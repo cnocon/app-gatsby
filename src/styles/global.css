@@ -896,7 +896,8 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
 	 		position: absolute; top: 0; left: 0; width: 0; height: 100%; border-radius: 4px; background : #5BCF80; /*box-shadow: 4px 4px 0 #e7e7e7;*/
 			}
 
-/* TESTIMONIAL */
+
+			/* TESTIMONIAL */
 .testo-group {
 	padding: 1em 0 2em 0;
 	}
@@ -2982,3 +2983,4 @@ pre.prettyprint {
 .post-preview-header h3 a:hover {
 	box-shadow: inset 0 -3px 0 rgba(118,215,254,.35);
 }
+
