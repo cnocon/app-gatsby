@@ -23,7 +23,7 @@ const Header = ({ backgroundColor, textColor}) => {
   return (
     <Styled.Header backgroundColor="#fff" textColor="#345">
       <Container>
-        <img alt="cvCard WP" src="https://themes.pixelwars.org/cvcard-wp/wp-content/uploads/2014/04/avatar.png" css={Styled.Image} />
+        <img alt="cvCard WP" src="https://cdn.buttercms.com/w6cMj4fOSSWeeNza9ouP" css={Styled.Image} />
 
         <Styled.Heading1>
           <Styled.H1Link to="/">{data.site.siteMetadata.author}</Styled.H1Link>
@@ -31,9 +31,9 @@ const Header = ({ backgroundColor, textColor}) => {
         <Styled.Subhead>{data.site.siteMetadata.jobTitle}</Styled.Subhead>
 
         <Styled.Nav>
-          <Styled.NavLink to="/">Home</Styled.NavLink>
-          <Styled.NavLink to="/articles">Articles</Styled.NavLink>
-          <Styled.NavLink to="/404">404</Styled.NavLink>
+          <Styled.NavLink to="/" activeStyle={{color: '#345'}}>Home</Styled.NavLink>
+          <Styled.NavLink to="/articles" partiallyActive={true} activeStyle={{color: '#345'}}>Articles</Styled.NavLink>
+          <Styled.NavLink to="/404" activeStyle={{color: '#345'}}>404</Styled.NavLink>
         </Styled.Nav>
 
       </Container>

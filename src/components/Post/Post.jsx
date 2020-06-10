@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from 'gatsby'
+import ReactHtmlParser from 'react-html-parser';
 
 const Post = ({post}) => {
-  console.log(post)
+  const date = new Date(post.published).toLocaleString()
   // const body = preview ?  post.summary : post.body;
   return (
     <article
@@ -15,8 +16,15 @@ const Post = ({post}) => {
       <h2>
         <Link to={`/articles/${post.slug}`}>{post.title}</Link>
       </h2>
-      {post.summary}
-    </article>
+
+      <div className="entry-meta">
+            <span className="posted-in">posted in {post.categories.map(c => c.name).join(', ')}</span>
+            <span className="posted-on"> on&nbsp;<time className="entry-date" datetime={post.published}>{date}</time></span>
+          </div>
+          {ReactHtmlParser(post.summary)}
+        </article>
+
+
   )
 }
 

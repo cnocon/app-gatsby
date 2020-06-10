@@ -13,10 +13,10 @@ export default function PageHeader({ pageHeader, breadcrumbs }) {
 
   return (
     <header className="page-header">
-      <h2 className="page-title">{pageHeader}</h2>
       <nav>
         <Link to="/">Home</Link> {allBreadCrumbs} // {pageHeader}
       </nav>
+      <h2 className="page-title">{pageHeader}</h2>
     </header>
   )
 }

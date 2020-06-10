@@ -8,6 +8,7 @@ const PostSingle = ({...data}) => {
   console.log(data)
   const post = data.pageContext.post
   const breadcrumbs = data.pageContext.breadcrumbs
+  const date = new Date(post.published).toLocaleString()
   // const body = preview ?  post.summary : post.body;
   return (
     <Layout>
@@ -16,11 +17,15 @@ const PostSingle = ({...data}) => {
         <PageHeader pageHeader={post.title} breadcrumbs={breadcrumbs} />
         <article
           style={{
-            display: `inline-block`,
-            margin: `0 5% 0 0`,
-            width: `70%`,
+            display: `block`,
+            margin: `0`,
+            width: `100%`,
             padding: 0,
           }}>
+          <div className="entry-meta">
+            <span className="posted-in">posted in {post.categories.map(c => c.name).join(', ')}</span>
+            <span className="posted-on"> on&nbsp;<time className="entry-date" datetime={post.published}>{date}</time></span>
+          </div>
           {ReactHtmlParser(post.body)}
         </article>
       </section>
