@@ -14,7 +14,7 @@ export default function PageHeader({ pageHeader, breadcrumbs, hideHeader }) {
 
   return (
     <header className="page-header">
-      <nav className="breadcrumbs">
+      <nav className="breadcrumbs" style={{marginBottom: `20px`}}>
         <Link to="/">HOME</Link> {allBreadCrumbs} <span> / {pageHeader.toUpperCase()}</span>
       </nav>
       {heading}

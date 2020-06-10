@@ -4,7 +4,6 @@ import ReactHtmlParser from 'react-html-parser';
 
 const PostPreview = ({post}) => {
   const date = new Date(post.published).toLocaleString()
-  // const body = preview ?  post.summary : post.body;
 
   const links = post.categories.map(c => {
     return <Link to={`/articles/category/${c.slug}`} key={c.slug}>{c.name}</Link>
@@ -19,8 +18,8 @@ const PostPreview = ({post}) => {
           <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>
       </div>
       </header>
-
-      <div className="entry-content">{ReactHtmlParser(post.summary)}</div>
+      <div className="entry-content"><p>{ReactHtmlParser(post.summary)}</p></div>
+      <Link className="button small blue colored more-link" to={`/articles/${post.slug}`}>Continue Reading <span class="meta-nav">→</span></Link>
     </article>
   )
 }

@@ -8,7 +8,7 @@ export const Header = styled.header(
     backgroundColor: props.backgroundColor || `indigo`,
     zIndex: 200,
     margin: `0 auto`,
-    padding: `2em`,
+    padding: `1em 15px 0`,
     width: `100%`,
     textAlign: `center`,
     fontFamily: `Lato`,
@@ -48,6 +48,10 @@ export const H1Link = styled(Link)`
   color: #345;
   text-decoration: none;
   font-family: inherit;
+
+  &:hover {
+    color: #000;
+  }
 `
 
 export const Subhead = styled.p`
@@ -55,7 +59,7 @@ export const Subhead = styled.p`
   margin: .1em 0 .6em;
   display: inline-block;
   font-style: italic;
-  padding: 6px 10px;
+  padding: 3px 10px;
   background: #FAF46A;
   color: #345;
   color: rgba(0,0,0,.7);
@@ -66,7 +70,7 @@ export const Subhead = styled.p`
 
 export const Nav = styled.nav`
   height: 40px;
-  max-width: 360px;
+  max-width: none;
   position: relative;
   display: block;
   margin: .9em auto 0 auto;

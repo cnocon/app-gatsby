@@ -47,7 +47,7 @@ body {
  	 font-size: 1em; line-height: 1.66; -webkit-text-size-adjust: none;
 	}
 a {
- 	color: #096; text-decoration: none; outline: none;
+ 	color: #4ECE99; text-decoration: none; outline: none;
 	}
 a:hover,
 a:focus {
@@ -164,12 +164,15 @@ tr:nth-child(odd) td {
  	background: #FAFCFD;
 	}
 /* code and pre  */
-code,
+/* code,
 pre {
  	padding: 0 3px 2px; margin-bottom: 4em; font-family: Monaco, Menlo, Consolas, "Courier New", monospace; font-size: 12px; color: #333333; white-space: pre; overflow: auto;
 	}
 code {
  	display: inline-block; margin: 0 .4em; padding: 1px 6px; background: #fff; border: 1px solid #DDE4E6; box-shadow: 1px 1px 0 #fff, 2px 2px 0 #DDE4E6;
+	} */
+	code {
+		white-space: pre;
 	}
 /* lists  */
 ol,
@@ -1255,7 +1258,7 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
 		opacity: 1; filter: alpha(opacity = 100);
 		}
 	.media-box .mask:before {
-		position: absolute; left: 50%; top: 50%; margin: -38px 0 0 -38px; width: 76px; line-height: 76px; font-size: 18px; text-align: center; content: "\f0ca"; color: #fff; background: #096; border-radius: 50%;
+		position: absolute; left: 50%; top: 50%; margin: -38px 0 0 -38px; width: 76px; line-height: 76px; font-size: 18px; text-align: center; content: "\f0ca"; color: #fff; background: #4ECE99; border-radius: 50%;
 		}
 	.hentry.video .mask:before {
 		content: "\f03d"
@@ -1336,19 +1339,19 @@ input[type=submit].colored,
 input[type=button],
 button.colored,
 a.button.colored {
- 	color: #fff; background-color: #096; border-color: transparent;
+ 	color: #fff; background-color: #4ECE99; border-color: transparent;
 	}
 input[type=submit].colored:hover,
 input[type=button]:hover,
 button.colored:hover,
 a.button.colored:hover {
-	background: #085;
+	background-color: #399670;
 	}
 input[type=submit].colored:active,
 input[type=button]:active,
 button.colored:active,
 a.button.colored:active {
-	background: #074;
+	background-color: #399670;
 	}
 input[type=submit]:active,
 input[type=button]:active,
@@ -1830,7 +1833,7 @@ a.button.colored {
  	display: inline-block; text-align: center; padding: 0; line-height: 33px; width: 40px; font-size: 18px; color: #B7C6C9; border: 3px solid #DDE4E6; cursor: pointer; border-radius: 50%;
 	}
 .portfolio-nav a.button:hover {
-	color: #096; border-color: #096; background: none;
+	color: #4ECE99; border-color: #4ECE99; background: none;
 	}
 .icon.prev:before {
  	content: "\f104"
@@ -1859,7 +1862,7 @@ a.button.colored {
  	color: #345
 	}
 .entry-title a:hover {
- 	color: #096
+ 	color: #4ECE99
 	}
 /* entry-meta */
 .blog-posts .entry-meta {
@@ -1927,7 +1930,7 @@ a.more-link {
 	display: block; max-width: 17em; text-align: center; margin: 2em 0 0 0; padding: 1.4em 0; color: #6A7686; font-weight: 400; font-size: 12px; letter-spacing: .03em; background: none; border: 2px solid #DDE4E6; border-radius: 4px; text-transform: uppercase; font-weight: 800;
 	}
 a.more-link:hover {
- 	background: #096
+ 	background: #4ECE99
 	}
 /* featured image */
 .featured-image {
@@ -1981,7 +1984,7 @@ a.more-link:hover {
  	font-size: 1.5em; font-weight: 300; word-break: break-all; text-transform: uppercase; padding: .4em 1.2em; margin-top: 1em; border-radius: 8px; color: #456; display: inline-block; border: 2px dashed #DDE4E6;
 	}
 .format-link .link-content > a:first-child:hover {
- 	border-color: #096
+ 	border-color: #4ECE99
 	}
 .format-link header {
  	text-align: center
@@ -2065,10 +2068,10 @@ a.more-link:hover {
  	width: 12px; height: 12px; border: 2px solid #DDE4E6; background: none;
 	}
 .flex-control-paging li a:hover {
- 	border-color: #096; background: none;
+ 	border-color: #4ECE99; background: none;
 	}
 .flex-control-paging li a.flex-active {
- 	border-color: transparent; background: #096;
+ 	border-color: transparent; background: #4ECE99;
 	}
 /* aside  */
 .format-aside .post-format:before {
@@ -2174,7 +2177,7 @@ a.more-link:hover {
 	}
 .mejs-controls .mejs-time-rail .mejs-time-current,
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
- 	background: #096
+ 	background: #4ECE99
 	}
 .mejs-overlay-loading {
 	background: rgba(0, 0, 0, 0.6); border-radius: 8px;
@@ -2283,14 +2286,14 @@ a.more-link:hover {
 .comment-meta a:hover,
 .comment-meta .fn + a:hover,
 .comment-reply-link:hover {
- 	color: #096
+ 	color: #4ECE99
 	}
 /* comment by post author  */
 .bypostauthor > article {
- 	border-color: #096
+ 	border-color: #4ECE99
 	}
 .bypostauthor > article:before {
- 	border-right-color: #096
+ 	border-right-color: #4ECE99
 	}
 
 /* COMMENT FORM */
@@ -2771,7 +2774,7 @@ body {
 	}
 /* Links */
 a {
- 	color: #096;
+ 	color: #4ECE99;
 	}
 a:hover {
  	color: #5BCF80;
@@ -2849,9 +2852,13 @@ a.more-link:hover,
     animation: none; -webkit-animation: none;
     }
 
+.blog-posts header,
+.blog-posts .entry-header {
+	text-align: center;
+}
 .blog-posts .entry-meta {
   width: auto;
-  text-align: left;
+  text-align: center;
   display: block;
   width: 100%;
 }
@@ -2860,7 +2867,19 @@ a.more-link:hover,
 .blog-single .breadcrumbs {
   text-align: center;
 }
+.post-preview .entry-content {
+	padding-bottom: 0;
+}
 
+.post-preview.hentry {
+	border-bottom: 1px dotted #BFC5CD;
+	padding-bottom: 45px;
+	margin-bottom: 45px;
+}
+.post-preview.hentry:last-of-type {
+	border-bottom: 0;
+}
+.post-preview .entry-content p,
 .blog-single .entry-content p {
   font-size: 18px;
   line-height: 29px;
@@ -2870,4 +2889,12 @@ a.more-link:hover,
   display: inline-block;
   width: auto;
   max-width: none;
+}
+
+a.button.blue.colored {
+	background: #76d7fe59;
+	color: #345;
+}
+a.button.colored.more-link {
+	margin: 0 auto;
 }

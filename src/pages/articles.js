@@ -13,8 +13,8 @@ const Articles = ({ data }) => {
 
   return (
     <Layout classNames="blog-posts readable-content">
-      <SEO title="Front End Development Articles" />
-      <PageHeader pageHeader="Recent Articles" />
+      <SEO title="Front End Development Articles"/>
+      <PageHeader pageHeader="Recent Articles" hideHeader={true}/>
       {posts}
     </Layout>
   )
