@@ -1332,13 +1332,13 @@ input[type=submit].colored,
 input[type=button],
 button.colored,
 a.button.colored {
- 	color: #fff; background-color: #4ECE99; border-color: transparent;
+ 	color: #fff; background-color: #21B572; border-color: transparent;
 	}
 input[type=submit].colored:hover,
 input[type=button]:hover,
 button.colored:hover,
 a.button.colored:hover {
-	background: #5BCF80;
+	background: #074;
 	}
 input[type=submit].colored:active,
 input[type=button]:active,

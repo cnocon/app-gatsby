@@ -3,7 +3,7 @@ module.exports = {
     title: `Cristin O'Connor | Front End Developer`,
     author: `Cristin O'Connor`,
     jobTitle: `Front End Developer`,
-    description: `Professional blog and portfolio site for Cristin O'Connor, professional Front End Developer`,
+    description: `Professional blog and portfolio site for Front End Developer Cristin O'Connor`,
     twitter: `@cnocon`,
   },
   plugins: [

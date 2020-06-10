@@ -164,10 +164,10 @@ tr:nth-child(odd) td {
  	background: #FAFCFD;
 	}
 /* code and pre  */
-/* code,
+code,
 pre {
- 	padding: 0 3px 2px; margin-bottom: 4em; font-family: Monaco, Menlo, Consolas, "Courier New", monospace; font-size: 12px; color: #333333; white-space: pre; overflow: auto;
-	}
+ 	padding: 0 3px 2px; margin-bottom: 4em; font-family: Monaco, Menlo, Consolas, "Courier New", monospace; font-size: 14px; color: #000; white-space: pre; overflow: auto; background: #F4F6F7
+	}/*
 code {
  	display: inline-block; margin: 0 .4em; padding: 1px 6px; background: #fff; border: 1px solid #DDE4E6; box-shadow: 1px 1px 0 #fff, 2px 2px 0 #DDE4E6;
 	} */
@@ -875,10 +875,10 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
 		height: 76%
 		}
 	.event h4 {
-		margin: 0; padding: 0;
+		margin: 0; padding: 0; font-family: Lato, Arial, sans-serif;
 		}
 	.event h5 {
-		margin: 0; padding: 0 0 .3em 0; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; color: #C9D5D6;
+		margin: 0; padding: 0 0 .3em 0; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; color: #C9D5D6; font-weight: 500;
 		}
 	.event p {
 		margin: .6em 0 .2em 0; font-size: 14px; letter-spacing: .02em;
@@ -886,6 +886,9 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
 	.event p:before {
 		display: block; content: ""; position: absolute; top: -30px; left: -72px; height: 160%; width: 4px; background: #F4F6F7;
 		}
+
+		.event h5,
+		.event h4 { font-family: "Lato";}
 
 /* SKILLS */
 .skillset {
@@ -1339,19 +1342,19 @@ input[type=submit].colored,
 input[type=button],
 button.colored,
 a.button.colored {
- 	color: #fff; background-color: #4ECE99; border-color: transparent;
+ 	color: #fff; background-color: #63C76F; border-color: transparent;
 	}
 input[type=submit].colored:hover,
 input[type=button]:hover,
 button.colored:hover,
 a.button.colored:hover {
-	background-color: #399670;
+	background-color: #4FAA5A;
 	}
 input[type=submit].colored:active,
 input[type=button]:active,
 button.colored:active,
 a.button.colored:active {
-	background-color: #399670;
+	background-color: #4FAA5A;
 	}
 input[type=submit]:active,
 input[type=button]:active,
@@ -2536,37 +2539,7 @@ a.more-link:hover {
 		min-height: 28px; min-width: 166px;
 		}
 
-	/* timeline */
-	.timeline {
-		padding-left: 0;
-		}
-	.timeline h2 [class^="icon-"], .timeline h2 [class*=" icon-"], .timeline h2 .fa {
-		position: relative; top: auto; left: auto; margin: -12px auto 6px auto; border: 0; line-height: 1;
-		}
-	.event {
-		padding: 16px; margin-top: 104px;
-		}
-	.event:first-of-type {
-		margin-top: 116px;
-		}
-	.event:first-of-type .date {
-		top: -74px;
-		}
-	.event:before, .event:after {
-		display: none;
-		}
-	.event .date {
-		top: -64px; left: 50%; margin-left: -32px;
-		}
-	.timeline h2, .event h4, .event h5 {
-		text-align: center;
-		}
-	.event p:before {
-		left: 50%; z-index: -1;
-		}
-	.timeline .event:last-child p:before {
-		height: 100%;
-		}
+
 
 	/* PROCESS */
 	.row [class^="col-"]:nth-child(3n) .process:before {
@@ -2814,7 +2787,8 @@ a.more-link:hover,
 .flex-control-paging li a.flex-active,
 .mejs-controls .mejs-time-rail .mejs-time-current,
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
- 	background: #21B572
+	 background: rgba(118,215,254,.35);
+	 color: #345;
 	}
 .entry-title a:hover,
 .portfolio-nav a.button:hover,
@@ -2841,7 +2815,7 @@ a.more-link:hover,
 #nprogress .bar,
 #fancybox-close,
 .portfolio-nav a.button.back {
-	background: #5BCF80;
+	background: #21B572;
 	}
 #nprogress .spinner-icon {
   border-top-color: #5BCF80; border-left-color: #5BCF80;
@@ -2895,7 +2869,56 @@ a.button.blue.colored {
 	background: #76d7fe59;
 	color: #345;
 }
+a.button.gray.colored {
+	background: #EFF4F5;
+	color: #345;
+}
 a.button.colored.more-link {
 	margin: 0 auto;
 }
+a.button.gray.colored:hover {
+	background: #345;
+	color: #fff;
+}
+.list {
+	list-style-position: outside;
+	margin: .5rem 1rem;
+	padding-left: 0;
+}
 
+.list li {
+	font-size: .8125rem;
+	padding-bottom: 0.5rem;
+	line-height: 1.125rem;
+}
+
+.timeline .event date {
+	font-family: Oswald;
+}
+
+.timeline::before {
+		content: "";
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: block;
+    background: #F4F6F7;
+		left: 42px;
+	}
+	.skill-unit h4 {
+		/* color: #345; */
+	}
+.skill-unit .bar .progress {
+	/* background: #76d7fe59; */
+}
+.timeline .event:not(.current) .date {
+	/* background: #FAF46A; */
+	/* background: #d0f1ff; */
+	/* background: #F4F6F7 */
+	/* color: #345; */
+}
+
+.entry-content p a {
+	text-decoration: underline;
+}

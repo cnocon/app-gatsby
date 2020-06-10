@@ -3,9 +3,11 @@ import React from "react"
 
 const Event = ({ current, data, type }) => {
   const listItems = data.descList.map((item, i) => {
-    return (
-      <li key={`li-${i}`}>{item}</li>
-    )
+    if (type === "work") {
+      return <li key={`li-${i}`}>{item}</li>
+    } else {
+      return <p key={`p-${i}`}>{item}</p>
+    }
   })
 
   const awards = data.awards.map((item, i) => {
@@ -21,7 +23,7 @@ const Event = ({ current, data, type }) => {
         <h4>{data.position}</h4>
         <h5>{data.company}</h5>
         {/* <p>{data.desc}</p> */}
-        <ul>
+        <ul className="list">
           {listItems}
         </ul>
       </div>
@@ -33,9 +35,9 @@ const Event = ({ current, data, type }) => {
         <h4>{data.position}</h4>
         <h5>{data.company}</h5>
         {/* <p>{data.desc}</p> */}
-        <ul>
-          {listItems}
-        </ul>
+
+        {listItems}
+
         <ul className="awards">
           {awards}
         </ul>

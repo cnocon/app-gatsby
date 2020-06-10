@@ -19,7 +19,7 @@ const PostPreview = ({post}) => {
       </div>
       </header>
       <div className="entry-content"><p>{ReactHtmlParser(post.summary)}</p></div>
-      <Link className="button small blue colored more-link" to={`/articles/${post.slug}`}>Continue Reading <span class="meta-nav">→</span></Link>
+      <Link className="button small colored more-link" to={`/articles/${post.slug}`}>Continue Reading <span class="meta-nav">→</span></Link>
     </article>
   )
 }

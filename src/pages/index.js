@@ -1,5 +1,6 @@
 import React from "react"
 // import { Link } from "gatsby"
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ResumeData } from "../data/ResumeData"
 import Layout from "../components/Layout/Layout"
 // import Image from "../components/image"
@@ -11,8 +12,21 @@ const IndexPage = () => {
     return <Event key={`event-${i}`} current={i === 0} data={item} type="work"/>
   })
 
-  const eduEvents = ResumeData.experience.map((item, i) => {
-    return <Event key={`event-edu-${i}`} data={item}/>
+  const eduEvents = ResumeData.education.map((item, i) => {
+    return <Event key={`event-edu-${i}`} current={false} data={item} type="edu"/>
+  })
+
+  const skills = ResumeData.skills.map((skill, i) => {
+    return(
+      <div className="skill-unit" key={`skill-${i}`}>
+        <h4>
+        {/* <FontAwesomeIcon icon={skill.icon}/> */}
+        <i className={skill.icon}></i> {skill.name}</h4>
+        <div className="bar" data-percent={skill.percent}>
+          <div className="progress" style={{width: `${skill.percent}%`}}></div>
+        </div>
+      </div>
+    )
   })
 
   return (
@@ -23,29 +37,21 @@ const IndexPage = () => {
             <h2><i className="fa fa-flask"></i>WORK HISTORY</h2>
             {workEvents}
           </div>
+
           <div className="timeline">
             <h2><i className="fa icon-college"></i>EDUCATION HISTORY</h2>
             {eduEvents}
           </div>
 
         </div>
+
         <div className="col-md-6 col-lg-5">
-          <h2 className="section-title"><span><i className="fa icon-cog-1"></i>DEVELOPMENT SKILLS</span></h2>
+          <h2 className="section-title">
+            <span><i className="fa icon-cog-1"></i>DEVELOPMENT SKILLS</span>
+          </h2>
 
           <div className="skillset">
-            <div className="skill-unit">
-              <h4>HTML5</h4>
-              <div className="bar" data-percent="100">
-                <div className="progress" style={{width: `100%`}}></div>
-              </div>
-            </div>
-
-            <div className="skill-unit">
-              <h4>CSS</h4>
-              <div className="bar" data-percent="80">
-                <div className="progress" style={{width: `80%`}}></div>
-              </div>
-            </div>
+            {skills}
           </div>
 
           <h2 className="section-title"><span><i className="fa icon-comment"></i>TESTIMONIALS</span></h2>

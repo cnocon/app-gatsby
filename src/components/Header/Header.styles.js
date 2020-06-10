@@ -101,4 +101,7 @@ export const NavLink = styled(Link)`
   font-size: 130%;
   margin: 0 1rem;
   text-transform: lowercase;
+  &:hover {
+    color: #345;
+  }
 `

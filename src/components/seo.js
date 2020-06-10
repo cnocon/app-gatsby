@@ -10,22 +10,9 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
+function SEO({ sdescription, lang, meta, stitle }) {
+  const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`
+  const title = stitle || `Cristin O'Connor | Front End Developer`
 
   return (
     <Helmet
@@ -33,7 +20,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${title}`}
       meta={[
         {
           name: `description`,
@@ -57,7 +44,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.twitter,
+          content: `@cnocon`,
         },
         {
           name: `twitter:title`,
@@ -69,6 +56,9 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
+    <link rel="stylesheet" id="oswald-css" href="//fonts.googleapis.com/css?family=Oswald&amp;subset=latin" type="text/css" media="all"></link>
+      <link rel="stylesheet" href="/assets/css/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"/>
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous"/>
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/skins/sunburst.css"></link>
       <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     </Helmet>
