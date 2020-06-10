@@ -10,56 +10,89 @@ const path = require(`path`)
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
     query {
-      allButterPost {
+      allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git"]}}}}) {
         edges {
           node {
+            id
             title
             slug
             url
             summary
-            featured_image
-            featured_image_alt
-            published
-            tags {
-              name
-              slug
-            }
             categories {
               name
               slug
             }
+            tags {
+              name
+              slug
+            }
             body
-            date
-            id
+            author {
+              first_name
+              last_name
+              profile_image
+              twitter_handle
+            }
+            featured_image
+            featured_image_alt
             meta_description
+            published
             seo_title
-            status
           }
           previous {
-            slug
-            url
+            id
           }
         }
-        pageInfo {
-          itemCount
-          hasPreviousPage
-          hasNextPage
-          currentPage
-          pageCount
-          perPage
-          totalCount
-        }
-        group(field: id, limit: 5) {
-          edges {
-            node {
-              id
+        group(field: categories___slug) {
+          field
+          fieldValue
+          nodes {
+            featured_image
+            featured_image_alt
+            id
+            meta_description
+            slug
+            tags {
+              name
+              slug
+            }
+            summary
+            title
+            url
+            seo_title
+            published
+            categories {
+              name
+              slug
+            }
+            author {
+              profile_image
+              last_name
+              first_name
+              title
+              twitter_handle
             }
           }
         }
-        totalCount
       }
     }
   `)
+
+  data.allButterPost.group.forEach(({ ...group }) => {
+    actions.createPage({
+      path: `/categories/${group.fieldValue}`,
+      component: path.resolve(`./src/components/Category/Category.jsx`),
+      context: {
+        posts: group.nodes,
+        breadcrumbs: [
+          {
+            name: `Categories`,
+            path: `/categories`,
+          },
+        ]
+      },
+    })
+  })
 
   data.allButterPost.edges.forEach(({ node }) => {
     actions.createPage({
@@ -69,8 +102,8 @@ exports.createPages = async ({ actions, graphql }) => {
         post: node,
         breadcrumbs: [
           {
-            name: 'Articles',
-            path: '/articles',
+            name: `Articles`,
+            path: `/articles`,
           },
         ]
       },

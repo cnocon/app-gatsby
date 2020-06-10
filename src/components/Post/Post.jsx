@@ -5,6 +5,11 @@ import ReactHtmlParser from 'react-html-parser';
 const Post = ({post}) => {
   const date = new Date(post.published).toLocaleString()
   // const body = preview ?  post.summary : post.body;
+
+  const links = post.categories.map(c => {
+    return <Link to={`/categories/${c.slug}`}>{c.name}</Link>
+  })
+
   return (
     <article
       style={{
@@ -19,7 +24,8 @@ const Post = ({post}) => {
       </h2>
 
       <div className="entry-meta">
-            <span className="posted-in">posted in {post.categories.map(c => c.name).join(', ')}</span>
+            <span className="posted-in">posted in {links}
+            </span>
             <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>
           </div>
           {ReactHtmlParser(post.summary)}

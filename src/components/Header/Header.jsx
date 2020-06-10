@@ -34,6 +34,7 @@ const Header = ({ backgroundColor, textColor}) => {
           <Styled.NavLink to="/" activeStyle={{color: '#345'}}>Home</Styled.NavLink>
           <Styled.NavLink to="/articles" partiallyActive={true} activeStyle={{color: '#345'}}>Articles</Styled.NavLink>
           <Styled.NavLink to="/404" activeStyle={{color: '#345'}}>404</Styled.NavLink>
+          <Styled.NavLink to={`/categories`} activeStyle={{color: '#345'}}>Category</Styled.NavLink>
         </Styled.Nav>
 
       </Container>
