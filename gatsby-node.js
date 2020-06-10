@@ -80,14 +80,15 @@ exports.createPages = async ({ actions, graphql }) => {
 
   data.allButterPost.group.forEach(({ ...group }) => {
     actions.createPage({
-      path: `/categories/${group.fieldValue}`,
+      path: `/articles/category/${group.fieldValue.toLowerCase().replace(/\s/g, '-')}`,
       component: path.resolve(`./src/components/Category/Category.jsx`),
       context: {
+        category: group.fieldValue,
         posts: group.nodes,
         breadcrumbs: [
           {
-            name: `Categories`,
-            path: `/categories`,
+            name: `Articles`,
+            path: `/articles`,
           },
         ]
       },

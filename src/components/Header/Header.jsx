@@ -6,7 +6,6 @@ import React from "react"
 import { Container } from "../Layout/Layout.styles"
 import * as Styled from "./Header.styles"
 
-
 const Header = ({ backgroundColor, textColor}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -33,8 +32,7 @@ const Header = ({ backgroundColor, textColor}) => {
         <Styled.Nav>
           <Styled.NavLink to="/" activeStyle={{color: '#345'}}>Home</Styled.NavLink>
           <Styled.NavLink to="/articles" partiallyActive={true} activeStyle={{color: '#345'}}>Articles</Styled.NavLink>
-          <Styled.NavLink to="/404" activeStyle={{color: '#345'}}>404</Styled.NavLink>
-          <Styled.NavLink to={`/categories`} activeStyle={{color: '#345'}}>Category</Styled.NavLink>
+          {/* <Styled.NavLink to="/404" activeStyle={{color: '#345'}}>404</Styled.NavLink> */}
         </Styled.Nav>
 
       </Container>

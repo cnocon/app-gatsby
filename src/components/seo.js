@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/skins/sunburst.css"></link>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=cli&lang=css&lang=html&lang=js" async></script>
+      <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     </Helmet>
   )
 }

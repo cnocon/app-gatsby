@@ -12,14 +12,12 @@ import Header from "../Header/Header"
 import "../layout.css"
 import * as Styled from "./Layout.styles"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, classNames }) => {
   return (
     <>
-      <Header
-        backgroundColor="indigo"
-        textColor="#fff"/>
-      <Styled.Container>
-        <main>{children}</main>
+      <Header />
+      <Styled.Container className="wrapper">
+        <main className={classNames}>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
