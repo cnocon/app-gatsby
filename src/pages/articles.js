@@ -8,7 +8,7 @@ import Post from "../components/Post/Post"
 const Articles = ({ data }) => {
   const posts = data.allButterPost.edges
     .map(({ node }) => {
-      return <Post post={node} />
+      return <Post post={node} key={node.published}/>
     });
 
   return (

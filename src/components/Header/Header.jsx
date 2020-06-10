@@ -1,8 +1,8 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
-import { css } from "@emotion/core"
+// import { css } from "@emotion/core"
 import { Container } from "../Layout/Layout.styles"
 import * as Styled from "./Header.styles"
 

@@ -5,7 +5,7 @@ export default function PageHeader({ pageHeader, breadcrumbs }) {
   const crumbs = breadcrumbs || [{name: pageHeader, path: null}]
   const allBreadCrumbs = crumbs.map((crumb, i) => {
     if (crumb.path) {
-      return <span key={i}> // <Link to={crumb.path}>{crumb.name}</Link></span>
+      return <span key={i}> / <Link to={crumb.path}>{crumb.name}</Link></span>
     } else {
       return false;
     }
@@ -14,7 +14,7 @@ export default function PageHeader({ pageHeader, breadcrumbs }) {
   return (
     <header className="page-header">
       <nav>
-        <Link to="/">Home</Link> {allBreadCrumbs} // {pageHeader}
+        <Link to="/">Home</Link> {allBreadCrumbs} / {pageHeader}
       </nav>
       <h2 className="page-title">{pageHeader}</h2>
     </header>

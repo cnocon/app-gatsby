@@ -13,13 +13,14 @@ const Post = ({post}) => {
         width: `70%`,
         padding: 0,
       }}>
+
       <h2>
         <Link to={`/articles/${post.slug}`}>{post.title}</Link>
       </h2>
 
       <div className="entry-meta">
             <span className="posted-in">posted in {post.categories.map(c => c.name).join(', ')}</span>
-            <span className="posted-on"> on&nbsp;<time className="entry-date" datetime={post.published}>{date}</time></span>
+            <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>
           </div>
           {ReactHtmlParser(post.summary)}
         </article>
