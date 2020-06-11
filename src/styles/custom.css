@@ -25,12 +25,13 @@
 .blog-posts .post-preview-header h3 a {
   text-align: center;
   font-size: 30px;
-  box-shadow: inset 0 -3px 0 rgba(250,244,106, .5)
+  /* rgba(250,244,106, .5) */
+  box-shadow: inset 0 -3px 0 rgba(118,215,254,.35);
 }
 
 .blog-posts .post-preview-header h3 a:hover {
-  /* box-shadow: inset 0 -3px 0 rgba(118,215,254,.35); */
-  box-shadow: inset 0 -3px 0 rgba(250,244,106, .95);
+  box-shadow: inset 0 -3px 0 rgba(118,215,254,.35);
+  /* box-shadow: inset 0 -3px 0 rgba(250,244,106, .95); */
   color: #000;
 }
 
@@ -44,9 +45,36 @@
   background-color: #EDF1F3;
 }
 .blog-posts .hentry {
-  padding: 0.25em 0 4rem 0;
-  margin-bottom: 4rem;
+  padding: 0.25em 0 3rem 0;
+  margin-bottom: 3rem;
 }
 .blog-posts .hentry:not(:last-of-type) {
-  border-bottom: 3px solid #EDF1F3;
+  /* border-bottom: 3px solid #EDF1F3; */
+}
+
+
+a.button.colored.blue {
+  background-color:rgba(118,215,254,.35);
+  color: #345;
+}
+a.button.colored.blue:hover {
+  color: #fff;
+}
+
+.entry-content a {
+  text-decoration: underline;
+}
+/* .entry-content a {
+  color: #345;
+  box-shadow: inset 0 -3px 0 rgba(118,215,254,.35);
+  transition: box-shadow .2s ease;
+}
+
+.entry-content a:hover {
+  color: #345;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.75);
+} */
+
+.testo {
+  background: rgba(118,215,254,.35);
 }
