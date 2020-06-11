@@ -13,7 +13,7 @@ const IndexPage = () => {
   })
 
   const eduEvents = ResumeData.education.map((item, i) => {
-    return <Event key={`event-edu-${i}`} current={false} data={item} type="edu"/>
+    return <Event key={`event-edu-${i}`} current={i === 0} data={item} type="edu"/>
   })
 
   const skills = ResumeData.skills.map((skill, i) => {
@@ -23,7 +23,7 @@ const IndexPage = () => {
         {/* <FontAwesomeIcon icon={skill.icon}/> */}
         <i className={skill.icon}></i> {skill.name}</h4>
         <div className="bar" data-percent={skill.percent}>
-          <div className="progress" style={{width: `${skill.percent}%`}}></div>
+          <div className="progress" style={{width: `${skill.percent}%`}}><span className="score">{skill.percent}%</span></div>
         </div>
       </div>
     )
@@ -31,54 +31,34 @@ const IndexPage = () => {
 
   return (
     <Layout classNames="resume">
+      <SEO stitle="Home | Résumé" />
       <div className="row">
-        <div className="col-md-6 col-lg-7">
-          <div className="timeline">
-            <h2><i className="fa fa-flask"></i>WORK HISTORY</h2>
+        <div className="col-md-7 col-lg-7 left-col">
+          <h2><i className="fas fa-flask"></i>Work History</h2>
+          <div className=" timeline">
             {workEvents}
           </div>
 
-          <div className="timeline">
-            <h2><i className="fa icon-college"></i>EDUCATION HISTORY</h2>
+          <h2><i className="fas fa-graduation-cap"></i>Education</h2>
+          {/* <div className="timeline"> */}
             {eduEvents}
-          </div>
-
+          {/* </div> */}
         </div>
 
-        <div className="col-md-6 col-lg-5">
-          <h2 className="section-title">
-            <span><i className="fa icon-cog-1"></i>DEVELOPMENT SKILLS</span>
-          </h2>
-
+        <div className="col-md-5 col-lg-5 right-col">
+          <h2>Skills</h2>
           <div className="skillset">
             {skills}
           </div>
 
-          <h2 className="section-title"><span><i className="fa icon-comment"></i>TESTIMONIALS</span></h2>
-          <div className="testo-group">
-            <div className="testo"><img alt="PHILLIP AUSTIN" src="https://themes.pixelwars.org/cvcard-wp/wp-content/uploads/2014/04/testo-01.jpg"/><p></p>
-            <h4>PHILLIP AUSTIN <span>CEO / GRAVITY INC.</span></h4>
-            <p>He is a great and hardworking guy. I am so proud of i have him as my asistant. He helped me so much. Also he is a great and hardworking guy. I am so proud of i have him as my asistant. He helped me so much.</p></div>
-            <div className="testo"><img alt="GARY MORGAN" src="https://themes.pixelwars.org/cvcard-wp/wp-content/uploads/2014/04/testo-02.jpg"/><p></p>
-            <h4>GARY MORGAN <span>CHEMIST / FREELANCER</span></h4>
-            <p>He was a great co-worker and a friend. I would’t be where i am without his support.</p></div>
-            <div className="testo"><img alt="JASON WILSON" src="https://themes.pixelwars.org/cvcard-wp/wp-content/uploads/2014/04/testo-03.jpg"/><p></p>
-            <h4>JASON WILSON <span>LAB GEEK / MIAMI METRO</span></h4>
-            <p>He is ok.</p></div>
-            </div>
+          <h2>Assets</h2>
+          <ul className="list"><li className="asset">Empathy to be an effective teammate</li><li className="asset">Organizational abilities for managing projects independently</li><li className="asset">Research skills to find the best solutions to new challenges</li><li className="asset">Enthusiasm and passion for front end work</li><li className="asset">Positive attitude and willingness to handle a wide variety of responsibilities</li><li className="asset">Effective communicator with people from varying technical backgrounds</li><li className="asset">Dedicated to ongoing professional development</li><li className="asset">Natural problem solver</li><li className="asset">5+ years of Agile experience</li><li className="asset">10+ years of experience working on web applications in various capacities</li></ul>
+
+          <div className="card mt-4"><blockquote className="text-xs-center text-sm-right"><i className="fas fa-quote-left"></i>How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.<cite title="Annie Dillard"> Annie Dillard</cite></blockquote></div>
         </div>
+
       </div>
 
-      <SEO title="Home" />
-      {/* <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <Link to="/articles">View Articles</Link> <br />
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
     </Layout>
   )
 }

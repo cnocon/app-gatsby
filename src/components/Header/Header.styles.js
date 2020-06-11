@@ -2,6 +2,7 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 export const Header = styled.header(
   props => ({
@@ -15,23 +16,23 @@ export const Header = styled.header(
   })
 )
 
-export const siteTitle = css`
-  text-decoration: none;
-  margin: 1rem 0 0;
-  color: #fff;
-  text-align: center;
-  font-weight: normal;
-`
+// export const siteTitle = css`
+//   text-decoration: none;
+//   margin: 1rem 0 0;
+//   color: #fff;
+//   text-align: center;
+//   font-weight: normal;
+// `
 
-export const Image = css`
-  max-height: 160px;
-  max-width: 160px;
+export const Image = styled(Img)`
+  height: 160px;
+  width: 160px;
   border-radius: 50%;
-  display: inline !important;
-  width: 100%;
-  height: auto;
   vertical-align: middle;
   margin: 0 auto;
+  border-radius: 80px;
+  border: 1px solid #fff;
+  display: block !important;
 `
 
 export const Heading1 = styled.h1`
@@ -79,26 +80,24 @@ export const Nav = styled.nav`
   line-height: 1.8;
 `
 
-export const NavLi = css`
-  position: absolute;
-  visibility: hidden;
-  width: 100%;
-  display: inline-block;
-  margin-bottom: 10px;
-  text-align: center;
-  text-decoration: none;
-`
+// export const NavLi = css`
+//   position: absolute;
+//   visibility: hidden;
+//   width: 100%;
+//   display: inline-block;
+//   margin-bottom: 10px;
+//   text-align: center;
+//   text-decoration: none;
+// `
 
 export const NavLink = styled(Link)`
   width: auto;
-  font-size: 130%;
-  font-family: Lato, Helvetica, sans-serif;
+  font-size: 150%;
   position: relative;
   color: #D0DADC;
-  letter-spacing: -1px;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 130%;
+  font-weight: 800;
+  font-size: 200%;
   margin: 0 1rem;
   text-transform: lowercase;
   &:hover {

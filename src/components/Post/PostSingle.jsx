@@ -15,7 +15,7 @@ const PostSingle = ({...data}) => {
 
   return (
     <Layout classNames="blog-single readable-content">
-      <SEO title={post.title}/>
+      <SEO stitle={post.title}/>
       <section className={`${post.slug}`}>
         <PageHeader pageHeader={post.title} hideHeader={true} breadcrumbs={breadcrumbs} />
         <article className="hentry post post-single">

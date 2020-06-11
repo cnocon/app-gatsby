@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
-console.log(process.env)
+// console.log(process.env)
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
     query {
@@ -87,7 +87,7 @@ exports.createPages = async ({ actions, graphql }) => {
         posts: group.nodes,
         breadcrumbs: [
           {
-            name: `Articles`,
+            name: `All Articles`,
             path: `/articles`,
           },
         ]

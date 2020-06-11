@@ -13,9 +13,9 @@ const Category = ({ ...data}) => {
 
   return (
     <Layout classNames="blog-posts readable-content">
-      <SEO title={`${categoryName} | Front End Development`} />
+      <SEO stitle={`${categoryName} | Front End Development Articles`} />
       <section>
-        <PageHeader pageHeader={`Tags: ${categoryName}`} breadcrumbs={breadcrumbs} hideHeader={true}/>
+        <PageHeader pageHeader={categoryName} breadcrumbs={breadcrumbs} hideHeader={true}/>
         {posts}
       </section>
     </Layout>
