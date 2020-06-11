@@ -176,12 +176,31 @@ a.button.colored.blue:hover {
   height: 115%;
   border: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .right-col .event,
+  .timeline .event.current,
+  .timeline .event {
+    margin-top: 15px;
+  }
+}
+
 .timeline .event.current::before {
   top: 34px;
 }
+
 .timeline .event .date {
   top: 34px;
 }
+
+@media screen and (max-width: 76rem) {
+.timeline .event .date {
+  /* top: -64px; */
+  display: none;
+  }
+}
+
+
 
 .skill-unit h4 {
   margin-bottom: -28px;
@@ -254,10 +273,31 @@ a.button.colored.blue:hover {
   z-index: 9999999999;
 
 }
+@media screen and (max-width: 767px) {
+  h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .left-col h2:first-of-type i {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .left-col h2:first-of-type {
+    padding-left: 0;
+  }
+}
 
 .right-col h2:first-of-type {
   line-height: 64px;
-  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .right-col h2:first-of-type {
+    margin-top: 30px;
+  }
 }
 
 .right-col {
@@ -332,4 +372,54 @@ i.rule-icon::before {
 
 html {
   font-size: 10px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .skill-unit .bar {
+    height: 36px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skill-unit {
+    padding-bottom: 6px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skill-unit h4 {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+.event span,
+.event small {
+  display: block;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .right-col {
+    padding-left: 15px;
+  }
+}
+
+ul.list,
+ul li {
+  list-style: disc;
+}
+
+ul.list li.asset {
+  padding-bottom: 10px;
 }

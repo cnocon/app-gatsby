@@ -24,7 +24,7 @@ const PostSingle = ({...data}) => {
 
         <ReadableContent className="hentry post post-single">
           <header style={{fontSize: `1.6rem`}}>
-            <h1 style={{fontSize: `2.75rem`, margin: `.25em 0 .5em`}}>{post.title}</h1>
+            <h1 style={{fontSize: `2.75rem`, lineHeight: `1.25em`, margin: `.25em 0 .5em`}}>{post.title}</h1>
             <div className="entry-meta">
               <span className="posted-in">posted in {links}</span>
               <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>
