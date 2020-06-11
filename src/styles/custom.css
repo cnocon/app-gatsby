@@ -100,7 +100,8 @@ a.button.colored.blue:hover {
     background-color: #fff;
     background-clip: border-box;
     /* border: 1px solid rgba(0,0,0,.125); */
-    border: 3px solid #5BCF80;
+    /* border: 3px solid #5BCF80; */
+    border: 3px solid #345;
     /* border-radius: .25rem; */
     border-radius: 6px;
     padding: 0;
@@ -449,4 +450,12 @@ article:not(.event) ul.list {
 .event h4, .event h5 {
   text-align: left !important;
 }
+}
+
+.left-col .timeline h2:last-of-type {
+  padding-left: 0;
+}
+
+.event header {
+  margin-bottom: 20px;
 }
