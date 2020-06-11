@@ -4,6 +4,7 @@ import Layout from "../components/Layout/Layout"
 import SEO from "../components/seo"
 import Event from "../components/Event/Event"
 import Header from "../components/Header/Header"
+import PageHeader from "../components/PageHeader/PageHeader"
 
 const IndexPage = () => {
   const workEvents = ResumeData.experience.map((item, i) => {
@@ -31,7 +32,8 @@ const IndexPage = () => {
   return (
 
       <Layout maxWidth="100rem" width="90%">
-        <Header ruleTitle={`Résumé`.toUpperCase()} ruleIcon="icon-home-2"/>
+        <PageHeader pageHeader="" breadcrumbs={false}/>
+        <Header ruleTitle={`Résumé`.toUpperCase()} ruleIcon="icon-leaf"/>
         <SEO stitle="Résumé" />
         <div className="row">
           <div className="col-md-6 col-lg-7 left-col">

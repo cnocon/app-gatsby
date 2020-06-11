@@ -98,8 +98,9 @@ export const NavLink = styled(Link)`
 
 export const RuleWrapper = styled.h2`
   position: relative;
-  max-width: 100%;
-  margin: 1em auto;
+  max-width: 100rem;
+  width: 100%;
+  margin: 1em 0;
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: 700;
@@ -111,6 +112,7 @@ export const RuleWrapper = styled.h2`
     left: 0;
     margin-top: 3px;
     width: 100%;
+    max-width: 96rem;
     border-bottom: 4px solid #F4F6F7;
   }
 `

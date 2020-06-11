@@ -1,15 +1,21 @@
 // import React from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
 import { Link } from "gatsby"
-{/* background-color: rgba(118,215,254,.35); */}
 
-export const Article = styled.article({
-  marginBottom: `2.5rem`,
-  marginTop: `2.5rem`,
-  padding: `.25em 0 4rem`,
-  display: `block`,
-});
+export const ReadableContent = styled.article`
+  margin: 2.5rem auto;
+  padding: .25em 0 4rem;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+
+  @media screen and (min-width: 76rem) {
+    width: 90%;
+    max-width: 96rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+`;
 
 export const Button = styled(Link)`
   margin-left: auto;

@@ -14,7 +14,7 @@ const Articles = ({ data }) => {
 
   return (
     <>
-    <Layout className="blog-posts" maxWidth="96rem" width={`90%`}>
+    <Layout className="blog-posts" maxWidth="100rem" width={`90%`}>
       <PageHeader pageHeader="Recent Posts" />
       <Header ruleTitle="Latest from the Blog" ruleIcon="icon-rss"/>
       <SEO stitle="Front End Development Blog"/>

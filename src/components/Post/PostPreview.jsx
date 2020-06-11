@@ -11,22 +11,27 @@ const PostPreview = ({post}) => {
   })
 
   return (
-    <Styled.Article>
+    <Styled.ReadableContent>
       <header className="post-preview-header">
         <h2 style={{margin: `1rem auto 1.6rem`}}>
-          <Link to={`/articles/${post.slug}`} rel="bookmark" style={{fontSize: '2.25rem', color: `#345`, boxShadow: `inset 0 -3px 0 rgba(118,215,254,.35)`}}>{post.title}</Link>
+          <Link to={`/articles/${post.slug}`} rel="bookmark" style={{fontSize: '2.75rem', lineHeight: `1.5em`, color: `#345`, boxShadow: `inset 0 -3px 0 rgba(118,215,254,.35)`}}>{post.title}</Link>
         </h2>
         <div className="entry-meta" style={{fontSize: '1.2rem'}}>
           <span className="posted-in">posted in {links}</span>
           <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>
       </div>
       </header>
-      <div className="entry-content"><p style={{fontSize: '1.6rem'}}>{ReactHtmlParser(post.summary)}</p></div>
+
+      <div className="entry-content">
+        <p style={{fontSize: '1.6rem'}}>
+          {ReactHtmlParser(post.summary)}
+        </p>
+      </div>
 
       <Styled.Button to={`/articles/${post.slug}`}>
         Read Full Article <span className="meta-nav">→</span>
       </Styled.Button>
-    </Styled.Article>
+    </Styled.ReadableContent>
   )
 }
 

@@ -7,7 +7,7 @@ export const Container = styled.div(
     margin: `0 auto`,
     width: props.width || `100%`,
     maxWidth: props.maxWidth || 1140,
-    padding: `1.74rem 2.32rem`,
+    padding: `1.74rem 0`,
     display: props.display || `block`,
     flexDirection: props.flexDirection || `column`,
     alignItems: props.alignItems || `initial`,
