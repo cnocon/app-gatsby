@@ -105,12 +105,12 @@ a.button.colored.blue:hover {
     border-radius: 6px;
     padding: 0;
     margin: 40px 0 60px;
-    max-width: 350px;
+    /* max-width: 350px; */
 }
 
 @media screen and (max-width: 1002px) {
   .card {
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: 0 auto 60px;
 
   }
@@ -211,7 +211,7 @@ a.button.colored.blue:hover {
 }
 
 .event {
-  max-width: 500px !important;
+  /* max-width: 500px !important; */
 }
 
 .skill-unit h4 {
