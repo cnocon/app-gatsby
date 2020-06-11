@@ -31,7 +31,7 @@ const IndexPage = () => {
 
   return (
 
-      <Layout maxWidth="100rem" width="90%">
+      <Layout maxWidth="96rem" width="90%">
         <PageHeader pageHeader="" breadcrumbs={false}/>
         <Header ruleTitle={`Résumé`.toUpperCase()} ruleIcon="icon-leaf"/>
         <SEO stitle="Résumé" />

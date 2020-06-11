@@ -444,3 +444,9 @@ ul.list li.asset {
 article:not(.event) ul.list {
   /* margin-bottom: 60px !important; */
 }
+
+@media screen and (max-width: 767px) {
+.event h4, .event h5 {
+  text-align: left !important;
+}
+}

@@ -14,7 +14,7 @@ const Category = ({ ...data}) => {
 
   return (
     <>
-    <Layout classNames="blog-posts" maxWidth="100rem" width={`90%`}>
+    <Layout className="blog-posts" maxWidth="96rem" width={`90%`}>
       <PageHeader pageHeader={categoryName} breadcrumbs={breadcrumbs} />
       <Header ruleTitle={`Posted in ${categoryName.toUpperCase()}`} ruleIcon="icon-article-alt"/>
       <SEO stitle={`${categoryName} | Front End Development Articles`} />

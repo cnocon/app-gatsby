@@ -16,7 +16,7 @@ const PostSingle = ({...data}) => {
   })
 
   return (
-    <Layout maxWidth="100rem" width={`90%`}>
+    <Layout maxWidth="90rem" width={`90%`}>
       <PageHeader pageHeader={post.title} breadcrumbs={breadcrumbs} />
       <Header ruleTitle={`Level: ${post.tags[0].name.toUpperCase()}`} ruleIcon="icon-chart-bar"/>
       <SEO stitle={post.title}/>
