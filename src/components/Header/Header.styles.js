@@ -6,41 +6,33 @@ import Img from "gatsby-image"
 
 export const Header = styled.header(
   props => ({
-    backgroundColor: props.backgroundColor || `indigo`,
+    backgroundColor: `#fff`,
     zIndex: 200,
     margin: `0 auto`,
-    padding: `1em 15px 0`,
+    padding: `1em 1.5rem 0`,
     width: `100%`,
     textAlign: `center`,
-    fontFamily: `Lato`,
+    fontFamily: `Arial`,
   })
 )
 
-// export const siteTitle = css`
-//   text-decoration: none;
-//   margin: 1rem 0 0;
-//   color: #fff;
-//   text-align: center;
-//   font-weight: normal;
-// `
-
 export const Image = styled(Img)`
-  height: 160px;
-  width: 160px;
+  height: 16rem;
+  width: 16rem;
   border-radius: 50%;
   vertical-align: middle;
   margin: 0 auto;
-  border-radius: 80px;
-  border: 1px solid #fff;
+  border-radius: 8rem;
   display: block !important;
+  border: .4rem solid #F4F6F7;
 `
 
 export const Heading1 = styled.h1`
   margin: .9em 0 0 0;
   padding: 0;
   font-weight: 300;
-  font-size: 1.4em;
-  line-height: 1.4;
+  font-size: 2.25rem;
+  line-height: 1.5em;
   -webkit-backface-visibility: hidden;
   font-family: Lato, sans-serif;
 `
@@ -56,51 +48,80 @@ export const H1Link = styled(Link)`
 `
 
 export const Subhead = styled.p`
-  font-size: 1em;
+  font-size: 1.6rem;
   margin: .1em 0 .6em;
   display: inline-block;
   font-style: italic;
-  padding: 3px 10px;
+  padding: .3rem 1rem;
   background: #FAF46A;
   color: #345;
   color: rgba(0,0,0,.7);
-  border-radius: 4px;
+  border-radius: .4rem;
   line-height: 1;
   text-transform: lowercase;
 `
 
-export const Nav = styled.nav`
-  height: 40px;
-  max-width: none;
-  position: relative;
-  display: block;
-  margin: .9em auto 0 auto;
-  padding: 0;
-  list-style: none;
-  line-height: 1.8;
+export const Nav = styled.ul`
+    height: 6rem;
+    position: relative;
+    display: block;
+    margin: .9em auto 0;
+    padding: 0;
+    list-style: none;
 `
 
-// export const NavLi = css`
-//   position: absolute;
-//   visibility: hidden;
-//   width: 100%;
-//   display: inline-block;
-//   margin-bottom: 10px;
-//   text-align: center;
-//   text-decoration: none;
-// `
+
+export const NavItem = styled.li`
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-decoration: none;
+  width: 30%;
+  position: static;
+  max-width: none;
+`
 
 export const NavLink = styled(Link)`
-  width: auto;
-  font-size: 150%;
-  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  position: static;
   color: #D0DADC;
+  letter-spacing: -2px;
   text-decoration: none;
-  font-weight: 800;
-  font-size: 200%;
-  margin: 0 1rem;
-  text-transform: lowercase;
+  font-weight: 700;
+  font-size: 2.7rem;
+  cursor: pointer;
   &:hover {
+    color: hsla(197,92%,68%,1);
     color: #345;
   }
+`
+
+export const RuleWrapper = styled.h2`
+  position: relative;
+  max-width: 100%;
+  margin: 1em auto;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: 3px;
+    width: 100%;
+    border-bottom: 4px solid #F4F6F7;
+  }
+`
+export const RuleSpan = css`
+  position: relative;
+  display: inline-block;
+  padding-right: 1.4em;
+  background: #fff;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-family: "Lato";
 `

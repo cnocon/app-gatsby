@@ -6,6 +6,7 @@
 
 // You can delete this file if you're not using it
 import "./src/styles/fonts/fontello/css/fontello.css"
+// import "./src/styles/fontello.css"
 // import "./src/styles/fonts/font-awesome/css/font-awesome.min.css"
 // import "./src/styles/flexslider.css"
 // import "./src/styles/jquery.fancybox-1.3.4.css"

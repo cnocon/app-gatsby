@@ -5,8 +5,9 @@ export const Container = styled.div(
   props => ({
     position: `relative`,
     margin: `0 auto`,
-    maxWidth: 1100,
-    padding: `1.0875rem 1.45rem`,
+    width: props.width || `100%`,
+    maxWidth: props.maxWidth || 1140,
+    padding: `1.74rem 2.32rem`,
     display: props.display || `block`,
     flexDirection: props.flexDirection || `column`,
     alignItems: props.alignItems || `initial`,

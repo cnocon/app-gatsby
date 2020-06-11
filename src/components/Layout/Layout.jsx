@@ -8,23 +8,20 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Header from "../Header/Header"
+
 import "../layout.css"
 import * as Styled from "./Layout.styles"
 
-const Layout = ({ children, classNames }) => {
+const Layout = (props) => {
   return (
-    <>
-      <Header />
-      <Styled.Container className="wrapper">
-        <main className={classNames}>{children}</main>
+      <Styled.Container className="wrapper" {...props}>
+        <main className={props.classNames}>{props.children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </Styled.Container>
-    </>
   )
 }
 

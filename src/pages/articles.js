@@ -1,6 +1,7 @@
 import React from "react"
-import PageHeader from "../components/PageHeader"
+import PageHeader from "../components/PageHeader/PageHeader"
 import Layout from "../components/Layout/Layout"
+import Header from "../components/Header/Header"
 import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 import PostPreview from "../components/Post/PostPreview"
@@ -12,11 +13,14 @@ const Articles = ({ data }) => {
     });
 
   return (
-    <Layout classNames="blog-posts readable-content">
-      <SEO stitle="Front End Development Articles"/>
-      <PageHeader pageHeader="Recent Articles" hideHeader={true}/>
+    <>
+    <Layout className="blog-posts" maxWidth="96rem" width={`90%`}>
+      <PageHeader pageHeader="Recent Posts" />
+      <Header ruleTitle="Latest from the Blog" ruleIcon="icon-rss"/>
+      <SEO stitle="Front End Development Blog"/>
       {posts}
     </Layout>
+    </>
   )
 }
 

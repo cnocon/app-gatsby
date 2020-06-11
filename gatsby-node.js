@@ -87,7 +87,7 @@ exports.createPages = async ({ actions, graphql }) => {
         posts: group.nodes,
         breadcrumbs: [
           {
-            name: `All Articles`,
+            name: `Blog`,
             path: `/articles`,
           },
         ]
@@ -103,7 +103,7 @@ exports.createPages = async ({ actions, graphql }) => {
         post: node,
         breadcrumbs: [
           {
-            name: `Articles`,
+            name: `Blog`,
             path: `/articles`,
           },
         ]

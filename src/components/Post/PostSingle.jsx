@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from 'gatsby'
 import Layout from "../Layout/Layout"
-import PageHeader from "../PageHeader"
+import Header from "../Header/Header"
+import PageHeader from "../PageHeader/PageHeader"
 import SEO from "../seo"
 import ReactHtmlParser from 'react-html-parser';
 
@@ -14,13 +15,14 @@ const PostSingle = ({...data}) => {
   })
 
   return (
-    <Layout classNames="blog-single readable-content">
+    <Layout maxWidth="96rem" width={`90%`}>
+      <PageHeader pageHeader={post.title} breadcrumbs={breadcrumbs} />
+      <Header ruleTitle={`Level: ${post.tags[0].name.toUpperCase()}`} ruleIcon="icon-chart-bar"/>
       <SEO stitle={post.title}/>
-      <section className={`${post.slug}`}>
-        <PageHeader pageHeader={post.title} hideHeader={true} breadcrumbs={breadcrumbs} />
+      <section className={`${post.slug}`} style={{fontSize: '1.6rem'}}>
         <article className="hentry post post-single">
           <header className="">
-            <h1 className="">{post.title}</h1>
+            <h1 style={{fontSize: `2.75rem`, margin: `.25em 0 .5em`}}>{post.title}</h1>
             <div className="entry-meta">
               <span className="posted-in">posted in {links}</span>
               <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>

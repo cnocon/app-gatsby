@@ -18,11 +18,11 @@ const Event = ({ current, data, type }) => {
 
   if (type === 'work') {
     return (
-      <div className={`event ${current ? 'current' : null}`}>
+      <div className={`event ${current ? 'current' : null}`} style={{fontSize: '1.25rem'}}>
         <span className="date">{data.year}</span>
-        <h4>{data.position}</h4>
+        <h4 style={{fontSize: '1.4rem'}}>{data.position}</h4>
         <h5>{data.company}</h5>
-        <small>{data.startDate} - {data.endDate}</small>
+        <span style={{fontSize: '1.1rem'}}>{data.startDate} - {data.endDate}</span>
         {/* <p>{data.desc}</p> */}
         <ul className="list">
           {listItems}
@@ -31,14 +31,11 @@ const Event = ({ current, data, type }) => {
     )
   } else {
     return (
-      <div className="event">
+      <div className="event" style={{fontSize: '1.25rem'}}>
         {/* <span className="date">{data.year}</span> */}
-        <h4>{data.position}</h4>
+        <h4 style={{fontSize: '1.4rem'}}>{data.position}</h4>
         <h5>{data.company}</h5>
-
-        <small>{data.timespan}</small>
-
-
+        <small style={{fontSize: '1.1rem'}}>{data.timespan}</small>
         {data.desc ? <p>{data.desc}</p> : null}
 
 
