@@ -31,7 +31,7 @@ const IndexPage = () => {
 
   return (
     <Layout classNames="resume">
-      <SEO stitle="Home | Résumé" />
+      <SEO stitle="Résumé" />
       <div className="row">
         <div className="col-md-7 col-lg-7 left-col">
           <h2><i className="fas fa-flask"></i>Work History</h2>
@@ -39,9 +39,9 @@ const IndexPage = () => {
             {workEvents}
           </div>
 
-          <h2><i className="fas fa-graduation-cap"></i>Education</h2>
+          {/* <h2><i className="fas fa-graduation-cap"></i>Education</h2> */}
           {/* <div className="timeline"> */}
-            {eduEvents}
+            {/* {eduEvents} */}
           {/* </div> */}
         </div>
 
@@ -51,10 +51,14 @@ const IndexPage = () => {
             {skills}
           </div>
 
+
+          <div className="card mt-4"><blockquote className="text-xs-center text-sm-right"><i className="fas fa-quote-left"></i>How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.<cite title="Annie Dillard"> Annie Dillard</cite></blockquote></div>
+
           <h2>Assets</h2>
           <ul className="list"><li className="asset">Empathy to be an effective teammate</li><li className="asset">Organizational abilities for managing projects independently</li><li className="asset">Research skills to find the best solutions to new challenges</li><li className="asset">Enthusiasm and passion for front end work</li><li className="asset">Positive attitude and willingness to handle a wide variety of responsibilities</li><li className="asset">Effective communicator with people from varying technical backgrounds</li><li className="asset">Dedicated to ongoing professional development</li><li className="asset">Natural problem solver</li><li className="asset">5+ years of Agile experience</li><li className="asset">10+ years of experience working on web applications in various capacities</li></ul>
 
-          <div className="card mt-4"><blockquote className="text-xs-center text-sm-right"><i className="fas fa-quote-left"></i>How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.<cite title="Annie Dillard"> Annie Dillard</cite></blockquote></div>
+          <h2>Education</h2>
+          {eduEvents}
         </div>
 
       </div>

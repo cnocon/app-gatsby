@@ -12,7 +12,7 @@ const Event = ({ current, data, type }) => {
 
   const awards = data.awards.map((item, i) => {
     return (
-      <li key={i}><i className="fa fa-trophy"></i> {item.name}<small>{item.detail}</small></li>
+      <h5 key={i} className="award"><i className="fa fa-trophy"></i> {item.name}<span>{item.detail}</span></h5>
     )
   })
 
@@ -31,18 +31,18 @@ const Event = ({ current, data, type }) => {
     )
   } else {
     return (
-      <div className={`event ${current ? 'current' : null}`}>
-        <span className="date">{data.year}</span>
+      <div className="event">
+        {/* <span className="date">{data.year}</span> */}
         <h4>{data.position}</h4>
         <h5>{data.company}</h5>
-        <small>{data.startDate} - {data.endDate}</small>
-        {/* <p>{data.desc}</p> */}
 
-        {listItems}
+        <small>{data.timespan}</small>
 
-        <ul className="awards">
-          {awards}
-        </ul>
+
+        {data.desc ? <p>{data.desc}</p> : null}
+
+
+        {awards ? awards : null }
       </div>
     )
 
