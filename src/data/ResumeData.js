@@ -131,17 +131,18 @@ const ResumeData = {
     // }
   ],
   education: [
+    // {
+    //   year: 2014,
+    //   startDate: "2014",
+    //   endDate: "2014",
+    //   timespan: "Spring 2014",
+    //   position: "Student/Graduate",
+    //   company: "Dev Bootcamp (Chicago)",
+    //   desc: "Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field.",
+    //   descList: ["Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field."],
+    //   awards: []
+    // },
     {
-      year: 2014,
-      startDate: "2014",
-      endDate: "2014",
-      timespan: "Spring 2014",
-      position: "Student/Graduate",
-      company: "Dev Bootcamp (Chicago)",
-      desc: "Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field.",
-      descList: ["Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field."],
-      awards: []
-    }, {
       year: 2011,
       startDate: "2007",
       endDate: "2011",
