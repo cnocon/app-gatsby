@@ -100,10 +100,20 @@ a.button.colored.blue:hover {
     background-color: #fff;
     background-clip: border-box;
     /* border: 1px solid rgba(0,0,0,.125); */
-    border: 3px solid #EDF1F3;
+    border: 3px solid #5BCF80;
     /* border-radius: .25rem; */
     border-radius: 6px;
-    margin-bottom: 60px;
+    padding: 0;
+    margin: 40px 0 60px;
+    max-width: 350px;
+}
+
+@media screen and (max-width: 1002px) {
+  .card {
+    max-width: 400px;
+    margin: 0 auto 60px;
+
+  }
 }
 
 .card blockquote {
@@ -111,13 +121,13 @@ a.button.colored.blue:hover {
   margin: 1.6em 0;
   padding: 0 2em;
   text-align: right;
-  font-size: 1.8em;
+  font-size: 2.5rem;
   line-height: 1.2;
   font-weight: bold;
   letter-spacing: -1px;
-  font-size: 1.8em;
-  padding: 0 2em;
   font-family: "Roboto", Monaco, sans-serif;
+  line-height: 1.5em;
+  padding: 1rem 2em 0;
 }
 
 .card blockquote::before {
@@ -200,16 +210,21 @@ a.button.colored.blue:hover {
   }
 }
 
-
+.event {
+  max-width: 500px !important;
+}
 
 .skill-unit h4 {
   margin-bottom: -28px;
   font-size: 12px;
+  color: #345;
 }
 
 .skill-unit .bar .progress {
   /* background-color: hsl(139, 70%, 65%); */
   /* background-color: rgba(118,215,254,.35); */
+  background-color: #76d7fe59;
+
 }
 
 .bar .progress {
@@ -290,7 +305,7 @@ a.button.colored.blue:hover {
   }
 }
 
-.right-col h2:first-of-type {
+.right-col > h2:first-of-type {
   line-height: 64px;
 }
 
@@ -304,8 +319,10 @@ a.button.colored.blue:hover {
   padding-left: 34px;
 }
 
-.list {
-  margin-bottom: 60px;
+
+.right-col .list {
+  /* margin-bottom: 60px; */
+  display: inline-block;
 }
 
 .event h4 {
@@ -402,7 +419,7 @@ html {
 .event span,
 .event small {
   display: block;
-  text-align: center;
+  text-align: left;
   line-height: 1;
   margin-bottom: 10px;
   font-weight: 600;
@@ -422,4 +439,8 @@ ul li {
 
 ul.list li.asset {
   padding-bottom: 10px;
+}
+
+article:not(.event) ul.list {
+  /* margin-bottom: 60px !important; */
 }

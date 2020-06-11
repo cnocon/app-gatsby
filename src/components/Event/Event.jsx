@@ -12,35 +12,38 @@ const Event = ({ current, data, type }) => {
 
   const awards = data.awards.map((item, i) => {
     return (
-      <h5 key={i} className="award"><i className="fa fa-trophy"></i> {item.name}<span>{item.detail}</span></h5>
+      <h5 key={i} className="award"><i className="fa fa-trophy"></i> {item.name}<span style={{textAlign: 'left'}}>{item.detail}</span></h5>
     )
   })
 
   if (type === 'work') {
     return (
-      <div className={`event ${current ? 'current' : null}`} style={{fontSize: '1.25rem'}}>
+
+      <article className={`event ${current ? `current` : ''}`} style={{fontSize: '1.25rem'}}>
         <span className="date">{data.year}</span>
-        <h4 style={{fontSize: '1.4rem'}}>{data.position}</h4>
-        <h5>{data.company}</h5>
-        <span style={{fontSize: '1.1rem'}}>{data.startDate} - {data.endDate}</span>
+        <header>
+          <h4 style={{fontSize: '1.4rem'}}>{data.position}</h4>
+          <h5>{data.company}</h5>
+          <span style={{fontSize: '1.1rem', textAlign: 'left'}} className="range">{data.startDate} - {data.endDate}</span>
+        </header>
         {/* <p>{data.desc}</p> */}
         <ul className="list">
           {listItems}
         </ul>
-      </div>
+      </article>
     )
   } else {
     return (
-      <div className="event" style={{fontSize: '1.25rem'}}>
+      <article className="event" style={{fontSize: '1.25rem'}}>
         {/* <span className="date">{data.year}</span> */}
-        <h4 style={{fontSize: '1.4rem'}}>{data.position}</h4>
-        <h5>{data.company}</h5>
-        <small style={{fontSize: '1.1rem'}}>{data.timespan}</small>
-        {data.desc ? <p>{data.desc}</p> : null}
-
-
-        {awards ? awards : null }
-      </div>
+        <header>
+          <h4 style={{fontSize: '1.4rem'}}>{data.position}</h4>
+          <h5>{data.company}</h5>
+          <small style={{fontSize: '1.1rem'}}>{data.timespan}</small>
+          {data.desc ? <p>{data.desc}</p> : null}
+        </header>
+        {awards ? awards : false }
+      </article>
     )
 
   }
