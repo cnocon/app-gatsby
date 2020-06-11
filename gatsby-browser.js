@@ -18,4 +18,5 @@ import "./src/styles/animate.css"
 import "./src/styles/pe-7-icon-stroke.css"
 import "./src/styles/global.css"
 import "./src/styles/main.css"
+import "./src/styles/custom.css"
 // require('@fortawesome/fontawesome-svg-core')
