@@ -28,7 +28,9 @@ const PostSingle = ({...data}) => {
               <span className="posted-in">posted in {links}</span>
               <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>
             </div>
+            <div class="addthis_inline_share_toolbox_vo2p"></div>
           </header>
+
           <div className="entry-content clearfix" style={{fontSize: `1.6rem`}}>{ReactHtmlParser(post.body)}</div>
         </ReadableContent>
       </section>
