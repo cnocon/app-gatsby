@@ -27,7 +27,7 @@ const ResumeData = {
       position: "Front End Developer",
       company: "Clearlink | Salt Lake City, UT",
       desc: "",
-      descList: ["Use mockups to code responsive web pages using Handlebars, SCSS, and a homegrown component library", "Assist in maintaining and extending proprietary applications using Javascript, Npm and Node", "Migrate websites into a Gatsby, GraphQL, and Emotion powered front end."],
+      descList: ["Use mockups to code responsive web pages using Handlebars, SCSS, and a homegrown component library", "Assist in maintaining and extending proprietary applications using Javascript, NPM, and Node", "Migrate websites into a Gatsby, GraphQL, and Emotion powered front end."],
       awards: [
         // {
         //   name: "Treehouse Badges",
@@ -66,16 +66,16 @@ const ResumeData = {
         }
       ]
     },
-    // {
-    //   year: "2014",
-    //   startDate: "2014",
-    //   endDate: "2015",
-    //   position: "Junior Front End Engineer",
-    //   company: "DialogTech",
-    //   desc: "As a member of the Front-End Engineering team worked on several applications to assist our clients’ marketing efforts, including phone routing, tracking, and analytics tools. The primary framework we used was Backbone, although at the end of my tenure there we started transitioning into a React and Node based implementation. I almost exclusively coded in vanilla Javascript (ES5), although we used used Underscore and jQuery occasionally. I built out mockups using LESS and a Handlebars.",
-    //   descList: ["Code extensively in Javascript to extend and support several single page applications built in Backbone, leveraging Javascript libraries including JQuery, Underscore and Lodash", "Build mockups of new views to spec with LESS, Mustache, and Handlebars, careful to consider accessibility requirements and cross-browser compatibility of implementations","Develop and deploy code in an all Javascript web stack: MongoDB, Node, Express and Backbone"],
-    //   awards: []
-    // },
+    {
+      year: "2014",
+      startDate: "2014",
+      endDate: "2015",
+      position: "Junior Front End Engineer",
+      company: "DialogTech",
+      desc: "As a member of the Front-End Engineering team worked on several applications to assist our clients’ marketing efforts, including phone routing, tracking, and analytics tools. The primary framework we used was Backbone, although at the end of my tenure there we started transitioning into a React and Node based implementation. I almost exclusively coded in vanilla Javascript (ES5), although we used used Underscore and jQuery occasionally. I built out mockups using LESS and a Handlebars.",
+      descList: ["Code extensively in Javascript to extend and support several single page applications built in Backbone, leveraging Javascript libraries including JQuery, Underscore and Lodash", "Build mockups of new views to spec with LESS, Mustache, and Handlebars, careful to consider accessibility requirements and cross-browser compatibility of implementations","Develop and deploy code in an all Javascript web stack: MongoDB, Node, Express and Backbone"],
+      awards: []
+    },
     // {
     //   year: "2014",
     //   startDate: "2014",
