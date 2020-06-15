@@ -34,7 +34,7 @@ const IndexPage = () => {
       <Layout maxWidth="96rem" width="90%">
         <PageHeader pageHeader="" breadcrumbs={false}/>
         <Header ruleTitle={`Résumé`.toUpperCase()} ruleIcon="icon-leaf"/>
-        <SEO stitle="Résumé" />
+        <SEO stitle="Home" />
         <div className="row">
           <div className="col-md-6 col-lg-7 left-col">
             <h2><i className="fas fa-flask"></i>Work History</h2>

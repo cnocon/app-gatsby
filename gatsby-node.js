@@ -7,10 +7,11 @@
 // You can delete this file if you're not using it
 const path = require(`path`)
 // console.log(process.env)
+
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
     query {
-      allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git"]}}}}) {
+      allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git", "sass"]}}}}, sort: {fields: published}) {
         edges {
           node {
             id
@@ -78,7 +79,7 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
 
-  data.allButterPost.group.forEach(({ ...group }) => {
+  data.allButterPost.group.reverse().forEach(({ ...group }) => {
     actions.createPage({
       path: `/articles/category/${group.fieldValue.toLowerCase().replace(/\s/g, '-')}`,
       component: path.resolve(`./src/components/Category/Category.jsx`),
@@ -95,7 +96,7 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
-  data.allButterPost.edges.forEach(({ node }) => {
+  data.allButterPost.edges.reverse().forEach(({ node }) => {
     actions.createPage({
       path: `/articles/${node.slug}`,
       component: path.resolve(`./src/components/Post/PostSingle.jsx`),

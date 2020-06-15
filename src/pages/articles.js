@@ -7,20 +7,18 @@ import { graphql } from 'gatsby'
 import PostPreview from "../components/Post/PostPreview"
 
 const Articles = ({ data }) => {
-  const posts = data.allButterPost.edges
+  const posts = data.allButterPost.edges.reverse()
     .map(({ node }) => {
       return <PostPreview post={node} key={node.published}/>
     });
 
   return (
-    <>
     <Layout className="blog-posts" maxWidth="96rem" width={`90%`}>
       <PageHeader pageHeader="Recent Posts" />
       <Header ruleTitle="Latest from the Blog" ruleIcon="icon-rss"/>
       <SEO stitle="Front End Development Blog"/>
       {posts}
     </Layout>
-    </>
   )
 }
 
@@ -28,7 +26,7 @@ export default Articles
 
 export const pageQuery = graphql`
   query {
-    allButterPost {
+    allButterPost(sort: {fields: published}) {
       edges {
         node {
           title

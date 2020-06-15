@@ -199,9 +199,14 @@ a.button.colored.blue:hover {
 .timeline .event.current::before {
   top: 34px;
 }
-
+.timeline .event.current .date {
+  background: #345;
+  color: #fff;
+}
 .timeline .event .date {
   top: 34px;
+  background-color: #d0f1ff;
+  color: #345;
 }
 
 @media screen and (max-width: 76rem) {
@@ -458,4 +463,66 @@ article:not(.event) ul.list {
 
 .event header {
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  header .entry-meta .posted-in {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header .entry-meta .posted-on {
+    display: block;
+  }
+}
+
+.entry-meta .posted-on time.entry-date {
+  display: inline-block;
+}
+
+.post blockquote {
+  position: relative;
+  margin: 1.6em 0;
+  padding: 0 2em;
+  text-align: right;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: bold;
+  letter-spacing: -1px;
+  font-family: "Roboto", Monaco, sans-serif;
+  line-height: 1.5em;
+  padding: 1rem 2em 0;
+}
+.post blockquote::before {
+  display: none;
+}
+.post blockquote p {
+  display: inline-block;
+  padding-left: 30px;
+}
+.post blockquote i {
+  display: block;
+  position: absolute;
+  top: -0.6em;
+  font-size: 2.5rem;
+  display: block;
+  content: "\F10D";
+  line-height: 1;
+  position: absolute;
+  left: 0;
+  color: #DDE4E6;
+}
+
+.entry-content a,
+.entry-content a:active,
+.entry-content a:focus {
+  color: hsla(197,100%,50%,1);
+}
+
+.entry-content a:hover,
+.entry-content a:active,
+.entry-content a:focus {
+  text-decoration: none !important;
+  border-bottom: 0;
 }

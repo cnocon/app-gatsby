@@ -21,7 +21,6 @@ const PostSingle = ({...data}) => {
       <Header ruleTitle={`Level: ${post.tags[0].name.toUpperCase()}`} ruleIcon="icon-chart-bar"/>
       <SEO stitle={post.title}/>
       <section>
-
         <ReadableContent className="hentry post post-single">
           <header style={{fontSize: `1.6rem`}}>
             <h1 style={{fontSize: `2.75rem`, lineHeight: `1.25em`, margin: `.25em 0 .5em`}}>{post.title}</h1>

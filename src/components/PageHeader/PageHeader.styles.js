@@ -34,3 +34,13 @@ export const RightBlock = css`
   }
 `
 
+export const Icon = css`
+  color: #d0f1ff;
+  margin: 0 1rem;
+  font-size: 2rem;
+  line-height: 1;
+
+  &:hover {
+    color: hsla(197,92%,68%,1);
+  }
+`
