@@ -11,13 +11,14 @@ module.exports = {
       lighter: 'hsla(198, 100%, 91%, 1)'
     },
     tertiary: {
-      base: '#FAF46A',
-      darker: '',
-      lighter: ''
+      base: 'hsl(58, 94%, 70%)',
+      darker: 'hsl(58, 100%, 50%)',
+      lighter: 'hsl(58, 100%, 80%)'
     },
     grays: {
       border: '#f4f6f7',
-      text: '#d0dadc'
+      text: '#d0dadc',
+      background: 'whitesmoke'
     }
   },
   fonts: {

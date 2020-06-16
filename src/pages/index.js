@@ -40,15 +40,8 @@ const IndexPage = () => {
             <h2><i className="fas fa-flask"></i>Work History</h2>
             <div className=" timeline">
               {workEvents}
-              <h2>Education</h2>
-            {eduEvents}
             </div>
 
-
-            {/* <h2><i className="fas fa-graduation-cap"></i>Education</h2> */}
-            {/* <div className="timeline"> */}
-              {/* {eduEvents} */}
-            {/* </div> */}
           </div>
 
           <div className="col-md-6 col-lg-5 right-col">
@@ -57,10 +50,13 @@ const IndexPage = () => {
               {skills}
             </div>
 
+            <h2>Education</h2>
+            {eduEvents}
+
             <article><h2>Assets</h2>
             <ul className="list" style={{fontSize: '1.25rem'}}><li className="asset">Empathy to be an effective teammate</li><li className="asset">Organizational abilities for managing projects independently</li><li className="asset">Research skills to find the best solutions to new challenges</li><li className="asset">Enthusiasm and passion for front end work</li><li className="asset">Positive attitude and willingness to handle a wide variety of responsibilities</li><li className="asset">Effective communicator with people from varying technical backgrounds</li><li className="asset">Dedicated to ongoing professional development</li><li className="asset">Natural problem solver</li><li className="asset">5+ years of Agile experience</li><li className="asset">10+ years of experience working on web applications in various capacities</li></ul></article>
 
-            <article><div className="card mt-4"><blockquote className="text-xs-center text-sm-right"><i className="fas fa-quote-left"></i>How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.<cite title="Annie Dillard"> Annie Dillard</cite></blockquote></div></article>
+            <article><div className="card mt-4"><blockquote className="text-xs-center text-sm-right"><i className="fas fa-quote-left"></i>How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.<cite title="Annie Dillard">&mdash; Annie Dillard</cite></blockquote></div></article>
           </div>
 
         </div>

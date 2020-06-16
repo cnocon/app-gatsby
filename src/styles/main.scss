@@ -2910,19 +2910,7 @@ h6 {
 p {
  	margin: 1.2em 0
 	}
-/* blockquote  */
-blockquote {
- 	position: relative; margin: 2em 0; padding: .3em 2em 1em 2.0em; font-size: 1.6em; font-family: Georgia, "Times New Roman", Times, serif; font-weight: 300; font-style: italic;
-	}
-blockquote:before {
- 	display: block; content: "\f10d"; line-height: 1; font-size: 1.2em; position: absolute; left: 0; top: -0.1em; color: #DDE4E6;
-	}
-blockquote cite {
- 	display: block; font-size: 14px; letter-spacing: .04em; text-align: right; padding-right: 1em; margin-top: 12px; font-style: normal; font-weight: 400; color: #B7C6C9;
-	}
-blockquote cite:before {
- 	content: "\2014 \2009"
-	}
+
 hr {
  	padding: .6em 0 1em 0; margin-bottom: 3em; outline: 0; border-width: 0 0 1px 0; border-style: solid; border-color: #eee;
 	}
@@ -3664,21 +3652,7 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
 		}
 
 /* SKILLS */
-.skillset {
- 	padding: 0 0 3.2em 0
-	}
-.skill-unit {
- 	padding-bottom: 0
-	}
-	.skill-unit h4 {
- 		margin-bottom: -26px; font-weight: 800; font-size: 11px; letter-spacing: 1px; color: #fff; position: relative; z-index: 100; padding-left: 14px; text-transform: uppercase;
-		}
-	.skill-unit .bar {
-		position: relative; width: 100%; height: 36px;
-		}
-		.skill-unit .bar .progress {
-	 		position: absolute; top: 0; left: 0; width: 0; height: 100%; border-radius: 4px; background : #5BCF80; /*box-shadow: 4px 4px 0 #e7e7e7;*/
-			}
+
 
 /* TESTIMONIAL */
 .testo-group {

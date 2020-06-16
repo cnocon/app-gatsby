@@ -27,7 +27,11 @@ const ResumeData = {
       position: "Front End Developer",
       company: "Clearlink | Salt Lake City, UT",
       desc: "",
-      descList: ["Use mockups to code responsive web pages using Handlebars, SCSS, and a homegrown component library", "Assist in maintaining and extending proprietary applications using Javascript, NPM, and Node", "Migrate websites into a Gatsby, GraphQL, and Emotion powered front end."],
+      descList: [
+        "Use mockups to code responsive web pages using Handlebars, SCSS, and a proprietary component library",
+        "Assist in maintaining and extending proprietary applications using Javascript, NPM, and Node",
+        // "Migrate websites into a Gatsby, GraphQL, and Emotion powered front end."
+      ],
       awards: [
         // {
         //   name: "Treehouse Badges",
@@ -46,7 +50,13 @@ const ResumeData = {
       position: "Software Engineer",
       company: "The Scion Group | Chicago, IL",
       desc: "Our small team worked with a large number of APIs and data to populate a data warehouse stored in Snowflake. I worked heavily with tools like DataTables and HighCharts in order to help visualize meaning. The internal tool housing all the resulting insights is a Rails 5 App.",
-      descList: ["Launch a new Rails-based business intelligence platform from scratch on a two person team responsible for decision making and planning from start to finish", "Take ownership of front end maintenance and scaling using ERB, handcrafted SASS, HTML5, Javascript, Stimulus.js, ActionView, and a custom Bootstrap installation", "Engineer services for consuming data from varied 3rd party APIs", "Create data visualizations using Javascript libraries (e.g. Highcharts and DataTables)","Build and automate services to distribute dynamically generated reports using the AXLSX gem, DocRaptor, ActionMailer, and Heroku Scheduler"],
+      descList: [
+        "Launch a new Rails-based business intelligence platform from scratch on a two person team responsible for decision making and planning from start to finish",
+        "Take ownership of front end maintenance and scaling using ERB, handcrafted SASS, HTML5, Javascript, Stimulus.js, ActionView, and a custom Bootstrap installation",
+        "Engineer services for consuming data from various 3rd party APIs",
+        //  "Create data visualizations using Javascript libraries (e.g. Highcharts and DataTables)",
+        // "Build and automate services to distribute dynamically generated reports using the AXLSX gem, DocRaptor, ActionMailer, and Heroku Scheduler"
+      ],
       awards: []
     },
     {
@@ -55,7 +65,12 @@ const ResumeData = {
       endDate: "2017",
       position: "Software Engineer",
       company: "NCSA Next College Student Athlete | Chicago, IL",
-      descList: ["Serve simultaneously on both the UI and Software Engineering teams and float between teams as needed","Lead UI/UX design on project to build a tool for families to estimate federal loan amounts","Build and support existing Rails applications using TDD with RSPEC","Utilize Javascript, Slim, jQuery, CoffeeScript, and LESS to complete various front end work","Write API documentation for internal and publicly available APIs"],
+      descList: [
+        "Serve simultaneously on both the UI and Software Engineering teams and float between teams as needed",
+        // "Lead UI/UX design on project to build a tool for families to estimate federal loan amounts",
+        "Build and support existing Rails applications using TDD with RSPEC","Utilize Javascript, Slim, jQuery, CoffeeScript, and LESS for front end work",
+        // "Write API documentation for internal and publicly available APIs"
+      ],
       awards: [
         {
           name: "Teammate of the Sprint",
@@ -70,22 +85,27 @@ const ResumeData = {
       year: "2014",
       startDate: "2014",
       endDate: "2015",
-      position: "Junior Front End Engineer",
+      position: "Jr. Front End Engineer",
       company: "DialogTech",
       desc: "As a member of the Front-End Engineering team worked on several applications to assist our clients’ marketing efforts, including phone routing, tracking, and analytics tools. The primary framework we used was Backbone, although at the end of my tenure there we started transitioning into a React and Node based implementation. I almost exclusively coded in vanilla Javascript (ES5), although we used used Underscore and jQuery occasionally. I built out mockups using LESS and a Handlebars.",
-      descList: ["Code extensively in Javascript to extend and support several single page applications built in Backbone, leveraging Javascript libraries including JQuery, Underscore and Lodash", "Build mockups of new views to spec with LESS, Mustache, and Handlebars, careful to consider accessibility requirements and cross-browser compatibility of implementations","Develop and deploy code in an all Javascript web stack: MongoDB, Node, Express and Backbone"],
+      descList: [
+        "Code extensively in Javascript to extend and support several single page applications built in Backbone,",
+        // "Build mockups of new views to spec with LESS, Mustache, and Handlebars, careful to consider accessibility requirements and cross-browser compatibility of implementations",
+        "Build mockups of new views to spec in Backbone with LESS, Mustache, Lodash, and Handlebars",
+        "Develop and deploy code in an all Javascript web stack: MongoDB, Node, Express and Backbone"
+      ],
       awards: []
     },
-    // {
-    //   year: "2014",
-    //   startDate: "2014",
-    //   endDate: "2014",
-    //   position: "Rails Developer",
-    //   company: "Blueye Creative",
-    //   desc: "As a contractor, I worked on the MVC components for a Rails-based software application that would serve as an Airbnb-like product. Additionally, I was the sole developer responsible for building a database Wilson could use to track millions of racket purchases. This included writing a powerful algorithm to parse through years of inconsistently formatted records form Excel spreadsheets, as well as building out a front end for them to enter new purchase data efficiently in an aesthetically pleasing format.",
-    //   descList: ["Assist in building an Airbnb-like web application using Rails 4", "Build a new database for Wilson’s tennis racket inventory with a Microsoft Access front end","Parse through and import years of inconsistently formatted spreadsheet data with Ruby scripts"],
-    //   awards: []
-    // },
+    {
+      year: "2014",
+      startDate: "2014",
+      endDate: "2014",
+      position: "Rails Developer",
+      company: "Blueye Creative",
+      desc: "As a contractor, I worked on the MVC components for a Rails-based software application that would serve as an Airbnb-like product. Additionally, I was the sole developer responsible for building a database Wilson could use to track millions of racket purchases. This included writing a powerful algorithm to parse through years of inconsistently formatted records form Excel spreadsheets, as well as building out a front end for them to enter new purchase data efficiently in an aesthetically pleasing format.",
+      descList: ["Assist in building an Airbnb-like web application using Rails 4", "Build a new database for Wilson’s tennis racket inventory with a Microsoft Access front end","Parse through and import years of inconsistently formatted spreadsheet data with Ruby scripts"],
+      awards: []
+    },
     // {
     //   year: 2013,
     //   startDate: "2013",
@@ -104,9 +124,10 @@ const ResumeData = {
       company: "University of Notre Dame | Notre Dame, IN",
       desc: "I was the sole support developer for ~400 websites using our homegrown CMS, supporting the codebase for both the Rails app and the individual websites. Further, I trained clients to maintain their websites in our CMS with a focus on empowering them to generate content that would improve their search rankings and strive to reach the levels of accessibility/usability encouraged by WAI-ARIA.  I also created a series of responsive HTML email templates for brand-standards compliant email marketing for the Office of the Provost and the Office of the President, among others. I also had the occasional opportunity to build out custom designed mobile-first, responsive websites for university organizations.",
       descList: ["Sole support developer for ~400 websites using our homegrown CMS, providing support for both our Rails based CMS app and client websites",
-      "Train clients to maintain their websites in our CMS with a focus on empowering them to generate content that would improve their search rankings and strive to reach the levels of accessibility/usability encouraged by WAI-ARIA",
-      "Create a series of responsive, brand-standards compliant, HTML email templates for email marketing campaigns from the Office of the Provost and the Office of the President and many more",
-      "Build custom designs from PSDs into mobile-first, responsive websites for university organizations",
+      // "Train clients to maintain their websites in our CMS with a focus on empowering them to generate content that would improve their search rankings and strive to reach the levels of accessibility/usability encouraged by WAI-ARIA",
+      "Train clients to maintain their websites in our CMS with a focus on improving search rankings and good accessibility",
+      // "Create a series of responsive, brand-standards compliant, HTML email templates for email marketing campaigns from the Office of the Provost and the Office of the President and many more",
+      "Build custom designs from PSDs into mobile-first, responsive websites",
       "Excel at providing great customer service over the phone, in-person, and via email for clients"],
       awards: [
         {
@@ -168,16 +189,17 @@ const ResumeData = {
     {name: "Javascript (ES5, ES6)", percent: "85", icon: "fab fa-js-square"},
     {name: "SCSS, LESS, CSS", percent: "85", icon: "fab fa-sass"},
     {name: "HTML5", percent: "85", icon: "fab fa-html5"},
-    {name: "Ruby", percent: "85", icon: "pe-7s-diamond bold"},
-    {name: "Git", percent: "85", icon: "fab fa-git"},
-    {name: "RESTful APIs", percent: "75", icon: "pe-7s-network bold"},
-    {name: "Responsive Web Development", percent: "75", icon: "pe-7s-phone bold"},
+    {name: "React", percent: "80", icon: "fab fa-react"},
+    {name: "Responsive Web Development", percent: "80", icon: "pe-7s-phone bold"},
+    {name: "API Consumption", percent: "77", icon: "pe-7s-network bold"},
     // {name: "JS Libs (Highcharts, DataTables, jQuery, Stimulus)", percent: "75", icon: "pe-7s-graph3"},
-    {name: "React", percent: "70", icon: "fab fa-react"},
+    {name: "Ruby", percent: "75", icon: "pe-7s-diamond bold"},
+    {name: "Git", percent: "70", icon: "fab fa-git"},
     {name: "Node, NPM", percent: "70", icon: "fab fa-node-js"},
+    {name: "Gatsby", percent: "65", icon: "pe-7s-gleam bold"},
     {name: "Rails 5", percent: "60", icon: "pe-7s-diamond bold"},
-    {name: "SQL", percent: "50", icon: "pe-7s-gleam bold"},
-    {name: "Backbone", percent: "50", icon: "pe-7s-tools bold"}
+    // {name: "SQL", percent: "50", icon: "pe-7s-gleam bold"},
+    // {name: "Backbone", percent: "50", icon: "pe-7s-tools bold"}
   ],
   assets: [
     "Empathy to be an effective teammate",

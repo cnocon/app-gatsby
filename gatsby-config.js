@@ -9,12 +9,6 @@ module.exports = {
     twitter: `@cnocon`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        includePaths: ["/src/styles/*.scss"],
-      }
-    },
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-buttercms`,
@@ -44,6 +38,12 @@ module.exports = {
         icon: `src/images/cristin-io-favicon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["/src/styles/*.scss"],
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
