@@ -1,10 +1,10 @@
 import React from "react"
 import { ResumeData } from "../data/ResumeData"
 import Layout from "../components/Layout/Layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO/seo"
 import Event from "../components/Event/Event"
 import Header from "../components/Header/Header"
-import PageHeader from "../components/PageHeader/PageHeader"
+import TopBar from "../components/TopBar/TopBar"
 
 const IndexPage = () => {
   const workEvents = ResumeData.experience.map((item, i) => {
@@ -32,7 +32,7 @@ const IndexPage = () => {
   return (
 
       <Layout maxWidth="96rem" width="90%">
-        <PageHeader pageHeader="" breadcrumbs={false}/>
+        <TopBar pageHeader="" breadcrumbs={false}/>
         <Header ruleTitle={`Résumé`.toUpperCase()} ruleIcon="icon-leaf"/>
         <SEO stitle="Home" />
         <div className="row">

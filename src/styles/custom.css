@@ -258,7 +258,7 @@ a.button.colored.blue:hover {
   font-size: 16px;
   text-transform: uppercase;
   /* letter-spacing: 1px; */
-  font-weight: 800;
+  font-weight: 700;
   font-family: "Roboto", Monaco, sans-serif;
   opacity: .8;
   /* color: #C9D5D6;   */
@@ -360,10 +360,6 @@ a.button.colored.blue:hover {
 }
 
 
-.blog-posts .hentry {
-  margin-bottom: .5rem;
-}
-
 .post-preview .entry-content {
   padding-bottom: 0;
 }
@@ -447,14 +443,10 @@ ul.list li.asset {
   padding-bottom: 10px;
 }
 
-article:not(.event) ul.list {
-  /* margin-bottom: 60px !important; */
-}
-
 @media screen and (max-width: 767px) {
-.event h4, .event h5 {
-  text-align: left !important;
-}
+  .event h4, .event h5 {
+    text-align: left !important;
+  }
 }
 
 .left-col .timeline h2:last-of-type {
@@ -481,51 +473,6 @@ article:not(.event) ul.list {
   display: inline-block;
 }
 
-.post blockquote {
-  position: relative;
-  margin: 1.6em 0;
-  padding: 0 2em;
-  text-align: right;
-  font-size: 2rem;
-  line-height: 1.2;
-  font-weight: bold;
-  letter-spacing: -1px;
-  font-family: "Roboto", Monaco, sans-serif;
-  line-height: 1.5em;
-  padding: 1rem 2em 0;
-}
-.post blockquote::before {
-  display: none;
-}
-.post blockquote p {
-  display: inline-block;
-  padding-left: 30px;
-}
-.post blockquote i {
-  display: block;
-  position: absolute;
-  top: -0.6em;
-  font-size: 2.5rem;
-  display: block;
-  content: "\F10D";
-  line-height: 1;
-  position: absolute;
-  left: 0;
-  color: #DDE4E6;
-}
-
-.entry-content a,
-.entry-content a:active,
-.entry-content a:focus {
-  color: hsla(197,100%,50%,1);
-}
-
-.entry-content a:hover,
-.entry-content a:active,
-.entry-content a:focus {
-  text-decoration: none !important;
-  border-bottom: 0;
-}
 
 ol, ul {
   display: block;
@@ -541,10 +488,30 @@ ul li {
   margin-left: 10px;
 }
 
-.entry-content .main-content img {
-  padding: 1rem;
-  border: 2px solid #F4F6F7;
-  border-radius: 5px;
-  display: block;
+
+
+pre.prettyprint,
+pre.prettyprinted {
+  border: 2px solid #F4F6F7 !important;
+  border-radius: 5px !important;
+  -webkit-font-smoothing: antialiased;
+    font-size: .825em;
+  line-height: 1.75em;
   margin: 2rem auto;
+}
+
+
+code {
+  padding: 0 3px 2px;
+  /* margin-bottom: 4em; */
+  font-size: .825em;
+  color: #000;
+  white-space: pre;
+  overflow: auto;
+  background-color: #EDF1F3;
+}
+
+
+.blog-posts .hentry {
+  margin-bottom: .5rem;
 }

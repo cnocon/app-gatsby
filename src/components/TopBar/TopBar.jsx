@@ -1,9 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import * as Styled from "./PageHeader.styles"
+import * as Styled from "./TopBar.styles"
 
-
-export default function PageHeader({ pageHeader, breadcrumbs }) {
+export default function TopBar({ pageHeader, breadcrumbs }) {
   const crumbs = breadcrumbs || [{name: pageHeader, path: null}]
   const allBreadCrumbs = crumbs.map((crumb, i) => {
     if (crumb.path) {

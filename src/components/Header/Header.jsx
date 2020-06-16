@@ -17,23 +17,13 @@ const HomeRule = ({title, icon}) => {
 };
 
 const Header = ({ ruleTitle, ruleIcon }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "square-portrait.png" }) {
-        childImageSharp {
-          fixed(width: 160, height: 160) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Styled.Header>
       <Container>
 
-        <Styled.Image fixed={data.placeholderImage.childImageSharp.fixed} />
+        {/* <Styled.Image fixed={data.placeholderImage.childImageSharp.fixed} /> */}
+        <img src="/assets/images/square-portrait.png" alt="" />
         <Styled.Heading1>
           {/* <Styled.H1Link to="/" style={{color: 'red', fontWeight: 800}}>Site Under Construction</Styled.H1Link> */}
           <Styled.H1Link to="/">Cristin O'Connor</Styled.H1Link>

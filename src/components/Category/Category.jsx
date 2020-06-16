@@ -1,9 +1,9 @@
 import React from "react"
-import PageHeader from "../PageHeader/PageHeader"
+import TopBar from "../TopBar/TopBar"
 import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
-import SEO from "../seo"
-import PostPreview from "../Post/PostPreview"
+import SEO from "../SEO/seo"
+import PostPreview from "../PostPreview/PostPreview"
 
 const Category = ({ ...data}) => {
   const categoryName = data.pageContext.category
@@ -15,7 +15,7 @@ const Category = ({ ...data}) => {
   return (
     <>
     <Layout className="blog-posts" maxWidth="96rem" width={`90%`}>
-      <PageHeader pageHeader={categoryName} breadcrumbs={breadcrumbs} />
+      <TopBar pageHeader={categoryName} breadcrumbs={breadcrumbs} />
       <Header ruleTitle={`Posted in ${categoryName.toUpperCase()}`} ruleIcon="icon-article-alt"/>
       <SEO stitle={`${categoryName} | Front End Development Articles`} />
       <section>

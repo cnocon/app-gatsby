@@ -3642,7 +3642,7 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
  	border-right-color: #EDF1F3; border-width: 15px; margin-top: -15px;
 	}
 	.event .date {
-		position: absolute; top: 45%; margin-top: -24px; left: -106px; width: 68px; line-height: 58px; text-align: center; background: #d0f1ff; display: block; z-index: 120; color: #fff; border-radius: 50%; border: 5px solid #FFF; font-family: Oswald; font-weight: 400; font-size: 11px; letter-spacing: 1px;
+		position: absolute; top: 45%; margin-top: -24px; left: -106px; width: 68px; line-height: 58px; text-align: center; background: #d0f1ff; display: block; z-index: 120; color: #fff; border-radius: 50%; border: 5px solid #FFF; font-family: "Lato, sans-serif"; font-weight: 400; font-size: 11px; letter-spacing: 1px;
 		}
 	.event.current .date {
 		border-color: #345; outline: 5px solid #FFF; background-color: #345;

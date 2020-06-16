@@ -9,6 +9,12 @@ module.exports = {
     twitter: `@cnocon`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["/src/styles/*.scss"],
+      }
+    },
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-buttercms`,

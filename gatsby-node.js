@@ -99,7 +99,7 @@ exports.createPages = async ({ actions, graphql }) => {
   data.allButterPost.edges.reverse().forEach(({ node }) => {
     actions.createPage({
       path: `/articles/${node.slug}`,
-      component: path.resolve(`./src/components/Post/PostSingle.jsx`),
+      component: path.resolve(`./src/components/PostSingle/PostSingle.jsx`),
       context: {
         post: node,
         breadcrumbs: [

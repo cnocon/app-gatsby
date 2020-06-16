@@ -61,11 +61,12 @@ function SEO({ sdescription, lang, meta, stitle, imagePath }) {
         },
       ].concat(meta)}
     >
-    <link rel="stylesheet" id="oswald-css" href="//fonts.googleapis.com/css?family=Oswald&amp;subset=latin" type="text/css" media="all"></link>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400"></link>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700"></link>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"></link>
       <link rel="stylesheet" href="/assets/css/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"/>
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous"/>
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/skins/sunburst.css"></link>
-      <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=doxy"></script>
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ed26ab486ccf280"></script>
     </Helmet>
   )

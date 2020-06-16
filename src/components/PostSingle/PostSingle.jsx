@@ -2,9 +2,9 @@ import React from "react"
 import { Link } from 'gatsby'
 import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
-import PageHeader from "../PageHeader/PageHeader"
-import { ReadableContent } from './PostPreview.styles'
-import SEO from "../seo"
+import TopBar from "../TopBar/TopBar"
+import { ReadableContent } from '../PostPreview/PostPreview.styles'
+import SEO from "../SEO/seo"
 import ReactHtmlParser from 'react-html-parser';
 // import styled from "@emotion/styled"
 import * as Styled  from "./PostSingle.styles"
@@ -21,7 +21,7 @@ const PostSingle = ({...data}) => {
 
   return (
     <Layout maxWidth="90rem" width={`90%`}>
-      <PageHeader pageHeader={post.title} breadcrumbs={breadcrumbs} />
+      <TopBar pageHeader={post.title} breadcrumbs={breadcrumbs} />
       <Header ruleTitle={`Level: ${post.tags[0].name.toUpperCase()}`} ruleIcon="icon-chart-bar"/>
       <SEO
         stitle={post.title}
