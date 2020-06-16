@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { css } from "@emotion/core"
 import { Container } from "../Layout/Layout.styles"
 import * as Styled from "./Header.styles"
+import portrait from "./square-portrait.png"
 
 const HomeRule = ({title, icon}) => {
   return (
@@ -17,20 +18,16 @@ const HomeRule = ({title, icon}) => {
 };
 
 const Header = ({ ruleTitle, ruleIcon }) => {
-
   return (
     <Styled.Header>
       <Container>
-
-        {/* <Styled.Image fixed={data.placeholderImage.childImageSharp.fixed} /> */}
-        <img src="/assets/images/square-portrait.png" alt="" />
+        {/* <Styled.Image fixed={data.placeholderImage.childImageSharp.fixed.src} key="wtf"/> */}
+        <Styled.ImageEl src={portrait} alt="Cristin O'Connor Cartoon Portrait"/>
         <Styled.Heading1>
-          {/* <Styled.H1Link to="/" style={{color: 'red', fontWeight: 800}}>Site Under Construction</Styled.H1Link> */}
           <Styled.H1Link to="/">Cristin O'Connor</Styled.H1Link>
         </Styled.Heading1>
 
         <Styled.Subhead>Front End Developer</Styled.Subhead>
-        {/* <ul id="nav" className="menu-auto menu-custom vs-nav"><li className="vs-nav-left"><a href="#/about-me">about me</a></li><li className="vs-nav-current"><a href="#/portfolio">portfolio</a></li><li className="vs-nav-right"><a href="#/contact">contact</a></li><li className=""><a href="#/blog">blog</a></li><li className=""><a href="#/resume">resume</a></li></ul> */}
         <Styled.Nav>
           <Styled.NavItem>
             <Styled.NavLink to="/" activeStyle={{color: '#345'}}>home</Styled.NavLink>

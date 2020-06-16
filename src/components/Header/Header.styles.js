@@ -27,6 +27,17 @@ export const Image = styled(Img)`
   border: .4rem solid #F4F6F7;
 `
 
+export const ImageEl = styled.img`
+  height: 16rem;
+  width: 16rem;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 auto;
+  border-radius: 8rem;
+  display: block !important;
+  border: .4rem solid #F4F6F7;
+`
+
 export const Heading1 = styled.h1`
   margin: .9em 0 0 0;
   padding: 0;

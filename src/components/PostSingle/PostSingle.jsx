@@ -39,9 +39,9 @@ const PostSingle = ({...data}) => {
             </div>
           </header>
           <div className="entry-content clearfix" style={{fontSize: `1.6rem`}}>
-            <div className="featured-image-wrapper" css={Styled.FeaturedImageContainer}>
-              <Styled.FeaturedImage src={post.featured_image} alt={post.featured_image_alt} />
-            </div>
+            {/* <div className="featured-image-wrapper" css={Styled.FeaturedImageContainer}> */}
+              {/* <Styled.FeaturedImage src={post.featured_image} alt={post.featured_image_alt} /> */}
+            {/* </div> */}
             <div className="main-content">
               {ReactHtmlParser(post.body)}
             </div>
