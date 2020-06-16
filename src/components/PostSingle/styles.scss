@@ -1,0 +1,71 @@
+$colorsGrayText: #d0dadc;
+$fontsHeadingsAlt: 'Arial, Helvetica, sans-serif';
+$colorsBlueDarker: hsl(197, 100%, 56%);
+$colorsBlueBase: hsl(210, 40%, 10%);
+$colorsBlueLighter: hsl(210, 25%, 60%);
+
+.main-content {
+  blockquote {
+    position: relative;
+    display: table;
+    margin: 0 0 0 -1.5rem;
+    padding: 2rem 5rem;
+
+    &:before {
+      display: none;
+    }
+
+    i {
+      position: absolute;
+      display: table-cell;
+    }
+
+    p {
+      display: table-cell;
+      font-style: italic;
+      font-family: $fontsHeadingsAlt;
+      line-height: 1.5em;
+      padding-left: 3rem;
+      font-size: 2.25rem;
+    }
+
+    cite {
+      display: block;
+      font-size: 14px;
+      letter-spacing: .04em;
+      text-align: right;
+      padding-right: 1em;
+      margin-top: 12px;
+      font-style: normal;
+      font-weight: 400;
+      color: $colorsGrayText;
+
+      &:before {
+        content: "–";
+        font-family: $fontsHeadingsAlt;
+      }
+    }
+  }
+
+  p {
+    margin: 1.2em 0;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+
+  a {
+    color: $colorsBlueDarker;
+    text-decoration: none;
+    border-bottom: 1px solid $colorsBlueDarker;
+    transition: color .3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $colorsBlueBase;
+      border-bottom-color: $colorsBlueLighter;
+      text-decoration: none;
+      outline: 0;
+    }
+  }
+}

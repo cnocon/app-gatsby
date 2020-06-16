@@ -4,6 +4,21 @@ import { css } from "@emotion/core"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
+export const Container = styled.div(
+  ({theme}) => ({
+    position: `relative`,
+    margin: `0 auto`,
+    width: `${theme.layout.widths.full}`,
+    maxWidth: `${theme.layout.widths.fullMax}`,
+    padding: `${theme.spacing.large} 0`,
+    display: `block`,
+    flexDirection: `column`,
+    alignItems: `initial`,
+    justifyContent: `initial`,
+    fontFamily: `${theme.fonts.body}`,
+  })
+)
+
 export const Header = styled.header(
   props => ({
     backgroundColor: `#fff`,
@@ -13,6 +28,8 @@ export const Header = styled.header(
     width: `100%`,
     textAlign: `center`,
     fontFamily: `Arial`,
+    display: 'block',
+    boxSizing: 'border-box'
   })
 )
 

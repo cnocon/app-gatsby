@@ -1,16 +1,16 @@
 module.exports = {
   colors: {
-    primary: {
-      base: '#345',
-      darker: '',
-      lighter: ''
+    default: {
+      base: 'hsl(210, 25%, 27%)',
+      darker: 'hsl(210, 40%, 10%)',
+      lighter: 'hsl(210, 25%, 60%)'
     },
-    secondary: {
+    blue: {
       base: 'hsla(197,92%,68%,1)',
       darker: 'hsla(197, 100%, 56%,1)',
       lighter: 'hsla(198, 100%, 91%, 1)'
     },
-    tertiary: {
+    yellow: {
       base: 'hsl(58, 94%, 70%)',
       darker: 'hsl(58, 100%, 50%)',
       lighter: 'hsl(58, 100%, 80%)'
@@ -22,24 +22,24 @@ module.exports = {
     }
   },
   fonts: {
-    primary: {
+    body: {
       family: 'Roboto, sans-serif',
       weights: {
         normal: 400,
         bold: 700
       }
     },
-    secondary: {
+    headings: {
+      family: 'Lato, sans-serif',
+      weights: {
+        normal: 400
+      }
+    },
+    headingsAlt: {
       family: 'Arial, Helvetica, sans-serif',
       weights: {
         normal: 400,
         bold: 700
-      }
-    },
-    tertiary: {
-      family: 'Lato, sans-serif',
-      weights: {
-        normal: 400
       }
     },
     accent: {
@@ -62,5 +62,11 @@ module.exports = {
     default: '2rem',
     small: '1rem',
     xsmall: '.5rem'
+  },
+  layout: {
+    widths: {
+      full: '90%',
+      fullMax: '96rem'
+    }
   }
 }
