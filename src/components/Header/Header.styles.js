@@ -125,5 +125,5 @@ export const RuleSpan = css`
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
-  font-family: "Lato";
+  font-family: "Lato", Arial, sans-serif;
 `

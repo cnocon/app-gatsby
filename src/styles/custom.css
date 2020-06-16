@@ -259,7 +259,7 @@ a.button.colored.blue:hover {
   text-transform: uppercase;
   /* letter-spacing: 1px; */
   font-weight: 800;
-  font-family: "Roboto";
+  font-family: "Roboto", Monaco, sans-serif;
   opacity: .8;
   /* color: #C9D5D6;   */
 }
@@ -534,6 +534,11 @@ ol, ul {
 ol li,
 ul li {
   margin-left: 20px;
+}
+
+.event ol li,
+.event ul li {
+  margin-left: 10px;
 }
 
 .entry-content .main-content img {
