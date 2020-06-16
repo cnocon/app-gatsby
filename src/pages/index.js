@@ -5,6 +5,7 @@ import SEO from "../components/SEO/seo"
 import Event from "../components/Event/Event"
 import Header from "../components/Header/Header"
 import TopBar from "../components/TopBar/TopBar"
+import "../components/PostSingle/styles.scss"
 
 const IndexPage = () => {
   const workEvents = ResumeData.experience.map((item, i) => {
@@ -30,39 +31,32 @@ const IndexPage = () => {
   })
 
   return (
-
-      <Layout maxWidth="96rem" width="90%">
-        <TopBar pageHeader="" breadcrumbs={false}/>
-        <Header ruleTitle={`Résumé`.toUpperCase()} ruleIcon="icon-leaf"/>
-        <SEO stitle="Home" />
-        <div className="row">
-          <div className="col-md-6 col-lg-7 left-col">
-            <h2><i className="fas fa-flask"></i>Work History</h2>
-            <div className=" timeline">
-              {workEvents}
-            </div>
-
-          </div>
-
-          <div className="col-md-6 col-lg-5 right-col">
-            <h2>Skills</h2>
-            <div className="skillset">
-              {skills}
-            </div>
-
-            <h2>Education</h2>
-            {eduEvents}
-
-            <article><h2>Assets</h2>
-            <ul className="list" style={{fontSize: '1.25rem'}}><li className="asset">Empathy to be an effective teammate</li><li className="asset">Organizational abilities for managing projects independently</li><li className="asset">Research skills to find the best solutions to new challenges</li><li className="asset">Enthusiasm and passion for front end work</li><li className="asset">Positive attitude and willingness to handle a wide variety of responsibilities</li><li className="asset">Effective communicator with people from varying technical backgrounds</li><li className="asset">Dedicated to ongoing professional development</li><li className="asset">Natural problem solver</li><li className="asset">5+ years of Agile experience</li><li className="asset">10+ years of experience working on web applications in various capacities</li></ul></article>
-
-            <article><div className="card mt-4"><blockquote className="text-xs-center text-sm-right"><i className="fas fa-quote-left"></i>How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.<cite title="Annie Dillard">&mdash; Annie Dillard</cite></blockquote></div></article>
-          </div>
-
+    <Layout maxWidth="96rem" width="90%">
+      <TopBar pageHeader="" breadcrumbs={false}/>
+      <Header ruleTitle={`Résumé`.toUpperCase()} ruleIcon="icon-leaf"/>
+      <SEO stitle="Home" />
+      <div className="row">
+        <div className="col-md-6 col-lg-7 left-col">
+          <h2><i className="fas fa-flask"></i>Work History</h2>
+          <div className=" timeline">{workEvents}</div>
         </div>
 
-      </Layout>
+        <div className="col-md-6 col-lg-5 right-col">
+          <h2>Skills</h2>
+          <div className="skillset">{skills}</div>
 
+          <h2>Education</h2>
+          {eduEvents}
+
+          <article><h2>Assets</h2>
+          <ul className="list" style={{fontSize: '1.25rem'}}><li className="asset">Empathy to be an effective teammate</li><li className="asset">Organizational abilities for managing projects independently</li><li className="asset">Research skills to find the best solutions to new challenges</li><li className="asset">Enthusiasm and passion for front end work</li><li className="asset">Positive attitude and willingness to handle a wide variety of responsibilities</li><li className="asset">Effective communicator with people from varying technical backgrounds</li><li className="asset">Dedicated to ongoing professional development</li><li className="asset">Natural problem solver</li><li className="asset">5+ years of Agile experience</li><li className="asset">10+ years of experience working on web applications in various capacities</li></ul></article>
+
+          <article><div className="card mt-4"><blockquote className="text-xs-center text-sm-right"><i className="fas fa-quote-left"></i>How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.<cite title="Annie Dillard">&mdash; Annie Dillard</cite></blockquote></div></article>
+        </div>
+
+      </div>
+
+    </Layout>
   )
 }
 

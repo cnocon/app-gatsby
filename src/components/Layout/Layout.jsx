@@ -10,9 +10,12 @@ import PropTypes from "prop-types"
 
 import "../layout.css"
 import * as Styled from "./Layout.styles"
+import ThemeProvider from "../Theme/ThemeProvider"
+import SiteTheme from "../Theme/SiteTheme"
 
 const Layout = (props) => {
   return (
+    <ThemeProvider theme={SiteTheme}>
       <Styled.Container className="wrapper" {...props}>
         <main className={props.classNames}>{props.children}</main>
         <footer>
@@ -21,6 +24,7 @@ const Layout = (props) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </Styled.Container>
+    </ThemeProvider>
   )
 }
 
