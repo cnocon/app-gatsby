@@ -10,8 +10,9 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 // import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ sdescription, lang, meta, stitle }) {
+function SEO({ sdescription, lang, meta, stitle, imagePath }) {
   const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`
+  const image = imagePath || 'https://cristin.io/images/cristin-io-favicon.png'
   const title = stitle || `Cristin O'Connor | Front End Developer`
 
   return (
@@ -37,6 +38,10 @@ function SEO({ sdescription, lang, meta, stitle }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: image,
         },
         {
           name: `twitter:card`,

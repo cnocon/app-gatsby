@@ -526,3 +526,20 @@ article:not(.event) ul.list {
   text-decoration: none !important;
   border-bottom: 0;
 }
+
+ol, ul {
+  display: block;
+}
+
+ol li,
+ul li {
+  margin-left: 20px;
+}
+
+.entry-content .main-content img {
+  padding: 1rem;
+  border: 2px solid #F4F6F7;
+  border-radius: 5px;
+  display: block;
+  margin: 2rem auto;
+}
