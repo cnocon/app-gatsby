@@ -5,8 +5,7 @@ import Header from "../Header/Header"
 import TopBar from "../TopBar/TopBar"
 import { ReadableContent } from '../PostPreview/PostPreview.styles'
 import SEO from "../SEO/seo"
-import ReactHtmlParser from 'react-html-parser';
-// import * as Styled  from "./PostSingle.styles"
+import ReactHtmlParser from 'react-html-parser'
 
 const PostSingle = ({...data}) => {
   const post = data.pageContext.post
@@ -23,8 +22,9 @@ const PostSingle = ({...data}) => {
       <SEO
         stitle={post.title}
         sdescription={post.summary}
-        imagePath={post.featued_image}
+        imagePath={post.featured_image}
         />
+
       <section>
         <ReadableContent className="hentry post post-single">
           <header style={{fontSize: `1.6rem`}}>

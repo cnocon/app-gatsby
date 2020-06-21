@@ -15,7 +15,7 @@ const Footer = () => {
           <Styled.FooterLink to="https://www.gatsbyjs.org" rel="noreferrer" target="_blank">Gatsby</Styled.FooterLink> and <Styled.FooterLink to="https://emotion.sh/docs/introduction" rel="noreferrer" target="_blank">Emotion</Styled.FooterLink></p>
         </Styled.LeftBlock>
         <Styled.RightBlock>
-          <p css={Styled.flexParagraph}>Powered by <a href="https://buttercms.org" rel="noreferrer" target="_blank"><Styled.Image src={logo} alt="ButterCMS"/></a></p>
+          <p css={Styled.flexParagraph}>Blog powered by <a href="https://buttercms.org" rel="noreferrer" target="_blank"><Styled.Image src={logo} alt="ButterCMS"/></a></p>
         </Styled.RightBlock>
       </Styled.FooterInner>
     </Styled.Footer>

@@ -8,7 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-// import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ sdescription, lang, meta, stitle, imagePath }) {
   const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`
@@ -21,7 +20,7 @@ function SEO({ sdescription, lang, meta, stitle, imagePath }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | Cristin O'Connor`}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,
@@ -38,6 +37,10 @@ function SEO({ sdescription, lang, meta, stitle, imagePath }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `twitter:site`,
+          content: `@cnocon`,
         },
         {
           property: `og:image`,
