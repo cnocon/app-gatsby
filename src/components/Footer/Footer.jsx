@@ -5,11 +5,15 @@ import logo from "./buttercms-logo.png"
 const Footer = () => {
   const [offset, setOffset] = useState(`2000px`);
 
-  useEffect(() => {
+  const positionFooter = () => {
     const footerHeight = document.querySelector('.footer').offsetHeight;
     const contentHeight = document.querySelector('main').offsetHeight;
     const topOffset = contentHeight < window.innerHeight ? (window.innerHeight - footerHeight) : contentHeight + footerHeight;
     setOffset(topOffset)
+  }
+
+  useEffect(() => {
+    positionFooter();
   }, [])
 
   return(
