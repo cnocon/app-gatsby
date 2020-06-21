@@ -58,13 +58,16 @@ export const FooterInner = styled.div`
   }
 `
 
-export const Footer = styled.footer`
-  margin: ${Theme.spacing.lg} auto 0;
-  padding: ${Theme.spacing.xl} 0;
-  width: 100%;
-  background-color: #D7F1FF;
-  ${'' /* background-color: ${Theme.colors.grays.borderLight}; */}
-`
+export const Footer = styled.footer(
+  props => ({
+    margin: `${Theme.spacing.lg} auto 0`,
+    padding: `${Theme.spacing.xl} 0`,
+    width: `100%`,
+    backgroundColor: `#D7F1FF`,
+    position: `absolute`,
+    top: `${props.offsetTop}`
+  })
+)
 
 export const paragraph = css`
   margin: 0;

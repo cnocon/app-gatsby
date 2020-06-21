@@ -1,13 +1,19 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import * as Styled from "./Footer.styles"
-// import { css } from "@emotion/core"
-// import logo from "./buttercms-logo.png"
 import logo from "./buttercms-logo.png"
-// import {Img} from "gatsby-image"
 
 const Footer = () => {
+  const [offset, setOffset] = useState(`2000px`);
+
+  useEffect(() => {
+    const footerHeight = 1.75 * document.querySelector('.footer').offsetHeight;
+    const contentHeight = document.querySelector('body').offsetHeight;
+    const topOffset = contentHeight < window.outerHeight ? (window.outerHeight - footerHeight) : contentHeight;
+    setOffset(topOffset)
+  }, [])
+
   return(
-    <Styled.Footer>
+    <Styled.Footer className="footer" style={{top: offset}}>
       <Styled.FooterInner>
         <Styled.LeftBlock>
           <p css={Styled.paragraph}>&copy; {new Date().getFullYear()} Cristin O'Connor</p>
