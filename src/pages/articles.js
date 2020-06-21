@@ -7,7 +7,7 @@ import { graphql } from 'gatsby'
 import PostPreview from "../components/PostPreview/PostPreview"
 
 const Articles = ({ data }) => {
-  const posts = data.allButterPost.edges.reverse()
+  const posts = data.allButterPost.edges
     .map(({ node }) => {
       return <PostPreview post={node} key={node.published}/>
     });
@@ -17,7 +17,7 @@ const Articles = ({ data }) => {
       <TopBar pageHeader="Recent Posts" />
       <Header ruleTitle="Latest from the Blog" ruleIcon="icon-rss"/>
       <SEO stitle="Front End Development Blog"/>
-      {posts}
+      {posts.reverse()}
     </Layout>
   )
 }

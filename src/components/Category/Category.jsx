@@ -13,7 +13,6 @@ const Category = ({ ...data}) => {
   });
 
   return (
-    <>
     <Layout className="blog-posts" maxWidth="96rem" width={`90%`}>
       <TopBar pageHeader={categoryName} breadcrumbs={breadcrumbs} />
       <Header ruleTitle={`Posted in ${categoryName.toUpperCase()}`} ruleIcon="icon-article-alt"/>
@@ -22,7 +21,6 @@ const Category = ({ ...data}) => {
         {posts}
       </section>
     </Layout>
-    </>
   )
 }
 

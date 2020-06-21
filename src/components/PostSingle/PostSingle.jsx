@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from 'gatsby'
 import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
@@ -15,6 +15,11 @@ const PostSingle = ({...data}) => {
     return <Link to={`/articles/category/${c.slug}`} key={c.slug}>{c.name}</Link>
   });
 
+  useEffect(() => {
+    window.addthis.init();
+    window.addthis.layers.refresh();
+  })
+
   return (
     <Layout maxWidth="90rem" width={`90%`}>
       <TopBar pageHeader={post.title} breadcrumbs={breadcrumbs} />
@@ -28,8 +33,8 @@ const PostSingle = ({...data}) => {
       <section>
         <ReadableContent className="hentry post post-single">
           <header style={{fontSize: `1.6rem`}}>
-            <h1 style={{fontSize: `2.75rem`, lineHeight: `1.25em`, margin: `.25em 0 .5em`}}>{post.title}</h1>
-            <div className="addthis_inline_share_toolbox_vo2p" style={{marginBottom: '10px'}}></div>
+            <h1 className="title" style={{fontSize: `2.75rem`, lineHeight: `1.25em`, margin: `.25em 0 .5em`}}>{post.title}</h1>
+            <div className="addthis_inline_share_toolbox_vo2p" style={{marginBottom: '16px'}}></div>
             <div className="entry-meta">
               <span className="posted-in">posted in {links}</span>
               <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>

@@ -62,7 +62,8 @@ export const Footer = styled.footer`
   margin: ${Theme.spacing.lg} auto 0;
   padding: ${Theme.spacing.xl} 0;
   width: 100%;
-  background-color: ${Theme.colors.grays.borderLight};
+  background-color: #D7F1FF;
+  ${'' /* background-color: ${Theme.colors.grays.borderLight}; */}
 `
 
 export const paragraph = css`
