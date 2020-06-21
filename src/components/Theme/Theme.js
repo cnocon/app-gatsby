@@ -73,5 +73,6 @@ module.exports = {
   },
   breakpoints: {
     sm: `64.1rem`,
+    md: `76rem`,
   },
 }
