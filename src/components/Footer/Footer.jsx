@@ -8,8 +8,10 @@ const Footer = () => {
   useEffect(() => {
     const footerHeight = 1.75 * document.querySelector('.footer').offsetHeight;
     const contentHeight = document.querySelector('body').offsetHeight;
+    console.log('contentHeight', contentHeight)
     const topOffset = contentHeight < window.outerHeight ? (window.outerHeight - footerHeight) : contentHeight;
-    setOffset(topOffset)
+    console.log('topOffset', topOffset)
+    setOffset(`${topOffset}px`)
   }, [])
 
   return(
