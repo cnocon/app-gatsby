@@ -6,7 +6,6 @@
 
 // You can delete this file if you're not using it
 import "./src/styles/fonts/fontello/css/fontello.css"
-// import "./src/styles/normalize.css"
 import "./src/styles/bootstrap.min.css"
 // import "./src/styles/uniform.default.css"
 // import "./src/styles/wp-fix.css"

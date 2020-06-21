@@ -22,7 +22,6 @@ export default function TopBar({ pageHeader, breadcrumbs }) {
           <i className="icon-github-circled" css={Styled.Icon}></i>
         </a>
         <a className="social-link twitter" href="http://twitter.com/cnocon" target="_blank" rel="noreferrer"><i className="icon-twitter" css={Styled.Icon}></i></a>
-        <a target="_blank" rel="noreferrer"></a>
         <a className="social-link linkedin" href="https://www.linkedin.com/in/cristinoconnor/" target="_blank" rel="noreferrer"><i className="icon-linkedin" css={Styled.Icon}></i></a>
         <a className="social-link email" href="mailto:her@cristin.io">
         <i className="icon-email" css={Styled.Icon}></i></a>

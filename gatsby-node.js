@@ -10,74 +10,75 @@ const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
-    query {
-      allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git", "sass","javascript"]}}}}, sort: {fields: published}) {
-        edges {
-          node {
-            id
-            title
+  {
+    allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git", "sass", "javascript"]}}}}, sort: {fields: published}) {
+      edges {
+        node {
+          id
+          title
+          slug
+          url
+          summary
+          categories {
+            name
             slug
-            url
-            summary
-            categories {
-              name
-              slug
-            }
-            tags {
-              name
-              slug
-            }
-            body
-            author {
-              first_name
-              last_name
-              profile_image
-              twitter_handle
-            }
-            featured_image
-            featured_image_alt
-            meta_description
-            published
-            seo_title
           }
-          previous {
-            id
+          tags {
+            name
+            slug
+          }
+          body
+          featured_image
+          featured_image_alt
+          meta_description
+          published
+          seo_title
+          internal {
+            content
+            description
+            ignoreType
+            mediaType
           }
         }
-        group(field: categories___slug) {
-          field
-          fieldValue
-          nodes {
-            featured_image
-            featured_image_alt
-            id
-            meta_description
+        previous {
+          tags {
+            name
             slug
-            tags {
-              name
-              slug
-            }
-            summary
-            title
-            url
-            seo_title
-            published
-            categories {
-              name
-              slug
-            }
-            author {
-              profile_image
-              last_name
-              first_name
-              title
-              twitter_handle
-            }
+          }
+          internal {
+            content
+            description
+            ignoreType
+            mediaType
+          }
+        }
+      }
+      group(field: categories___slug) {
+        field
+        fieldValue
+        nodes {
+          featured_image
+          featured_image_alt
+          meta_description
+          slug
+          tags {
+            name
+            slug
+          }
+          summary
+          title
+          url
+          seo_title
+          published
+          categories {
+            name
+            slug
           }
         }
       }
     }
-  `)
+  }
+`)
 
   data.allButterPost.group.reverse().forEach(({ ...group }) => {
     actions.createPage({

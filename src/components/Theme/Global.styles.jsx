@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import SiteTheme from './SiteTheme'
+import Theme from './Theme'
 
 export default {styles: css`
   html {
@@ -11,6 +11,6 @@ export default {styles: css`
     box-sizing: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: ${SiteTheme.fonts.body.family};
+    font-family: ${Theme.fonts.body.family};
   }
 `}

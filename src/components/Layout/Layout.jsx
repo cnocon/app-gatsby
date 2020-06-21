@@ -8,14 +8,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import "../layout.css"
 import * as Styled from "./Layout.styles"
 import ThemeProvider from "../Theme/ThemeProvider"
-import SiteTheme from "../Theme/SiteTheme"
+import Theme from "../Theme/Theme"
 
 const Layout = (props) => {
   return (
-    <ThemeProvider theme={SiteTheme}>
+    <ThemeProvider theme={Theme}>
       <Styled.Container className="wrapper" {...props}>
         <main className={props.classNames}>{props.children}</main>
         <footer>
