@@ -25,6 +25,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
