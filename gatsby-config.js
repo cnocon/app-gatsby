@@ -25,35 +25,6 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        sitemapSize: 5000,
-        output: `/sitemap.xml`,
-        query: `
-          {
-            allButterPost {
-              nodes {
-                published
-                url
-              }
-            }
-        }`,
-        resolveSiteUrl: ({site, allSitePage}) => {
-          //Alternativly, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
-          return siteMetadata.siteUrl
-        },
-        serialize: ({ site, allSitePage }) =>
-          nodes.map(node => {
-            return {
-              url: `${node.url}`,
-              lastmod: `${node.published}`,
-              changefreq: `daily`,
-              priority: 0.7,
-            }
-          })
-      }
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

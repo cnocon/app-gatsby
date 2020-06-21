@@ -10,7 +10,7 @@ export const Container = styled.div(
     margin: `0 auto`,
     width: `${theme.layout.widths.full}`,
     maxWidth: `${theme.layout.widths.fullMax}`,
-    padding: `${theme.spacing.large} 0`,
+    padding: `${theme.spacing.lg} 0`,
     display: `block`,
     flexDirection: `column`,
     alignItems: `initial`,

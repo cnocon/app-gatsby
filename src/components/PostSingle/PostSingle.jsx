@@ -6,10 +6,7 @@ import TopBar from "../TopBar/TopBar"
 import { ReadableContent } from '../PostPreview/PostPreview.styles'
 import SEO from "../SEO/seo"
 import ReactHtmlParser from 'react-html-parser';
-// import styled from "@emotion/styled"
-import * as Styled  from "./PostSingle.styles"
-// import { graphql } from "gatsby"
-// import Img from "gatsby-image"
+// import * as Styled  from "./PostSingle.styles"
 
 const PostSingle = ({...data}) => {
   const post = data.pageContext.post

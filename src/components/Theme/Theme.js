@@ -12,11 +12,13 @@ module.exports = {
     },
     yellow: {
       base: 'hsl(58, 94%, 70%)',
-      darker: 'hsl(58, 100%, 50%)',
+      darker: 'hsl(58, 100%, 45%)',
+      alt: '#fdd770',
       lighter: 'hsl(58, 100%, 80%)'
     },
     grays: {
       border: '#f4f6f7',
+      borderLight: '#F9F9F9',
       text: '#d0dadc',
       background: 'whitesmoke'
     }
@@ -49,24 +51,27 @@ module.exports = {
       }
     },
     sizes: {
-      xs: '.75rem',
-      sm: '.875rem',
-      default: '1rem',
-      lg: '2.25rem',
-      xl: '2.8rem'
+      xs: '1.2rem',
+      sm: '1.4rem',
+      default: '1.6rem',
+      lg: '3.6rem',
+      xl: '4.5rem'
     }
   },
   spacing: {
-    xlarge: '4.5rem',
-    large: '3rem',
+    xl: '4.5rem',
+    lg: '3rem',
     default: '2rem',
-    small: '1rem',
-    xsmall: '.5rem'
+    sm: '1rem',
+    xs: '.5rem'
   },
   layout: {
     widths: {
       full: '90%',
       fullMax: '96rem'
     }
-  }
+  },
+  breakpoints: {
+    sm: `64.1rem`,
+  },
 }

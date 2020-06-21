@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming'
-import { Global, css } from '@emotion/core'
+import { Global } from '@emotion/core'
 import Theme from './Theme'
 import GlobalStyles from './Global.styles'
 
