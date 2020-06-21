@@ -15,9 +15,20 @@ const PostSingle = ({...data}) => {
     return <Link to={`/articles/category/${c.slug}`} key={c.slug}>{c.name}</Link>
   });
 
+  const refreshAddThis = () => {
+    window.addEventListener('load', () => {
+      window.addthis.init();
+      window.addthis.layers.refresh();
+    })
+  }
+
   useEffect(() => {
-    window.addthis.init();
-    window.addthis.layers.refresh();
+    if (window.addthis) {
+      window.addthis.init();
+      window.addthis.layers.refresh();
+    } else {
+      refreshAddThis()
+    }
   })
 
   return (

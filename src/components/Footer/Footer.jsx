@@ -6,12 +6,9 @@ const Footer = () => {
   const [offset, setOffset] = useState(`2000px`);
 
   useEffect(() => {
-    const footerHeight = 1.75 * document.querySelector('.footer').offsetHeight;
-    const contentHeight = document.querySelector('body').offsetHeight;
-    console.log('contentHeight', contentHeight)
-    const topOffset = contentHeight < window.outerHeight ? (window.outerHeight - footerHeight) : contentHeight;
-    console.log('topOffset', topOffset)
-    console.log(contentHeight < window.outerHeight);
+    const footerHeight = document.querySelector('.footer').offsetHeight;
+    const contentHeight = document.querySelector('main').offsetHeight;
+    const topOffset = contentHeight < window.innerHeight ? (window.innerHeight - footerHeight) : contentHeight + footerHeight;
     setOffset(topOffset)
   }, [])
 

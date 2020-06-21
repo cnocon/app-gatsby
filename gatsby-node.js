@@ -11,7 +11,7 @@ const path = require(`path`)
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
   {
-    allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git", "sass", "javascript"]}}}}, sort: {fields: published}) {
+    allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git", "sass", "javascript", "workflow"]}}}}, sort: {fields: published}) {
       edges {
         node {
           id

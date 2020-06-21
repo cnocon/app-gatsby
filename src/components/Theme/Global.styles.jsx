@@ -4,6 +4,8 @@ import Theme from './Theme'
 export default {styles: css`
   html {
     font-size: 10px !important;
+    overflow-x: hidden;
+    width: 100%;
     box-sizing: border-box;
   }
 
@@ -12,6 +14,7 @@ export default {styles: css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: ${Theme.fonts.body.family};
+    height: 100%;
   }
 
   .entry-content {
