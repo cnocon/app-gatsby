@@ -27,7 +27,7 @@ const Resume = () => {
   })
 
   return (
-    <div className="row">
+    <div className="row resume">
       <div className="col-md-6 col-lg-7 left-col">
         <h2><i className="fas fa-flask"></i>Work History</h2>
         <div className=" timeline">{workEvents}</div>

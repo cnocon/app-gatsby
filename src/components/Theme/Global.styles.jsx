@@ -17,6 +17,11 @@ export default {styles: css`
     height: 100%;
   }
 
+  main {
+    height: 100%;
+    display: block;
+  }
+
   .entry-content {
     blockquote {
     position: relative;

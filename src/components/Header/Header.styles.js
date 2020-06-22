@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import Theme from "../Theme/Theme"
 
 export const Container = styled.div(
   ({theme}) => ({
@@ -10,7 +11,7 @@ export const Container = styled.div(
     margin: `0 auto`,
     width: `${theme.layout.widths.full}`,
     maxWidth: `${theme.layout.widths.fullMax}`,
-    padding: `${theme.spacing.lg} 0`,
+    padding: `0`,
     display: `block`,
     flexDirection: `column`,
     alignItems: `initial`,
@@ -93,9 +94,13 @@ export const Nav = styled.ul`
     height: 6rem;
     position: relative;
     display: block;
-    margin: .9em auto 0;
+    margin: ${Theme.spacing.xl} auto;
     padding: 0;
     list-style: none;
+    @media screen and (max-width: 640px) {
+
+      margin-bottom: 6rem;
+    }
 `
 
 
@@ -104,9 +109,14 @@ export const NavItem = styled.li`
   margin-bottom: 1rem;
   text-align: center;
   text-decoration: none;
-  width: 30%;
   position: static;
   max-width: none;
+  width: 30%;
+
+  @media screen and (min-width: 641px) {
+    width: 22%;
+    min-width: 175px;
+  }
 `
 
 export const NavLink = styled(Link)`
@@ -116,8 +126,13 @@ export const NavLink = styled(Link)`
   letter-spacing: -2px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 2.7rem;
+  font-size: 2.6rem;
   cursor: pointer;
+
+  @media screen and (min-width: 760px) {
+    font-size: 4rem;
+  }
+
   &:hover {
     color: hsla(197,92%,68%,1);
     color: #345;

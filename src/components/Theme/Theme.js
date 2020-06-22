@@ -8,7 +8,8 @@ module.exports = {
     blue: {
       base: 'hsla(197,92%,68%,1)',
       darker: 'hsla(197, 100%, 56%,1)',
-      lighter: 'hsla(198, 100%, 91%, 1)'
+      lighter: 'hsla(198, 100%, 91%, 1)',
+      lightest: '#D7F1FF'
     },
     yellow: {
       base: 'hsl(58, 94%, 70%)',

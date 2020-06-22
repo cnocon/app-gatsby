@@ -6,13 +6,17 @@
 
 // You can delete this file if you're not using it
 const path = require(`path`)
-// console.log(process.env)
-function chunk(array, size) {
+
+const chunk = (array, size) => {
   if (!array) return [];
-  const firstChunk = array.slice(0, size); // create the first chunk of the given array
+  // create the first chunk of the given array
+  const firstChunk = array.slice(0, size);
+
   if (!firstChunk.length) {
-    return array; // this is the base case to terminal the recursive
+    // this is the base case to terminate the recursion
+    return array;
   }
+
   return [firstChunk].concat(chunk(array.slice(size, array.length), size));
 }
 
@@ -99,7 +103,7 @@ exports.createPages = async ({ actions, graphql }) => {
         posts: group.nodes,
         breadcrumbs: [
           {
-            name: `Blog`,
+            name: `Recent Posts`,
             path: `/articles`,
           },
         ]
@@ -107,15 +111,24 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
+  actions.createPage({
+    path: `/about`,
+    component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
+    context: {
+      posts: allPosts.slice(0,3),
+      breadcrumbs: null,
+    },
+  })
+
   allPosts.forEach(({ node }) => {
     actions.createPage({
       path: `/articles/${node.slug}`,
-      component: path.resolve(`./src/components/PostSingle/PostSingle.jsx`),
+      component: path.resolve(`./src/components/Post/Post.jsx`),
       context: {
         post: node,
         breadcrumbs: [
           {
-            name: `Blog`,
+            name: `Recent Posts`,
             path: `/articles`,
           },
         ]
@@ -126,7 +139,7 @@ exports.createPages = async ({ actions, graphql }) => {
   chunkedPosts.forEach((collection, index) => {
     actions.createPage({
       path: `/articles/page/${index + 1}`,
-      component: path.resolve(`./src/components/ArticlePage/ArticlePage.jsx`),
+      component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
       context: {
         posts: collection,
         prevPagePath: index < 1 ? null : `/articles/page/${index}`,

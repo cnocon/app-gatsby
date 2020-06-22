@@ -4,9 +4,9 @@ import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
 import SEO from "../SEO/seo"
 import PostPreview from "../PostPreview/PostPreview"
-import * as Styled from '../ArticlePage/ArticlePage.styles'
+import * as Styled from '../PostsList/PostsList.styles'
 
-const ArticlePage = ({...data}) => {
+const PostsList = ({...data}) => {
   const nextPage = data.pageContext.nextPagePath
   const prevPage = data.pageContext.prevPagePath
 
@@ -46,4 +46,4 @@ const ArticlePage = ({...data}) => {
   )
 }
 
-export default ArticlePage
+export default PostsList

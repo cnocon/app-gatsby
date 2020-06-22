@@ -26,14 +26,17 @@ const Header = ({ ruleTitle, ruleIcon }) => {
         <Sty.Subhead>Front End Developer</Sty.Subhead>
         <Sty.Nav>
           <Sty.NavItem>
-            <Sty.NavLink to="/" activeStyle={{color: '#345'}}>home</Sty.NavLink>
+            <Sty.NavLink to="/" activeStyle={{color: '#345'}}>about me</Sty.NavLink>
+          </Sty.NavItem>
+          <Sty.NavItem>
+            <Sty.NavLink to="/resume" activeStyle={{color: '#345'}}>resume</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
             <Sty.NavLink to="/articles/page/1" partiallyActive={true} activeStyle={{color: '#345'}}>blog</Sty.NavLink>
           </Sty.NavItem>
         </Sty.Nav>
       </Sty.Container>
-      <HomeRule title={ruleTitle} icon={ruleIcon}/>
+      {ruleTitle ? <HomeRule title={ruleTitle} icon={ruleIcon}/> : null }
     </Sty.Header>
   )
 }

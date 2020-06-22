@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: `gatsby-source-buttercms`,
       options: {
-        authToken: process.env.REACT_APP_BUTTER_API_KEY,
+        authToken: process.env.GATSBY_BUTTER_API_KEY,
       },
     },
     `gatsby-plugin-react-helmet`,

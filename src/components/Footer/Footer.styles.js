@@ -64,8 +64,8 @@ export const Footer = styled.footer(
     padding: `${Theme.spacing.xl} 0`,
     width: `100%`,
     backgroundColor: `#D7F1FF`,
-    position: `absolute`,
-    top: `${props.offsetTop}`
+    // position: `absolute`,
+    // top: `${props.offsetTop}`
   })
 )
 

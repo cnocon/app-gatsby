@@ -7,7 +7,7 @@ import { ReadableContent } from '../PostPreview/PostPreview.styles'
 import SEO from "../SEO/seo"
 import ReactHtmlParser from 'react-html-parser'
 
-const PostSingle = ({...data}) => {
+const Post = ({...data}) => {
   const post = data.pageContext.post
   const breadcrumbs = data.pageContext.breadcrumbs
   const date = new Date(post.published).toLocaleString()
@@ -65,4 +65,4 @@ const PostSingle = ({...data}) => {
   )
 }
 
-export default PostSingle;
+export default Post;
