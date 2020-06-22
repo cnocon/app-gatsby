@@ -5,9 +5,9 @@ import Layout from "../Layout/Layout"
 import SEO from "../SEO/seo"
 import Header from "../Header/Header"
 import TopBar from "../TopBar/TopBar"
+import { window, document } from 'browser-monads';
 
 const AboutMe = ({ ...data }) => {
-  console.log(data.pageContext.posts);
   const posts = (
     data.pageContext.posts.map(obj => {
       const post = obj.node
@@ -45,16 +45,11 @@ const AboutMe = ({ ...data }) => {
 
   useEffect(() => {
     rotateWords()
-    if (window.twttr) {
-      window.twttr.widgets.load();
-    }
     document.addEventListener('ready', () => {
       window.twttr.widgets.load();
     })
+    window.twttr.widgets.load();
 
-    window.addEventListener('load', () => {
-      window.twttr.widgets.load()
-    })
   }, [])
 
   return (
@@ -85,7 +80,7 @@ const AboutMe = ({ ...data }) => {
             <blockquote className="twitter-tweet" style={{minHeight: `280px`}}><p lang="en" dir="ltr">This thread is keeping me going today. <a href="https://t.co/AmzaEul99S">https://t.co/AmzaEul99S</a></p>&mdash; Cristin O&#39;Connor (@cnocon) <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a></blockquote>
           </div>
         </div>
-        <h2 className="section-title"><span><i className="fa fas fa-blog"></i>LATEST FROM THE BLOG</span></h2>
+        <h2 className="section-title"><span><i className="fa fas fa-rss"></i>LATEST FROM THE BLOG</span></h2>
         <div className="row">
           {posts}
         </div>

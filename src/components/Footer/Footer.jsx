@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import * as Styled from "./Footer.styles"
 import logo from "./buttercms-logo.png"
+import { window, document } from 'browser-monads';
 
 const Footer = () => {
   const [offset, setOffset] = useState(`2000px`);

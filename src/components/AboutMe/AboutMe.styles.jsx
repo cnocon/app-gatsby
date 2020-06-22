@@ -111,10 +111,10 @@ export const Testo = styled.div`
   padding: 1.4em 2.2em;
   margin: 0 16px 40px 0;
   background: #fff;
-  border: 4px solid ${Theme.colors.grays.border};
-  border-radius: 6px;
+  ${'' /* border: 4px solid ${Theme.colors.grays.border}; */}
+  ${'' /* border-radius: 6px; */}
   text-align: center;
-  min-height: 400px;
+  min-height: 425px;
   display: block;
 
   i {

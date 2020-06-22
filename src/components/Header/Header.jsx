@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import * as Sty from "./Header.styles"
 import portrait from "./square-portrait.png"
+import { window } from 'browser-monads';
 
 const HomeRule = ({title, icon}) => {
   return (
@@ -14,12 +15,20 @@ const HomeRule = ({title, icon}) => {
   )
 };
 
-const isArticlesActive = () => {
-  const className = window.location.href.match(/\/articles/) ? "active" : ""
-  return className
-}
 
 const Header = ({ ruleTitle, ruleIcon }) => {
+  const [ArticlesClass, setArticlesClass] = useState("")
+
+  const setArticlesActive = () => {
+    setArticlesClass(window.location.href.match(/\/articles/) ? "active" : "")
+  }
+
+  useEffect(() => {
+    if (window) {
+      setArticlesActive()
+    }
+  })
+
   return (
     <Sty.Header>
       <Sty.Container>
@@ -37,7 +46,7 @@ const Header = ({ ruleTitle, ruleIcon }) => {
             <Sty.NavLink to="/resume"  activeClassName="active" activeStyle={{color: '#345'}}>resume</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/articles/page-1" className={isArticlesActive()} activeClassName="active" activeStyle={{color: '#345'}}>blog</Sty.NavLink>
+            <Sty.NavLink to="/articles/page-1" className={ArticlesClass} activeClassName="active" activeStyle={{color: '#345'}}>blog</Sty.NavLink>
           </Sty.NavItem>
         </Sty.Nav>
       </Sty.Container>

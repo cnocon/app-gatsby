@@ -92,7 +92,7 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
   const allPosts = data.allButterPost.edges.reverse();
-  const chunkedPosts = chunk(allPosts, 4);
+  const chunkedPosts = chunk(allPosts, 3);
 
   data.allButterPost.group.reverse().forEach(({ ...group }) => {
     actions.createPage({
@@ -104,7 +104,7 @@ exports.createPages = async ({ actions, graphql }) => {
         breadcrumbs: [
           {
             name: `Recent Posts`,
-            path: `/articles`,
+            path: `/articles/page-1`,
           },
         ]
       },
@@ -129,7 +129,7 @@ exports.createPages = async ({ actions, graphql }) => {
         breadcrumbs: [
           {
             name: `Recent Posts`,
-            path: `/articles`,
+            path: `/articles/page-1`,
           },
         ]
       },

@@ -6,6 +6,7 @@ import TopBar from "../TopBar/TopBar"
 import { ReadableContent } from '../PostPreview/PostPreview.styles'
 import SEO from "../SEO/seo"
 import ReactHtmlParser from 'react-html-parser'
+import { window } from 'browser-monads';
 
 const Post = ({...data}) => {
   const post = data.pageContext.post
@@ -26,9 +27,8 @@ const Post = ({...data}) => {
     if (window.addthis) {
       window.addthis.init();
       window.addthis.layers.refresh();
-    } else {
-      refreshAddThis()
     }
+    refreshAddThis();
   })
 
   return (
