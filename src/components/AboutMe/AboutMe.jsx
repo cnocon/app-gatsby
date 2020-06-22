@@ -75,8 +75,8 @@ const AboutMe = ({ ...data }) => {
                   <span className="rotate-in active">an engineer.</span>
                   <span className="rotate-out">a fan of kindess.</span>
                 </span><br/>
-                I live in beautiful Salt Lake City, UT.<br/>
-                I am passionated about <strong>teaching</strong> and learning.<br/>
+                I live in Salt Lake City, UT.<br/>
+                I am passionate about <strong>teaching</strong> and learning.<br/>
               </Styled.RotateWords>
             </div>
           </div>

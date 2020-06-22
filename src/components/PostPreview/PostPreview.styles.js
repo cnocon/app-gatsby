@@ -22,8 +22,8 @@ export const Button = styled(Link)`
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-color: ${Theme.colors.blue.base};
-  color: #fff;
+  background-color: ${Theme.colors.blue.lighter};
+  color: ${Theme.colors.default.base};
   font-size: ${Theme.fonts.sizes.xs};
   padding: ${Theme.spacing.sm} ${Theme.spacing.default};
   display: block;
@@ -40,8 +40,7 @@ export const Button = styled(Link)`
   transition: all .2s;
 
   &:hover {
-    background-color: ${Theme.colors.blue.darker};
-    color: #fff;
+    color: ${Theme.colors.default.base};
     transform: scale(1.05);
   }
 `

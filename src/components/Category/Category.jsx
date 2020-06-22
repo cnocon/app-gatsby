@@ -17,7 +17,7 @@ const Category = ({ ...data}) => {
   });
 
   const prevBtn = prevPage ?
-     <div className={nextPage ? "left-block" : "full-block"}>
+    <div className={nextPage ? "left-block" : "full-block"}>
         <Styled.Button href={prevPage}>
           <span style={{transform: "rotate(180deg) translateY(-5%)", display: 'inline-block'}}>→</span>&nbsp; Newer Posts
         </Styled.Button>
@@ -38,14 +38,15 @@ const Category = ({ ...data}) => {
       <TopBar pageHeader={categoryName} breadcrumbs={breadcrumbs} />
       <Header ruleTitle={`Posted in ${categoryName.toUpperCase()}`} ruleIcon="icon-article-alt"/>
       <SEO stitle={`Posts from ${categoryName}`} />
-      <section>
+
+      <Styled.Section>
         {posts}
 
-      <Styled.Navigation>
-        {prevBtn}
-        {nextBtn}
-      </Styled.Navigation>
-      </section>
+        <Styled.Navigation>
+          {prevBtn}
+          {nextBtn}
+        </Styled.Navigation>
+      </Styled.Section>
     </Layout>
   )
 }

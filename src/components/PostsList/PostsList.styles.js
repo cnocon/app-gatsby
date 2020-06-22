@@ -74,3 +74,7 @@ export const Navigation = styled.div`
     justify-content: flex-end;
   }
 `
+
+export const Section = styled.section`
+  padding-bottom: 3rem;
+`

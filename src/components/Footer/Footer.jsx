@@ -9,7 +9,7 @@ const Footer = () => {
   const positionFooter = () => {
     const footerHeight = document.querySelector('.footer').offsetHeight;
     const contentHeight = document.querySelector('main').offsetHeight;
-    const topOffset = contentHeight < window.innerHeight ? (window.innerHeight - footerHeight) : contentHeight + footerHeight;
+    const topOffset = contentHeight < window.innerHeight ? (window.innerHeight + .25*footerHeight) : contentHeight + footerHeight;
     setOffset(topOffset)
   }
 

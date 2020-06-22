@@ -36,7 +36,7 @@ const PostsList = ({...data}) => {
       <TopBar pageHeader="Recent Posts" />
       <Header ruleTitle="Recent Posts" ruleIcon="icon-rss"/>
       <SEO stitle="Front End Development Blog"/>
-      {posts}
+        {posts}
 
       <Styled.Navigation>
         {prevBtn}
