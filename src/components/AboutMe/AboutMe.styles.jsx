@@ -109,12 +109,9 @@ export const Container = styled.div`
 export const Testo = styled.div`
   position: relative;
   padding: 1.4em 2.2em;
-  margin: 0 16px 40px 0;
+  margin: 0 -10px 40px;
   background: #fff;
-  ${'' /* border: 4px solid ${Theme.colors.grays.border}; */}
-  ${'' /* border-radius: 6px; */}
-  text-align: center;
-  min-height: 425px;
+  text-align: left;
   display: block;
 
   i {
@@ -131,6 +128,11 @@ export const Testo = styled.div`
 
 export const TestoHeading = styled.h2`
   margin: 0 0 10px;
+  text-align: left;
+
+  @media screen and (max-width: 767px) {
+    text-align: left !important;
+  }
 
   &::before {
     display: none !important;
@@ -158,8 +160,13 @@ export const Image = styled.img`
   border-radius: 0 !important;
   border: 0 !important;
   max-height: 80px;
+  margin: 10px 0 !important;
   width: 100%;
-  margin: 10px auto !important;
-  text-align: center;
+  text-align: left;
   float: none !important;
+
+  @media screen and (min-width: 767px) {
+    margin: 10px auto !important;
+    text-align: center;
+  }
 `

@@ -93,31 +93,30 @@ exports.createPages = async ({ actions, graphql }) => {
   `)
   const allPosts = data.allButterPost.edges.reverse();
   const chunkedPosts = chunk(allPosts, 3);
+  const groups = data.allButterPost.group;
 
-  data.allButterPost.group.reverse().forEach(({ ...group }) => {
-    actions.createPage({
-      path: `/articles/category/${group.fieldValue.toLowerCase().replace(/\s/g, '-')}`,
-      component: path.resolve(`./src/components/Category/Category.jsx`),
-      context: {
-        category: group.fieldValue,
-        posts: group.nodes,
-        breadcrumbs: [
-          {
-            name: `Recent Posts`,
-            path: `/articles/page-1`,
-          },
-        ]
-      },
+  groups.forEach(group => {
+    const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
+    const chunkedPosts = chunk(sortedPosts, 3);
+    const category = group.fieldValue.toLowerCase().replace(/\s/g, '-')
+    chunkedPosts.forEach((collection, index) => {
+      actions.createPage({
+        path: `/articles/${category}-page-${index + 1}`,
+        component: path.resolve(`./src/components/Category/Category.jsx`),
+        context: {
+          prevPagePath: index < 1 ? null : `/articles/${category}-page-${index}`,
+          nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}-page-${index + 2}`,
+          category: group.fieldValue,
+          posts: collection.reverse(),
+          breadcrumbs: [
+            {
+              name: `Recent Posts`,
+              path: `/articles/page-1`,
+            },
+          ]
+        },
+      })
     })
-  })
-
-  actions.createPage({
-    path: `/`,
-    component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
-    context: {
-      posts: allPosts.slice(0,3),
-      breadcrumbs: null,
-    },
   })
 
   allPosts.forEach(({ node }) => {
@@ -152,5 +151,14 @@ exports.createPages = async ({ actions, graphql }) => {
         ]
       },
     })
+  })
+
+  actions.createPage({
+    path: `/`,
+    component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
+    context: {
+      posts: allPosts.slice(0,3),
+      breadcrumbs: null,
+    },
   })
 }

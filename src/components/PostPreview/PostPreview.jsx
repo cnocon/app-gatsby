@@ -8,7 +8,7 @@ const PostPreview = ({post}) => {
   const date = new Date(post.published).toLocaleDateString(undefined, options)
 
   const links = post.categories.map(c => {
-    return <Link to={`/articles/category/${c.slug}`} key={c.slug} style={{fontSize: `1rem`}}>{c.name}</Link>
+    return <Link to={`/articles/${c.slug}-page-1`} key={c.slug} style={{fontSize: `1rem`}}>{c.name}</Link>
   })
 
   return (

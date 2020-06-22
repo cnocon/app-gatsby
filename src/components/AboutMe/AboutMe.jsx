@@ -48,7 +48,12 @@ const AboutMe = ({ ...data }) => {
     document.addEventListener('ready', () => {
       window.twttr.widgets.load();
     })
-    window.twttr.widgets.load();
+    if (window.twttr) {
+      window.twttr.widgets.load();
+    } else {
+      window.addEventListener('load', () => window.twttr.widgets.load())
+    }
+
 
   }, [])
 
