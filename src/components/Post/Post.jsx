@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from 'gatsby'
 import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
@@ -6,7 +6,6 @@ import TopBar from "../TopBar/TopBar"
 import { ReadableContent } from '../PostPreview/PostPreview.styles'
 import SEO from "../SEO/seo"
 import ReactHtmlParser from 'react-html-parser'
-import { window } from 'browser-monads';
 import * as Styled from "./Post.styles"
 
 const Post = ({...data}) => {
@@ -16,21 +15,6 @@ const Post = ({...data}) => {
   const links = post.categories.map(c => {
     return <Link to={`/articles/${c.slug}-page-1`} key={c.slug}>{c.name}</Link>
   });
-
-  const refreshAddThis = () => {
-    window.addEventListener('load', () => {
-      window.addthis.init();
-      window.addthis.layers.refresh();
-    })
-  }
-
-  useEffect(() => {
-    if (window.addthis) {
-      window.addthis.init();
-      window.addthis.layers.refresh();
-    }
-    refreshAddThis();
-  })
 
   return (
     <Layout maxWidth="90rem" width={`90%`}>
@@ -46,7 +30,6 @@ const Post = ({...data}) => {
         <ReadableContent className="hentry post post-single">
           <header css={Styled.HeaderStyles}>
             <Styled.PostTitle className="title">{post.title}</Styled.PostTitle>
-            <div className="addthis_inline_share_toolbox_vo2p" style={{marginBottom: '16px'}}></div>
             <div className="entry-meta">
               <span className="posted-in">posted in {links}</span>
               <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>

@@ -29,6 +29,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `@awolf81/gatsby-theme-addthis`,
+      options: {
+        publicId: process.env.ADDTHIS_PUBLIC_ID
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
