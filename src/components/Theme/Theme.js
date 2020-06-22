@@ -9,13 +9,15 @@ module.exports = {
       base: 'hsla(197,92%,68%,1)',
       darker: 'hsla(197, 100%, 56%,1)',
       lighter: 'hsla(198, 100%, 91%, 1)',
-      lightest: '#D7F1FF'
+      lightest: '#D7F1FF',
+      boxShadow: 'rgba(118,215,254,.35)'
     },
     yellow: {
       base: 'hsl(58, 94%, 70%)',
-      darker: 'hsl(58, 100%, 45%)',
+      darker: 'hsl(58,100%,46%)',
       alt: '#fdd770',
-      lighter: 'hsl(58, 100%, 80%)'
+      lighter: 'hsl(58, 100%, 80%)',
+      lightest: 'hsl(58, 100%,85%)',
     },
     grays: {
       border: '#f4f6f7',
@@ -55,6 +57,7 @@ module.exports = {
       xs: '1.2rem',
       sm: '1.4rem',
       default: '1.6rem',
+      md: '2.76rem',
       lg: '3.6rem',
       xl: '4.5rem'
     }

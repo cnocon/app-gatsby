@@ -18,7 +18,7 @@ const Footer = () => {
   }, [])
 
   return(
-    <Styled.Footer className="footer" style={{top: offset}}>
+    <Styled.Footer className="footer" style={{top: offset}} offsetTop={offset}>
       <Styled.FooterInner>
         <Styled.LeftBlock>
           <p css={Styled.paragraph}>&copy; {new Date().getFullYear()} Cristin O'Connor</p>

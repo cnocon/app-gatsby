@@ -45,3 +45,19 @@ export const Button = styled(Link)`
     transform: scale(1.05);
   }
 `
+
+export const TitleLink = styled(Link)`
+  font-size: ${Theme.fonts.sizes.md};
+  line-height: ${Theme.fonts.sizes.xl};
+  color: ${Theme.colors.default.base};
+  box-shadow: inset 0 -3px 0 ${Theme.colors.blue.boxShadow};
+
+  &:hover {
+    box-shadow: none;
+    color: ${Theme.colors.default.base};
+  }
+`
+
+export const Title = styled.h2`
+  margin: 1rem auto 1.6rem;
+`

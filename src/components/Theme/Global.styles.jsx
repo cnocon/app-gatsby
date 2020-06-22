@@ -24,10 +24,10 @@ export default {styles: css`
 
   .entry-content {
     blockquote {
-    position: relative;
-    display: table;
-    margin: 0 0 0 -1.5rem;
-    padding: 2rem 5rem;
+      position: relative;
+      display: table;
+      margin: 0 0 0 -1.5rem;
+      padding: 2rem 5rem;
 
     &:before {
       display: none;
@@ -65,6 +65,16 @@ export default {styles: css`
     }
   }
 
+  h2 {
+    font-family: ${Theme.fonts.body.family};
+    font-weight: 800;
+  }
+
+  img {
+    border: 1px solid transparent;
+    border-radius: 6px;
+  }
+
   p {
     margin: 1.2em 0;
     font-size: 1.6rem;
@@ -84,6 +94,14 @@ export default {styles: css`
       border-bottom-color: ${Theme.colors.blue.lighter};
       text-decoration: none;
       outline: 0;
+    }
+  }
+
+  .sources {
+    p {
+      font-size: 14px;
+      margin: 0 0 1rem;
+      line-height: 2rem;
     }
   }
 `}

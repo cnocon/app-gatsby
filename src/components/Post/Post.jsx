@@ -7,6 +7,7 @@ import { ReadableContent } from '../PostPreview/PostPreview.styles'
 import SEO from "../SEO/seo"
 import ReactHtmlParser from 'react-html-parser'
 import { window } from 'browser-monads';
+import * as Styled from "./Post.styles"
 
 const Post = ({...data}) => {
   const post = data.pageContext.post
@@ -41,10 +42,10 @@ const Post = ({...data}) => {
         imagePath={post.featured_image}
         />
 
-      <section>
+      <section style={{paddingBottom: `3rem`}}>
         <ReadableContent className="hentry post post-single">
-          <header style={{fontSize: `1.6rem`}}>
-            <h1 className="title" style={{fontSize: `2.75rem`, lineHeight: `1.25em`, margin: `.25em 0 .5em`}}>{post.title}</h1>
+          <header css={Styled.HeaderStyles}>
+            <Styled.PostTitle className="title">{post.title}</Styled.PostTitle>
             <div className="addthis_inline_share_toolbox_vo2p" style={{marginBottom: '16px'}}></div>
             <div className="entry-meta">
               <span className="posted-in">posted in {links}</span>

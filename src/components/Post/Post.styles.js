@@ -2,6 +2,7 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 // import { Link } from "gatsby"
+import Theme from "../Theme/Theme"
 
 export const FeaturedImage = styled.img`
   display: block;
@@ -20,4 +21,14 @@ export const FeaturedImageContainer = css`
   @media screen and (max-width: 500px) {
     display: none;
   }
+`
+
+export const PostTitle = styled.h1`
+  font-size: ${Theme.fonts.sizes.lg};
+  line-height: ${Theme.fonts.sizes.xl};
+  margin: .25em 0 .5em;
+`
+
+export const HeaderStyles = css`
+  font-size: ${Theme.fonts.sizes.default};
 `
