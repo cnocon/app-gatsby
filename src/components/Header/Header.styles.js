@@ -128,6 +128,9 @@ export const NavLink = styled(Link)`
   font-weight: 700;
   font-size: 2.6rem;
   cursor: pointer;
+  &.active {
+    color: #345;
+  }
 
   @media screen and (min-width: 760px) {
     font-size: 4rem;

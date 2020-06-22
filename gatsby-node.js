@@ -112,7 +112,7 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   actions.createPage({
-    path: `/about`,
+    path: `/`,
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
       posts: allPosts.slice(0,3),
@@ -138,16 +138,16 @@ exports.createPages = async ({ actions, graphql }) => {
 
   chunkedPosts.forEach((collection, index) => {
     actions.createPage({
-      path: `/articles/page/${index + 1}`,
+      path: `/articles/page-${index + 1}`,
       component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
       context: {
         posts: collection,
-        prevPagePath: index < 1 ? null : `/articles/page/${index}`,
-        nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page/${index + 2}`,
+        prevPagePath: index < 1 ? null : `/articles/page-${index}`,
+        nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
         breadcrumbs: [
           {
             name: `Recent Posts`,
-            path: `/articles/page/${index+1}`,
+            path: `/articles/page-${index+1}`,
           },
         ]
       },
