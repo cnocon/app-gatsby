@@ -2,7 +2,7 @@ import Theme from '../../Theme/Theme'
 
 const styledTweet = tweetEl => {
   // Update border to match site theme
-  tweetEl.style.border = `4px solid ${Theme.colors.grays.border}`
+  // tweetEl.style.border = `4px solid ${Theme.colors.grays.border}`
   tweetEl.style.borderRadius = `4px`
   tweetEl.style.minWidth = `270px`
   tweetEl.style.maxWidth = `500px`

@@ -81,32 +81,37 @@ export const ReadableContent = styled.article`
   }
 `;
 
-export const Button = styled(Link)(
-  () => ({
-    marginLeft: `auto`,
-    marginRight: `auto`,
-    textAlign: `center`,
-    color: `${Theme.colors.default.base}`,
-    fontSize: `${Theme.fonts.sizes.xs}`,
-    padding: `${Theme.spacing.sm} ${Theme.spacing.default}`,
-    display: `block`,
-    textAlign: `center`,
-    letterSpacing: `.03rem`,
-    borderRadius: `4px`,
-    textTransform: `uppercase`,
-    lineHeight: `${Theme.fonts.sizes.sm}`,
-    outline: `0`,
-    textShadow: `none`,
-    transition: `all .2s`,
-    fontSize: `1rem`,
-    maxWidth: `18rem`,
-    lineHeight: `1`,
-    fontFamily: `${Theme.fonts.body.family}`,
-    fontWeight: `900`,
-    backgroundColor: `${Theme.colors.default.base}`,
-    color: `#fff`
-  })
-)
+export const Button = styled(Link)`
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: ${Theme.colors.default.base};
+  padding: 0 ${Theme.spacing.default};
+  display: block;
+  text-align: center;
+  letter-spacing: .03rem;
+  border-radius: 4px;
+  ${'' /* text-transform: uppercase; */}
+  outline: 0;
+  text-shadow: none;
+  transition: all .2s;
+  font-size: ${Theme.fonts.sizes.xs};
+  max-width: 18rem;
+  line-height: 30px;
+  height: 34px;
+  font-family: ${Theme.fonts.body.family};
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid ${Theme.colors.default.base};
+
+  color: ${Theme.colors.default.base};
+    background-color: #fff;
+
+  &:hover {
+  color: #fff;
+  background-color: ${Theme.colors.default.base};
+  }
+`
 
 export const TitleLink = styled(Link)`
   font-size: ${Theme.fonts.sizes.md};

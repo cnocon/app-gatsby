@@ -83,17 +83,6 @@ const AboutMe = ({ ...data }) => {
         />
         <div className="row">
           <Styled.HalfColumn className="col-sm-12 col-md-6">
-            <blockquote className="twitter-tweet">
-              <p lang="en" dir="ltr">
-                Everyone should be as nice to themselves as they are to dogs.
-              </p>
-              &mdash;{` `}Cristin O&#39;Connor{` `}(@cnocon){` `}
-              <a href="https://twitter.com/cnocon/status/1251752798737199104?ref_src=twsrc%5Etfw">
-                April 19, 2020
-              </a>
-            </blockquote>
-          </Styled.HalfColumn>
-          <Styled.HalfColumn className="col-sm-12 col-md-6">
             <div>
               <blockquote className="twitter-tweet">
                 <p lang="en" dir="ltr">
@@ -104,6 +93,17 @@ const AboutMe = ({ ...data }) => {
                 <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a>
               </blockquote>
             </div>
+          </Styled.HalfColumn>
+          <Styled.HalfColumn className="col-sm-12 col-md-6">
+            <blockquote className="twitter-tweet">
+              <p lang="en" dir="ltr">
+                Everyone should be as nice to themselves as they are to dogs.
+              </p>
+              &mdash;{` `}Cristin O&#39;Connor{` `}(@cnocon){` `}
+              <a href="https://twitter.com/cnocon/status/1251752798737199104?ref_src=twsrc%5Etfw">
+                April 19, 2020
+              </a>
+            </blockquote>
           </Styled.HalfColumn>
         </div>
       </Styled.Container>
