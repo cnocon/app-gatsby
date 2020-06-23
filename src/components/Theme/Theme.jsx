@@ -22,61 +22,90 @@ module.exports = {
     grays: {
       border: '#f4f6f7',
       borderLight: '#F9F9F9',
-      text: '#d0dadc',
-      background: 'whitesmoke'
+      textLight: '#d0dadc',
+      text: '#96A5A8',
+    },
+    accents: {
+      red: 'hsl(1, 100%, 70%)',
+      green: '#5BCF80',
+      blue: 'hsla(197,92%,68%,1)',
+      yellow: '#fdd770',
     }
   },
   fonts: {
     body: {
       family: 'Roboto, sans-serif',
       weights: {
-        normal: 400,
-        bold: 700
+        light: `300`,
+        lightItalic: `300i`,
+        normal: `400`,
+        medium: `500`,
+        bold: `700`,
+        black: `900`
       }
     },
     headings: {
       family: 'Lato, sans-serif',
       weights: {
-        normal: 400
+        light: `300`,
+        normal: `400`,
+        bold: `700`,
+        black: `900`
       }
     },
     headingsAlt: {
       family: 'Arial, Helvetica, sans-serif',
       weights: {
-        normal: 400,
-        bold: 700
+        normal: `400`,
+        bold: `700`
       }
     },
     accent: {
       family: 'Oswald',
       weights: {
-        normal: 400
+        normal: `400`,
+        light: `200`,
+        bold: `700`
       }
     },
     sizes: {
+      xxs: '.75rem',
       xs: '1.2rem',
       sm: '1.4rem',
       default: '1.6rem',
-      md: '2.76rem',
-      lg: '3.6rem',
-      xl: '4.5rem'
-    }
+      md: '2.25rem',
+      lg: '3rem',
+      xl: '3.6rem',
+      xxl: '4.5rem',
+      lineHeights: {
+        sm: `1.35em`,
+        default: `1.5em`,
+        md: `1.75em`,
+        lg: `2em`
+      },
+    },
   },
   spacing: {
-    xl: '4.5rem',
-    lg: '3rem',
-    default: '2rem',
-    sm: '1rem',
-    xs: '.5rem'
+    xxl: `6rem`,
+    xl: `4.5rem`,
+    lg: `3rem`,
+    default: `1.6rem`,
+    md: `2rem`,
+    sm: `1rem`,
+    xs: `.5rem`
   },
   layout: {
     widths: {
-      full: '90%',
-      fullMax: '96rem'
+      default: `90%`,
+      defaultMax: `96rem`,
+      full: `100%`,
+      fullMax: `none`
     }
   },
   breakpoints: {
+    xs: `46.2rem`,
     sm: `64.1rem`,
-    md: `76rem`,
+    md: `76.8rem`,
+    lg: `96rem`
   },
 }

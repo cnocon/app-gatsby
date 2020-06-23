@@ -32,7 +32,7 @@ const Header = ({ ruleTitle, ruleIcon }) => {
   return (
     <Sty.Header>
       <Sty.Container>
-        <Sty.ImageEl src={portrait} alt="Cristin O'Connor Cartoon Portrait"/>
+        <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar"/>
         <Sty.Heading1>
           <Sty.H1Link to="/">Cristin O'Connor</Sty.H1Link>
         </Sty.Heading1>

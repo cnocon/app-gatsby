@@ -5,28 +5,30 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 import Theme from "../Theme/Theme"
 
-export const Container = styled.div(
-  ({theme}) => ({
-    position: `relative`,
-    margin: `0 auto`,
-    width: `${theme.layout.widths.full}`,
-    maxWidth: `${theme.layout.widths.fullMax}`,
-    padding: `0`,
-    display: `block`,
-    flexDirection: `column`,
-    alignItems: `initial`,
-    justifyContent: `initial`,
-    fontFamily: `${theme.fonts.body}`,
-  })
-)
+export const Container = styled.div`
+  position: relative;
+  margin: 0 auto;
+  width: calc(${Theme.layout.widths.full} - 3.2rem);
+  padding: 0;
+  display: block;
+  flex-direction: column;
+  align-items: initial;
+  justify-content: center;
+  font-family: ${Theme.fonts.body};
+
+  @media screen and (min-width: 768px) {
+    width: ${Theme.layout.widths.default};
+    max-width: ${Theme.layout.widths.defaultMax};
+  }
+`
 
 export const Header = styled.header(
-  props => ({
+  () => ({
     backgroundColor: `#fff`,
     zIndex: 200,
     margin: `0 auto`,
     padding: `1em 1.5rem 0`,
-    width: `100%`,
+    width: `${Theme.layout.widths.full}`,
     textAlign: `center`,
     fontFamily: `Arial`,
     display: 'block',
@@ -91,31 +93,39 @@ export const Subhead = styled.p`
 `
 
 export const Nav = styled.ul`
-    height: 6rem;
     position: relative;
     display: block;
-    margin: ${Theme.spacing.xl} auto;
+    margin: ${Theme.spacing.lg} auto;
     padding: 0;
     list-style: none;
-    @media screen and (max-width: 640px) {
 
-      margin-bottom: 6rem;
+    @media screen and (min-width: ${Theme.breakpoints.md}) {
+      height: 6rem;
+      margin: ${Theme.spacing.xl} auto 6rem;
     }
 `
 
 
 export const NavItem = styled.li`
   display: inline-block;
-  margin-bottom: 1rem;
+  margin: 0 1.5% 1rem;
   text-align: center;
   text-decoration: none;
   position: static;
   max-width: none;
   width: 30%;
 
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: ${Theme.breakpoints.md}) {
     width: 22%;
     min-width: 175px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:first-of-type {
+    margin-left: 0;
   }
 `
 
@@ -145,7 +155,7 @@ export const NavLink = styled(Link)`
 export const RuleWrapper = styled.h2`
   position: relative;
   max-width: 100rem;
-  width: 100%;
+  width: ${Theme.layout.widths.full};
   margin: 1em 0;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -157,7 +167,7 @@ export const RuleWrapper = styled.h2`
     top: 50%;
     left: 0;
     margin-top: 3px;
-    width: 100%;
+    width: ${Theme.layout.widths.full};
     max-width: 96rem;
     border-bottom: 4px solid #F4F6F7;
   }

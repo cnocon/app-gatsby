@@ -32,7 +32,7 @@ const PostsList = ({...data}) => {
     : null
 
   return (
-    <Layout className="blog-posts" maxWidth="96rem" width={`90%`}>
+    <Layout className="blog-posts">
       <TopBar pageHeader="Recent Posts" />
       <Header ruleTitle="Recent Posts" ruleIcon="icon-rss"/>
       <SEO stitle="Front End Development Blog"/>

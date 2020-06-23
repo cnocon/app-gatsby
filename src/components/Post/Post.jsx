@@ -17,7 +17,7 @@ const Post = ({...data}) => {
   });
 
   return (
-    <Layout maxWidth="90rem" width={`90%`}>
+    <Layout>
       <TopBar pageHeader={post.title} breadcrumbs={breadcrumbs} />
       <Header ruleTitle={`Level: ${post.tags[0].name.toUpperCase()}`} ruleIcon="icon-chart-bar"/>
       <SEO

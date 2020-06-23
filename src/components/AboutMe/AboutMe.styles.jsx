@@ -1,172 +1,272 @@
-// import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Theme from '../Theme/Theme'
+// import { Link } from 'gatsby'
+import { css } from '@emotion/core'
+
+
+export const RotateWordsWrapper = styled.div`
+  text-align: left;
+  padding: 0 0 1em 0;
+  font-family: ${Theme.fonts.headings.family};
+
+  @media screen and (min-width: ${Theme.breakpoints.sm}) {
+    text-align: center;
+  }
+`
 
 export const RotateWords = styled.h2`
-  font-weight: 300;
-  font-size: 2.6rem;
-  line-height: 1.4;
-  font-family: ${Theme.fonts.headings.family};
-  text-transform: none;
-  color: #345;
-  @media all and (min-width: 920px) {
-  font-size: 3.6rem;
-  }
-
-  strong {
-    letter-spacing: -1px;
-    font-weight: 800;
-  }
-
-  .rotate-words {
-    font-size: inherit;
-    min-height: 27px;
+  &.rotate-header {
+    font-weight: 300;
+    font-size: ${Theme.fonts.sizes.lg};
+    line-height: 1.4;
     font-family: ${Theme.fonts.headings.family};
-	  display: inline-block;
-    min-width: 180px;
-    text-align: left;
+    text-transform: none;
+    color: #345;
+    text-align: center;
+    font-weight: 300;
 
-    @media all and (min-width: 920px) {
-      min-height: 39px;
-      font-size: inherit;
+    @media all and (min-width: ${Theme.breakpoints.sm}) {
+      font-size: ${Theme.fonts.sizes.lg};
+      text-align: center;
     }
-	}
-.rotate-words span {
-  font-size: inherit;
-  font-family: ${Theme.fonts.headings.family}; line-height: 1.4;
-	position: absolute; opacity: 0; font-weight: 800; letter-spacing: -1px;
 
-@media all and (min-width: 920px) {
-  font-size: inherit;
-}
+    strong {
+      letter-spacing: -1px;
+      font-weight: 800 !important;
+    }
 
-	}
-.rotate-words span.rotate-in {
-  font-size:inherit; line-height: 1.4;
-	animation: rotateInWord .5s linear forwards;
-	-webkit-animation: rotateInWord .5s linear forwards;
-  @media all and (min-width: 920px) {
-  font-size: inherit;
-}
-	}
-.rotate-words span.rotate-out {
-  font-size: inherit;
-	animation: rotateOutWord .5s linear forwards;
-	-webkit-animation: rotateOutWord .5s linear forwards;
-  @media all and (min-width: 920px) {
-  font-size: inherit;
-}
-	}
-.rotate-words span:first-of-type {
-	opacity: 1;
-	}
+    .rotate-words {
+      font-size: inherit;
 
-@-webkit-keyframes rotateInWord {
-    0% { opacity: 0; -webkit-transform: translateY(-39px); }
-	100% { opacity: 1; -webkit-transform: translateY(0px); }
-}
-@-webkit-keyframes rotateOutWord {
-    0% { opacity: 1; -webkit-transform: translateY(0px); }
-	100% { opacity: 0; -webkit-transform: translateY(39px); }
-}
-@keyframes rotateInWord {
-    0% { opacity: 0; transform: translateY(-39px); }
-	100% { opacity: 1; transform: translateY(0px); }
-}
-@keyframes rotateOutWord {
-    0% { opacity: 1; transform: translateY(0px); }
-	100% { opacity: 0; transform: translateY(39px); }
-}
+      min-height: 3.3rem;
+      font-family: ${Theme.fonts.headings.family};
+      display: inline-block;
+      min-width: 18rem;
 
-  .rotate-out {
-    position: absolute;
-    opacity: 0;
-    font-weight: 800;
-    letter-spacing: -1px;
-    line-height: inherit;
-    ${'' /* line-height: 1.4;
-    font-size: 2.6rem; */}
+      text-align: left;
+
+      @media all and (max-width: ${Theme.breakpoints.sm - 1}) {
+        min-height: 2.7rem;
+        ${'' /* text-align: left; */}
+      }
+
+      span {
+        font-size: inherit;
+        line-height: 1.4;
+        position: absolute;
+        opacity: 0;
+        letter-spacing: -1px;
+        font-family: ${Theme.fonts.headings.family};
+        font-weight: 300;
+
+        @media all and (min-width: ${Theme.breakpoints.sm}) {
+          font-size: inherit;
+        }
+
+        &:first-of-type {
+          opacity: 1;
+        }
+
+        &.rotate-in {
+          font-size:inherit;
+          line-height: 1.4;
+          animation: rotateInWord .5s linear forwards;
+          -webkit-animation: rotateInWord .5s linear forwards;
+          font-weight: 800;
+
+          @media all and (min-width: ${Theme.breakpoints.sm}) {
+            font-size: inherit;
+          }
+        }
+
+        &.rotate-out {
+          font-size: inherit;
+          animation: rotateOutWord .5s linear forwards;
+          -webkit-animation: rotateOutWord .5s linear forwards;
+          position: absolute;
+          opacity: 0;
+          font-weight: 800;
+          letter-spacing: -1px;
+          line-height: inherit;
+
+          @media all and (min-width: ${Theme.breakpoints.sm}) {
+            font-size: inherit;
+          }
+        }
+      }
+
+      @-webkit-keyframes rotateInWord {
+          0% { opacity: 0; -webkit-transform: translateY(-39px); }
+        100% { opacity: 1; -webkit-transform: translateY(0px); }
+      }
+      @-webkit-keyframes rotateOutWord {
+          0% { opacity: 1; -webkit-transform: translateY(0px); }
+        100% { opacity: 0; -webkit-transform: translateY(39px); }
+      }
+      @keyframes rotateInWord {
+          0% { opacity: 0; transform: translateY(-39px); }
+        100% { opacity: 1; transform: translateY(0px); }
+      }
+      @keyframes rotateOutWord {
+          0% { opacity: 1; transform: translateY(0px); }
+        100% { opacity: 0; transform: translateY(39px); }
+      }
+    }
   }
 `
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 87vh;
 
-  @media screen and (max-width: 560px) {
-    min-height: 140vh;
-  }
-
-  &::after,
-  &::before {
-    content: " ";
-    display: table;
+  h2 {
+    text-align: left;
+    font-weight: 700;
+    font-size: ${Theme.fonts.sizes.xs};
   }
 `
 
-
 export const Testo = styled.div`
-  position: relative;
-  padding: 1.4em 2.2em;
-  margin: 0 -10px 40px;
+  padding: ${Theme.spacing.default} ${Theme.spacing.sm} ${Theme.spacing.md};
+  margin: 0;
   background: #fff;
   text-align: left;
   display: block;
 
   i {
     display: block;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: ${Theme.fonts.sizes.md};
+    margin-bottom: ${Theme.spacing.sm};
   }
 
   &::before {
     display: none !important;
   }
 `
-
 
 export const TestoHeading = styled.h2`
-  margin: 0 0 10px;
-  text-align: left;
-
-  @media screen and (max-width: 767px) {
-    text-align: left !important;
-  }
-
-  &::before {
-    display: none !important;
-  }
-`
-
-export const Link = styled.a`
-  color: ${Theme.colors.default.base};
-  text-decoration: none;
-  border-bottom: 1px solid ${Theme.colors.default.base};
-  transition: color .3s;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: ${Theme.colors.blue.base};
-    border-bottom-color: ${Theme.colors.blue.lighter};
-    text-decoration: none;
-    outline: 0;
-  }
-
-`
-export const Image = styled.img`
   display: block;
-  border-radius: 0 !important;
-  border: 0 !important;
-  max-height: 80px;
-  margin: 10px 0 !important;
-  width: 100%;
-  text-align: left;
-  float: none !important;
+  margin: 0 auto ${Theme.spacing.sm};
+  text-align: center;
+  font-family: ${Theme.fonts.accent.family};
+  font-weight: 200;
 
-  @media screen and (min-width: 767px) {
-    margin: 10px auto !important;
+  p {
+    font-size: ${Theme.fonts.sizes.default};
+    line-height: ${Theme.fonts.sizes.lineHeights.default};
+  }
+
+  .post-link {
+    color: ${Theme.colors.default.base};
+    font-size: ${Theme.fonts.sizes.default};
+    line-height: ${Theme.fonts.sizes.lineHeights.default};
+    text-decoration: none;
+    padding-bottom: 1px;
+    box-shadow: inset 0 -3px 0 ${Theme.colors.blue.boxShadow};
+    transition: all .3s;
+    font-family: ${Theme.fonts.body.family};
+    font-weight: 500;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: ${Theme.colors.default.base};
+      text-decoration: none;
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+`
+export const Date = styled.time`
+  display: block;
+  text-transform: none;
+  font-size: ${Theme.fonts.sizes.sm};
+  line-height: ${Theme.fonts.sizes.lineHeights.sm};
+  text-transform: none;
+  color: ${Theme.colors.default.base};
+  margin: ${Theme.spacing.sm} auto 0;
+  text-align: center;
+  font-family: ${Theme.fonts.body.family};
+  font-weight: 400;
+
+
+  i {
+    display: inline-block;
+    font-size: ${Theme.fonts.sizes.sm};
+    line-height: inherit;
+    margin-right: 6px;
+    color: ${Theme.colors.grays.text};
+  }
+`
+
+export const PostParagraph = css`
+  font-size: ${Theme.fonts.sizes.sm};
+  line-height: ${Theme.fonts.sizes.lineHeights.md};
+  text-align: center;
+  margin: auto 0;
+`
+
+export const ServiceDiv = styled.div`
+  text-align: center;
+  padding: ${Theme.spacing.default} 0 ${Theme.spacing.xl};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  h4 {
+    font-size: ${Theme.fonts.sizes.sm};
+    line-height: ${Theme.fonts.sizes.lineHeights.sm};
+    font-family: ${Theme.fonts.body.family};
+    letter-spacing: 1px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: ${Theme.fonts.sizes.sm};
+    color: ${Theme.colors.grays.text};
+    margin: ${Theme.spacing.xs} 0 0;
+    font-weight: 400;
+  }
+
+  &.color1 i {
+    background-color: ${Theme.colors.accents.green};
+  }
+
+  &.color2 i {
+    background-color: ${Theme.colors.accents.blue};
+  }
+
+  &.color3 i {
+    background-color: ${Theme.colors.accents.yellow};
+  }
+
+  &.color4 i {
+    background-color: ${Theme.colors.accents.red};
+  }
+}
+`
+
+export const ImageContainer = styled.span`
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  margin: 0 auto ${Theme.spacing.xs}  ;
+  border: 4px solid ${Theme.colors.grays.border};
+  padding: 3px;
+  vertical-align: middle;
+  text-align: center;
+
+  img {
+    display: block;
+    width: calc(100% - 14px);
+    height: auto;
+    max-height: calc(100% - 14px);
+    vertical-align: middle;
+    margin: 10px auto;
     text-align: center;
+    line-height: calc(100% - 14px);
   }
 `

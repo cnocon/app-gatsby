@@ -9,7 +9,7 @@ import Resume from "../components/Resume/Resume"
 const IndexPage = () => {
 
   return (
-    <Layout maxWidth="96rem" width="90%">
+    <Layout>
       <TopBar pageHeader="" breadcrumbs={false}/>
       <Header ruleTitle={`Résumé`.toUpperCase()} ruleIcon="icon-leaf"/>
       <SEO stitle="Home" />

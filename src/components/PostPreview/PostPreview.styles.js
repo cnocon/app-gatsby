@@ -11,8 +11,8 @@ export const ReadableContent = styled.article`
   max-width: 100%;
 
   @media screen and (min-width: ${Theme.breakpoints.md}) {
-    width: ${Theme.layout.widths.full};
-    max-width: ${Theme.layout.widths.fullMax};
+    width: ${Theme.layout.widths.default};
+    max-width: ${Theme.layout.widths.defaultMax};
     padding-left: ${Theme.spacing.default};
     padding-right: ${Theme.spacing.default};
   }

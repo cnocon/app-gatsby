@@ -21,12 +21,39 @@ const Footer = () => {
     <Styled.Footer className="footer" style={{top: offset}} offsetTop={offset}>
       <Styled.FooterInner>
         <Styled.LeftBlock>
-          <p css={Styled.paragraph}>&copy; {new Date().getFullYear()} Cristin O'Connor</p>
-          <p css={Styled.smParagraph}>Built with{` `}
-          <Styled.FooterLink to="https://www.gatsbyjs.org" rel="noreferrer" target="_blank">Gatsby</Styled.FooterLink> and <Styled.FooterLink to="https://emotion.sh/docs/introduction" rel="noreferrer" target="_blank">Emotion</Styled.FooterLink></p>
+          <p css={Styled.paragraph}>
+
+            <span css={Styled.date}>
+              &copy;{` `}{new Date().getFullYear()}
+            </span>
+            {` `}<span css={Styled.date}>Cristin O'Connor</span>
+          </p>
+          <p css={Styled.smParagraph}>
+            Built using{` `}
+            <Styled.FooterLink
+              to="https://www.gatsbyjs.org"
+              rel="noreferrer"
+              target="_blank">
+              Gatsby
+            </Styled.FooterLink>
+            {` `}and{` `}
+            <Styled.FooterLink
+              to="https://emotion.sh/docs/introduction"
+              rel="noreferrer"
+              target="_blank">
+              Emotion
+            </Styled.FooterLink>
+          </p>
         </Styled.LeftBlock>
+
         <Styled.RightBlock>
-          <p css={Styled.flexParagraph}>Blog powered by <a href="https://buttercms.com" rel="noreferrer" target="_blank"><Styled.Image src={logo} alt="ButterCMS"/></a></p>
+          <p css={Styled.flexParagraph}>
+            <span css={Styled.date}>BLOG POWERED BY</span>
+            <a href="https://buttercms.com" rel="noreferrer" target="_blank">
+              <Styled.Image src={logo} alt="ButterCMS"/>
+            </a>
+
+          </p>
         </Styled.RightBlock>
       </Styled.FooterInner>
     </Styled.Footer>

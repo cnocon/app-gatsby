@@ -1,8 +1,16 @@
 const path = require(`path`)
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://www.example.com',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://cristin.io`,
+    siteUrl: siteUrl,
     title: `Cristin O'Connor | Front End Developer`,
     author: `Cristin O'Connor`,
     jobTitle: `Front End Developer`,
@@ -29,12 +37,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `@awolf81/gatsby-theme-addthis`,
-      options: {
-        publicId: process.env.ADDTHIS_PUBLIC_ID
-      }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -50,6 +52,39 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ["/src/styles/*.scss"],
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+            sitemap: 'https://cristin.io/sitemap.xml',
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `oswald\:200,400,700`,
+          `lato\:300,300i,400,400i,700,700i,900,900i`,
+          `roboto\:300,300i,400,400i,500,500i,700,700i,900,900i`
+        ],
+        display: 'swap'
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
