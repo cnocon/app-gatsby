@@ -20,7 +20,7 @@ module.exports = {
       lightest: 'hsl(58, 100%,85%)',
     },
     grays: {
-      background: 'hsl(200,5%,96%)',
+      background: 'hsl(180, 1%, 97%)',
       border: '#f4f6f7',
       borderLight: '#F9F9F9',
       borderDark: 'hsl(200, 5%, 91%)',

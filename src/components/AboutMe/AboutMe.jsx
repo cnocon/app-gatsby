@@ -13,7 +13,7 @@ import styledTweet from "./partials/styledTweet"
 
 const AboutMe = ({ ...data }) => {
   const posts = (
-    data.pageContext.posts.reverse().map(obj => {
+    data.pageContext.posts.map(obj => {
       const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
       const date = new Date(obj.node.published).toLocaleDateString(undefined, options)
       return <LatestPost post={obj.node} date={date} key={obj.node.published}/>
@@ -77,11 +77,11 @@ const AboutMe = ({ ...data }) => {
         />
         <div className="row">{posts}</div>
 
-        <SectionTitle
+        {/* <SectionTitle
           text="Tweets"
           icon="fa icon-twitter"
-        />
-        <div className="row">
+        /> */}
+        {/* <div className="row">
           <Styled.HalfColumn className="col-sm-12 col-md-6">
             <div>
               <blockquote className="twitter-tweet">
@@ -105,7 +105,7 @@ const AboutMe = ({ ...data }) => {
               </a>
             </blockquote>
           </Styled.HalfColumn>
-        </div>
+        </div> */}
       </Styled.Container>
     </Layout>
   )

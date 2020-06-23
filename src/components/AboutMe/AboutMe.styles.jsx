@@ -202,13 +202,13 @@ export const Date = styled.time`
 export const PostParagraph = css`
   font-size: ${Theme.fonts.sizes.sm};
   line-height: ${Theme.fonts.sizes.lineHeights.md};
-  text-align: center;
+  text-align: left;
   margin: auto 0;
 `
 
 export const ServiceDiv = styled.div`
   text-align: center;
-  padding: ${Theme.spacing.default} 0 ${Theme.spacing.xl};
+  padding: ${Theme.spacing.default} 0;
   display: flex;
   flex-direction: column;
   align-items: center;

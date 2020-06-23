@@ -9,6 +9,7 @@ const styledTweet = tweetEl => {
   tweetEl.style.width = `85%`
   tweetEl.style.overflow = `hidden`
   tweetEl.style.margin = `0 auto`
+  tweetEl.style.padding = `1.6rem`
 
   // Find top level shadow DOM node
   const shadowEl = tweetEl.shadowRoot
@@ -16,16 +17,20 @@ const styledTweet = tweetEl => {
   // Find and style container
   const node = shadowEl.childNodes[1].childNodes[0]
   node.style.border = `0`
+  node.style.backgroundColor = `${Theme.colors.grays.background}`
 
   // Set CTA to default color
   const cta = shadowEl.childNodes[1].querySelector('.CallToAction')
-  const ctaText = cta.querySelector('.CallToAction-text')
-  ctaText.style.color = `${Theme.colors.blue.base}`
-  ctaText.style.fontWeight = `400`
+  cta.style.border = 0
+  cta.style.display = 'none'
+
+  // const ctaText = cta.querySelector('.CallToAction-text')
+  // ctaText.style.color = `${Theme.colors.blue.base}`
+  // ctaText.style.fontWeight = `400`
 
   // Get and style the footer icon
-  const ctaIcon = cta.querySelector('.CallToAction-icon')
-  ctaIcon.style.display = 'none'
+  // const ctaIcon = cta.querySelector('.CallToAction-icon')
+  // ctaIcon.style.display = 'none'
 
   // Get and style the header icon
   const twitterIcon = node.querySelector('.Icon--twitter ')
@@ -40,7 +45,8 @@ const styledTweet = tweetEl => {
   // Get and style links in post
   const link = content.querySelector('.link.customisable')
   if (!!link) {
-    link.style.color = `${Theme.colors.blue.base}`
+    link.style.color = `${Theme.colors.default.base}`
+    link.style.boxShadow = `inset 0 -3px 0 ${Theme.colors.blue.boxShadow}`
     link.style.fontWeight = `400`
   }
 
@@ -48,7 +54,7 @@ const styledTweet = tweetEl => {
   const author = content.children[0].querySelector('.TweetAuthor-name')
   const authorLink = content.children[0].querySelector('.TweetAuthor-link')
   author.style.fontWeight = '900'
-  author.style.textTransform = 'uppercase'
+  // author.style.textTransform = 'uppercase'
 
   authorLink.addEventListener('mouseover', () => {
     authorLink.style.color = `${Theme.colors.blue.base} !important`
