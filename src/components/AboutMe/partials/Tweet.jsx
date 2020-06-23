@@ -1,5 +1,5 @@
-import React from 'react'
-import { window, document } from 'browser-monads';
+import React, { useEffect } from 'react'
+import { document } from 'browser-monads';
 import Theme from '../../Theme/Theme'
 
 const styleTweet = (tweetEl) => {
@@ -49,32 +49,33 @@ const styleTweet = (tweetEl) => {
   author.style.textTransform = 'uppercase'
 }
 
-class Tweet extends React.Component {
-
-  componentDidMount() {
-    setTimeout(() => {
-      if (window && window.twttr) {
-        const tweetEl = document.querySelector('.twitter-tweet-rendered');
-        window.twttr.widgets.load()
+const Tweet =() => {
+  useEffect(() => {
+    try {
+      setTimeout(() => {
+        const tweetEl = document.querySelector('.twitter-tweet');
         styleTweet(tweetEl)
-      }
-    }, 1250)
-  }
+      }, 2000)
+    } catch (e) {
+      setTimeout(() => {
+        const tweetEl = document.querySelector('.twitter-tweet');
+        styleTweet(tweetEl)
+      }, 500)
+    }
+  }, [])
 
-  render() {
-    return (
-      <blockquote className="twitter-tweet">
-        <p lang="en" dir="ltr" style={{fontFamily: 'Oswald'}}>
-          This thread is keeping me going today.&nbsp;
-          <a href="https://t.co/AmzaEul99S">
-            https://t.co/AmzaEul99S
-          </a>
-        </p>
-        &mdash;&nbsp;Cristin O&#39;Connor (@cnocon)&nbsp;
-        <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a>
-      </blockquote>
-    )
-  }
+  return (
+    <blockquote className="twitter-tweet">
+      <p lang="en" dir="ltr" style={{fontFamily: 'Oswald'}}>
+        This thread is keeping me going today.&nbsp;
+        <a href="https://t.co/AmzaEul99S">
+          https://t.co/AmzaEul99S
+        </a>
+      </p>
+      &mdash;&nbsp;Cristin O&#39;Connor (@cnocon)&nbsp;
+      <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a>
+    </blockquote>
+  )
 }
 
 export default Tweet

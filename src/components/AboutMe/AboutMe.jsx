@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // import { Link } from 'gatsby'
 import * as Styled from "./AboutMe.styles"
 import Layout from "../Layout/Layout"
@@ -6,10 +6,65 @@ import SEO from "../SEO/seo"
 import Header from "../Header/Header"
 import TopBar from "../TopBar/TopBar"
 import SectionTitle from './partials/SectionTitle'
-import Tweet from './partials/Tweet'
+
 import Intro from './partials/Intro'
 import Service from './partials/Service'
 import LatestPost from './partials/LatestPost'
+import Theme from '../Theme/Theme'
+
+
+const styleTweet = (tweetEl) => {
+  // Update border to match site theme
+  tweetEl.style.border = `4px solid ${Theme.colors.grays.border}`
+  tweetEl.style.minWidth = `270px`
+  tweetEl.style.maxWidth = `500px`
+  tweetEl.style.width = `85%`
+  tweetEl.style.overflow = `hidden`
+  tweetEl.style.margin = `0 auto`
+
+  // Find top level shadow DOM node
+  const shadowEl = tweetEl.shadowRoot
+
+  // Find and style container
+  const node = shadowEl.childNodes[1].childNodes[0]
+  node.style.border = `0`
+
+  // Set CTA to default color
+  const cta = shadowEl.childNodes[1].querySelector('.CallToAction')
+  const ctaText = cta.querySelector('.CallToAction-text')
+  ctaText.style.color = `${Theme.colors.blue.base}`
+  ctaText.style.fontWeight = `400`
+
+  // Get and style the footer icon
+  const ctaIcon = cta.querySelector('.CallToAction-icon')
+  ctaIcon.style.display = 'none'
+
+  // Get and style the header icon
+  const twitterIcon = node.querySelector('.Icon--twitter ')
+  twitterIcon.style.display = 'none'
+
+  // Get tweet content element
+  const content = node.childNodes[1].childNodes[1].childNodes[1]
+  content.style.fontFamily = 'Lato, sans-serif'
+  content.style.fontSize = `14px`
+  content.style.lineHeight = `18px`
+
+  // Get and style links in post
+  const link = content.querySelector('.link.customisable')
+  link.style.color = `${Theme.colors.blue.base}`
+  link.style.fontWeight = `400`
+
+  // Get tweet header element
+  const author = content.children[0].querySelector('.TweetAuthor-name')
+  const authorLink = content.children[0].querySelector('.TweetAuthor-link')
+  author.style.fontWeight = '900'
+  author.style.textTransform = 'uppercase'
+
+  authorLink.addEventListener('mouseover', () => {
+    authorLink.style.color = `${Theme.colors.blue.base} !important`
+    authorLink.style.textDecoration = `underline !important`
+  })
+}
 
 const AboutMe = ({ ...data }) => {
   const posts = (
@@ -20,6 +75,13 @@ const AboutMe = ({ ...data }) => {
     })
   )
 
+  useEffect(() => {
+    setTimeout(() => {
+      const tweetEl = document.querySelector('.twitter-tweet-rendered');
+      styleTweet(tweetEl)
+    }, 1000)
+  })
+
   return (
     <Layout>
       <TopBar pageHeader="About Me" breadcrumbs={null}/>
@@ -27,7 +89,7 @@ const AboutMe = ({ ...data }) => {
       <SEO stitle="About Me" />
       <Styled.Container>
         <div className="row">
-          <div className="col-md-6 col-sm-12">
+          <div className="col-sm-12 col-md-6">
             <SectionTitle
               text="A Little About Me"
               icon="fa fad fa-user-cowboy"
@@ -35,12 +97,22 @@ const AboutMe = ({ ...data }) => {
             <Intro />
           </div>
 
-          <div className="col-md-6 col-sm-12">
-            <SectionTitle
+          <div className="col-sm-12 col-md-6">
+
+          <SectionTitle
               text="Tweets"
               icon="fa icon-twitter"
             />
-            <Tweet />
+            <div style={{marginLeft: `61px`}}>
+              <blockquote className="twitter-tweet">
+                <p lang="en" dir="ltr">
+                  This thread is keeping me going today.{` `}
+                  <a href="https://t.co/AmzaEul99S">https://t.co/AmzaEul99S</a>
+                </p>
+                &mdash; Cristin O&#39;Connor (@cnocon){` `}
+                <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a>
+              </blockquote>
+            </div>
           </div>
         </div>
 

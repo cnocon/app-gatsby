@@ -23,7 +23,7 @@ module.exports = {
       border: '#f4f6f7',
       borderLight: '#F9F9F9',
       textLight: '#d0dadc',
-      text: '#96A5A8',
+      text: '#DDE4E6',
     },
     accents: {
       red: 'hsl(1, 100%, 70%)',

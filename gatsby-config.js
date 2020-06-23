@@ -19,13 +19,17 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-source-buttercms`,
       options: {
         authToken: process.env.GATSBY_BUTTER_API_KEY,
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,9 +37,6 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    `gatsby-plugin-sitemap`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -87,8 +88,5 @@ module.exports = {
         display: 'swap'
       }
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

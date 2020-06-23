@@ -22,20 +22,28 @@ const Intro = () => {
   }
 
   useEffect(() => {
-    rotateWords()
+    try {
+      rotateWords()
+    } catch (error) {
+      console.error(error);
+      setTimeout(() => {
+        rotateWords()
+      }, 500)
+    }
+
   })
 
   return (
     <RotateWordsWrapper>
       <RotateWords className="rotate-header">
-        Hi. I am&nbsp;
+        Hello. I'm&nbsp;
         <span className="rotate-words">
-          <span className="rotate-out">a&nbsp;multiplier.</span>
-          <span className="rotate-out active">a&nbsp;teacher.</span>
-          <span className="rotate-out">an&nbsp;avid learner.</span>
+          <span className="rotate-out">a&nbsp;developer.</span>
+          <span className="rotate-out">a&nbsp;teacher.</span>
+          <span className="rotate-in active">an&nbsp;avid learner.</span>
         </span><br/>
-        I'm a Web Developer.<br/>
-        I'm passionate about <strong>code</strong>.<br/>
+        I live in Salt Lake City, UT.<br/>
+        <strong>Code</strong> is my passion.<br/>
       </RotateWords>
     </RotateWordsWrapper>
   )

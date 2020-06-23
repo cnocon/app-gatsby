@@ -68,7 +68,26 @@ export default {styles: css`
   h2 {
     font-family: ${Theme.fonts.body.family};
     font-weight: 800;
-  }
+
+    i {
+      font-size: 16px;
+      margin-right: 14px;
+      line-height: 39px;
+      text-align: center;
+      color: ${Theme.colors.grays.text} !important;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 4px solid ${Theme.colors.grays.border};
+      display: inline-block;
+      width: 47px;
+
+      &:before {
+        display: inline;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+	}
 
   img {
     border: 1px solid transparent;

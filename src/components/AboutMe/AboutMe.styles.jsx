@@ -270,3 +270,11 @@ export const ImageContainer = styled.span`
     line-height: calc(100% - 14px);
   }
 `
+
+export const Tweet = css`
+  margin: 0 0 0 15% !important;
+
+  @media all and (min-width: ${Theme.breakpoints.md}) {
+    margin: 0 auto !important;
+  }
+`
