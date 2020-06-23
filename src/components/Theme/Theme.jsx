@@ -22,8 +22,8 @@ module.exports = {
     grays: {
       border: '#f4f6f7',
       borderLight: '#F9F9F9',
-      textLight: '#d0dadc',
-      text: '#DDE4E6',
+      textLight: `#DDE4E6`,
+      text: `hsl(193, 10%, 66%)`
     },
     accents: {
       red: 'hsl(1, 100%, 70%)',

@@ -112,6 +112,7 @@ const AboutMe = ({ ...data }) => {
                 &mdash; Cristin O&#39;Connor (@cnocon){` `}
                 <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a>
               </blockquote>
+              {/* <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Everyone should be as nice to themselves as they are to dogs.</p>&mdash; Cristin O&#39;Connor (@cnocon) <a href="https://twitter.com/cnocon/status/1251752798737199104?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote>*/}
             </div>
           </div>
         </div>
