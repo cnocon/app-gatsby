@@ -447,15 +447,17 @@ pre.prettyprinted {
 }
 
 
-code {
-  padding: 0 3px 2px;
-  /* margin-bottom: 4em; */
-  font-size: .825em;
-  color: #000;
-  white-space: pre;
-  overflow: auto;
-  background-color: #EDF1F3;
-}
+// code {
+//   :not(.pre) & {
+//     padding: 0 3px 2px;
+//     /* margin-bottom: 4em; */
+//     font-size: .825em;
+//     color: #000;
+//     white-space: pre;
+//     overflow: auto;
+//     background-color: #EDF1F3;
+//   }
+// }
 
 
 .blog-posts .hentry {
