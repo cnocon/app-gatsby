@@ -21,23 +21,15 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // The property ID; the tracking code won't be generated without it
         trackingId: "UA-134680170-1",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
-        // Avoids sending pageview hits from custom paths
         exclude: ["/preview**"],
-        // Delays sending pageview hits on route update (in milliseconds)
         pageTransitionDelay: 0,
-        // Defers execution of google analytics script after page load
         defer: false,
-        // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
         cookieDomain: "cristin.io",
@@ -65,7 +57,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/cristin-io-favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/cristin-io-favicon.png`,
       },
     },
     {

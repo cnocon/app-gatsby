@@ -107,6 +107,7 @@ exports.createPages = async ({ actions, graphql }) => {
           prevPagePath: index < 1 ? null : `/articles/${category}-page-${index}`,
           nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}-page-${index + 2}`,
           category: group.fieldValue,
+          colors: colorsArr.sort((a, b) => 0.5 - Math.random()),
           posts: collection.reverse(),
           breadcrumbs: [
             {
@@ -143,6 +144,7 @@ exports.createPages = async ({ actions, graphql }) => {
         posts: collection,
         prevPagePath: index < 1 ? null : `/articles/page-${index}`,
         nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
+        colors: colorsArr.sort((a, b) => 0.5 - Math.random()),
         breadcrumbs: [
           {
             name: `Recent Posts`,

@@ -6,7 +6,7 @@ const Service = ({ color, icon, title, text }) => {
     <div className="col-sm-6 col-md-3">
       <ServiceDiv className={`service ${color}`}>
         <i className={ icon }></i>
-        <h4>{title}</h4>
+        <h4><span>{title}</span></h4>
         <p>{text}</p>
       </ServiceDiv>
     </div>

@@ -20,16 +20,24 @@ module.exports = {
       lightest: 'hsl(58, 100%,85%)',
     },
     grays: {
+      background: 'hsl(200,5%,96%)',
       border: '#f4f6f7',
       borderLight: '#F9F9F9',
-      textLight: `#DDE4E6`,
+      borderDark: 'hsl(200, 5%, 91%)',
+      textLight: `hsl(193,21%,82%)`,
       text: `hsl(193, 10%, 66%)`
     },
     accents: {
-      red: 'hsl(1, 100%, 70%)',
-      green: '#5BCF80',
-      blue: 'hsla(197,92%,68%,1)',
-      yellow: '#fdd770',
+      red: 'hsl(1,100%,86%)',
+      green: 'hsl(139, 70%, 81%)',
+      blue: 'hsl(197,100%,87%)',
+      yellow: 'hsl(58, 100%, 85%)',
+      text: {
+        red: 'hsl(1,77%,65%)',
+        green: 'hsl(139,50%,46%)',
+        yellow: 'hsl(58, 94%, 70%)',
+        blue: 'hsl(197,85%,55%)'
+      }
     }
   },
   fonts: {

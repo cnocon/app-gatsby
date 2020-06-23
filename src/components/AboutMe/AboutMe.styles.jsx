@@ -230,20 +230,67 @@ export const ServiceDiv = styled.div`
     font-weight: 400;
   }
 
-  &.color1 i {
-    background-color: ${Theme.colors.accents.green};
+  &.color1,
+  &.color2,
+  &.color3,
+  &.color4 {
+    i {
+      color: ${Theme.colors.grays.textLight};
+      background: transparent !important;
+      border: 4px solid ${Theme.colors.grays.border};
+      border-radius: 50%;
+      box-sizing: border-box;
+      display: inline-block;
+      width: 94px;
+      line-height: 90px;
+      font-size: 32px;
+      border-radius: 50%;
+      text-align: center;
+    }
   }
 
-  &.color2 i {
-    background-color: ${Theme.colors.accents.blue};
+  &.color1 {
+    i {
+      color: ${Theme.colors.accents.text.green};
+    }
+
+    h4 span {
+      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.green};
+      padding-bottom: 1px;
+    }
   }
 
-  &.color3 i {
-    background-color: ${Theme.colors.accents.yellow};
+  &.color2 {
+    i {
+      color: ${Theme.colors.accents.blue};
+    }
+
+    h4 span {
+      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.blue};
+      padding-bottom: 1px;
+    }
   }
 
-  &.color4 i {
-    background-color: ${Theme.colors.accents.red};
+  &.color3 {
+    i {
+      color: ${Theme.colors.accents.yellow};
+    }
+
+    h4 span {
+      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.yellow};
+      padding-bottom: 1px;
+    }
+  }
+
+  &.color4 {
+    i {
+      color: ${Theme.colors.accents.red};
+    }
+
+    h4 span {
+      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.red};
+      padding-bottom: 1px;
+    }
   }
 }
 `
@@ -276,5 +323,13 @@ export const Tweet = css`
 
   @media all and (min-width: ${Theme.breakpoints.md}) {
     margin: 0 auto !important;
+  }
+`
+
+export const HalfColumn = styled.div`
+  &:first-of-type {
+    @media all and (max-width: ${Theme.breakpoints.md}) {
+      margin-bottom: ${Theme.spacing.xl};
+    }
   }
 `

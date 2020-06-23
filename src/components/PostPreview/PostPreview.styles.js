@@ -16,40 +16,99 @@ export const ReadableContent = styled.article`
     padding-left: ${Theme.spacing.default};
     padding-right: ${Theme.spacing.default};
   }
+  .box-shadow-red {
+    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.red};
+    padding-bottom: 1px;
+  }
+
+  .border-accent-red {
+    background-color: ${Theme.colors.accents.red};
+
+    &:hover {
+      background-color: ${Theme.colors.accents.red};
+      border-color: transparent;
+      color: #fff;
+    }
+
+  }
+
+  .box-shadow-yellow {
+    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.yellow};
+    padding-bottom: 1px;
+  }
+
+  .border-accent-yellow {
+    background-color: ${Theme.colors.accents.yellow};
+    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
+
+    &:hover {
+      background-color: ${Theme.colors.accents.yellow};
+      border-color: transparent;
+      color: ${Theme.colors.default.base};
+    }
+  }
+
+  .box-shadow-blue {
+    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.blue};
+    padding-bottom: 1px;
+  }
+
+  .border-accent-blue {
+    background-color: ${Theme.colors.accents.blue};
+    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
+
+    &:hover {
+      background-color: ${Theme.colors.accents.blue};
+      border-color: transparent;
+      color: #fff;
+    }
+  }
+
+  .box-shadow-green {
+    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.green};
+    padding-bottom: 1px;
+  }
+
+  .border-accent-green {
+    background-color: ${Theme.colors.accents.green};
+    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
+
+    &:hover {
+      background-color: ${Theme.colors.accents.green};
+      border-color: transparent;
+      color: #fff;
+    }
+  }
 `;
 
-export const Button = styled(Link)`
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  background-color: ${Theme.colors.blue.lighter};
-  color: ${Theme.colors.default.base};
-  font-size: ${Theme.fonts.sizes.xs};
-  padding: ${Theme.spacing.sm} ${Theme.spacing.default};
-  display: block;
-  max-width: 21rem;
-  text-align: center;
-  letter-spacing: .03rem;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: 800;
-  line-height: ${Theme.fonts.sizes.sm};
-  outline: 0;
-  text-shadow: none;
-  transition: all .2s;
-
-  &:hover {
-    color: ${Theme.colors.default.base};
-    transform: scale(1.05);
-  }
-`
+export const Button = styled(Link)(
+  ({props}) => ({
+    marginLeft: `auto`,
+    marginRight: `auto`,
+    textAlign: `center`,
+    color: `${Theme.colors.default.base}`,
+    fontSize: `${Theme.fonts.sizes.xs}`,
+    padding: `${Theme.spacing.sm} ${Theme.spacing.default}`,
+    display: `block`,
+    textAlign: `center`,
+    letterSpacing: `.03rem`,
+    borderRadius: `4px`,
+    textTransform: `uppercase`,
+    lineHeight: `${Theme.fonts.sizes.sm}`,
+    outline: `0`,
+    textShadow: `none`,
+    transition: `all .2s`,
+    fontSize: `1rem`,
+    maxWidth: `18rem`,
+    lineHeight: `1`,
+    fontFamily: `${Theme.fonts.body.family}`,
+    fontWeight: `900`
+}))
 
 export const TitleLink = styled(Link)`
   font-size: ${Theme.fonts.sizes.md};
   line-height: ${Theme.fonts.sizes.xl};
   color: ${Theme.colors.default.base};
-  box-shadow: inset 0 -3px 0 ${Theme.colors.blue.boxShadow};
 
   &:hover {
     box-shadow: none;

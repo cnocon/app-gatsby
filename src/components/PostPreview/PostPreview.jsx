@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import ReactHtmlParser from 'react-html-parser';
 import * as Styled from './PostPreview.styles'
 
-const PostPreview = ({post}) => {
+const PostPreview = ({ post, color }) => {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   const date = new Date(post.published).toLocaleDateString(undefined, options)
 
@@ -15,7 +15,13 @@ const PostPreview = ({post}) => {
     <Styled.ReadableContent>
       <header className="post-preview-header">
         <Styled.Title>
-          <Styled.TitleLink to={`/articles/${post.slug}`} rel="bookmark">{post.title}</Styled.TitleLink>
+          <Styled.TitleLink
+            to={`/articles/${post.slug}`}
+            rel="bookmark"
+            className={`box-shadow-${color}`}
+          >
+            {post.title}
+          </Styled.TitleLink>
         </Styled.Title>
         <div className="entry-meta" style={{fontSize: '1.2rem'}}>
           <span className="posted-in">posted in {links}</span>
@@ -29,7 +35,7 @@ const PostPreview = ({post}) => {
         </p>
       </div>
 
-      <Styled.Button to={`/articles/${post.slug}`}>
+      <Styled.Button to={`/articles/${post.slug}`} className={`border-accent-${color}`}>
         Read Full Article <span className="meta-nav">→</span>
       </Styled.Button>
     </Styled.ReadableContent>

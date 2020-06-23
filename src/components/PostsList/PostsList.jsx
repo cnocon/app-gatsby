@@ -7,25 +7,24 @@ import PostPreview from "../PostPreview/PostPreview"
 import * as Styled from '../PostsList/PostsList.styles'
 
 const PostsList = ({...data}) => {
-  const nextPage = data.pageContext.nextPagePath
-  const prevPage = data.pageContext.prevPagePath
+  const {nextPagePath, prevPagePath, colors} = data.pageContext
 
   const posts = data.pageContext.posts
     .map(({ node }) => {
-      return <PostPreview post={node} key={node.published}/>
+      return <PostPreview post={node} key={node.published} color={colors.pop()}/>
     });
 
-  const prevBtn = prevPage ?
-     <div className={nextPage ? "left-block" : "full-block"}>
-        <Styled.Button href={prevPage}>
+  const prevBtn = prevPagePath ?
+     <div className={nextPagePath ? "left-block" : "full-block"}>
+        <Styled.Button href={prevPagePath}>
           <span style={{transform: "rotate(180deg) translateY(-5%)", display: 'inline-block'}}>→</span>&nbsp; Newer Posts
         </Styled.Button>
       </div>
     : null
 
-  const nextBtn = nextPage ?
-      <div className={prevPage ? "right-block" : "full-block"}>
-        <Styled.Button href={nextPage}>
+  const nextBtn = nextPagePath ?
+      <div className={prevPagePath ? "right-block" : "full-block"}>
+        <Styled.Button href={nextPagePath}>
           Older Posts&nbsp; <span>→</span>
         </Styled.Button>
       </div>
