@@ -34,7 +34,7 @@ module.exports = {
       yellow: 'hsl(58, 100%, 85%)',
       text: {
         red: 'hsl(1,77%,65%)',
-        green: 'hsl(139,50%,46%)',
+        green: 'hsl(139,50%,57%)',
         yellow: 'hsl(58, 94%, 70%)',
         blue: 'hsl(197,85%,55%)'
       }

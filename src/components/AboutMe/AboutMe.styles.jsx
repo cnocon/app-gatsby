@@ -162,15 +162,15 @@ export const TestoHeading = styled.h2`
     line-height: ${Theme.fonts.sizes.lineHeights.default};
     text-decoration: none;
     padding-bottom: 1px;
-    box-shadow: inset 0 -3px 0 ${Theme.colors.blue.boxShadow};
+    ${'' /* box-shadow: inset 0 -3px 0 ${Theme.colors.blue.boxShadow}; */}
     transition: all .3s;
     font-family: ${Theme.fonts.body.family};
-    font-weight: 500;
+    font-weight: 900;
 
     &:hover,
     &:focus,
     &:active {
-      color: ${Theme.colors.default.base};
+      color: ${Theme.colors.blue.base};
       text-decoration: none;
       box-shadow: none;
       outline: 0;

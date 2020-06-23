@@ -43,41 +43,6 @@ const AboutMe = ({ ...data }) => {
           </div>
         </div>
 
-        <SectionTitle
-          text="Tweets"
-          icon="fa icon-twitter"
-        />
-        <div className="row">
-          <Styled.HalfColumn className="col-sm-12 col-md-6">
-            <div>
-              <blockquote className="twitter-tweet">
-                <p lang="en" dir="ltr">
-                  This thread is keeping me going today.{` `}
-                  <a href="https://t.co/AmzaEul99S">https://t.co/AmzaEul99S</a>
-                </p>
-                &mdash; Cristin O&#39;Connor (@cnocon){` `}
-                <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a>
-              </blockquote>
-            </div>
-          </Styled.HalfColumn>
-          <Styled.HalfColumn className="col-sm-12 col-md-6">
-            <blockquote className="twitter-tweet">
-              <p lang="en" dir="ltr">
-                Everyone should be as nice to themselves as they are to dogs.
-              </p>
-              &mdash;{` `}Cristin O&#39;Connor{` `}(@cnocon){` `}
-              <a href="https://twitter.com/cnocon/status/1251752798737199104?ref_src=twsrc%5Etfw">
-                April 19, 2020
-              </a>
-            </blockquote>
-          </Styled.HalfColumn>
-        </div>
-
-        <SectionTitle
-          text="Latest from the Blog"
-          icon="fa fas fa-rss"
-        />
-        <div className="row">{posts}</div>
         <SectionTitle text="Services" icon="fa fal fa-concierge-bell"/>
         <div className="row">
           <Service
@@ -104,6 +69,42 @@ const AboutMe = ({ ...data }) => {
             title="Project Management"
             text="I have strong project management skills and can self-manage, or manage others as needed."
           />
+        </div>
+
+        <SectionTitle
+          text="Latest from the Blog"
+          icon="fa fas fa-rss"
+        />
+        <div className="row">{posts}</div>
+
+        <SectionTitle
+          text="Tweets"
+          icon="fa icon-twitter"
+        />
+        <div className="row">
+          <Styled.HalfColumn className="col-sm-12 col-md-6">
+            <blockquote className="twitter-tweet">
+              <p lang="en" dir="ltr">
+                Everyone should be as nice to themselves as they are to dogs.
+              </p>
+              &mdash;{` `}Cristin O&#39;Connor{` `}(@cnocon){` `}
+              <a href="https://twitter.com/cnocon/status/1251752798737199104?ref_src=twsrc%5Etfw">
+                April 19, 2020
+              </a>
+            </blockquote>
+          </Styled.HalfColumn>
+          <Styled.HalfColumn className="col-sm-12 col-md-6">
+            <div>
+              <blockquote className="twitter-tweet">
+                <p lang="en" dir="ltr">
+                  This thread is keeping me going today.{` `}
+                  <a href="https://t.co/AmzaEul99S">https://t.co/AmzaEul99S</a>
+                </p>
+                &mdash; Cristin O&#39;Connor (@cnocon){` `}
+                <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a>
+              </blockquote>
+            </div>
+          </Styled.HalfColumn>
         </div>
       </Styled.Container>
     </Layout>

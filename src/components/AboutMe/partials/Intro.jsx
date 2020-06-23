@@ -43,7 +43,7 @@ const Intro = () => {
           <span className="rotate-in active">an&nbsp;avid learner.</span>
         </span><br/>
         I live in Salt Lake City, UT.<br/>
-        <strong>Code</strong> is my passion.<br/>
+        I love <strong>coding</strong> new things.<br/>
       </RotateWords>
     </RotateWordsWrapper>
   )

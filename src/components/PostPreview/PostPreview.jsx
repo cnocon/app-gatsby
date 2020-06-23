@@ -35,7 +35,7 @@ const PostPreview = ({ post, color }) => {
         </p>
       </div>
 
-      <Styled.Button to={`/articles/${post.slug}`} className={`border-accent-${color}`}>
+      <Styled.Button to={`/articles/${post.slug}`}>
         Read Full Article <span className="meta-nav">→</span>
       </Styled.Button>
     </Styled.ReadableContent>

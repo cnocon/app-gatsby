@@ -20,6 +20,8 @@ const chunk = (array, size) => {
   return [firstChunk].concat(chunk(array.slice(size, array.length), size));
 }
 
+const colorsArr = ['blue', 'green', 'yellow', 'red']
+
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
     {

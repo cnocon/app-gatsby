@@ -82,7 +82,7 @@ export const ReadableContent = styled.article`
 `;
 
 export const Button = styled(Link)(
-  ({props}) => ({
+  () => ({
     marginLeft: `auto`,
     marginRight: `auto`,
     textAlign: `center`,
@@ -102,8 +102,11 @@ export const Button = styled(Link)(
     maxWidth: `18rem`,
     lineHeight: `1`,
     fontFamily: `${Theme.fonts.body.family}`,
-    fontWeight: `900`
-}))
+    fontWeight: `900`,
+    backgroundColor: `${Theme.colors.default.base}`,
+    color: `#fff`
+  })
+)
 
 export const TitleLink = styled(Link)`
   font-size: ${Theme.fonts.sizes.md};
