@@ -35,10 +35,12 @@ export const RightBlock = css`
 `
 
 export const Icon = css`
-  color: #d0f1ff;
+  ${'' /* color: #d0f1ff; */}
+  color: #345;
   margin: 0 1rem;
-  font-size: 2rem;
-  line-height: 1;
+  ${'' /* font-size: 2rem; */}
+  font-size: 1.6rem;
+  line-height: 2rem;
 
   &:hover {
     color: hsla(197,92%,68%,1);

@@ -176,13 +176,19 @@ a.button.colored.blue:hover {
 }
 .timeline .event.current .date {
   background: #345;
+  // background:  hsl(58, 100%, 85%);
   color: #fff;
+  border: 4px solid transparent;
 }
 .timeline .event .date {
   top: 34px;
-  background-color: #d0f1ff;
+  // background-color: hsl(58, 100%, 85%);
   // background-color: hsl(139, 60%, 69%);
+  // background-color: hsl(197,100%,87%);
+  // background-color: #345;
   color: #345;
+  border: 4px solid whitesmoke;
+  background-color: white;
   // color: #fff;
   font-family: 'Oswald', 'sans-serif';
 }
@@ -501,7 +507,7 @@ pre.prettyprinted {
 
     .bar {
       position: relative;
-      background-color: whitesmoke;
+      background-color: #d0f1ff;
       width: 100%;
       height: 5px;
 
@@ -510,7 +516,7 @@ pre.prettyprinted {
         // background-color: hsla(198, 100%, 91%, 1);
         // background-color: hsl(139, 60%, 69%);
         // background-color: hsla(197,92%,68%,1);
-        background-color: #d0f1ff;
+        background-color: hsl(139, 70%, 81%);
         top: 0;
         left: 0;
         width: 0;

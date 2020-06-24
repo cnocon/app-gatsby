@@ -18,14 +18,22 @@ const HomeRule = ({title, icon}) => {
 
 const Header = ({ ruleTitle, ruleIcon }) => {
   const [ArticlesClass, setArticlesClass] = useState("")
+  const [ResumeClass, setResumeClass] = useState("")
 
   const setArticlesActive = () => {
     setArticlesClass(window.location.href.match(/\/articles/) ? "active" : "")
   }
 
+  const setActiveOnLoad = () => {
+    setResumeClass(window.location.href.match(/\/resume/) ? "active" : "")
+    setArticlesClass(window.location.href.match(/\/articles/) ? "active" : "")
+
+  }
+
   useEffect(() => {
     if (window) {
-      setArticlesActive()
+      // setArticlesActive()
+      setActiveOnLoad()
     }
   })
 
@@ -43,10 +51,10 @@ const Header = ({ ruleTitle, ruleIcon }) => {
             <Sty.NavLink to="/" activeClassName="active" activeStyle={{color: '#345'}}>home</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/resume"  activeClassName="active" activeStyle={{color: '#345'}}>resume</Sty.NavLink>
+            <Sty.NavLink to="/articles/page-1" className={ArticlesClass} activeClassName="active" activeStyle={{color: '#345'}}>blog</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/articles/page-1" className={ArticlesClass} activeClassName="active" activeStyle={{color: '#345'}}>blog</Sty.NavLink>
+            <Sty.NavLink to="/resume" activeClassName="active" activeStyle={{color: '#345'}} className={ResumeClass} >résumé</Sty.NavLink>
           </Sty.NavItem>
         </Sty.Nav>
       </Sty.Container>

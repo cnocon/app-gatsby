@@ -1,6 +1,7 @@
 import React from "react";
 import { ResumeData } from "../../data/ResumeData"
 import Event from "../Event/Event"
+import * as Styled from "./Resume.styles"
 
 const Resume = () => {
 
@@ -29,7 +30,9 @@ const Resume = () => {
   return (
     <div className="row resume">
       <div className="col-md-6 col-lg-7 left-col">
-        <h2><i className="fas fa-flask"></i>Work History</h2>
+        <h2 css={Styled.HistoryHeading}>
+          <i className="far fa-briefcase"></i>
+          Work History</h2>
         <div className=" timeline">{workEvents}</div>
       </div>
 
