@@ -16,7 +16,7 @@ export const ReadableContent = styled.article`
     margin-top: 2rem;
 
     p {
-      margin: 0;
+      ${'' /* margin: 0; */}
     }
   }
 
@@ -25,99 +25,6 @@ export const ReadableContent = styled.article`
     max-width: ${Theme.layout.widths.defaultMax};
     padding-left: ${Theme.spacing.default};
     padding-right: ${Theme.spacing.default};
-  }
-
-  .box-shadow-purple {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.purple};
-    padding-bottom: 1px;
-  }
-
-  .background-accent-purple {
-    background: ${Theme.colors.accents.purple};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.purple};
-  }
-
-  .border-accent-purple {
-    background-color: ${Theme.colors.accents.purple};
-
-    &:hover {
-      background-color: ${Theme.colors.accents.purple};
-      border-color: transparent;
-      color: #fff;
-    }
-
-  }
-
-  .background-accent-red {
-    background: ${Theme.colors.accents.red};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.red};
-  }
-
-  .border-accent-red {
-    background-color: ${Theme.colors.accents.red};
-
-    &:hover {
-      background-color: ${Theme.colors.accents.red};
-      border-color: transparent;
-      color: #fff;
-    }
-
-  }
-
-
-
-  .background-accent-yellow {
-    background: ${Theme.colors.accents.yellow};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.yellow};
-  }
-
-  .border-accent-yellow {
-    background-color: ${Theme.colors.accents.yellow};
-    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
-
-    &:hover {
-      background-color: ${Theme.colors.accents.yellow};
-      border-color: transparent;
-      color: ${Theme.colors.default.base};
-    }
-  }
-
-
-  .background-accent-blue {
-    background: ${Theme.colors.accents.blue};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.blue};
-  }
-
-  .border-accent-blue {
-    background-color: ${Theme.colors.accents.blue};
-    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
-
-    &:hover {
-      background-color: ${Theme.colors.accents.blue};
-      border-color: transparent;
-      color: #fff;
-    }
-  }
-
-  .background-accent-green {
-    background: ${Theme.colors.accents.green};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.green};
-  }
-
-  .border-accent-green {
-    background-color: ${Theme.colors.accents.green};
-    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
-
-    &:hover {
-      background-color: ${Theme.colors.accents.green};
-      border-color: transparent;
-      color: #fff;
-    }
   }
 `;
 
@@ -166,24 +73,24 @@ export const TitleLink = styled(Link)`
     color: ${Theme.colors.default.base};
   }
   &.box-shadow-purple {
-    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.purple};
-    padding-bottom: 1px;
+    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.purple};
+    padding-bottom: 3px;
   }
   &.box-shadow-red {
-    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.red};
-    padding-bottom: 1px;
+    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.red};
+    padding-bottom: 3px;
   }
   &.box-shadow-yellow {
-    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.yellow};
-    padding-bottom: 1px;
+    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.yellow};
+    padding-bottom: 3px;
   }
   &.box-shadow-blue {
-    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.blue};
-    padding-bottom: 1px;
+    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.blue};
+    padding-bottom: 3px;
   }
   &.box-shadow-green {
-    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.green};
-    padding-bottom: 1px;
+    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.green};
+    padding-bottom: 3px;
   }
 `
 

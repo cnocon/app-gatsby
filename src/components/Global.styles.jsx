@@ -57,9 +57,6 @@ export default {styles: css`
     border: 1px solid ${Theme.colors.accents.red};
   }
 
-  .border-accent-red {
-    background-color: ${Theme.colors.accents.red};
-  }
     .border-accent-red:hover {
       background-color: ${Theme.colors.accents.red};
       border-color: transparent;
@@ -79,9 +76,6 @@ export default {styles: css`
     border: 1px solid ${Theme.colors.accents.yellow};
   }
 
-  .border-accent-yellow {
-    background-color: ${Theme.colors.accents.yellow};
-  }
 
   .border-accent-yellow:hover {
     background-color: ${Theme.colors.accents.yellow};
@@ -99,10 +93,6 @@ export default {styles: css`
     color: #000;
     border: 1px solid ${Theme.colors.accents.blue};
   }
-
-  .border-accent-blue {
-    background-color: ${Theme.colors.accents.blue};
-  }
   .border-accent-blue:hover {
     background-color: ${Theme.colors.accents.blue};
     border-color: transparent;
@@ -119,10 +109,6 @@ export default {styles: css`
     background: ${Theme.colors.accents.green};
     color: #000;
     border: 1px solid ${Theme.colors.accents.green};
-  }
-
-  .border-accent-green {
-    background-color: ${Theme.colors.accents.green};
   }
 
   .border-accent-green:hover {

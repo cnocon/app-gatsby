@@ -416,11 +416,19 @@ ul.list li.asset {
 
 ol, ul {
   display: block;
+  padding-left: 15px;
 }
 
 ol li,
 ul li {
-  margin-left: 20px;
+  margin-left: 15px;
+}
+
+ol li ol,
+ol li ul,
+ul li ol,
+ul li ul {
+  margin-left: 10px;
 }
 
 .event ol li,

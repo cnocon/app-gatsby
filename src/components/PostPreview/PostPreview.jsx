@@ -24,7 +24,7 @@ const PostPreview = ({ post, catMap, color }) => {
       </header>
 
       <div className="entry-content">
-        <p style={{marginBottom: `0`}}>
+        <p>
           {ReactHtmlParser(post.summary)}
         </p>
       </div>
