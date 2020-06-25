@@ -13,19 +13,21 @@ module.exports = {
       boxShadow: 'rgba(118,215,254,.35)'
     },
     yellow: {
-      base: 'hsl(58, 94%, 70%)',
-      darker: 'hsl(58,100%,46%)',
+      base: '#faf66b',
+      darker: '#ebe30',
       alt: '#fdd770',
-      lighter: 'hsl(58, 100%, 80%)',
-      lightest: 'hsl(58, 100%,85%)',
+      lighter: '#fffc99',
+      lightest: '#fffcb3',
     },
     grays: {
-      background: 'hsl(180, 1%, 97%)',
+      background: '#f7f7f7',
       border: '#f4f6f7',
       borderLight: '#F9F9F9',
-      borderDark: 'hsl(200, 5%, 91%)',
-      textLight: `hsl(193,21%,82%)`,
-      text: `hsl(193, 10%, 66%)`
+      borderDark: '#e7e8e9',
+      borderMedium: `#dde4e6`,
+      textLight: `#c7d7db`,
+      text: `#a0adb1`,
+      textDark: `#bfc5cd`
     },
     accents: {
       red: 'hsl(1,100%,92%)',
@@ -36,7 +38,7 @@ module.exports = {
       text: {
         red: 'hsl(1,77%,65%)',
         purple: 'hsl(240, 100%, 94%)',
-        green: 'hsl(139,50%,57%)',
+        green: 'hsl(139,50%,70%)',
         yellow: 'hsl(58, 94%, 70%)',
         blue: 'hsl(197,85%,55%)'
       }
@@ -90,8 +92,8 @@ module.exports = {
       lineHeights: {
         sm: `1.35em`,
         default: `1.5em`,
-        md: `1.75em`,
-        lg: `2em`
+        md: `1.7em`,
+        lg: `1.9em`
       },
     },
   },
@@ -117,7 +119,7 @@ module.exports = {
       xs: `462px`,
       sm: `641px`,
       md: `768px`,
-      lg: `96px`
+      lg: `960px`
     },
     min: {
       xs: `463px`,

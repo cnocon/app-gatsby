@@ -4,10 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+/* // You can delete this file if you're not using it */
 
-@import "bootstrap-grid.scss";
+@import "bootstrap-grid.min.css";
 @import "./fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css";
 @import "./fonts/fontello/css/fontello.css";
-@import "main";
-@import "custom";
+@import "main.css";
+@import "custom.css";

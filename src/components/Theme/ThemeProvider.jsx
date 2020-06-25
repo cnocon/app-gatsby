@@ -2,7 +2,7 @@ import React from 'react'
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming'
 import { Global } from '@emotion/core'
 import Theme from './Theme'
-import GlobalStyles from './Global.styles'
+import GlobalStyles from '../Global.styles'
 
 const ThemeProvider = ({ theme, children }) => {
   const GlobalStylesContainer = () => {
@@ -13,7 +13,7 @@ const ThemeProvider = ({ theme, children }) => {
 
   return(
     <EmotionThemeProvider theme={Theme}>
-      <GlobalStylesContainer />
+      <GlobalStylesContainer/>
       {children}
     </EmotionThemeProvider>
   )

@@ -42,7 +42,7 @@ const Intro = () => {
           <span className="rotate-out">a&nbsp;teacher.</span>
           <span className="rotate-in active">an&nbsp;avid learner.</span>
         </span><br/>
-        I live in Salt Lake City, UT.<br/>
+        I live and work in beautiful Utah.<br/>
         I love <strong>coding</strong> new things.<br/>
       </RotateWords>
     </RotateWordsWrapper>

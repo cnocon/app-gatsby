@@ -27,11 +27,11 @@
   margin: 0 auto;
 }
 
-// .entry-meta a:hover {
-//   /* background-color: rgba(250,244,106, .75); */
-//   color: #345;
-//   background-color: #EDF1F3;
-// }
+/* // .entry-meta a:hover { */
+/* //   background-color: rgba(250,244,106, .75); */
+/* //   color: #345; */
+/* //   background-color: #EDF1F3; */
+/* // } */
 .blog-posts .hentry {
   padding: 0.25em 0 3rem 0;
   margin-bottom: 3rem;
@@ -45,9 +45,9 @@ a.button.colored.blue:hover {
   color: #fff;
 }
 
-// .entry-content a {
-//   text-decoration: underline;
-// }
+/* // .entry-content a { */
+/* //   text-decoration: underline; */
+/* // } */
 
 .card {
   position: relative;
@@ -164,20 +164,20 @@ a.button.colored.blue:hover {
 }
 .timeline .event.current .date {
   background: #345;
-  // background:  hsl(58, 100%, 85%);
+  /* // background:  hsl(58, 100%, 85%); */
   color: #fff;
   border: 4px solid transparent;
 }
 .timeline .event .date {
   top: 34px;
-  // background-color: hsl(58, 100%, 85%);
-  // background-color: hsl(139, 60%, 69%);
-  // background-color: hsl(197,100%,87%);
-  // background-color: #345;
+  /* // background-color: hsl(58, 100%, 85%); */
+  /* // background-color: hsl(139, 60%, 69%); */
+  /* // background-color: hsl(197,100%,87%); */
+  /* // background-color: #345; */
   color: #345;
   border: 4px solid whitesmoke;
   background-color: white;
-  // color: #fff;
+  /* // color: #fff; */
   font-family: 'Oswald', 'sans-serif';
 }
 
@@ -267,7 +267,7 @@ a.button.colored.blue:hover {
   font-weight: 700;
   font-family: Lato, Arial, sans-serif;
   font-size: 1.4rem;
-  // text-transform: uppercase;
+  /* // text-transform: uppercase; */
 }
 
 .event h5 {
@@ -441,94 +441,87 @@ pre.prettyprinted {
 }
 
 
-// code {
-//   :not(.pre) & {
-//     padding: 0 3px 2px;
-//     /* margin-bottom: 4em; */
-//     font-size: .825em;
-//     color: #000;
-//     white-space: pre;
-//     overflow: auto;
-//     background-color: #EDF1F3;
-//   }
-// }
+/* // code { */
+/* //   :not(.pre) & { */
+/* //     padding: 0 3px 2px; */
+/* //     margin-bottom: 4em; */
+/* //     font-size: .825em; */
+/* //     color: #000; */
+/* //     white-space: pre; */
+/* //     overflow: auto; */
+/* //     background-color: #EDF1F3; */
+/* //   } */
+/* // } */
 
 
 .blog-posts .hentry {
   margin-bottom: .5rem;
 }
 
-
 .skillset {
   padding: 0 0 3.2em 0;
+}
 
+.skill-unit {
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
   .skill-unit {
-    padding-bottom: 0;
-
-    @media screen and (max-width: 767px) {
-      padding-bottom: 10px;
-    }
-
-    h4 {
-      font-weight: 800;
-      font-size: 12px !important;
-      position: relative;
-      z-index: 100;
-      // text-transform: lowercase !important;
-      color: #345;
-      line-height: 1;
-      vertical-align: top;
-
-      @media screen and (max-width: 767px) {
-        margin-bottom: 8px;
-        padding-left: 0;
-      }
-
-    }
-
-    i {
-      font-size: 14px;
-      line-height: 1.1rem;
-      margin-right: 3px;
-      transform: translateY(2px);
-    }
-
-    .bar {
-      position: relative;
-      background-color: #d0f1ff;
-      width: 100%;
-      height: 5px;
-
-      .progress {
-        position: absolute;
-        // background-color: hsla(198, 100%, 91%, 1);
-        // background-color: hsl(139, 60%, 69%);
-        // background-color: hsla(197,92%,68%,1);
-        background-color: hsl(139, 70%, 81%);
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-      }
-
-      .score {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 2.6rem;
-        // height: 26px;
-        height: 2rem;
-        background-color: #345;
-        color: #fff;
-        text-align: center;
-        // line-height: 26px;
-        line-height: 2rem;
-        font-weight: 600;
-        font-size: 1rem !important;
-        // border-top-right-radius: 2px;
-        // border-top-left-radius: 2px;
-        // border: 1px solid transparent;
-      }
-    }
+    padding-bottom: 10px;
   }
 }
+
+.skill-unit h4 {
+  font-weight: 800;
+  font-size: 12px !important;
+  position: relative;
+  z-index: 100;
+  color: #345;
+  line-height: 1;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 767px) {
+  .skill-unit h4 {
+    margin-bottom: 8px;
+    padding-left: 0;
+  }
+}
+
+skill-unit i {
+  font-size: 14px;
+  line-height: 1.1rem;
+  margin-right: 3px;
+  transform: translateY(2px);
+}
+
+  .skill-unit .bar {
+    position: relative;
+    background-color: #d0f1ff;
+    width: 100%;
+    height: 5px;
+  }
+
+  .skill-unit .bar .progress {
+    position: absolute;
+    background-color: hsl(139, 70%, 81%);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+  }
+
+.skill-unit .score {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2.6rem;
+    height: 2rem;
+    background-color: #345;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 600;
+    font-size: 1rem !important;
+  }

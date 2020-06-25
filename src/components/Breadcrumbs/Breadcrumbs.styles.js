@@ -23,6 +23,7 @@ export const CrumbItem = css`
   margin-left: 0;
   color: ${Theme.colors.grays.text};
   text-transform: uppercase;
+  font-size: ${Theme.fonts.sizes.xs};
 `
 
 export const CrumbsContainer = css`

@@ -9,9 +9,9 @@ export const RotateWordsWrapper = styled.div`
   padding: 0;
   font-family: ${Theme.fonts.headings.family};
 
-  @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+  ${'' /* @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     text-align: left;
-  }
+  } */}
 `
 
 export const RotateWords = styled.h2`
@@ -28,7 +28,6 @@ export const RotateWords = styled.h2`
 
     @media all and (max-width: ${Theme.breakpoints.max.sm}) {
       font-size: ${Theme.fonts.sizes.md};
-      text-align: left;
       line-height: 1.6;
     }
 
@@ -258,7 +257,7 @@ export const ServiceDiv = styled.div`
 
   &.color1 {
     i {
-      color: ${Theme.colors.accents.text.green};
+      color: ${Theme.colors.accents.green};
     }
 
     h4 span {
@@ -306,20 +305,22 @@ export const ImageContainer = styled.span`
   display: block;
   width: 7rem;
   height: 7rem;
-  border-radius: 50%;
-  margin: 0 auto ${Theme.spacing.xs}  ;
-  border: 4px solid ${Theme.colors.grays.border};
-  padding: 3px;
+  ${'' /* border-radius: 50%; */}
+  ${'' /* margin: 0 auto ${Theme.spacing.xs}  ; */}
+  ${'' /* border: 4px solid ${Theme.colors.grays.border}; */}
+  ${'' /* padding: 3px; */}
   vertical-align: middle;
   text-align: center;
+  margin: 0 auto 1rem;
 
   img {
     display: block;
-    width: calc(100% - 14px);
+    ${'' /* width: calc(100% - 14px); */}
     height: auto;
-    max-height: calc(100% - 14px);
+    ${'' /* max-height: calc(100% - 14px); */}
     vertical-align: middle;
-    margin: 10px auto;
+    ${'' /* margin: 7px auto; */}
+    margin: 0 auto;
     text-align: center;
     line-height: calc(100% - 14px);
   }

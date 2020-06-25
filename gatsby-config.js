@@ -21,7 +21,7 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-twitter`,
+    // `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -61,12 +61,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        includePaths: ["/src/styles/*.scss"],
-      }
-    },
-    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         resolveEnv: () => NETLIFY_ENV,
@@ -87,6 +81,12 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["styles/*.scss", "components/Theme/*.scss"],
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
