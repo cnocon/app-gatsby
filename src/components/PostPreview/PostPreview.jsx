@@ -3,12 +3,13 @@ import { Link } from 'gatsby'
 import ReactHtmlParser from 'react-html-parser';
 import * as Styled from './PostPreview.styles'
 
-const PostPreview = ({ post, color }) => {
+const PostPreview = ({ post, catMap }) => {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   const date = new Date(post.published).toLocaleDateString(undefined, options)
 
   const links = post.categories.map(c => {
-    return <Link to={`/articles/${c.slug}/page-1`} key={c.slug} style={{fontSize: `1rem`}}>{c.name}</Link>
+    const color = catMap[c.slug]
+    return <Link to={`/articles/${c.slug}/page-1`} key={c.slug} style={{fontSize: `1rem`}} className={`background-accent-${color}`}>{c.name}</Link>
   })
 
   return (
@@ -17,9 +18,7 @@ const PostPreview = ({ post, color }) => {
         <Styled.Title>
           <Styled.TitleLink
             to={`/articles/${post.slug}`}
-            rel="bookmark"
-            className={`box-shadow-${color}`}
-          >
+            rel="bookmark">
             {post.title}
           </Styled.TitleLink>
         </Styled.Title>

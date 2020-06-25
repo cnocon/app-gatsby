@@ -85,8 +85,12 @@ export default {styles: css`
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: 4rem 0 0;
+    margin: 5rem 0 0;
     font-size: ${Theme.fonts.sizes.md};
+    font-size: 25px;
+    margin: 1.0em 0 0.6em 0;
+    font-weight: 800;
+    font-family: ${Theme.fonts.headings.family};
 
     i {
       font-size: 16px;

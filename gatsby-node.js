@@ -20,12 +20,29 @@ const chunk = (array, size) => {
   return [firstChunk].concat(chunk(array.slice(size, array.length), size));
 }
 
-const colorsArr = ['blue', 'green', 'yellow', 'red', 'purple']
-
 exports.createPages = async ({ actions, graphql }) => {
+  const categoriesData = await graphql(`
+    {
+      allButterPost(filter: {categories: {elemMatch: {}}}) {
+        distinct(field: categories___slug)
+        group(field: categories___slug) {
+          edges {
+            node {
+              id
+              categories {
+                name
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
   const { data } = await graphql(`
     {
-      allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git", "sass", "javascript", "workflow"]}}}}, sort: {fields: published}) {
+      allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git", "sass", "javascript", "workflow"]}}}}, sort: {fields: created}) {
         edges {
           node {
             id
@@ -96,6 +113,12 @@ exports.createPages = async ({ actions, graphql }) => {
   const allPosts = data.allButterPost.edges.reverse();
   const chunkedPosts = chunk(allPosts, 3);
   const groups = data.allButterPost.group;
+  let catMap = {
+      git: 'green',
+      javascript: 'blue',
+      workflow: 'purple',
+      sass: 'red',
+      cli: 'yellow'}
 
   groups.forEach(group => {
     const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
@@ -105,11 +128,12 @@ exports.createPages = async ({ actions, graphql }) => {
       actions.createPage({
         path: `/articles/${category}/page-${index + 1}`,
         component: path.resolve(`./src/components/Category/Category.jsx`),
+        categories: categoriesData.data.allButterPost.distinct,
         context: {
           prevPagePath: index < 1 ? null : `/articles/${category}/page-${index}`,
           nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}/page-${index + 2}`,
-          category: group.fieldValue,
-          colors: colorsArr,
+          categoriesMap: catMap,
+          category: category,
           posts: collection.reverse(),
           breadcrumbs: [
             {
@@ -136,6 +160,8 @@ exports.createPages = async ({ actions, graphql }) => {
       component: path.resolve(`./src/components/Post/Post.jsx`),
       context: {
         post: node,
+        categories: categoriesData.data.allButterPost.distinct,
+        categoriesMap: catMap,
         breadcrumbs: [
           {
             name: 'Home',
@@ -159,10 +185,11 @@ exports.createPages = async ({ actions, graphql }) => {
       path: `/articles/page-${index + 1}`,
       component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
       context: {
+        categories: categoriesData.data.allButterPost.distinct,
         posts: collection,
         prevPagePath: index < 1 ? null : `/articles/page-${index}`,
         nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
-        colors: colorsArr,
+        categoriesMap: catMap,
         breadcrumbs: [
           {
             name: 'Home',
@@ -186,6 +213,8 @@ exports.createPages = async ({ actions, graphql }) => {
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
       posts: allPosts.slice(0,3),
+      categoriesMap: catMap,
+      categories: categoriesData.data.allButterPost.distinct,
       breadcrumbs: [
         {
           name: 'Home',

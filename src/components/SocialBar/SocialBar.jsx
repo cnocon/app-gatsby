@@ -1,23 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
-import * as Styled from "./TopBar.styles"
+import * as Styled from "./SocialBar"
 
-export default function TopBar({ pageHeader }) {
-// export default function TopBar({ pageHeader, breadcrumbs }) {
-  // const crumbs = breadcrumbs || [{name: pageHeader, path: null}]
-  // const allBreadCrumbs = crumbs.map((crumb, i) => {
-  //   if (crumb.path) {
-  //     return <span key={i}> / <Link to={crumb.path}>{crumb.name.toUpperCase()}</Link></span>
-  //   }
-
-  //   return false;
-  // });
+const SocialBar = ({ pageHeader }) => {
 
   return (
-    <Styled.PageHeader className="page-header">
-      {/* <div className="breadcrumbs" css={Styled.LeftBlock} style={{fontSize: '1.25rem'}}>
-        <Link to="/">HOME</Link> {allBreadCrumbs} <span>{pageHeader.length > 0 ? `/` : null} {pageHeader.toUpperCase()}</span>
-      </div> */}
+    <Styled.SocialBar className="social-bar">
       <div css={Styled.RightBlock} style={{fontSize: '1.25rem'}}>
         <a className="social-link github" href="http://github.com/cnocon" target="_blank" rel="noreferrer">
           <i className="icon-github-circled" css={Styled.Icon}></i>
@@ -32,8 +19,8 @@ export default function TopBar({ pageHeader }) {
           <i className="icon-email" css={Styled.Icon}></i>
         </a>
       </div>
-
-      {/* {heading} */}
-    </Styled.PageHeader>
+    </Styled.SocialBar>
   )
 }
+
+export default SocialBar

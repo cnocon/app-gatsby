@@ -8,10 +8,10 @@ import PostPreview from "../PostPreview/PostPreview"
 import * as Styled from '../PostsList/PostsList.styles'
 
 const Category = ({ ...data}) => {
-  const { category, breadcrumbs, nextPagePath, prevPagePath, colors } = data.pageContext
+  const { category, breadcrumbs, nextPagePath, prevPagePath, categoriesMap } = data.pageContext
 
   const posts = data.pageContext.posts.map(p => {
-    return <PostPreview post={p} key={p.slug} color={colors.sort((a, b) => 0.5 - Math.random()).pop()}/>
+    return <PostPreview post={p} key={p.slug} catMap={categoriesMap} />
   });
 
   const prevBtn = prevPagePath ?
@@ -35,7 +35,7 @@ const Category = ({ ...data}) => {
     <Layout className="blog-posts">
       <Header />
       <SEO stitle={`Posts from ${category}`} />
-      <Rule title={`Posted in ${category.toUpperCase()}`} icon="icon-article-alt" />
+      <Rule title={`Posted in ${category.toUpperCase()}`} icon="rule-icon icon-article-alt" />
       <Breadcrumbs crumbs={breadcrumbs} />
       <Styled.Section>
         {posts}

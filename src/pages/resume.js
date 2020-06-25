@@ -12,7 +12,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Header />
-      <Rule title={`Résumé`} icon="icon-leaf"/>
+      <Rule title={`Résumé`} icon="rule-icon icon-leaf"/>
       <Breadcrumbs crumbs={[]} />
 
       <SEO stitle="Home" />

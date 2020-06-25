@@ -10,8 +10,8 @@ const Header = ({ ruleTitle, ruleIcon }) => {
   const [ResumeClass, setResumeClass] = useState("")
 
   const setActiveOnLoad = () => {
-    setResumeClass(window.location.href.match(/\/resume/) ? "active box-shadow-yellow" : "")
-    setArticlesClass(window.location.href.match(/\/articles/) ? "active box-shadow-yellow" : "")
+    setResumeClass(window.location.href.match(/\/resume/) ? "active" : "")
+    setArticlesClass(window.location.href.match(/\/articles/) ? "active" : "")
 
   }
 
@@ -32,7 +32,7 @@ const Header = ({ ruleTitle, ruleIcon }) => {
         <Sty.Subhead>Front End Developer</Sty.Subhead>
         <Sty.Nav>
           <Sty.NavItem>
-            <Sty.NavLink to="/" activeClassName="active box-shadow-yellow">home</Sty.NavLink>
+            <Sty.NavLink to="/" activeClassName="active">home</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
             <Sty.NavLink to="/articles/page-1" className={ArticlesClass}>blog</Sty.NavLink>

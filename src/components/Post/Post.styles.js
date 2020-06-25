@@ -4,6 +4,118 @@ import { css } from "@emotion/core"
 // import { Link } from "gatsby"
 import Theme from "../Theme/Theme"
 
+export const EntryContent = css`
+
+.box-shadow-purple {
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.purple};
+    padding-bottom: 1px;
+  }
+
+  .background-accent-purple {
+    background: ${Theme.colors.accents.purple};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.purple};
+  }
+
+  .border-accent-purple {
+    background-color: ${Theme.colors.accents.purple};
+
+    &:hover {
+      background-color: ${Theme.colors.accents.purple};
+      border-color: transparent;
+      color: #fff;
+    }
+
+  }
+
+  .box-shadow-red {
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.red};
+    padding-bottom: 1px;
+  }
+
+  .background-accent-red {
+    background: ${Theme.colors.accents.red};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.red};
+  }
+
+  .border-accent-red {
+    background-color: ${Theme.colors.accents.red};
+
+    &:hover {
+      background-color: ${Theme.colors.accents.red};
+      border-color: transparent;
+      color: #fff;
+    }
+
+  }
+
+  .box-shadow-yellow {
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.yellow};
+    padding-bottom: 1px;
+  }
+
+  .background-accent-yellow {
+    background: ${Theme.colors.accents.yellow};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.yellow};
+  }
+
+  .border-accent-yellow {
+    background-color: ${Theme.colors.accents.yellow};
+    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
+
+    &:hover {
+      background-color: ${Theme.colors.accents.yellow};
+      border-color: transparent;
+      color: ${Theme.colors.default.base};
+    }
+  }
+
+  .box-shadow-blue {
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.blue};
+    padding-bottom: 1px;
+  }
+
+  .background-accent-blue {
+    background: ${Theme.colors.accents.blue};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.blue};
+  }
+
+  .border-accent-blue {
+    background-color: ${Theme.colors.accents.blue};
+    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
+
+    &:hover {
+      background-color: ${Theme.colors.accents.blue};
+      border-color: transparent;
+      color: #fff;
+    }
+  }
+
+  .box-shadow-green {
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.green};
+    padding-bottom: 1px;
+  }
+
+  .background-accent-green {
+    background: ${Theme.colors.accents.green};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.green};
+  }
+
+  .border-accent-green {
+    background-color: ${Theme.colors.accents.green};
+    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
+
+    &:hover {
+      background-color: ${Theme.colors.accents.green};
+      border-color: transparent;
+      color: #fff;
+    }
+  }
+`
 
 export const PostTitle = styled.h1`
   font-size: ${Theme.fonts.sizes.xl};
@@ -11,6 +123,12 @@ export const PostTitle = styled.h1`
   margin: 20px 0 .5em;
   font-family: ${Theme.fonts.headings.family};
   font-weight: 900;
+  margin-top: 0;
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     font-size: ${Theme.fonts.sizes.lg};
@@ -72,7 +190,10 @@ export const EntryMeta = css`
 
   a:hover {
     color: #345;
-    background-color: #EDF1F3;
+    border-color: #345;
+    ${'' /* border-color: #345; */}
+    ${'' /* background-color: white; */}
+    ${'' /* background-color: #EDF1F3; */}
   }
 
   h3 {

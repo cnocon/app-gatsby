@@ -5,7 +5,7 @@ const Rule = ({ title, icon }) => {
   return (
     <Styled.RuleWrapper>
       <span css={Styled.RuleSpan}>
-        <i className={`rule-icon ${icon}`}></i>
+        <i className={`fa ${icon}`}></i>
         {title}
       </span>
     </Styled.RuleWrapper>

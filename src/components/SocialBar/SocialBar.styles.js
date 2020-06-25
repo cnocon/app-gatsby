@@ -3,7 +3,7 @@ import { css } from "@emotion/core"
 // import { Link } from "gatsby"
 // import Img from "gatsby-image"
 
-export const PageHeader = styled.header`
+export const SocialBar = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;

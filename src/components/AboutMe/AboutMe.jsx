@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import * as Styled from "./AboutMe.styles"
 import Layout from "../Layout/Layout"
 import SEO from "../SEO/seo"

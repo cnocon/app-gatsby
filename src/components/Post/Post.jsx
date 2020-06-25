@@ -10,13 +10,12 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 
 const Post = ({...data}) => {
-  const post = data.pageContext.post
-  const breadcrumbs = data.pageContext.breadcrumbs
-  // const date = new Date(post.published).toLocaleString()
+  const { post, breadcrumbs, categoriesMap } = data.pageContext
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
   const date = new Date(post.published).toLocaleDateString(undefined, options)
   const links = post.categories.map(c => {
-    return <Link to={`/articles/${c.slug}/page-1`} key={c.slug}>{c.name}</Link>
+    const color = categoriesMap[c.slug]
+    return <Link to={`/articles/${c.slug}/page-1`} key={c.slug} className={`background-accent-${color}`}>{c.name}</Link>
   });
 
   return (
@@ -29,7 +28,7 @@ const Post = ({...data}) => {
         imagePath={post.featured_image}
         />
 
-      <Rule title={`Level: ${post.tags[0].name.toUpperCase()}`} icon="icon-chart-bar" />
+      <Rule title={`Level: ${post.tags[0].name.toUpperCase()}`} icon="rule-icon icon-chart-bar" />
 
       <Breadcrumbs crumbs={breadcrumbs} />
 

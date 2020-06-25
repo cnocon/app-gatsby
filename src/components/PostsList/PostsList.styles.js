@@ -49,15 +49,21 @@ export const Navigation = styled.div`
   align-items: space-between;
   justify-content: start;
 
-  .full-block {
+  [class$='full-block'] {
     flex-basis: 100%;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
   }
+
+  .right-full-block {
+    align-items: flex-start;
+  }
+
+.left-full-block {
+  align-items: flex-end;
+}
 
   .left-block,
   .right-block {

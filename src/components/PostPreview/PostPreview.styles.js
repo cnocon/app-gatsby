@@ -24,8 +24,14 @@ export const ReadableContent = styled.article`
   }
 
   .box-shadow-purple {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.purple};
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.purple};
     padding-bottom: 1px;
+  }
+
+  .background-accent-purple {
+    background: ${Theme.colors.accents.purple};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.purple};
   }
 
   .border-accent-purple {
@@ -40,8 +46,14 @@ export const ReadableContent = styled.article`
   }
 
   .box-shadow-red {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.red};
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.red};
     padding-bottom: 1px;
+  }
+
+  .background-accent-red {
+    background: ${Theme.colors.accents.red};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.red};
   }
 
   .border-accent-red {
@@ -56,8 +68,14 @@ export const ReadableContent = styled.article`
   }
 
   .box-shadow-yellow {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.yellow};
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.yellow};
     padding-bottom: 1px;
+  }
+
+  .background-accent-yellow {
+    background: ${Theme.colors.accents.yellow};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.yellow};
   }
 
   .border-accent-yellow {
@@ -72,8 +90,14 @@ export const ReadableContent = styled.article`
   }
 
   .box-shadow-blue {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.blue};
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.blue};
     padding-bottom: 1px;
+  }
+
+  .background-accent-blue {
+    background: ${Theme.colors.accents.blue};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.blue};
   }
 
   .border-accent-blue {
@@ -88,8 +112,14 @@ export const ReadableContent = styled.article`
   }
 
   .box-shadow-green {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.green};
+    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.green};
     padding-bottom: 1px;
+  }
+
+  .background-accent-green {
+    background: ${Theme.colors.accents.green};
+    color: #000;
+    border: 1px solid ${Theme.colors.accents.green};
   }
 
   .border-accent-green {
@@ -126,20 +156,26 @@ export const Button = styled(Link)`
   font-weight: 700;
   text-transform: uppercase;
   border: 2px solid ${Theme.colors.default.base};
-
   color: ${Theme.colors.default.base};
-    background-color: #fff;
-
-  &:hover {
+  background-color: #fff;
   color: #fff;
   background-color: ${Theme.colors.default.base};
+
+  &:hover {
+  color: ${Theme.colors.default.base};
+  background-color: #fff;
   }
 `
 
 export const TitleLink = styled(Link)`
-  font-size: ${Theme.fonts.sizes.md};
-  line-height: ${Theme.fonts.sizes.xl};
+  font-size: ${Theme.fonts.sizes.xl};
+  line-height: ${Theme.fonts.sizes.lineHeights.sm};
   color: ${Theme.colors.default.base};
+  ${'' /* text-transform: uppercase; */}
+
+  @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+    font-size: ${Theme.fonts.sizes.md};
+  }
 
   &:hover {
     box-shadow: none;
@@ -150,8 +186,6 @@ export const TitleLink = styled(Link)`
 export const Title = styled.h2`
   margin: 0 auto 1.6rem;
 `
-
-
 
 export const EntryMeta = css`
   float: left;
@@ -201,7 +235,7 @@ export const EntryMeta = css`
 
   a:hover {
     color: #345;
-    background-color: #EDF1F3;
+    border-color: #345;
   }
 
   h3 {
