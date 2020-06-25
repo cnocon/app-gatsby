@@ -1,14 +1,16 @@
 import React from "react"
-import * as Styled from '../PostPreview/PostPreview.styles'
+import { Button } from '../PostPreview/PostPreview.styles'
+import * as Styled from './NotFound.styles'
 
 const NotFound = () => {
   return (
     <div style={{textAlign: 'center', padding: '4.5rem 0'}}>
-      <h1>NOT FOUND</h1>
-      <p style={{fontSize: '1.6rem'}}>The page you're looking for doesn't exist.</p>
-      <Styled.Button to="/">
-      <span className="meta-nav" style={{transform: "rotate(180deg)", display: "inline-block"}}>→</span> Homepage
-      </Styled.Button>
+      <h1 css={Styled.Heading}>404</h1>
+      <p style={{fontSize: '1.6rem', fontStyle: 'italic'}}>The page you are looking for was not found!</p>
+      <Button to="/">
+        <span className="meta-nav" style={{transform: "rotate(180deg)", display: "inline-block"}}>→</span>
+        {` `}Homepage
+      </Button>
     </div>
   )
 }
