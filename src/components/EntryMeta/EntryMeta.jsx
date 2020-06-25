@@ -9,7 +9,7 @@ const EntryMeta = ({ categories, categoriesMap, published})  => {
 
   const links = categories.map(c => {
     const color = categoriesMap[c.slug]
-    return <Link to={`/articles/${c.slug}/page-1`} key={c.slug} className={`background-accent-${color}`}>{c.name}</Link>
+    return <Link to={`/articles/${c.slug}/page-1`} key={c.slug}>{c.name}</Link>
   });
 
   return (

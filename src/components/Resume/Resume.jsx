@@ -29,14 +29,14 @@ const Resume = () => {
 
   return (
     <div className="row resume">
-      <div className="col-md-6 col-lg-7 left-col">
+      <div className="col-md-7 col-lg-7 left-col">
         <h2 css={Styled.HistoryHeading}>
           <i className="far fa-briefcase"></i>
           Work History</h2>
         <div className=" timeline">{workEvents}</div>
       </div>
 
-      <div className="col-md-6 col-lg-5 right-col">
+      <div className="col-md-5 col-lg-5 right-col">
         <h2>Skills</h2>
         <div className="skillset">{skills}</div>
 

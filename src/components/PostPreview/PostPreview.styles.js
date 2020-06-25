@@ -14,6 +14,10 @@ export const ReadableContent = styled.article`
   &.post-preview {
     margin-bottom: 2rem;
     margin-top: 2rem;
+
+    p {
+      margin: 0;
+    }
   }
 
   @media screen and (min-width: ${Theme.breakpoints.min.md}) {
@@ -45,11 +49,6 @@ export const ReadableContent = styled.article`
 
   }
 
-  .box-shadow-red {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.red};
-    padding-bottom: 1px;
-  }
-
   .background-accent-red {
     background: ${Theme.colors.accents.red};
     color: #000;
@@ -67,10 +66,7 @@ export const ReadableContent = styled.article`
 
   }
 
-  .box-shadow-yellow {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.yellow};
-    padding-bottom: 1px;
-  }
+
 
   .background-accent-yellow {
     background: ${Theme.colors.accents.yellow};
@@ -89,10 +85,6 @@ export const ReadableContent = styled.article`
     }
   }
 
-  .box-shadow-blue {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.blue};
-    padding-bottom: 1px;
-  }
 
   .background-accent-blue {
     background: ${Theme.colors.accents.blue};
@@ -109,11 +101,6 @@ export const ReadableContent = styled.article`
       border-color: transparent;
       color: #fff;
     }
-  }
-
-  .box-shadow-green {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.green};
-    padding-bottom: 1px;
   }
 
   .background-accent-green {
@@ -144,7 +131,6 @@ export const Button = styled(Link)`
   text-align: center;
   letter-spacing: .03rem;
   border-radius: 4px;
-  ${'' /* text-transform: uppercase; */}
   outline: 0;
   text-shadow: none;
   transition: all .2s;
@@ -158,17 +144,15 @@ export const Button = styled(Link)`
   border: 2px solid ${Theme.colors.default.base};
   color: ${Theme.colors.default.base};
   background-color: #fff;
-  color: #fff;
-  background-color: ${Theme.colors.default.base};
 
   &:hover {
-  color: ${Theme.colors.default.base};
-  background-color: #fff;
+  background-color: ${Theme.colors.default.base};
+  color: #fff;
   }
 `
 
 export const TitleLink = styled(Link)`
-  font-size: ${Theme.fonts.sizes.xl};
+  font-size: ${Theme.fonts.sizes.lg};
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
   color: ${Theme.colors.default.base};
   ${'' /* text-transform: uppercase; */}
@@ -180,6 +164,26 @@ export const TitleLink = styled(Link)`
   &:hover {
     box-shadow: none;
     color: ${Theme.colors.default.base};
+  }
+  &.box-shadow-purple {
+    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.purple};
+    padding-bottom: 1px;
+  }
+  &.box-shadow-red {
+    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.red};
+    padding-bottom: 1px;
+  }
+  &.box-shadow-yellow {
+    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.yellow};
+    padding-bottom: 1px;
+  }
+  &.box-shadow-blue {
+    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.blue};
+    padding-bottom: 1px;
+  }
+  &.box-shadow-green {
+    box-shadow: inset 0 -6px 1px ${Theme.colors.accents.green};
+    padding-bottom: 1px;
   }
 `
 

@@ -181,7 +181,7 @@ a.button.colored.blue:hover {
   font-family: 'Oswald', 'sans-serif';
 }
 
-@media screen and (max-width: 76rem) {
+@media screen and (max-width: 769px) {
 .timeline .event .date {
   /* top: -64px; */
   display: none;

@@ -112,13 +112,14 @@ exports.createPages = async ({ actions, graphql }) => {
   `)
   const allPosts = data.allButterPost.edges.reverse();
   const chunkedPosts = chunk(allPosts, 3);
+  const colors = ['blue', 'green', 'yellow', 'red', 'purple']
   const groups = data.allButterPost.group;
   let catMap = {
-      git: 'green',
-      javascript: 'blue',
+      git: 'blue',
+      javascript: 'green',
       workflow: 'purple',
-      sass: 'red',
-      cli: 'yellow'}
+      sass: 'yellow',
+      cli: 'red'}
 
   groups.forEach(group => {
     const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
@@ -133,6 +134,7 @@ exports.createPages = async ({ actions, graphql }) => {
           prevPagePath: index < 1 ? null : `/articles/${category}/page-${index}`,
           nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}/page-${index + 2}`,
           categoriesMap: catMap,
+          colors: colors,
           category: category,
           posts: collection.reverse(),
           breadcrumbs: [
@@ -162,6 +164,7 @@ exports.createPages = async ({ actions, graphql }) => {
         post: node,
         categories: categoriesData.data.allButterPost.distinct,
         categoriesMap: catMap,
+        colors: colors,
         breadcrumbs: [
           {
             name: 'Home',
@@ -187,6 +190,7 @@ exports.createPages = async ({ actions, graphql }) => {
       context: {
         categories: categoriesData.data.allButterPost.distinct,
         posts: collection,
+        colors: colors,
         prevPagePath: index < 1 ? null : `/articles/page-${index}`,
         nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
         categoriesMap: catMap,
@@ -214,6 +218,7 @@ exports.createPages = async ({ actions, graphql }) => {
     context: {
       posts: allPosts.slice(0,3),
       categoriesMap: catMap,
+      colors: colors,
       categories: categoriesData.data.allButterPost.distinct,
       breadcrumbs: [
         {

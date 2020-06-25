@@ -30,10 +30,10 @@ module.exports = {
       textDark: `#bfc5cd`
     },
     accents: {
-      red: 'hsl(1,100%,92%)',
-      green: 'hsl(139, 70%, 87%)',
+      red: 'hsl(1,100%,94%)',
+      green: 'hsl(139, 70%, 86%)',
       blue: 'hsl(197,100%,89%)',
-      yellow: 'hsl(58, 100%, 88%)',
+      yellow: 'hsl(58, 100%, 86%)',
       purple: 'hsl(240, 100%, 94%)',
       text: {
         red: 'hsl(1,77%,65%)',

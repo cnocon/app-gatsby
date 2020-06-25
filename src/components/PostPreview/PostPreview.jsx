@@ -3,7 +3,7 @@ import ReactHtmlParser from 'react-html-parser';
 import * as Styled from './PostPreview.styles'
 import EntryMeta from "../EntryMeta/EntryMeta"
 
-const PostPreview = ({ post, catMap }) => {
+const PostPreview = ({ post, catMap, color }) => {
 
   return (
     <Styled.ReadableContent className="post-preview">
@@ -11,7 +11,8 @@ const PostPreview = ({ post, catMap }) => {
         <Styled.Title>
           <Styled.TitleLink
             to={`/articles/${post.slug}`}
-            rel="bookmark">
+            rel="bookmark"
+            className={`box-shadow-${color}`}>
             {post.title}
           </Styled.TitleLink>
         </Styled.Title>
@@ -23,7 +24,7 @@ const PostPreview = ({ post, catMap }) => {
       </header>
 
       <div className="entry-content">
-        <p style={{fontSize: '1.6rem'}}>
+        <p style={{marginBottom: `0`}}>
           {ReactHtmlParser(post.summary)}
         </p>
       </div>

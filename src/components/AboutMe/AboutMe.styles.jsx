@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import Theme from '../Theme/Theme'
-// import { Link } from 'gatsby'
 import { css } from '@emotion/core'
 
 
@@ -8,10 +7,6 @@ export const RotateWordsWrapper = styled.div`
   text-align: center;
   padding: 0;
   font-family: ${Theme.fonts.headings.family};
-
-  ${'' /* @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
-    text-align: left;
-  } */}
 `
 
 export const RotateWords = styled.h2`
