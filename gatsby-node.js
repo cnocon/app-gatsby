@@ -20,7 +20,7 @@ const chunk = (array, size) => {
   return [firstChunk].concat(chunk(array.slice(size, array.length), size));
 }
 
-const colorsArr = ['blue', 'green', 'yellow', 'red']
+const colorsArr = ['blue', 'green', 'yellow', 'red', 'purple']
 
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
@@ -103,18 +103,26 @@ exports.createPages = async ({ actions, graphql }) => {
     const category = group.fieldValue.toLowerCase().replace(/\s/g, '-')
     chunkedPosts.forEach((collection, index) => {
       actions.createPage({
-        path: `/articles/${category}-page-${index + 1}`,
+        path: `/articles/${category}/page-${index + 1}`,
         component: path.resolve(`./src/components/Category/Category.jsx`),
         context: {
-          prevPagePath: index < 1 ? null : `/articles/${category}-page-${index}`,
-          nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}-page-${index + 2}`,
+          prevPagePath: index < 1 ? null : `/articles/${category}/page-${index}`,
+          nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}/page-${index + 2}`,
           category: group.fieldValue,
-          colors: colorsArr.sort((a, b) => 0.5 - Math.random()),
+          colors: colorsArr,
           posts: collection.reverse(),
           breadcrumbs: [
             {
-              name: `Recent Posts`,
+              name: 'Home',
+              path: '/',
+            },
+            {
+              name: `Blog`,
               path: `/articles/page-1`,
+            },
+            {
+              name: category.charAt(0).toUpperCase() + category.slice(1),
+              path: null,
             },
           ]
         },
@@ -130,10 +138,18 @@ exports.createPages = async ({ actions, graphql }) => {
         post: node,
         breadcrumbs: [
           {
-            name: `Recent Posts`,
+            name: 'Home',
+            path: '/',
+          },
+          {
+            name: `Blog`,
             path: `/articles/page-1`,
           },
-        ]
+          {
+            name: node.title,
+            path: null,
+          },
+        ],
       },
     })
   })
@@ -146,13 +162,21 @@ exports.createPages = async ({ actions, graphql }) => {
         posts: collection,
         prevPagePath: index < 1 ? null : `/articles/page-${index}`,
         nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
-        colors: colorsArr.sort((a, b) => 0.5 - Math.random()),
+        colors: colorsArr,
         breadcrumbs: [
           {
-            name: `Recent Posts`,
-            path: `/articles/page-${index+1}`,
+            name: 'Home',
+            path: '/',
           },
-        ]
+          {
+            name: `Blog`,
+            path: `/articles/page-1`,
+          },
+          {
+            name: `Page ${index + 1}`,
+            path: null,
+          },
+        ],
       },
     })
   })
@@ -162,7 +186,12 @@ exports.createPages = async ({ actions, graphql }) => {
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
       posts: allPosts.slice(0,3),
-      breadcrumbs: null,
+      breadcrumbs: [
+        {
+          name: 'Home',
+          path: null,
+        },
+      ],
     },
   })
 }

@@ -8,11 +8,11 @@ const PostPreview = ({ post, color }) => {
   const date = new Date(post.published).toLocaleDateString(undefined, options)
 
   const links = post.categories.map(c => {
-    return <Link to={`/articles/${c.slug}-page-1`} key={c.slug} style={{fontSize: `1rem`}}>{c.name}</Link>
+    return <Link to={`/articles/${c.slug}/page-1`} key={c.slug} style={{fontSize: `1rem`}}>{c.name}</Link>
   })
 
   return (
-    <Styled.ReadableContent>
+    <Styled.ReadableContent className="post-preview">
       <header className="post-preview-header">
         <Styled.Title>
           <Styled.TitleLink
@@ -23,9 +23,9 @@ const PostPreview = ({ post, color }) => {
             {post.title}
           </Styled.TitleLink>
         </Styled.Title>
-        <div className="entry-meta" style={{fontSize: '1.2rem'}}>
+        <div css={Styled.EntryMeta}>
           <span className="posted-in">posted in {links}</span>
-          <span className="posted-on"> on&nbsp;<time className="entry-date" dateTime={post.published}>{date}</time></span>
+          <span className="posted-on">on<time className="entry-date" dateTime={post.published}>{date}</time></span>
       </div>
       </header>
 

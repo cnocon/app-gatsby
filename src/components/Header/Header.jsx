@@ -4,35 +4,19 @@ import * as Sty from "./Header.styles"
 import portrait from "./square-portrait.png"
 import { window } from 'browser-monads';
 
-const HomeRule = ({title, icon}) => {
-  return (
-    <Sty.RuleWrapper>
-      <span css={Sty.RuleSpan}>
-        <i className={`rule-icon ${icon}`}></i>
-        {title}
-      </span>
-    </Sty.RuleWrapper>
-  )
-};
-
 
 const Header = ({ ruleTitle, ruleIcon }) => {
   const [ArticlesClass, setArticlesClass] = useState("")
   const [ResumeClass, setResumeClass] = useState("")
 
-  const setArticlesActive = () => {
-    setArticlesClass(window.location.href.match(/\/articles/) ? "active" : "")
-  }
-
   const setActiveOnLoad = () => {
-    setResumeClass(window.location.href.match(/\/resume/) ? "active" : "")
-    setArticlesClass(window.location.href.match(/\/articles/) ? "active" : "")
+    setResumeClass(window.location.href.match(/\/resume/) ? "active box-shadow-yellow" : "")
+    setArticlesClass(window.location.href.match(/\/articles/) ? "active box-shadow-yellow" : "")
 
   }
 
   useEffect(() => {
     if (window) {
-      // setArticlesActive()
       setActiveOnLoad()
     }
   })
@@ -48,17 +32,17 @@ const Header = ({ ruleTitle, ruleIcon }) => {
         <Sty.Subhead>Front End Developer</Sty.Subhead>
         <Sty.Nav>
           <Sty.NavItem>
-            <Sty.NavLink to="/" activeClassName="active" activeStyle={{color: '#345'}}>home</Sty.NavLink>
+            <Sty.NavLink to="/" activeClassName="active box-shadow-yellow">home</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/articles/page-1" className={ArticlesClass} activeClassName="active" activeStyle={{color: '#345'}}>blog</Sty.NavLink>
+            <Sty.NavLink to="/articles/page-1" className={ArticlesClass}>blog</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/resume" activeClassName="active" activeStyle={{color: '#345'}} className={ResumeClass} >résumé</Sty.NavLink>
+            <Sty.NavLink to="/resume" className={ResumeClass}>résumé</Sty.NavLink>
           </Sty.NavItem>
         </Sty.Nav>
       </Sty.Container>
-      {ruleTitle ? <HomeRule title={ruleTitle} icon={ruleIcon}/> : null }
+
     </Sty.Header>
   )
 }

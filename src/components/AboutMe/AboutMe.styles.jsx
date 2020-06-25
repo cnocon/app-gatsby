@@ -5,12 +5,12 @@ import { css } from '@emotion/core'
 
 
 export const RotateWordsWrapper = styled.div`
-  text-align: left;
-  padding: 0 0 1em 0;
+  text-align: center;
+  padding: 0;
   font-family: ${Theme.fonts.headings.family};
 
-  @media screen and (min-width: ${Theme.breakpoints.sm}) {
-    text-align: center;
+  @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+    text-align: left;
   }
 `
 
@@ -24,10 +24,12 @@ export const RotateWords = styled.h2`
     color: #345;
     text-align: center;
     font-weight: 300;
+    margin-bottom: 0;
 
-    @media all and (min-width: ${Theme.breakpoints.sm}) {
-      font-size: ${Theme.fonts.sizes.lg};
-      text-align: center;
+    @media all and (max-width: ${Theme.breakpoints.max.sm}) {
+      font-size: ${Theme.fonts.sizes.md};
+      text-align: left;
+      line-height: 1.6;
     }
 
     strong {
@@ -37,17 +39,15 @@ export const RotateWords = styled.h2`
 
     .rotate-words {
       font-size: inherit;
-
-      min-height: 3.3rem;
+      min-height: 3.2rem;
       font-family: ${Theme.fonts.headings.family};
       display: inline-block;
       min-width: 18rem;
 
       text-align: left;
 
-      @media all and (max-width: ${Theme.breakpoints.sm - 1}) {
-        min-height: 2.7rem;
-        ${'' /* text-align: left; */}
+      @media all and (max-width: ${Theme.breakpoints.max.sm}) {
+        min-height: 2.3rem;
       }
 
       span {
@@ -59,7 +59,7 @@ export const RotateWords = styled.h2`
         font-family: ${Theme.fonts.headings.family};
         font-weight: 300;
 
-        @media all and (min-width: ${Theme.breakpoints.sm}) {
+        @media all and (min-width: ${Theme.breakpoints.min.sm}) {
           font-size: inherit;
         }
 
@@ -74,7 +74,7 @@ export const RotateWords = styled.h2`
           -webkit-animation: rotateInWord .5s linear forwards;
           font-weight: 800;
 
-          @media all and (min-width: ${Theme.breakpoints.sm}) {
+          @media all and (min-width: ${Theme.breakpoints.min.sm}) {
             font-size: inherit;
           }
         }
@@ -89,7 +89,7 @@ export const RotateWords = styled.h2`
           letter-spacing: -1px;
           line-height: inherit;
 
-          @media all and (min-width: ${Theme.breakpoints.sm}) {
+          @media all and (min-width: ${Theme.breakpoints.min.sm}) {
             font-size: inherit;
           }
         }
@@ -119,6 +119,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+  .section-title {
+    margin-top: 2rem;
+  }
   h2 {
     text-align: left;
     font-weight: 700;
@@ -162,17 +165,15 @@ export const TestoHeading = styled.h2`
     line-height: ${Theme.fonts.sizes.lineHeights.default};
     text-decoration: none;
     padding-bottom: 1px;
-    ${'' /* box-shadow: inset 0 -3px 0 ${Theme.colors.blue.boxShadow}; */}
     transition: all .3s;
     font-family: ${Theme.fonts.body.family};
     font-weight: 900;
+    text-decoration: underline;
 
     &:hover,
     &:focus,
     &:active {
-      color: ${Theme.colors.blue.base};
       text-decoration: none;
-      box-shadow: none;
       outline: 0;
     }
   }
@@ -184,7 +185,7 @@ export const Date = styled.time`
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
   text-transform: none;
   color: ${Theme.colors.default.base};
-  margin: ${Theme.spacing.sm} auto 0;
+  margin: ${Theme.spacing.xxs} auto 0;
   text-align: center;
   font-family: ${Theme.fonts.body.family};
   font-weight: 400;
@@ -208,7 +209,7 @@ export const PostParagraph = css`
 
 export const ServiceDiv = styled.div`
   text-align: center;
-  padding: ${Theme.spacing.default} 0;
+  padding: ${Theme.spacing.default} 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,6 +247,12 @@ export const ServiceDiv = styled.div`
       font-size: 32px;
       border-radius: 50%;
       text-align: center;
+
+      @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+        width: 70px;
+        height: 70px;
+        line-height: 66px;
+      }
     }
   }
 
@@ -321,14 +328,14 @@ export const ImageContainer = styled.span`
 export const Tweet = css`
   margin: 0 0 0 15% !important;
 
-  @media all and (min-width: ${Theme.breakpoints.md}) {
+  @media all and (min-width: ${Theme.breakpoints.min.md}) {
     margin: 0 auto !important;
   }
 `
 
 export const HalfColumn = styled.div`
   &:first-of-type {
-    @media all and (max-width: ${Theme.breakpoints.md}) {
+    @media all and (max-width: ${Theme.breakpoints.min.md}) {
       margin-bottom: ${Theme.spacing.xl};
     }
   }

@@ -3,29 +3,29 @@ import { ResumeData } from "../../data/ResumeData"
 import Event from "../Event/Event"
 import * as Styled from "./Resume.styles"
 
-const Resume = () => {
+const workEvents = ResumeData.experience.map((item, i) => {
+  return <Event key={`event-${i}`} current={i === 0} data={item} type="work"/>
+})
 
-  const workEvents = ResumeData.experience.map((item, i) => {
-    return <Event key={`event-${i}`} current={i === 0} data={item} type="work"/>
-  })
+const eduEvents = ResumeData.education.map((item, i) => {
+  return <Event key={`event-edu-${i}`} current={i === 0} data={item} type="edu"/>
+})
 
-  const eduEvents = ResumeData.education.map((item, i) => {
-    return <Event key={`event-edu-${i}`} current={i === 0} data={item} type="edu"/>
-  })
-
-  const skills = ResumeData.skills.map((skill, i) => {
-    return(
-      <div className="skill-unit" key={`skill-${i}`}>
-        <h4 style={{fontSize: '1.1rem'}}>
-        <i className={skill.icon}></i> {skill.name}</h4>
-        <div className="bar" data-percent={skill.percent}>
-          <div className="progress" style={{width: `${skill.percent}%`}}>
-            <span className="score" style={{fontSize: '1.1rem'}}>{skill.percent}%</span>
-          </div>
+const skills = ResumeData.skills.map((skill, i) => {
+  return(
+    <div className="skill-unit" key={`skill-${i}`}>
+      <h4 style={{fontSize: '1.1rem'}}>
+      <i className={skill.icon}></i> {skill.name}</h4>
+      <div className="bar" data-percent={skill.percent}>
+        <div className="progress" style={{width: `${skill.percent}%`}}>
+          <span className="score" style={{fontSize: '1.1rem'}}>{skill.percent}%</span>
         </div>
       </div>
-    )
-  })
+    </div>
+  )
+})
+
+const Resume = () => {
 
   return (
     <div className="row resume">

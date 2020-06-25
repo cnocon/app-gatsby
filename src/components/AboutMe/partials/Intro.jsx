@@ -38,7 +38,7 @@ const Intro = () => {
       <RotateWords className="rotate-header">
         Hello. I'm&nbsp;
         <span className="rotate-words">
-          <span className="rotate-out">a&nbsp;developer.</span>
+          <span className="rotate-out">a&nbsp;web developer.</span>
           <span className="rotate-out">a&nbsp;teacher.</span>
           <span className="rotate-in active">an&nbsp;avid learner.</span>
         </span><br/>

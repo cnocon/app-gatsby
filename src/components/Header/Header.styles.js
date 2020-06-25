@@ -1,6 +1,6 @@
 // import React from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+// import { css } from "@emotion/core"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import Theme from "../Theme/Theme"
@@ -20,6 +20,28 @@ export const Container = styled.div`
     width: ${Theme.layout.widths.default};
     max-width: ${Theme.layout.widths.defaultMax};
   }
+
+  .box-shadow-blue {
+    box-shadow: inset 0 -4px 0 ${Theme.colors.accents.blue};
+    padding-bottom: 1px;
+  }
+  .box-shadow-yellow {
+    box-shadow: inset 0 -4px 0 ${Theme.colors.accents.yellow};
+    padding-bottom: 1px;
+  }
+  .box-shadow-purple {
+    box-shadow: inset 0 -4px 0 ${Theme.colors.accents.purple};
+    padding-bottom: 1px;
+  }
+  .box-shadow-red {
+    box-shadow: inset 0 -4px 0 ${Theme.colors.accents.red};
+    padding-bottom: 1px;
+  }
+
+.box-shadow-green {
+  box-shadow: inset 0 -4px 0 ${Theme.colors.accents.green};
+  padding-bottom: 1px;
+}
 `
 
 export const Header = styled.header(
@@ -56,6 +78,11 @@ export const ImageEl = styled.img`
   border-radius: 8rem;
   display: block !important;
   border: .4rem solid #F4F6F7;
+
+  @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+    height: 12rem;
+    width: 12rem;
+  }
 `
 
 export const Heading1 = styled.h1`
@@ -66,6 +93,10 @@ export const Heading1 = styled.h1`
   line-height: 1.5em;
   -webkit-backface-visibility: hidden;
   font-family: Lato, sans-serif;
+
+  @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+    font-size: ${Theme.fonts.sizes.md};
+  }
 `
 
 export const H1Link = styled(Link)`
@@ -90,18 +121,22 @@ export const Subhead = styled.p`
   border-radius: .4rem;
   line-height: 1;
   text-transform: lowercase;
+
+@media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+  font-size: ${Theme.fonts.sizes.sm};
+}
 `
 
 export const Nav = styled.ul`
     position: relative;
     display: block;
-    margin: ${Theme.spacing.lg} auto;
+    margin: ${Theme.spacing.md} auto ${Theme.spacing.md} -1.6rem;
     padding: 0;
     list-style: none;
 
-    @media screen and (min-width: ${Theme.breakpoints.md}) {
-      height: 6rem;
-      margin: ${Theme.spacing.xl} auto 6rem;
+    @media screen and (min-width: ${Theme.breakpoints.min.md}) {
+      height: 4rem;
+      margin: ${Theme.spacing.md} auto 5rem;
     }
 `
 
@@ -115,7 +150,7 @@ export const NavItem = styled.li`
   max-width: none;
   width: 30%;
 
-  @media screen and (min-width: ${Theme.breakpoints.md}) {
+  @media screen and (min-width: ${Theme.breakpoints.min.md}) {
     width: 22%;
     min-width: 175px;
   }
@@ -152,34 +187,3 @@ export const NavLink = styled(Link)`
   }
 `
 
-export const RuleWrapper = styled.h2`
-  position: relative;
-  max-width: 100rem;
-  width: ${Theme.layout.widths.full};
-  margin: 1em 0;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: 3px;
-    width: ${Theme.layout.widths.full};
-    max-width: 96rem;
-    border-bottom: 4px solid #F4F6F7;
-  }
-`
-export const RuleSpan = css`
-  position: relative;
-  display: inline-block;
-  padding-right: 1.4em;
-  background: #fff;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  font-family: "Lato", Arial, sans-serif;
-`

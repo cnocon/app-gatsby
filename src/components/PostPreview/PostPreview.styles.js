@@ -2,6 +2,7 @@
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import Theme from "../Theme/Theme"
+import { css } from "@emotion/core"
 
 export const ReadableContent = styled.article`
   margin: ${Theme.spacing.default} auto;
@@ -10,12 +11,34 @@ export const ReadableContent = styled.article`
   width: 100%;
   max-width: 100%;
 
-  @media screen and (min-width: ${Theme.breakpoints.md}) {
+  &.post-preview {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  @media screen and (min-width: ${Theme.breakpoints.min.md}) {
     width: ${Theme.layout.widths.default};
     max-width: ${Theme.layout.widths.defaultMax};
     padding-left: ${Theme.spacing.default};
     padding-right: ${Theme.spacing.default};
   }
+
+  .box-shadow-purple {
+    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.purple};
+    padding-bottom: 1px;
+  }
+
+  .border-accent-purple {
+    background-color: ${Theme.colors.accents.purple};
+
+    &:hover {
+      background-color: ${Theme.colors.accents.purple};
+      border-color: transparent;
+      color: #fff;
+    }
+
+  }
+
   .box-shadow-red {
     box-shadow: inset 0 -3px 0 ${Theme.colors.accents.red};
     padding-bottom: 1px;
@@ -125,5 +148,73 @@ export const TitleLink = styled(Link)`
 `
 
 export const Title = styled.h2`
-  margin: 1rem auto 1.6rem;
+  margin: 0 auto 1.6rem;
+`
+
+
+
+export const EntryMeta = css`
+  float: left;
+  width: 66px;
+  font-weight: 400;
+  font-size: 0.750em;
+  color: #BFC5CD;
+  font-weight: 400;
+  font-size: 0.750em;
+  line-height: 1.9;
+  text-align: center;
+  padding-bottom: 0;
+  float: none;
+  width: 100%;
+  margin-bottom: 0;
+  display: block;
+  max-width: none;
+  width: 100%;
+  text-align: center;
+
+  > span {
+    display: block;
+    margin: 0 auto 14px auto;
+    max-width: 55px;
+    min-height: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    display: inline-block;
+    max-width: none;
+  }
+
+  a,
+  .entry-date {
+    padding: 4px 10px;
+    margin: 0 2px;
+    border: 1px solid #DDE4E6;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .03em;
+    font-weight: 800;
+    color: #6A7686;
+    -webkit-transition: color 0.1s, background-color .2s, border-color .2s; transition: color 0.1s, background-color .2s, border-color .2s;
+  }
+
+  a:hover {
+    color: #345;
+    background-color: #EDF1F3;
+  }
+
+  h3 {
+	  font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .15em;
+    color: #DDE4E6;
+	}
+  .posted-in {
+    margin-right: 3px;
+  }
+
+  .posted-on time {
+    margin-left: 5px;
+  }
 `

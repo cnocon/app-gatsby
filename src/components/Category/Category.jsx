@@ -1,7 +1,8 @@
 import React from "react"
-import TopBar from "../TopBar/TopBar"
 import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
+import Rule from "../Rule/Rule"
 import SEO from "../SEO/seo"
 import PostPreview from "../PostPreview/PostPreview"
 import * as Styled from '../PostsList/PostsList.styles'
@@ -10,7 +11,7 @@ const Category = ({ ...data}) => {
   const { category, breadcrumbs, nextPagePath, prevPagePath, colors } = data.pageContext
 
   const posts = data.pageContext.posts.map(p => {
-    return <PostPreview post={p} key={p.slug} color={colors.pop()}/>
+    return <PostPreview post={p} key={p.slug} color={colors.sort((a, b) => 0.5 - Math.random()).pop()}/>
   });
 
   const prevBtn = prevPagePath ?
@@ -32,10 +33,10 @@ const Category = ({ ...data}) => {
 
   return (
     <Layout className="blog-posts">
-      <TopBar pageHeader={category} breadcrumbs={breadcrumbs} />
-      <Header ruleTitle={`Posted in ${category.toUpperCase()}`} ruleIcon="icon-article-alt"/>
+      <Header />
       <SEO stitle={`Posts from ${category}`} />
-
+      <Rule title={`Posted in ${category.toUpperCase()}`} icon="icon-article-alt" />
+      <Breadcrumbs crumbs={breadcrumbs} />
       <Styled.Section>
         {posts}
 

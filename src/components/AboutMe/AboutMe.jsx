@@ -3,13 +3,10 @@ import * as Styled from "./AboutMe.styles"
 import Layout from "../Layout/Layout"
 import SEO from "../SEO/seo"
 import Header from "../Header/Header"
-import TopBar from "../TopBar/TopBar"
 import SectionTitle from './partials/SectionTitle'
-
 import Intro from './partials/Intro'
 import Service from './partials/Service'
 import LatestPost from './partials/LatestPost'
-import styledTweet from "./partials/styledTweet"
 
 const AboutMe = ({ ...data }) => {
   const posts = (
@@ -20,16 +17,8 @@ const AboutMe = ({ ...data }) => {
     })
   )
 
-  useEffect(() => {
-    setTimeout(() => {
-      const tweetEls = document.querySelectorAll('.twitter-tweet-rendered');
-      tweetEls.forEach(tweetEl => styledTweet(tweetEl))
-    }, 1500)
-  })
-
   return (
     <Layout>
-      <TopBar pageHeader="About Me" breadcrumbs={null}/>
       <Header />
       <SEO stitle="About Me" />
       <Styled.Container>
@@ -48,20 +37,20 @@ const AboutMe = ({ ...data }) => {
           <Service
             color="color1"
             icon="far fa-code"
-            title="Web Development &amp; Design"
-            text="Web development is my strongest area, but I've learned a lot about design over the years."
+            title="Web Development"
+            text="This is my strongest area. I have over 10 years of experience in the field."
           />
           <Service
             color="color2"
             icon="far fa-graduation-cap"
             title="Code Tutoring"
-            text="I love teaching almost as much as I love learning, myself. I'm an experienced, friendly tutor who can work with all ages."
+            text="I'm extremely friendly, I love teaching and I can work with all ages."
           />
           <Service
             color="color3"
             icon="far fa-i-cursor"
             title="Blog Writer"
-            text="I believe it's important to contribute to the web development community. I write educational blog posts targeted at beginners."
+            text="I believe it's important to contribute to the web development community."
           />
           <Service
             color="color4"

@@ -17,11 +17,15 @@ export default {styles: css`
     height: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    font-size: 10px;
+    margin: 0;
   }
 
   main {
     height: 100%;
     display: block;
+    padding: 2rem 0;
+    font-size: 10px;
   }
 
   .entry-content {
@@ -67,9 +71,22 @@ export default {styles: css`
     }
   }
 
+  code {
+    &:not([class^='lang-']) {
+      background: ${Theme.colors.grays.background};
+      padding: 2px 6px;
+    }
+  }
+
   h2 {
     font-family: ${Theme.fonts.body.family};
     font-weight: 800;
+    font-family: Oswald;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 4rem 0 0;
+    font-size: ${Theme.fonts.sizes.md};
 
     i {
       font-size: 16px;
@@ -97,9 +114,13 @@ export default {styles: css`
   }
 
   p {
-    margin: 1.2em 0;
+    ${'' /* margin: 1.2em 0;
     font-size: 1.6rem;
-    line-height: 3rem;
+    line-height: 3rem; */}
+    font-size: 18px;
+    line-height: 29px;
+    font-family: ${Theme.fonts.headings.family};
+    margin: 22px 0;
   }
 
   a {
@@ -123,6 +144,70 @@ export default {styles: css`
       font-size: 14px;
       margin: 0 0 1rem;
       line-height: 2rem;
+    }
+  }
+
+  .box-shadow-purple {
+    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.purple};
+    padding-bottom: 1px;
+  }
+
+  .border-accent-purple {
+    background-color: ${Theme.colors.accents.purple};
+
+    &:hover {
+      background-color: ${Theme.colors.accents.purple};
+      border-color: transparent;
+      color: #fff;
+    }
+
+  }
+
+  .box-shadow-yellow {
+    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.yellow};
+    padding-bottom: 1px;
+  }
+
+  .border-accent-yellow {
+    background-color: ${Theme.colors.accents.yellow};
+    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
+
+    &:hover {
+      background-color: ${Theme.colors.accents.yellow};
+      border-color: transparent;
+      color: ${Theme.colors.default.base};
+    }
+  }
+
+  .box-shadow-blue {
+    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.blue};
+    padding-bottom: 1px;
+  }
+
+  .border-accent-blue {
+    background-color: ${Theme.colors.accents.blue};
+    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
+
+    &:hover {
+      background-color: ${Theme.colors.accents.blue};
+      border-color: transparent;
+      color: #fff;
+    }
+  }
+
+  .box-shadow-green {
+    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.green};
+    padding-bottom: 1px;
+  }
+
+  .border-accent-green {
+    background-color: ${Theme.colors.accents.green};
+    ${'' /* border: 2px solid ${Theme.colors.grays.borderDark}; */}
+
+    &:hover {
+      background-color: ${Theme.colors.accents.green};
+      border-color: transparent;
+      color: #fff;
     }
   }
 `}

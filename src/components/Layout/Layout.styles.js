@@ -7,7 +7,7 @@ export const Container = styled.div(
     margin: `0 auto`,
     width: `${theme.layout.widths.default}`,
     maxWidth: `${theme.layout.widths.defaultMax}`,
-    padding: `1.74rem 0`,
+    padding: `0`,
     display: `block`,
     fontFamily: `${theme.fonts.body.family}`,
   })

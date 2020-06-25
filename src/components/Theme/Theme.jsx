@@ -32,8 +32,10 @@ module.exports = {
       green: 'hsl(139, 70%, 81%)',
       blue: 'hsl(197,100%,87%)',
       yellow: 'hsl(58, 100%, 85%)',
+      purple: 'hsl(240, 100%, 94%)',
       text: {
         red: 'hsl(1,77%,65%)',
+        purple: 'hsl(240, 100%, 94%)',
         green: 'hsl(139,50%,57%)',
         yellow: 'hsl(58, 94%, 70%)',
         blue: 'hsl(197,85%,55%)'
@@ -111,9 +113,17 @@ module.exports = {
     }
   },
   breakpoints: {
-    xs: `46.2rem`,
-    sm: `64.1rem`,
-    md: `76.8rem`,
-    lg: `96rem`
+    max: {
+      xs: `462px`,
+      sm: `641px`,
+      md: `768px`,
+      lg: `96px`
+    },
+    min: {
+      xs: `463px`,
+      sm: `642px`,
+      md: `769px`,
+      lg: `961px`
+    }
   },
 }

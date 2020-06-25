@@ -1,17 +1,18 @@
 import React from "react"
-import TopBar from "../TopBar/TopBar"
 import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
 import SEO from "../SEO/seo"
 import PostPreview from "../PostPreview/PostPreview"
 import * as Styled from '../PostsList/PostsList.styles'
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
+import Rule from "../Rule/Rule"
 
 const PostsList = ({...data}) => {
-  const {nextPagePath, prevPagePath, colors} = data.pageContext
+  const {nextPagePath, prevPagePath, colors, breadcrumbs} = data.pageContext
 
   const posts = data.pageContext.posts
     .map(({ node }) => {
-      return <PostPreview post={node} key={node.published} color={colors.pop()}/>
+      return <PostPreview post={node} key={node.published} color={colors.sort((a, b) => 0.5 - Math.random()).pop()}/>
     });
 
   const prevBtn = prevPagePath ?
@@ -32,11 +33,11 @@ const PostsList = ({...data}) => {
 
   return (
     <Layout className="blog-posts">
-      <TopBar pageHeader="Recent Posts" />
-      <Header ruleTitle="Recent Posts" ruleIcon="icon-rss"/>
+      <Header />
       <SEO stitle="Front End Development Blog"/>
-        {posts}
-
+      <Rule title="Recent Posts" icon="icon-rss" />
+      <Breadcrumbs crumbs={breadcrumbs} />
+      {posts}
       <Styled.Navigation>
         {prevBtn}
         {nextBtn}
