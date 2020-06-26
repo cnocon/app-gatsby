@@ -3,6 +3,7 @@ import { ResumeData } from "../../data/ResumeData"
 import Event from "../Event/Event"
 import * as Styled from "./Resume.styles"
 
+
 const workEvents = ResumeData.experience.map((item, i) => {
   return <Event key={`event-${i}`} current={i === 0} data={item} type="work"/>
 })
@@ -53,3 +54,4 @@ const Resume = () => {
 }
 
 export default Resume;
+

@@ -7,6 +7,8 @@ import SectionTitle from './partials/SectionTitle'
 import Intro from './partials/Intro'
 import Service from './partials/Service'
 import LatestPost from './partials/LatestPost'
+import IconList from '../IconList/IconList'
+
 
 const AboutMe = ({ ...data }) => {
   const posts = (
@@ -18,17 +20,48 @@ const AboutMe = ({ ...data }) => {
   )
 
   return (
+    
     <Layout>
       <Header />
       <SEO stitle="About Me" />
       <Styled.Container>
         <div className="row">
-          <div className="col-sm-12">
+          <div className="col-sm-12 col-md-7 col-lg-8">
             <SectionTitle
               text="A Little About Me"
               icon="fa fad fa-user-cowboy"
             />
             <Intro />
+          </div>
+
+          <div className="col-sm-12 col-md-5 col-lg-4">
+            <SectionTitle
+              text="Around the Internet"
+              icon="fa far fa-browser"
+            />
+            <IconList listItems={[
+                {
+                  icon: 'fab fa-github',
+                  link: 'https://github.com/cnocon',
+                  text: 'Github'
+                },
+                {
+                  icon: 'fab fa-codepen',
+                  link: 'https://codepen.io/cnocon',
+                  text: 'Codepen'
+                },
+                {
+                  icon: 'fab fa-twitter',
+                  link: 'https://twitter.com/cnocon',
+                  text: 'Twitter'
+                },
+                {
+                  icon: 'fab fa-linkedin',
+                  link: 'https://linkedin.com/cristinoconnor',
+                  text: 'LinkedIn'
+                }
+              ]} 
+            />
           </div>
         </div>
 

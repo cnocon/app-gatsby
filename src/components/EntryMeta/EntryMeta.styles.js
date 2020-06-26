@@ -58,6 +58,7 @@ export const EntryMeta = css`
 
   .posted-on time {
     margin-left: 5px;
+    border: 0;
   }
   .border-accent-purple {
     border: 2px solid ${Theme.colors.accents.purple};

@@ -274,7 +274,7 @@ export const ServiceDiv = styled.div`
 
   &.color3 {
     i {
-      color: ${Theme.colors.accents.yellow};
+      color: ${Theme.colors.accents.text.yellow};
     }
 
     h4 span {

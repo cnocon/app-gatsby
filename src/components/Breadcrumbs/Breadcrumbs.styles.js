@@ -27,15 +27,14 @@ export const CrumbItem = css`
 `
 
 export const CrumbsContainer = css`
-  margin: 0 0 0 -40px;
-  ${'' /* width: 50%; */}
+  margin: 0;
   display: block;
+  text-align: left;
 
   @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
     text-align: center;
     width: 100%;
-    margin: 0 0 0 -15px;
+    margin: 0 auto;
     display: none;
   }
-
 `
