@@ -30,7 +30,6 @@ const Post = ({...data}) => {
       <SEO
         stitle={post.title}
         sdescription={post.summary}
-        imagePath={post.featured_image}
       />
 
       <PageTransition>

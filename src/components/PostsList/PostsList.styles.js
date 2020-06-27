@@ -1,14 +1,10 @@
-// import React from "react"
 import styled from "@emotion/styled"
-// import { css } from "@emotion/core"
-// import { Link } from "gatsby"
 import Theme from "../Theme/Theme"
 
 export const Button = styled.a`
   text-align: center;
-  ${'' /* background-color: ${Theme.colors.blue.base}; */}
-  background-color: #fff;
-  color: ${Theme.colors.default.base};
+  background-color: ${Theme.colors.default.base};
+  color: #fff;
   font-size: ${Theme.fonts.sizes.xs};
   line-height: 1.2;
   padding: ${Theme.spacing.sm} ${Theme.spacing.default};
@@ -16,7 +12,7 @@ export const Button = styled.a`
   max-width: 17em;
   text-align: center;
   letter-spacing: .03em;
-  border: 2px solid ${Theme.colors.grays.border};
+  border: 2px solid ${Theme.colors.default.base};
   border-radius: 4px;
   text-transform: uppercase;
   font-weight: 800;
@@ -25,11 +21,9 @@ export const Button = styled.a`
   transition: all .2s;
 
   &:hover {
-    ${'' /* background-color:${Theme.colors.default.base}; */}
-    ${'' /* color: #fff; */}
     background-color: #fff;
     color: ${Theme.colors.default.base};
-    border: 2px solid ${Theme.colors.default.base};
+    border: 2px solid ${Theme.colors.grays.borderDark};
     cursor: pointer;
     transform: scale(1.05);
   }
