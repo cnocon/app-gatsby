@@ -17,7 +17,7 @@ const PostsList = ({...data}) => {
       const color = shuffle(colors)[0]
       return <PostPreview
         post={node}
-        key={color}
+        key={node.slug}
         catMap={categoriesMap}
         color={color} />
     });
@@ -43,13 +43,15 @@ const PostsList = ({...data}) => {
       <Header />
       <SEO stitle="Front End Development Blog"/>
       <PageTransition>
-        <Rule title={title} icon="rule-icon icon-rss" />
-        <Breadcrumbs crumbs={breadcrumbs} />
-        {articles}
-        <Styled.Navigation>
-          {prevBtn}
-          {nextBtn}
-        </Styled.Navigation>
+        <>
+          <Rule title={title} icon="rule-icon icon-rss" />
+          <Breadcrumbs crumbs={breadcrumbs} />
+          {articles}
+          <Styled.Navigation>
+            {prevBtn}
+            {nextBtn}
+          </Styled.Navigation>
+        </>
       </PageTransition>
     </Layout>
   )

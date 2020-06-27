@@ -10,12 +10,6 @@ import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
 import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
-const AddThis = () => {
-  return(
-    <div className="addthis_inline_share_toolbox_vo2p"></div>
-  )
-}
-
 const Post = ({...data}) => {
   const { post, breadcrumbs, categoriesMap } = data.pageContext
 
@@ -28,22 +22,18 @@ const Post = ({...data}) => {
         imagePath={post.featured_image}
       />
 
-      <Rule
-        title={`Level: ${post.tags[0].name.toUpperCase()}`}
-        icon="rule-icon icon-chart-bar"
-      />
-
       <PageTransition>
-        <Breadcrumbs crumbs={breadcrumbs} />
-
         <section css={theme => ({paddingBottom: theme.spacing.lg})}>
+          <Rule
+            title={`Level: ${post.tags[0].name.toUpperCase()}`}
+            icon="rule-icon icon-chart-bar"
+          />
+          <Breadcrumbs crumbs={breadcrumbs} />
           <ReadableContent className="hentry post post-single">
             <header css={Styled.HeaderStyles}>
               <Styled.PostTitle className="title">
                 {post.title}
               </Styled.PostTitle>
-              
-              <AddThis /><br/>
               
               <EntryMeta
                 categoriesMap={categoriesMap}
