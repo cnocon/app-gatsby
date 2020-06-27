@@ -8,11 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-// import squarePortrait from '../../images/square-portrait.png'
 import defaultImage from '../../images/default.png';
 import imageGetter from '../utils/imageGetter';
 
-function SEO({ sdescription, lang, meta, stitle, imagePath, slug }) {
+function SEO({ sdescription, lang, meta, stitle, imagePath, slug='' }) {
   const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`;
   const image = `https://cristin.io${imageGetter(slug)}` || `https://cristin.io${defaultImage}`;
   const title = stitle || `Cristin O'Connor | Front End Developer`;
