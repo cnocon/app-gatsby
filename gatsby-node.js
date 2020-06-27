@@ -42,7 +42,8 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const { data } = await graphql(`
     {
-      allButterPost(filter: {categories: {elemMatch: {slug: {in: ["cli", "git", "sass", "javascript", "workflow"]}}}}, sort: {fields: created}) {
+      allButterPost(filter: {categories: {elemMatch: {slug: {in: [
+        "gatsby", "cli", "git", "sass", "javascript", "workflow"]}}}}, sort: {fields: created}) {
         edges {
           node {
             id

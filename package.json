@@ -28,6 +28,7 @@
     "gatsby-source-buttercms": "^2.1.1",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-remark": "^2.8.15",
+    "gatsby-v2-plugin-page-transitions": "^1.0.0",
     "jquery": "^3.5.1",
     "netlify-cli": "^2.54.0",
     "node-sass": "^4.14.1",

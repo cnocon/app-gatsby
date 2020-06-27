@@ -8,7 +8,7 @@ import Intro from './partials/Intro'
 import Service from './partials/Service'
 import LatestPost from './partials/LatestPost'
 import IconList from '../IconList/IconList'
-
+import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
 const AboutMe = ({ ...data }) => {
   const posts = (
@@ -24,111 +24,113 @@ const AboutMe = ({ ...data }) => {
     <Layout>
       <Header />
       <SEO stitle="About Me" />
-      <Styled.Container>
-        <div className="row">
-          <div className="col-sm-12 col-md-7 col-lg-7">
-            <SectionTitle
-              text="A Little About Me"
-              icon="fa fal fa-female"
-            />
-            <Intro />
+      <PageTransition>
+        <Styled.Container>
+          <div className="row">
+            <div className="col-sm-12 col-md-7 col-lg-7">
+              <SectionTitle
+                text="A Little About Me"
+                icon="fa fal fa-female"
+              />
+              <Intro />
+            </div>
+
+            <div className="col-sm-12 col-md-5 col-lg-5">
+              <SectionTitle
+                text="Profiles"
+                icon="fa fal fa-id-card"
+              />
+              <IconList listItems={[
+                  {
+                    icon: 'fab fa-github',
+                    link: 'https://github.com/cnocon',
+                    text: 'Github'
+                  },
+                  {
+                    icon: 'fab fa-codepen',
+                    link: 'https://codepen.io/cnocon',
+                    text: 'Codepen'
+                  },
+                  {
+                    icon: 'fab fa-twitter',
+                    link: 'https://twitter.com/cnocon',
+                    text: 'Twitter'
+                  },
+                  {
+                    icon: 'fab fa-linkedin-in',
+                    link: 'https://linkedin.com/cristinoconnor',
+                    text: 'LinkedIn'
+                  }
+                ]} 
+              />
+            </div>
           </div>
 
-          <div className="col-sm-12 col-md-5 col-lg-5">
-            <SectionTitle
-              text="Profiles"
-              icon="fa fal fa-id-card"
+          <SectionTitle text="Services" icon="fa fal fa-concierge-bell"/>
+          <div className="row">
+            <Service
+              color="color1"
+              icon="far fa-code"
+              title="Web Development"
+              text="This is my primary area of expertise. I have over 10 years of experience in the field."
             />
-            <IconList listItems={[
-                {
-                  icon: 'fab fa-github',
-                  link: 'https://github.com/cnocon',
-                  text: 'Github'
-                },
-                {
-                  icon: 'fab fa-codepen',
-                  link: 'https://codepen.io/cnocon',
-                  text: 'Codepen'
-                },
-                {
-                  icon: 'fab fa-twitter',
-                  link: 'https://twitter.com/cnocon',
-                  text: 'Twitter'
-                },
-                {
-                  icon: 'fab fa-linkedin-in',
-                  link: 'https://linkedin.com/cristinoconnor',
-                  text: 'LinkedIn'
-                }
-              ]} 
+            <Service
+              color="color2"
+              icon="far fa-graduation-cap"
+              title="Code Tutoring"
+              text="I'm extremely friendly, I love teaching and I can work with all ages."
+            />
+            <Service
+              color="color3"
+              icon="far fa-i-cursor"
+              title="Blog Writer"
+              text="I believe it's important to contribute to the web development community."
+            />
+            <Service
+              color="color4"
+              icon="far fa-tasks"
+              title="Project Management"
+              text="I have strong project management skills and can self-manage, or manage others as needed."
             />
           </div>
-        </div>
 
-        <SectionTitle text="Services" icon="fa fal fa-concierge-bell"/>
-        <div className="row">
-          <Service
-            color="color1"
-            icon="far fa-code"
-            title="Web Development"
-            text="This is my primary area of expertise. I have over 10 years of experience in the field."
+          <SectionTitle
+            text="Latest from the Blog"
+            icon="fa fas fa-rss"
           />
-          <Service
-            color="color2"
-            icon="far fa-graduation-cap"
-            title="Code Tutoring"
-            text="I'm extremely friendly, I love teaching and I can work with all ages."
-          />
-          <Service
-            color="color3"
-            icon="far fa-i-cursor"
-            title="Blog Writer"
-            text="I believe it's important to contribute to the web development community."
-          />
-          <Service
-            color="color4"
-            icon="far fa-tasks"
-            title="Project Management"
-            text="I have strong project management skills and can self-manage, or manage others as needed."
-          />
-        </div>
+          <div className="row">{posts}</div>
 
-        <SectionTitle
-          text="Latest from the Blog"
-          icon="fa fas fa-rss"
-        />
-        <div className="row">{posts}</div>
-
-        {/* <SectionTitle
-          text="Tweets"
-          icon="fa icon-twitter"
-        /> */}
-        {/* <div className="row">
-          <Styled.HalfColumn className="col-sm-12 col-md-6">
-            <div>
+          {/* <SectionTitle
+            text="Tweets"
+            icon="fa icon-twitter"
+          /> */}
+          {/* <div className="row">
+            <Styled.HalfColumn className="col-sm-12 col-md-6">
+              <div>
+                <blockquote className="twitter-tweet">
+                  <p lang="en" dir="ltr">
+                    This thread is keeping me going today.{` `}
+                    <a href="https://t.co/AmzaEul99S">https://t.co/AmzaEul99S</a>
+                  </p>
+                  &mdash; Cristin O&#39;Connor (@cnocon){` `}
+                  <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a>
+                </blockquote>
+              </div>
+            </Styled.HalfColumn>
+            <Styled.HalfColumn className="col-sm-12 col-md-6">
               <blockquote className="twitter-tweet">
                 <p lang="en" dir="ltr">
-                  This thread is keeping me going today.{` `}
-                  <a href="https://t.co/AmzaEul99S">https://t.co/AmzaEul99S</a>
+                  Everyone should be as nice to themselves as they are to dogs.
                 </p>
-                &mdash; Cristin O&#39;Connor (@cnocon){` `}
-                <a href="https://twitter.com/cnocon/status/1251555080739803136?ref_src=twsrc%5Etfw">April 18, 2020</a>
+                &mdash;{` `}Cristin O&#39;Connor{` `}(@cnocon){` `}
+                <a href="https://twitter.com/cnocon/status/1251752798737199104?ref_src=twsrc%5Etfw">
+                  April 19, 2020
+                </a>
               </blockquote>
-            </div>
-          </Styled.HalfColumn>
-          <Styled.HalfColumn className="col-sm-12 col-md-6">
-            <blockquote className="twitter-tweet">
-              <p lang="en" dir="ltr">
-                Everyone should be as nice to themselves as they are to dogs.
-              </p>
-              &mdash;{` `}Cristin O&#39;Connor{` `}(@cnocon){` `}
-              <a href="https://twitter.com/cnocon/status/1251752798737199104?ref_src=twsrc%5Etfw">
-                April 19, 2020
-              </a>
-            </blockquote>
-          </Styled.HalfColumn>
-        </div> */}
-      </Styled.Container>
+            </Styled.HalfColumn>
+          </div> */}
+        </Styled.Container>
+      </PageTransition>
     </Layout>
   )
 }

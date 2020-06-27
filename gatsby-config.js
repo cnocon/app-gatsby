@@ -21,7 +21,6 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    // `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -80,6 +79,12 @@ module.exports = {
             host: null
           }
         }
+      }
+    },   
+    {
+      resolve: 'gatsby-v2-plugin-page-transitions',
+      options: {
+        transitionTime: 400
       }
     },
     {

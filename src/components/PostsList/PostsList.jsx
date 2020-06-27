@@ -7,6 +7,7 @@ import * as Styled from '../PostsList/PostsList.styles'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import shuffle from "../utils/shuffle"
+import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
 const PostsList = ({...data}) => {
   const {posts, nextPagePath, prevPagePath, categoriesMap, breadcrumbs, colors, title} = data.pageContext
@@ -41,13 +42,15 @@ const PostsList = ({...data}) => {
     <Layout className="blog-posts">
       <Header />
       <SEO stitle="Front End Development Blog"/>
-      <Rule title={title} icon="rule-icon icon-rss" />
-      <Breadcrumbs crumbs={breadcrumbs} />
-      {articles}
-      <Styled.Navigation>
-        {prevBtn}
-        {nextBtn}
-      </Styled.Navigation>
+      <PageTransition>
+        <Rule title={title} icon="rule-icon icon-rss" />
+        <Breadcrumbs crumbs={breadcrumbs} />
+        {articles}
+        <Styled.Navigation>
+          {prevBtn}
+          {nextBtn}
+        </Styled.Navigation>
+      </PageTransition>
     </Layout>
   )
 }

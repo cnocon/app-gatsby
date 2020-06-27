@@ -8,6 +8,7 @@ import * as Styled from "./Post.styles"
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
+import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
 const Post = ({...data}) => {
   const { post, breadcrumbs, categoriesMap } = data.pageContext
@@ -26,28 +27,30 @@ const Post = ({...data}) => {
         icon="rule-icon icon-chart-bar"
       />
 
-      <Breadcrumbs crumbs={breadcrumbs} />
+      <PageTransition>
+        <Breadcrumbs crumbs={breadcrumbs} />
 
-      <section css={theme => ({paddingBottom: theme.spacing.lg})}>
-        <ReadableContent className="hentry post post-single">
-          <header css={Styled.HeaderStyles}>
-            <Styled.PostTitle className="title">
-              {post.title}
-            </Styled.PostTitle>
+        <section css={theme => ({paddingBottom: theme.spacing.lg})}>
+          <ReadableContent className="hentry post post-single">
+            <header css={Styled.HeaderStyles}>
+              <Styled.PostTitle className="title">
+                {post.title}
+              </Styled.PostTitle>
 
-            <EntryMeta
-              categoriesMap={categoriesMap}
-              published={post.published}
-              categories={post.categories}
-            />
-          </header>
-          <div className="entry-content clearfix">
-            <div className="main-content">
-              {ReactHtmlParser(post.body)}
+              <EntryMeta
+                categoriesMap={categoriesMap}
+                published={post.published}
+                categories={post.categories}
+              />
+            </header>
+            <div className="entry-content clearfix">
+              <div className="main-content">
+                {ReactHtmlParser(post.body)}
+              </div>
             </div>
-          </div>
-        </ReadableContent>
-      </section>
+          </ReadableContent>
+        </section>
+      </PageTransition>
     </Layout>
   )
 }
