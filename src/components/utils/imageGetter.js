@@ -6,9 +6,11 @@ import gitImg from '../../images/git.png'
 import searchImg from '../../images/search.png'
 import defaultImg from '../../images/default.png'
 
+
 const imageGetter = (slug) => {
-  if (slug === 'animate-page-transitions-with-fade-effect-in-gatsby') {
-    return animationImg
+  if (slug.match(/animate-page-transitions-with-fade-effect-in-gatsby/)) {
+    console.log(`${animationImg}`);
+    return `${animationImg}`
   } else if (slug === 'what-is-destructuring-in-javascript') {
     return destructuringImg
   } else if (slug === 'about-the-cristinio-redesign') {

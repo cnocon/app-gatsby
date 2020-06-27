@@ -30,6 +30,7 @@ const Post = ({...data}) => {
       <SEO
         stitle={post.title}
         sdescription={post.summary}
+        slug={post.slug}
       />
 
       <PageTransition>
