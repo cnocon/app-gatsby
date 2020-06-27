@@ -22,6 +22,10 @@ export const RuleWrapper = styled.h2`
     max-width: 96rem;
     border-bottom: 4px solid #F4F6F7;
   }
+
+  i.fa {
+    color: #345;
+  }
 `
 
 export const RuleSpan = css`

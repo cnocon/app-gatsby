@@ -128,7 +128,7 @@ exports.createPages = async ({ actions, graphql }) => {
     chunkedPosts.forEach((collection, index) => {
       actions.createPage({
         path: `/articles/${category}/page-${index + 1}`,
-        component: path.resolve(`./src/components/Category/Category.jsx`),
+        component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
         categories: categoriesData.data.allButterPost.distinct,
         context: {
           prevPagePath: index < 1 ? null : `/articles/${category}/page-${index}`,
@@ -189,7 +189,7 @@ exports.createPages = async ({ actions, graphql }) => {
       component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
       context: {
         categories: categoriesData.data.allButterPost.distinct,
-        posts: collection,
+        posts: collection.map(p => p.node),
         colors: colors,
         prevPagePath: index < 1 ? null : `/articles/page-${index}`,
         nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,

@@ -26,7 +26,7 @@ const AboutMe = ({ ...data }) => {
       <SEO stitle="About Me" />
       <Styled.Container>
         <div className="row">
-          <div className="col-sm-12 col-md-7 col-lg-8">
+          <div className="col-sm-12">
             <SectionTitle
               text="A Little About Me"
               icon="fa fad fa-user-cowboy"
@@ -34,7 +34,7 @@ const AboutMe = ({ ...data }) => {
             <Intro />
           </div>
 
-          <div className="col-sm-12 col-md-5 col-lg-4">
+          {/* <div className="col-sm-12 col-md-5 col-lg-4">
             <SectionTitle
               text="Around the Internet"
               icon="fa far fa-browser"
@@ -62,7 +62,7 @@ const AboutMe = ({ ...data }) => {
                 }
               ]} 
             />
-          </div>
+          </div> */}
         </div>
 
         <SectionTitle text="Services" icon="fa fal fa-concierge-bell"/>

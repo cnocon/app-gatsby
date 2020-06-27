@@ -9,14 +9,14 @@ import Rule from "../Rule/Rule"
 import shuffle from "../utils/shuffle"
 
 const PostsList = ({...data}) => {
-  const {nextPagePath, prevPagePath, categoriesMap, breadcrumbs, colors} = data.pageContext
-
-  const posts = data.pageContext.posts
-    .map(({ node }) => {
-      const color = shuffle(colors).pop()
+  const {posts, nextPagePath, prevPagePath, categoriesMap, breadcrumbs, colors, title} = data.pageContext
+  
+  const articles = posts
+    .map(node  => {
+      const color = shuffle(colors)[0]
       return <PostPreview
         post={node}
-        key={node.published}
+        key={color}
         catMap={categoriesMap}
         color={color} />
     });
@@ -41,9 +41,9 @@ const PostsList = ({...data}) => {
     <Layout className="blog-posts">
       <Header />
       <SEO stitle="Front End Development Blog"/>
-      <Rule title="Recent Posts" icon="rule-icon icon-rss" />
+      <Rule title={title} icon="rule-icon icon-rss" />
       <Breadcrumbs crumbs={breadcrumbs} />
-      {posts}
+      {articles}
       <Styled.Navigation>
         {prevBtn}
         {nextBtn}

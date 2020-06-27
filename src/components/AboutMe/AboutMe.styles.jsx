@@ -172,6 +172,7 @@ export const TestoHeading = styled.h2`
     }
   }
 `
+
 export const Date = styled.time`
   display: block;
   text-transform: none;
@@ -335,4 +336,9 @@ export const HalfColumn = styled.div`
       margin-bottom: ${Theme.spacing.xl};
     }
   }
+`
+
+export const List = css`
+  list-style-type: none;
+
 `

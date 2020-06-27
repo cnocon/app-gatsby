@@ -4,7 +4,7 @@ import * as Styled from './PostPreview.styles'
 import EntryMeta from "../EntryMeta/EntryMeta"
 
 const PostPreview = ({ post, catMap, color }) => {
-
+  
   return (
     <Styled.ReadableContent className="post-preview">
       <header className="post-preview-header">

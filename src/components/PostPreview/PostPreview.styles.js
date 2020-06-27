@@ -62,7 +62,6 @@ export const TitleLink = styled(Link)`
   font-size: ${Theme.fonts.sizes.lg};
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
   color: ${Theme.colors.default.base};
-  ${'' /* text-transform: uppercase; */}
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     font-size: ${Theme.fonts.sizes.md};
@@ -72,22 +71,27 @@ export const TitleLink = styled(Link)`
     box-shadow: none;
     color: ${Theme.colors.default.base};
   }
+
   &.box-shadow-purple {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.purple};
     padding-bottom: 3px;
   }
+
   &.box-shadow-red {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.red};
     padding-bottom: 3px;
   }
+
   &.box-shadow-yellow {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.yellow};
     padding-bottom: 3px;
   }
+
   &.box-shadow-blue {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.blue};
     padding-bottom: 3px;
   }
+    
   &.box-shadow-green {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.green};
     padding-bottom: 3px;
