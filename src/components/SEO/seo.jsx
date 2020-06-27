@@ -9,12 +9,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import squarePortrait from '../../images/square-portrait.png'
-console.log(`https://cristin.io${squarePortrait}`);
+import imageGetter from '../utils/imageGetter'
+
 function SEO({ sdescription, lang, meta, stitle, imagePath }) {
   const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`
-  const image = squarePortrait
+  const image = `${imageGetter()}`
   const title = stitle || `Cristin O'Connor | Front End Developer`
-
+  console.log(image)
   return (
     <Helmet
       htmlAttributes={{
@@ -45,7 +46,7 @@ function SEO({ sdescription, lang, meta, stitle, imagePath }) {
         },
         {
           property: `og:image`,
-          content: `https://cristin.io${squarePortrait}`,
+          content: image,
         },
         {
           name: `twitter:card`,
@@ -65,7 +66,7 @@ function SEO({ sdescription, lang, meta, stitle, imagePath }) {
         },
         { 
           name: `twitter:image`,
-          content: `https://cristin.io${squarePortrait}`,
+          content: image,
         },
       ].concat(meta)}
     >
