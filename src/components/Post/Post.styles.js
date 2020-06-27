@@ -8,7 +8,7 @@ import Theme from "../Theme/Theme"
 export const PostTitle = styled.h1`
   font-size: ${Theme.fonts.sizes.xl};
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
-  margin: 20px 0 .5em;
+  margin: 20px 0 1.6rem;
   font-family: ${Theme.fonts.headings.family};
   font-weight: 900;
   margin-top: 0;

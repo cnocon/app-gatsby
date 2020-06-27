@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
 import { ReadableContent } from '../PostPreview/PostPreview.styles'
@@ -8,10 +8,21 @@ import * as Styled from "./Post.styles"
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
-import PageTransition from 'gatsby-v2-plugin-page-transitions';
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
+import $ from 'jquery'
 
 const Post = ({...data}) => {
   const { post, breadcrumbs, categoriesMap } = data.pageContext
+   
+  useEffect(() => {
+    $("html, body").animate({ scrollTop: 0 }, 0);
+    $('.addthis_inline_share_toolbox_vo2p').hide();
+    setTimeout(() => {
+      window.addthis.layers.refresh();
+      $('.addthis_inline_share_toolbox_vo2p').fadeIn(800);
+    }, 1200);
+    
+  }, [])
 
   return (
     <Layout>
@@ -34,12 +45,14 @@ const Post = ({...data}) => {
               <Styled.PostTitle className="title">
                 {post.title}
               </Styled.PostTitle>
-              
+
+              <div className="addthis_inline_share_toolbox_vo2p" style={{marginBottom: '1.6rem'}}></div>
               <EntryMeta
                 categoriesMap={categoriesMap}
                 published={post.published}
                 categories={post.categories}
               />
+
             </header>
             <div className="entry-content clearfix">
               <div className="main-content">
