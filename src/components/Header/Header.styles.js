@@ -115,7 +115,7 @@ export const Subhead = styled.p`
   display: inline-block;
   font-style: italic;
   padding: .3rem 1rem;
-  background-color: ${Theme.colors.accents.yellow};
+  background-color: ${Theme.colors.accents.text.yellow};
   color: #345;
   color: rgba(0,0,0,.7);
   border-radius: .4rem;

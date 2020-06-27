@@ -57,7 +57,8 @@ export const EntryMeta = css`
   }
 
   .posted-on time {
-    margin-left: 5px;
+    margin-left: 0;
+    padding-left: 5px;
     border: 0;
   }
   .border-accent-purple {

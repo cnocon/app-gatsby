@@ -10,6 +10,12 @@ import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
 import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
+const AddThis = () => {
+  return(
+    <div className="addthis_inline_share_toolbox_vo2p"></div>
+  )
+}
+
 const Post = ({...data}) => {
   const { post, breadcrumbs, categoriesMap } = data.pageContext
 
@@ -36,7 +42,9 @@ const Post = ({...data}) => {
               <Styled.PostTitle className="title">
                 {post.title}
               </Styled.PostTitle>
-
+              
+              <AddThis /><br/>
+              
               <EntryMeta
                 categoriesMap={categoriesMap}
                 published={post.published}
