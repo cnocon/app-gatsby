@@ -67,7 +67,7 @@ module.exports = {
         resolveEnv: () => process.env.NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: '*', allow: '/' }]
+            policy: [{ userAgent: '*', allow: ['/', '/static/'] }]
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
