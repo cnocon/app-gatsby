@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import * as Sty from "./Header.styles"
-import portrait from "./square-portrait.png"
+import portrait from "../../images/square-portrait.png"
 import { window } from 'browser-monads';
 
 
