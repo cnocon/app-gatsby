@@ -53,8 +53,8 @@ export const Button = styled(Link)`
   background-color: #fff;
 
   &:hover {
-  background-color: ${Theme.colors.default.base};
-  color: #fff;
+    background-color: ${Theme.colors.default.base};
+    color: #fff;
   }
 `
 
@@ -68,33 +68,52 @@ export const TitleLink = styled(Link)`
   }
 
   &:hover {
-    box-shadow: none;
     color: ${Theme.colors.default.base};
   }
 
   &.box-shadow-purple {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.purple};
     padding-bottom: 3px;
+
+    &:hover {
+      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.purple};
+    }
   }
 
   &.box-shadow-red {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.red};
     padding-bottom: 3px;
+    
+    &:hover {
+      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.red};
+    }
   }
 
   &.box-shadow-yellow {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.yellow};
     padding-bottom: 3px;
+    
+    &:hover {
+      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.yellow};
+    }
   }
 
   &.box-shadow-blue {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.blue};
     padding-bottom: 3px;
+    
+    &:hover {
+      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.blue};
+    }
   }
     
   &.box-shadow-green {
     box-shadow: inset 0 -5px 1px ${Theme.colors.accents.green};
     padding-bottom: 3px;
+    
+    &:hover {
+      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.green};
+    }
   }
 `
 

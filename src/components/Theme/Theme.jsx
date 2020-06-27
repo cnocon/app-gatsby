@@ -26,8 +26,8 @@ module.exports = {
       borderDark: '#e7e8e9',
       borderMedium: `#dde4e6`,
       textLight: `#c7d7db`,
-      text: `#a0adb1`,
-      textDark: `#bfc5cd`
+      textDark: `#a0adb1`,
+      text: `#bfc5cd`
     },
     accents: {
       red: 'hsl(1,100%,94%)',
@@ -36,11 +36,11 @@ module.exports = {
       yellow: 'hsl(58, 100%, 86%)',
       purple: 'hsl(240, 100%, 94%)',
       text: {
-        red: 'hsl(1,77%,65%)',
-        purple: 'hsl(240, 100%, 94%)',
-        green: 'hsl(139,50%,70%)',
+        red: 'hsl(1,77%,82%)',
+        purple: 'hsl(240, 100%, 85%)',
+        green: 'hsl(139,50%,75%)',
         yellow: 'hsl(58, 94%, 70%)',
-        blue: 'hsl(197,85%,55%)'
+        blue: 'hsl(197,85%,75%)'
       }
     }
   },

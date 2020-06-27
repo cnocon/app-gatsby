@@ -135,6 +135,7 @@ exports.createPages = async ({ actions, graphql }) => {
           nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}/page-${index + 2}`,
           categoriesMap: catMap,
           colors: colors,
+          title: `Posted in ${group.fieldValue}`,
           category: category,
           posts: collection.reverse(),
           breadcrumbs: [
@@ -194,6 +195,7 @@ exports.createPages = async ({ actions, graphql }) => {
         prevPagePath: index < 1 ? null : `/articles/page-${index}`,
         nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
         categoriesMap: catMap,
+        title: "Latest Posts",
         breadcrumbs: [
           {
             name: 'Home',

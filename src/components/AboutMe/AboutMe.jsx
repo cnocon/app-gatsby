@@ -26,18 +26,18 @@ const AboutMe = ({ ...data }) => {
       <SEO stitle="About Me" />
       <Styled.Container>
         <div className="row">
-          <div className="col-sm-12">
+          <div className="col-sm-12 col-md-7 col-lg-7">
             <SectionTitle
               text="A Little About Me"
-              icon="fa fad fa-user-cowboy"
+              icon="fa fal fa-female"
             />
             <Intro />
           </div>
 
-          {/* <div className="col-sm-12 col-md-5 col-lg-4">
+          <div className="col-sm-12 col-md-5 col-lg-5">
             <SectionTitle
-              text="Around the Internet"
-              icon="fa far fa-browser"
+              text="Profiles"
+              icon="fa fal fa-id-card"
             />
             <IconList listItems={[
                 {
@@ -56,13 +56,13 @@ const AboutMe = ({ ...data }) => {
                   text: 'Twitter'
                 },
                 {
-                  icon: 'fab fa-linkedin',
+                  icon: 'fab fa-linkedin-in',
                   link: 'https://linkedin.com/cristinoconnor',
                   text: 'LinkedIn'
                 }
               ]} 
             />
-          </div> */}
+          </div>
         </div>
 
         <SectionTitle text="Services" icon="fa fal fa-concierge-bell"/>
@@ -71,7 +71,7 @@ const AboutMe = ({ ...data }) => {
             color="color1"
             icon="far fa-code"
             title="Web Development"
-            text="This is my strongest area. I have over 10 years of experience in the field."
+            text="This is my primary area of expertise. I have over 10 years of experience in the field."
           />
           <Service
             color="color2"

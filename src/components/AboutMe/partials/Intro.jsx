@@ -39,7 +39,7 @@ const Intro = () => {
         Hello. I'm&nbsp;
         <span className="rotate-words">
           <span className="rotate-out">a&nbsp;web developer.</span>
-          <span className="rotate-out">a&nbsp;teacher.</span>
+          <span className="rotate-out">a&nbsp;tutor.</span>
           <span className="rotate-in active">an&nbsp;avid learner.</span>
         </span><br/>
         I live and work in beautiful Utah.<br/>

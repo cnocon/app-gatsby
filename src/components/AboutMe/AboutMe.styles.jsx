@@ -147,6 +147,7 @@ export const TestoHeading = styled.h2`
   text-align: center;
   font-family: ${Theme.fonts.accent.family};
   font-weight: 200;
+  padding: 0;
 
   p {
     font-size: ${Theme.fonts.sizes.default};
@@ -253,7 +254,7 @@ export const ServiceDiv = styled.div`
 
   &.color1 {
     i {
-      color: ${Theme.colors.accents.green};
+      color: ${Theme.colors.accents.text.green};
     }
 
     h4 span {
@@ -264,7 +265,7 @@ export const ServiceDiv = styled.div`
 
   &.color2 {
     i {
-      color: ${Theme.colors.accents.blue};
+      color: ${Theme.colors.accents.text.blue};
     }
 
     h4 span {
@@ -286,7 +287,7 @@ export const ServiceDiv = styled.div`
 
   &.color4 {
     i {
-      color: ${Theme.colors.accents.red};
+      color: ${Theme.colors.accents.text.red};
     }
 
     h4 span {
@@ -339,6 +340,6 @@ export const HalfColumn = styled.div`
 `
 
 export const List = css`
-  list-style-type: none;
+  <list-style-type></list-style-type>: none;
 
 `

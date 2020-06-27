@@ -8,7 +8,6 @@ const EntryMeta = ({ categories, categoriesMap, published})  => {
   const date = new Date(published).toLocaleDateString(undefined, options)
 
   const links = categories.map(c => {
-    const color = categoriesMap[c.slug]
     return <Link to={`/articles/${c.slug}/page-1`} key={c.slug}>{c.name}</Link>
   });
 
