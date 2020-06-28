@@ -11,7 +11,7 @@ import PageTransition from '../../plugins/gatsby-v3-plugin-page-transitions';
 const IndexPage = () => {
 
   return (
-    <Layout>
+    <Layout css={{position: 'relative'}}>
       <Header />
       <Rule title={`Résumé`} icon="rule-icon icon-leaf"/>
       <Breadcrumbs crumbs={[]} />

@@ -302,21 +302,14 @@ export const ImageContainer = styled.span`
   display: block;
   width: 7rem;
   height: 7rem;
-  ${'' /* border-radius: 50%; */}
-  ${'' /* margin: 0 auto ${Theme.spacing.xs}  ; */}
-  ${'' /* border: 4px solid ${Theme.colors.grays.border}; */}
-  ${'' /* padding: 3px; */}
   vertical-align: middle;
   text-align: center;
   margin: 0 auto 1rem;
 
   img {
     display: block;
-    ${'' /* width: calc(100% - 14px); */}
     height: auto;
-    ${'' /* max-height: calc(100% - 14px); */}
     vertical-align: middle;
-    ${'' /* margin: 7px auto; */}
     margin: 0 auto;
     text-align: center;
     line-height: calc(100% - 14px);
@@ -340,6 +333,5 @@ export const HalfColumn = styled.div`
 `
 
 export const List = css`
-  <list-style-type></list-style-type>: none;
-
+  list-style-type: none;
 `
