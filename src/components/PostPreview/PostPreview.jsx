@@ -3,7 +3,7 @@ import ReactHtmlParser from 'react-html-parser';
 import * as Styled from './PostPreview.styles'
 import EntryMeta from "../EntryMeta/EntryMeta"
 
-const PostPreview = ({ post, catMap, color }) => {
+const PostPreview = ({ post, color }) => {
   
   return (
     <Styled.ReadableContent className="post-preview">
@@ -18,7 +18,6 @@ const PostPreview = ({ post, catMap, color }) => {
           
         </Styled.Title>
         <EntryMeta
-          categoriesMap={catMap}
           published={post.published}
           categories={post.categories}
         />

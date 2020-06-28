@@ -73,7 +73,7 @@ const Post = ({...data}) => {
 
             </header>
 
-            <div className="entry-content clearfix">
+            <div className="entry-content clearfix" css={Styled.EntryContent}>
             {/* <img src={post.featured_image} style={{display: 'block', margin: '0 auto 1.6rem', height: '300px'}} alt=""/> */}
               <div className="main-content">
                 {ReactHtmlParser(post.body)}

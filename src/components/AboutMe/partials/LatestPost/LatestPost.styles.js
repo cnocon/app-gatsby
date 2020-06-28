@@ -23,11 +23,6 @@ export const LatestPostHeading = styled.h2`
   padding: 0;
   text-align: left;
 
-  p {
-    font-size: ${Theme.fonts.sizes.default};
-    line-height: ${Theme.fonts.sizes.lineHeights.default};
-  }
-
   .post-link {
     color: ${Theme.colors.default.base};
     font-size: ${Theme.fonts.sizes.default};

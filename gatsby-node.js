@@ -5,6 +5,9 @@
  */
 
 // You can delete this file if you're not using it
+
+
+
 const path = require(`path`)
 
 const chunk = (array, size) => {
@@ -43,7 +46,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
     {
       allButterPost(filter: {categories: {elemMatch: {slug: {in: [
-        "gatsby", "cli", "git", "sass", "javascript", "workflow"]}}}}, sort: {fields: created}) {
+        "netlify", "webhooks", "gatsby", "cli", "git", "sass", "javascript", "workflow"]}}}}, sort: {fields: created}) {
         edges {
           node {
             id
@@ -115,12 +118,6 @@ exports.createPages = async ({ actions, graphql }) => {
   const chunkedPosts = chunk(allPosts, 3);
   const colors = ['blue', 'green', 'yellow', 'purple']
   const groups = data.allButterPost.group;
-  let catMap = {
-      git: 'blue',
-      javascript: 'green',
-      workflow: 'purple',
-      sass: 'yellow',
-      cli: 'red'}
 
   groups.forEach(group => {
     const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
@@ -135,9 +132,9 @@ exports.createPages = async ({ actions, graphql }) => {
         context: {
           prevPagePath: index < 1 ? null : `/articles/${category}/page-${index}`,
           nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}/page-${index + 2}`,
-          categoriesMap: catMap,
           colors: colors,
-          title: `Posted in ${group.fieldValue}`,
+          title: `Posts from ${group.fieldValue}`,
+          seoDescription: `Latest Posts on ${group.fieldValue} from the Front End Development Blog`,
           category: category,
           posts: collection.reverse(),
           breadcrumbs: [
@@ -168,7 +165,6 @@ exports.createPages = async ({ actions, graphql }) => {
         prevPost: index === 0 ? null : allPosts[index - 1].node,
         nextPost: index === allPosts.length - 1 ? null : allPosts[index + 1].node,
         categories: categoriesData.data.allButterPost.distinct,
-        categoriesMap: catMap,
         colors: colors,
         breadcrumbs: [
           {
@@ -198,8 +194,8 @@ exports.createPages = async ({ actions, graphql }) => {
         colors: colors,
         prevPagePath: index < 1 ? null : `/articles/page-${index}`,
         nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
-        categoriesMap: catMap,
         title: "Latest Posts",
+        seoDescription: `Latest Posts from the Front End Development Blog`,
         breadcrumbs: [
           {
             name: 'Home',
@@ -223,7 +219,6 @@ exports.createPages = async ({ actions, graphql }) => {
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
       posts: allPosts.slice(0,3),
-      categoriesMap: catMap,
       colors: colors,
       categories: categoriesData.data.allButterPost.distinct,
       breadcrumbs: [

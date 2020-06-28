@@ -32,14 +32,14 @@ module.exports = {
     accents: {
       red: 'hsl(1,100%,94%)',
       green: 'hsl(139, 70%, 86%)',
-      blue: 'hsl(197,100%,89%)',
-      yellow: 'hsl(58, 100%, 86%)',
+      blue: 'hsl(197,100%,85%)',
+      yellow: 'hsl(58, 100%, 80%)',
       purple: 'hsl(240, 100%, 94%)',
       text: {
         red: 'hsl(1,77%,82%)',
         purple: 'hsl(240, 100%, 85%)',
         green: 'hsl(139,50%,75%)',
-        yellow: 'hsl(58, 94%, 70%)',
+        yellow: 'hsla(58, 100%, 60%, 1)',
         blue: 'hsl(197,85%,75%)'
       }
     }

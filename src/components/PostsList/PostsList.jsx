@@ -10,17 +10,16 @@ import shuffle from "../utils/shuffle"
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions';
 
 const PostsList = ({...data}) => {
-  const {posts, nextPagePath, prevPagePath, categoriesMap, breadcrumbs, colors, title} = data.pageContext
+  const {posts, nextPagePath, prevPagePath, breadcrumbs, colors, title, seoDescription} = data.pageContext
+  let colorsCopy = colors
+
+  const getColor = () => {
+    return shuffle(colorsCopy).pop()
+  }
   
-  const articles = posts
-    .map(node  => {
-      const color = shuffle(colors)[0]
-      return <PostPreview
-        post={node}
-        key={node.slug}
-        catMap={categoriesMap}
-        color={color} />
-    });
+  const articles = posts.map(node => {
+    return <PostPreview post={node} key={node.slug} color={getColor()} />
+  });
 
   const prevBtn = prevPagePath ?
      <div className={nextPagePath ? "left-block" : "left-full-block"}>
@@ -41,7 +40,7 @@ const PostsList = ({...data}) => {
   return (
     <Layout className="blog-posts">
       <Header />
-      <SEO stitle="Front End Development Blog"/>
+      <SEO stitle={title} sdescription={seoDescription} />
       <PageTransition>
         <>
           <Rule title={title} icon="rule-icon icon-rss" />

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import * as Styled from './EntryMeta.styles'
 
-const EntryMeta = ({ categories, categoriesMap, published})  => {
+const EntryMeta = ({ categories, published})  => {
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
 
   const date = new Date(published).toLocaleDateString(undefined, options)

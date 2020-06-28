@@ -74,25 +74,25 @@ const AboutMe = ({ ...data }) => {
               color="color1"
               icon="far fa-code"
               title="Web Development"
-              text="This is my primary area of expertise. I have over 10 years of experience in the field."
+              text="This is my primary area of expertise. I have over <b>10 years of experience</b> in the field."
             />
             <Service
               color="color2"
               icon="far fa-graduation-cap"
               title="Code Tutoring"
-              text="I focus on teaching with compassion. I love tutoring and I can work with all ages."
+              text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages."
             />
             <Service
               color="color3"
               icon="far fa-i-cursor"
               title="Blog Writer"
-              text="I believe it's important to share and contribute content to the developer community."
+              text="I believe it's important to <b>share and contribute</b> content to the developer community."
             />
             <Service
               color="color4"
               icon="far fa-tasks"
               title="Project Management"
-              text="I have strong project management skills and can self-manage well as needed."
+              text="I have <b>strong project management</b> skills and can self-manage well as needed."
             />
           </div>
 
