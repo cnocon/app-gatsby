@@ -8,7 +8,7 @@ import * as Styled from "./Post.styles"
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
-import PageTransition from 'gatsby-v2-plugin-page-transitions'
+import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions'
 import $ from 'jquery'
 
 const Post = ({...data}) => {

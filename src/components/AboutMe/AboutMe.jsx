@@ -8,7 +8,7 @@ import Intro from './partials/Intro'
 import Service from './partials/Service'
 import LatestPost from './partials/LatestPost'
 import IconList from '../IconList/IconList'
-import PageTransition from 'gatsby-v2-plugin-page-transitions';
+import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions';
 
 const AboutMe = ({ ...data }) => {
   const posts = (

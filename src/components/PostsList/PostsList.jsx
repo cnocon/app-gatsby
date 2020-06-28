@@ -7,7 +7,7 @@ import * as Styled from '../PostsList/PostsList.styles'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import shuffle from "../utils/shuffle"
-import PageTransition from 'gatsby-v2-plugin-page-transitions';
+import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions';
 
 const PostsList = ({...data}) => {
   const {posts, nextPagePath, prevPagePath, categoriesMap, breadcrumbs, colors, title} = data.pageContext

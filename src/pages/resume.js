@@ -6,7 +6,7 @@ import Header from "../components/Header/Header"
 import Resume from "../components/Resume/Resume"
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs"
 import Rule from "../components/Rule/Rule"
-import PageTransition from 'gatsby-v2-plugin-page-transitions';
+import PageTransition from '../../plugins/gatsby-v3-plugin-page-transitions';
 
 const IndexPage = () => {
 
