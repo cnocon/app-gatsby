@@ -59,13 +59,6 @@ export const Timeline = styled.div`
         display: inline-block;
         width: 47px;
       }
-
-      &::before {
-        // margin:0;
-        // display: inline; 
-        // margin-left: 0; 
-        // margin-right: 0;
-      }
     }
   }
 
@@ -87,6 +80,34 @@ export const Timeline = styled.div`
       &:last-child p:before {
         height: 100%;
       }
+
+
+    
+      &:first-of-type {
+        margin-top: 20px;
+        
+        .date {
+          // top: -74px;
+        }
+      }
+
+
+    &:before, 
+    &:after {
+      display: none;
+    }
+    .date {
+      // top: -64px; left: 50%; margin-left: -32px;
+      display: none;
+    }
+    h4,
+    h5 {
+      text-align: center;
+    }
+    p:before,
+    ul:before {
+      left: 50%; z-index: -1;
+    }
     }
 
     &::after, 
@@ -181,17 +202,17 @@ export const HistoryHeading = css`
 
 
   @media screen and (max-width: ${Theme.breakpoints.max.md}) {
-    font-size: 16px;
+    /* font-size: 16px; */
     text-transform: uppercase;
-    font-weight: 700;
-    font-family: "Roboto", sans-serif;
-    opacity: .8;
-    padding-left: 50px;
-    text-align: center;
+    /* font-weight: 700; */
+    /* font-family: "Roboto", sans-serif; */
+    /* opacity: .8; */
+    padding-left: 102px;
+    text-align: left;
 
     &:first-of-type i {
-      width: 86px;
-      height: 86px;
+      /* width: 86px;
+      height: 86px; */
       font-size: 43px;
       line-height: 72px;
     }

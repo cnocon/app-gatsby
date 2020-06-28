@@ -4707,27 +4707,7 @@ a.more-link:hover {
 	 .entry-content {
 		 padding-top: 0;
 		 }
-	.event {
-		padding: 16px; margin-top: 104px;
-		}
-	.event:first-of-type {
-		margin-top: 116px;
-		}
-	.event:first-of-type .date {
-		top: -74px;
-		}
-	.event:before, .event:after {
-		display: none;
-		}
-	.event .date {
-		top: -64px; left: 50%; margin-left: -32px;
-		}
-	.event h4, .event h5 {
-		text-align: center;
-		}
-	.event p:before {
-		left: 50%; z-index: -1;
-		}
+
 
 
 

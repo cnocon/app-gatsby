@@ -11,6 +11,11 @@ export const Event = styled.article`
   background: #ffffff;
   border: 3px solid #EDF1F3;
   border-radius: 6px;
+  
+  @media screen and (max-width: ${Theme.breakpoints.max.md}) {
+    padding: 16px; 
+    // margin-top: 104px;
+  }
 
   &::before,
   &::after {
