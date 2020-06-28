@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { RotateWords, RotateWordsWrapper } from '../AboutMe.styles'
+import { RotateWords, RotateWordsWrapper } from './Intro.styles'
 import $ from 'jquery'
 
 const Intro = () => {

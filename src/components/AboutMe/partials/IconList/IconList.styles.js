@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-// import { css } from '@emotion/core'
-import Theme from '../Theme/Theme'
+import Theme from '../../../Theme/Theme'
 
 export const IconList = styled.ul`
   list-style: none;

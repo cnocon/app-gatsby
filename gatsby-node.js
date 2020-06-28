@@ -113,7 +113,7 @@ exports.createPages = async ({ actions, graphql }) => {
   `)
   const allPosts = data.allButterPost.edges.reverse();
   const chunkedPosts = chunk(allPosts, 3);
-  const colors = ['blue', 'green', 'yellow', 'red', 'purple']
+  const colors = ['blue', 'green', 'yellow', 'purple']
   const groups = data.allButterPost.group;
   let catMap = {
       git: 'blue',
