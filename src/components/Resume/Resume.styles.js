@@ -258,23 +258,39 @@ export const SectionTitle = css`
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 700;
-  font-family: Lato;
-  margin: 0 0 1em;
+  font-family: Lato, sans-serif;
   text-align: left;
   display: block;
-
-  &:first-of-type {
+  &:first-of-type span {
     margin: 25px 0 30px 0;
+    line-height: 37px;
+    letter-spacing: 1px;
+    opacity: 1;
+    color: #345;
+    font-family: Lato, sans-serif;
+    position: relative;
+    display: inline-block;
+    padding-right: 1em;
+    font-size: 12px;
+    font-family: Lato,sans-serif;
+    text-transform: uppercase;
+    margin: 20px 0 15px;
+    margin: 25px 0 14px;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: 0;
-    width: 100%;
-    border-bottom: 4px solid #F4F6F7;
+  & {
+    margin: 0 0 2rem;
+    text-align: left;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: 4px;
+      width: 100%;
+      border-bottom: 4px solid ${Theme.colors.grays.border};
+    }
   }
 
   span {
@@ -284,17 +300,15 @@ export const SectionTitle = css`
     background: #fff;
     font-size: 12px;
     letter-spacing: 1px;
-    font-weight: 700;
     font-family: Lato, sans-serif;
     text-transform: uppercase;
-    opacity: .8;
 
     i {
       font-size: 16px;
       margin-right: 14px;
       line-height: 39px;
       text-align: center;
-      color: #B7C6C9;
+      /* color: #345; */
       background: #fff;
       border-radius: 50%;
       border: 4px solid #F4F6F7;
@@ -314,10 +328,11 @@ export const SectionTitle = css`
         opacity: .8;
         font-variant: normal;
         text-transform: none;
-        line-height: 39px;
+        line-height: 37px;
         margin-left: auto;
         font-size: 120%;
         margin: 0 auto;
+        font-weight: 300;
         vertical-align: middle;
         color: ${Theme.colors.grays.textDark};
       }
@@ -377,7 +392,7 @@ export const RightCol = css`
   }
 
   article:not(:first-of-type) h2 {
-    margin: 25px 0 15px 0;
+    margin: 25px 0 0;
   }
 
   .skillset {

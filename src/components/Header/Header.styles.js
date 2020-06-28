@@ -115,7 +115,7 @@ export const Subhead = styled.p`
   display: inline-block;
   font-style: italic;
   padding: .3rem 1rem;
-  background-color: ${Theme.colors.accents.text.yellow};
+  background-color: ${Theme.colors.accents.yellow};
   color: #345;
   color: rgba(0,0,0,.7);
   border-radius: .4rem;
@@ -136,7 +136,7 @@ export const Nav = styled.ul`
 
     @media screen and (min-width: ${Theme.breakpoints.min.md}) {
       height: 4rem;
-      margin: ${Theme.spacing.md} auto 5rem;
+      margin: ${Theme.spacing.md} auto 7rem;
     }
 `
 
@@ -151,7 +151,7 @@ export const NavItem = styled.li`
   width: 30%;
 
   @media screen and (min-width: ${Theme.breakpoints.min.md}) {
-    width: 22%;
+    width: 20%;
     min-width: 175px;
   }
 
@@ -168,12 +168,16 @@ export const NavLink = styled(Link)`
   font-family: Arial, Helvetica, sans-serif;
   position: static;
   color: #D0DADC;
-  letter-spacing: -2px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 2.6rem;
   cursor: pointer;
   transition: all .6s;
+  text-transform: lowercase;
+  font-family: Lato, sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 1px;
   
   &.active {
     color: #345;

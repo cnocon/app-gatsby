@@ -32,13 +32,13 @@ const Header = ({ ruleTitle, ruleIcon }) => {
         <Sty.Subhead>Front End Developer</Sty.Subhead>
         <Sty.Nav>
           <Sty.NavItem>
-            <Sty.NavLink to="/" activeClassName="active">home</Sty.NavLink>
+            <Sty.NavLink to="/" activeClassName="active">Home</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/articles/page-1" className={ArticlesClass}>blog</Sty.NavLink>
+            <Sty.NavLink to="/articles/page-1" className={ArticlesClass}>Blog</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/resume" className={ResumeClass}>résumé</Sty.NavLink>
+            <Sty.NavLink to="/resume" className={ResumeClass}>CV</Sty.NavLink>
           </Sty.NavItem>
         </Sty.Nav>
       </Sty.Container>
