@@ -4,7 +4,7 @@ import Theme from '../../../Theme/Theme'
 
 export const LatestPost = styled.div`
   padding: ${Theme.spacing.default} ${Theme.spacing.xs} ${Theme.spacing.md};
-  margin: 0;
+  margin: 2rem auto 0;
   background: #fff;
   display: inline-block;
   text-align: center;
@@ -67,8 +67,9 @@ export const Date = styled.time`
   font-size: ${Theme.fonts.sizes.sm};
   line-height: ${Theme.fonts.sizes.lineHeights.xs};
   color: ${Theme.colors.grays.textDark};
-  font-weight: 500;
-  font-family: ${Theme.fonts.accent.family};
+  // font-weight: 500;
+  font-weight: 700;
+  // font-family: ${Theme.fonts.accent.family};
   text-transform: uppercase;
   letter-spacing: .25px;
   text-align: center;

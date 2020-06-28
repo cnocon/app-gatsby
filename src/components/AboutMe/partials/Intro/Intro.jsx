@@ -22,16 +22,8 @@ const Intro = () => {
   }
 
   useEffect(() => {
-    try {
-      rotateWords()
-    } catch (error) {
-      console.error(error);
-      setTimeout(() => {
-        rotateWords()
-      }, 500)
-    }
-
-  })
+    rotateWords()
+  }, [])
 
   return (
     <RotateWordsWrapper>

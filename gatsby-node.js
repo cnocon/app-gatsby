@@ -217,7 +217,7 @@ exports.createPages = async ({ actions, graphql }) => {
     path: `/`,
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
-      posts: allPosts.slice(0,3),
+      posts: allPosts.slice(0,4),
       colors: colors,
       categories: categoriesData.data.allButterPost.distinct,
       breadcrumbs: [
