@@ -50,12 +50,12 @@ export const Event = styled.article`
     height: 68px;
     line-height: 58px;
     text-align: center;
-    background: ${Theme.colors.accents.blue} !important;
+    background: ${Theme.colors.grays.border} !important;
     display: block;
     z-index: 120;
     color: #345 !important;
     border-radius: 50%;
-    border: 5px solid #fff !important;
+    border: 5px solid ${Theme.colors.grays.border} !important;
     font-family: Oswald, sans-serif;
     font-weight: 400;
     font-size: 11px;
@@ -65,6 +65,9 @@ export const Event = styled.article`
   &.current {
     .date {
       border-color: #345 !important;
+      width: 76px;
+      height: 76px;
+      line-height: 66px;
       outline: 5px solid #FFF !important;
       color: #fff !important;
       background-color: #345 !important;

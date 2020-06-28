@@ -284,9 +284,10 @@ export const SectionTitle = css`
     background: #fff;
     font-size: 12px;
     letter-spacing: 1px;
-    font-weight: 900;
-    font-family: Lato;
+    font-weight: 700;
+    font-family: Lato, sans-serif;
     text-transform: uppercase;
+    opacity: .8;
 
     i {
       font-size: 16px;
