@@ -83,7 +83,7 @@ module.exports = {
       }
     },   
     {
-      resolve: require.resolve('../gatsby-v3-plugin-page-transitions'),
+      resolve: `gatsby-v3-plugin-page-transitions`,
       options: {
         transitionTime: 500
       }
