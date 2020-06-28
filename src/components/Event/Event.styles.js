@@ -14,24 +14,56 @@ export const Event = styled.article`
 
   &::before,
   &::after {
-    right: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none;
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
   }
 
   &::after {
-    border-right-color: #ffffff; border-width: 10px; margin-top: -10px;
+    border-right-color: #ffffff;
+    border-width: 10px;
+    margin-top: -10px;
   }
 
   &::before {
-    border-right-color: #EDF1F3; border-width: 15px; margin-top: -15px;
+    border-right-color: #EDF1F3;
+    border-width: 15px;
+    margin-top: -15px;
   }
 
   .date {
-    position: absolute; top: 45%; margin-top: -24px; left: -106px; width: 68px; line-height: 58px; text-align: center; background: #d0f1ff; display: block; z-index: 120; color: #fff; border-radius: 50%; border: 5px solid #FFF; font-family: "Lato, sans-serif"; font-weight: 400; font-size: 11px; letter-spacing: 1px;
+    position: absolute;
+    top: 50%;
+    // margin-top: -24px;
+    transform: translateY(-50%);
+    left: -106px;
+    width: 68px;
+    height: 68px;
+    line-height: 58px;
+    text-align: center;
+    background: ${Theme.colors.accents.blue} !important;
+    display: block;
+    z-index: 120;
+    color: #345 !important;
+    border-radius: 50%;
+    border: 5px solid #fff !important;
+    font-family: Oswald, sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 1px;
   }
 
   &.current {
     .date {
-      border-color: #345; outline: 5px solid #FFF; background-color: #345;
+      border-color: #345 !important;
+      outline: 5px solid #FFF !important;
+      color: #fff !important;
+      background-color: #345 !important;
     }
   }
 
@@ -39,7 +71,13 @@ export const Event = styled.article`
     margin-bottom: 15px;
     
     h5 {
-      margin: 0; padding: 0 0 .3em 0; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; color: #C9D5D6;
+      margin: 0;
+      padding: 0 0 .3em 0;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #C9D5D6;
       letter-spacing: 0;
       font-size: 13px;
       font-family: Roboto;
@@ -133,11 +171,11 @@ export const Event = styled.article`
     .fa-trophy-alt {
       color: ${Theme.colors.default.base};
       padding: 0 6px 0 0;
-      font-weight: 500;
+      font-weight: 300;
       margin: 0 0 0 -12px;
       font-size: 16px;
       transform: translateY(3px);
-      text-shadow: 0px 1px .5px ${Theme.colors.accents.text.yellow};
+      text-shadow: 0 1px 1px ${Theme.colors.accents.yellow};
     }
   }
   

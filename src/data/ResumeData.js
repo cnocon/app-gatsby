@@ -153,22 +153,11 @@ const ResumeData = {
   ],
   education: [
     {
-      year: 2014,
-      startDate: "2014",
-      endDate: "2014",
-      timespan: "Spring 2014",
-      position: "Student/Graduate",
-      company: "Dev Bootcamp (Chicago)",
-      desc: "Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field.",
-      descList: ["Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field."],
-      awards: []
-    },
-    {
       year: 2011,
       startDate: "2007",
       endDate: "2011",
       position: "B.A. Sociology, Computer Applications",
-      company: "University of Notre Dame",
+      company: "University of Notre Dame <i class='far fa-chevron-right'></i> <em>Notre Dame, IN</em>",
       timespan: "Class of 2011",
       descList: [],
       awards: [
@@ -183,23 +172,30 @@ const ResumeData = {
           detail: "International Sociology Honor Society"
         }
       ]
-    }
+    },
+    {
+      year: 2014,
+      startDate: "2014",
+      endDate: "2014",
+      timespan: "Spring 2014",
+      position: "Student/Graduate",
+      company: "Dev Bootcamp <i class='far fa-chevron-right'></i> <em>Chicago, IL</em>",
+      desc: "Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field.",
+      descList: ["Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field."],
+      awards: []
+    },
   ],
   skills: [
-    {name: "Javascript (ES5, ES6)", percent: "85", icon: "fab fa-js-square"},
-    {name: "SCSS, LESS, CSS", percent: "85", icon: "fab fa-sass"},
-    {name: "HTML5", percent: "85", icon: "fab fa-html5"},
-    {name: "React", percent: "80", icon: "fab fa-react"},
-    {name: "Responsive Web Development", percent: "80", icon: "pe-7s-phone bold"},
-    {name: "API Consumption", percent: "77", icon: "pe-7s-network bold"},
-    // {name: "JS Libs (Highcharts, DataTables, jQuery, Stimulus)", percent: "75", icon: "pe-7s-graph3"},
-    {name: "Ruby", percent: "75", icon: "pe-7s-diamond bold"},
-    {name: "Git", percent: "70", icon: "fab fa-git"},
+    {name: "SCSS, LESS, CSS", percent: "90", icon: "fab fa-sass"},
+    {name: "Responsive Development", percent: "88", icon: "pe-7s-phone bold"},
+    {name: "JavaScript", percent: "83", icon: "fab fa-js-square"},
+    {name: "APIs", percent: "80", icon: "pe-7s-network bold"},
+    {name: "React", percent: "75", icon: "fab fa-react"},
+    {name: "Gatsby", percent: "72", icon: "pe-7s-gleam bold"},
     {name: "Node, NPM", percent: "70", icon: "fab fa-node-js"},
-    {name: "Gatsby", percent: "65", icon: "pe-7s-gleam bold"},
+    {name: "Git", percent: "70", icon: "fab fa-git"},
+    {name: "Ruby", percent: "65", icon: "pe-7s-diamond bold"},
     {name: "Rails 5", percent: "60", icon: "pe-7s-diamond bold"},
-    // {name: "SQL", percent: "50", icon: "pe-7s-gleam bold"},
-    // {name: "Backbone", percent: "50", icon: "pe-7s-tools bold"}
   ],
   assets: [
     "Empathy to be an effective teammate",

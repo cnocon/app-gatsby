@@ -29,7 +29,7 @@ export const EntryMeta = css`
 
   a,
   .entry-date {
-    padding: 4px 10px;
+    padding: 0 8px;
     margin: 0 2px;
     border: 1px solid ${Theme.colors.grays.borderMedium};
     border-radius: 4px;
@@ -39,6 +39,7 @@ export const EntryMeta = css`
     font-weight: 800;
     color: #6A7686;
     display: inline-block;
+    line-height: 1.8;
     -webkit-transition: color 0.1s, background-color .2s, border-color .2s; transition: color 0.1s, background-color .2s, border-color .2s;
   }
 

@@ -26,21 +26,32 @@ const PostsList = ({...data}) => {
     return <PostPreview post={node} key={node.slug} color={getColor()} />
   });
 
-  const prevBtn = prevPagePath ?
-     <div className={nextPagePath ? "left-block" : "left-full-block"}>
-        <Styled.Button href={prevPagePath}>
-          Newer Posts&nbsp;<span>→</span>
-        </Styled.Button>
+  const prevBtn = (
+     <div className="col-sm-6 nav-prev left-block">
+       {prevPagePath ? (
+         <>
+          <h4>NEWER POSTS</h4>
+          <Styled.Button href={prevPagePath}>
+            <i className="fal fa-long-arrow-left"></i>{` `}BACK
+          </Styled.Button>
+        </>
+        )
+      : null}
       </div>
-    : null
+    )
 
-  const nextBtn = nextPagePath ?
-      <div className={prevPagePath ? "right-block" : "right-full-block"}>
+  const nextBtn = (
+    <div className="col-sm-6 nav-next right-block">
+    {nextPagePath ? (
+      <>
+        <h4>OLDER POSTS</h4>
         <Styled.Button href={nextPagePath}>
-          <span style={{transform: "rotate(180deg) translateY(-5%)", display: 'inline-block'}}>→</span>&nbsp;Older Posts
+          CONTINUE{` `}<i className="fal fa-long-arrow-right"></i>
         </Styled.Button>
-      </div>
-    : null
+      </>
+      ) : null}
+    </div>
+  )
 
   return (
     <Layout className="blog-posts">

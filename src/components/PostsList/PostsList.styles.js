@@ -3,21 +3,18 @@ import Theme from "../Theme/Theme"
 
 export const Button = styled.a`
   text-align: center;
-  background-color: ${Theme.colors.default.base};
-  color: #fff;
+  color: ${Theme.colors.default.base};
   font-size: ${Theme.fonts.sizes.xs};
   line-height: 1.2;
-  padding: ${Theme.spacing.sm} ${Theme.spacing.default};
   display: block;
-  max-width: 17em;
   text-align: center;
-  letter-spacing: .03em;
-  border: 2px solid ${Theme.colors.default.base};
-  border-radius: 4px;
+  // letter-spacing: .03em;
+  // border: 2px solid ${Theme.colors.default.base};
+  // border-radius: 4px;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 200;
+  font-size: ${Theme.fonts.sizes.default};
   outline: 0;
-  text-shadow: none;
   transition: all .2s;
 
   &:hover {
@@ -33,48 +30,129 @@ export const Button = styled.a`
     line-height: inherit;
     height: unset;
     padding: 0;
+    font-family: Roboto;
+    line-height: 1.2;
     margin-right: 0;
+    font-size: ${Theme.fonts.sizes.default};
+    font-weight:900;
   }
+`
+
+// export const Navigation = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   align-items: space-between;
+//   justify-content: start;
+
+//   [class$='full-block'] {
+//     flex-basis: 100%;
+//     max-width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//   .right-full-block {
+//     align-items: flex-start;
+//   }
+
+// .left-full-block {
+//   align-items: flex-end;
+// }
+
+//   .left-block,
+//   .right-block {
+//     display: flex;
+//     flex-basis: 50%;
+//     max-width: 50%;
+//   }
+
+//   .left-block {
+//     justify-content: flex-start;
+//   }
+
+//   .right-block {
+//     justify-content: flex-end;
+//   }
+// `
+
+export const Section = styled.section`
+  padding-bottom: 3rem;
 `
 
 export const Navigation = styled.div`
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   align-items: space-between;
   justify-content: start;
 
-  [class$='full-block'] {
-    flex-basis: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .right-full-block {
-    align-items: flex-start;
-  }
-
-.left-full-block {
-  align-items: flex-end;
-}
-
-  .left-block,
-  .right-block {
-    display: flex;
+  .col-sm-6 {
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .left-block {
-    justify-content: flex-start;
+  .nav-prev {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .right-block {
-    justify-content: flex-end;
+  .nav-next {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
-`
 
-export const Section = styled.section`
-  padding-bottom: 3rem;
+  h4 {
+    color: ${Theme.colors.grays.text};
+  }
+
+  a {
+    font-family: ${Theme.fonts.headings.family};
+    font-weight: 300;
+    color: ${Theme.colors.default.base};
+    font-size: ${Theme.fonts.sizes.default};
+    transform: scale(1.0);
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: 0;
+      border: 0;
+      transform: scale(1.0);
+      text-decoration: underline;
+    }
+  }
+
+  [class$='full-block'] {
+      flex-basis: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .right-full-block {
+      align-items: flex-start;
+    }
+  
+  .left-full-block {
+    align-items: flex-end;
+  }
+  
+    .left-block,
+    .right-block {
+      display: flex;
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  
+    .left-block {
+      justify-content: flex-start;
+    }
+  
+    .right-block {
+      justify-content: flex-end;
+    }
 `

@@ -19,7 +19,7 @@ const Post = ({...data}) => {
   const prevBtn = prevPost ?
      <div className={nextPost ? "left-block" : "left-full-block"}>
         <Link to={`/articles/${prevPost.slug}`}>
-          <span style={{transform: "rotate(180deg) translateY(-5%)", display: 'inline-block'}}>→</span>{` `}{prevPost.title}
+        <i className="fal fa-long-arrow-left"></i>{` `}{prevPost.title}
         </Link>
       </div>
     : null
@@ -27,7 +27,7 @@ const Post = ({...data}) => {
   const nextBtn = nextPost ?
       <div className={prevPost ? "right-block" : "right-full-block"}>
         <Link to={`/articles/${nextPost.slug}`}>
-          {nextPost.title}&nbsp;<span>→</span>
+          {nextPost.title}&nbsp;<i className="fal fa-long-arrow-right"></i>
         </Link>
       </div>
     : null

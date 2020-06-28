@@ -66,7 +66,7 @@ export const SectionTitle = css`
         line-height: 39px;
         margin-left: auto;
         font-size: 120%;
-        margin: 0 auto;
+        margin: 0 auto 0 0px;
         vertical-align: middle;
         color: ${Theme.colors.grays.text};
         font-weight: normal;

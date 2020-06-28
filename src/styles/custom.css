@@ -154,11 +154,7 @@ i.rule-icon::before {
 
 
 
-@media screen and (max-width: 767px) {
-  .skill-unit .bar {
-    height: 36px;
-  }
-}
+
 @media screen and (max-width: 767px) {
   .skill-unit {
     padding-bottom: 6px;

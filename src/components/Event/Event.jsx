@@ -26,7 +26,7 @@ const Event = ({ current, data, type }) => {
       <Styled.Event className={`event ${current ? `current` : ''}`}>
         <span className="date">{data.year}</span>
         <header>
-          <h4>{data.position}</h4>
+          <h4>{ReactHtmlParser(data.position)}</h4>
           <h5>{ReactHtmlParser(data.company)}</h5>
           <span className="range">{data.startDate} &ndash; {data.endDate}</span>
         </header>
@@ -40,7 +40,7 @@ const Event = ({ current, data, type }) => {
     return (
       <Styled.Event className="event">
         <header>
-          <h4>{data.position}</h4>
+          <h4>{ReactHtmlParser(data.position)}</h4>
           <h5>{ReactHtmlParser(data.company)}</h5>
           <small>{data.timespan}</small>
           {data.desc ? <p>{data.desc}</p> : null}

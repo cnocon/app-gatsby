@@ -65,55 +65,62 @@ export const TitleLink = styled(Link)`
   font-size: ${Theme.fonts.sizes.lg};
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
   color: ${Theme.colors.default.base};
-  padding-bottom: 1px;
+  padding-bottom: 0;
   transition: box-shadow .2s;
+  font-weight: 700px;
+  color: ${Theme.colors.default.darker};
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     font-size: ${Theme.fonts.sizes.md};
   }
 
   &.box-shadow-purple {
-    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.purple};
+    box-shadow: 0 2px 1px ${Theme.colors.accents.purple};
+    text-shadow: 0 1px 0 ${Theme.colors.accents.text.purple};
 
     &:hover {
-      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.purple};
+      box-shadow: 0 3px 1px ${Theme.colors.accents.text.purple};
     }
   }
 
   &.box-shadow-red {
-    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.red};
+    box-shadow: 0 2px 1px ${Theme.colors.accents.red};
+    text-shadow: 0 1px 0 ${Theme.colors.accents.text.red};
 
     &:hover {
-      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.red};
+      box-shadow: 0 3px 1px ${Theme.colors.accents.text.red};
     }
   }
 
   &.box-shadow-yellow {
-    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.yellow};
+    box-shadow: 0 2px 1px ${Theme.colors.accents.yellow};
+    text-shadow: 0 1px 0 ${Theme.colors.accents.yellow};
 
     &:hover {
-      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.yellow};
+      box-shadow: 0 3px 1px ${Theme.colors.accents.text.yellow};
     }
   }
 
   &.box-shadow-blue {
-    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.blue};
+    box-shadow: 0 3px 1px ${Theme.colors.accents.blue};
+    text-shadow: 0 1px 0 ${Theme.colors.accents.text.blue};
 
     &:hover {
-      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.blue};
+      box-shadow: 0 3px 1px ${Theme.colors.accents.text.blue};
     }
   }
     
   &.box-shadow-green {
-    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.green};
+    box-shadow: 0 2px 1px ${Theme.colors.accents.green};
+    text-shadow: 0 1px 0 ${Theme.colors.accents.text.green};
 
     &:hover {
-      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.green};
+      box-shadow: 0 3px 1px ${Theme.colors.accents.text.green};
     }
   } 
 
   &:hover {
-    color: ${Theme.colors.default.base} !important;
+    color: ${Theme.colors.default.base};
   }
 `
 

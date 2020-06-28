@@ -29,7 +29,7 @@ const Resume = () => {
 
   return (
     <div className="row resume">
-      <div className="col-md-7 col-lg-7" css={Styled.LeftCol}>
+      <div className="col-md-7" css={Styled.LeftCol}>
         <h2 css={Styled.HistoryHeading}>
           <i className="fa far fa-briefcase"></i>
           Work History
@@ -39,7 +39,7 @@ const Resume = () => {
         </Styled.Timeline>
       </div>
 
-      <div className="col-md-5 col-lg-5" css={Styled.RightCol}>
+      <div className="col-md-5" css={Styled.RightCol}>
         <h2 css={Styled.SectionTitle}>
           <span>
             <i className="fa icon-cog"></i>
