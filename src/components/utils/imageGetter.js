@@ -5,6 +5,7 @@ import convertImg from '../../images/convert.png'
 import gitImg from '../../images/git.png'
 import searchImg from '../../images/search.png'
 import defaultImg from '../../images/default.png'
+import netlifyImg from '../../images/netlify.png'
 
 const imageGetter = (slug) => {
   if (slug.match(/animate-page-transitions-with-fade-effect-in-gatsby/)) {
@@ -19,6 +20,8 @@ const imageGetter = (slug) => {
     return gitImg
   } else if (slug.match(/search-git-history-for-certain-words-and-phrases/)) {
     return searchImg
+  } else if (slug.match(/automatically-build-and-deploy-your-gatsby-site-on-netlify-after-publishing-a-post-in-buttercms/)) {
+    return netlifyImg
   } else {
     return defaultImg
   }
