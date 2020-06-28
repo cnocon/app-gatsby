@@ -18,6 +18,10 @@ export const ReadableContent = styled.article`
     p {
       ${'' /* margin: 0; */}
     }
+
+    .entry-content {
+      padding-bottom: 0;
+    }
   }
 
   @media screen and (min-width: ${Theme.breakpoints.min.md}) {
@@ -69,7 +73,7 @@ export const TitleLink = styled(Link)`
   }
 
   &.box-shadow-purple {
-    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.purple};
+    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.purple};
 
     &:hover {
       box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.purple};
@@ -77,7 +81,7 @@ export const TitleLink = styled(Link)`
   }
 
   &.box-shadow-red {
-    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.red};
+    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.red};
 
     &:hover {
       box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.red};
@@ -85,7 +89,7 @@ export const TitleLink = styled(Link)`
   }
 
   &.box-shadow-yellow {
-    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.yellow};
+    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.yellow};
 
     &:hover {
       box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.yellow};
@@ -93,7 +97,7 @@ export const TitleLink = styled(Link)`
   }
 
   &.box-shadow-blue {
-    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.blue};
+    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.blue};
 
     &:hover {
       box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.blue};
@@ -101,7 +105,7 @@ export const TitleLink = styled(Link)`
   }
     
   &.box-shadow-green {
-    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.green};
+    box-shadow: inset 0 -4px 1px ${Theme.colors.accents.green};
 
     &:hover {
       box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.green};

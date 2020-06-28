@@ -3,7 +3,6 @@ import { ResumeData } from "../../data/ResumeData"
 import Event from "../Event/Event"
 import * as Styled from "./Resume.styles"
 
-
 const workEvents = ResumeData.experience.map((item, i) => {
   return <Event key={`event-${i}`} current={i === 0} data={item} type="work"/>
 })
@@ -30,24 +29,63 @@ const Resume = () => {
 
   return (
     <div className="row resume">
-      <div className="col-md-7 col-lg-7 left-col">
+      <div className="col-md-7 col-lg-7" css={Styled.LeftCol}>
         <h2 css={Styled.HistoryHeading}>
-          <i className="far fa-briefcase"></i>
-          Work History</h2>
-        <div className=" timeline">{workEvents}</div>
+          <i className="fa far fa-briefcase"></i>
+          Work History
+        </h2>
+        <Styled.Timeline className="timeline">
+          {workEvents}
+        </Styled.Timeline>
       </div>
 
-      <div className="col-md-5 col-lg-5 right-col">
-        <h2>Skills</h2>
+      <div className="col-md-5 col-lg-5" css={Styled.RightCol}>
+        <h2 css={Styled.SectionTitle}>
+          <span>
+            <i className="fa icon-cog"></i>
+            Development Skills
+          </span>
+        </h2>
         <div className="skillset">{skills}</div>
 
-        <h2>Education</h2>
+        <h2 css={Styled.SectionTitle}>
+          <span>
+            <i className="fas fa-graduation-cap"></i>
+            Education
+          </span>
+        </h2>
         {eduEvents}
 
-        <article><h2>Assets</h2>
-        <ul className="list" style={{fontSize: '1.25rem'}}><li className="asset">Empathy to be an effective teammate</li><li className="asset">Organizational abilities for managing projects independently</li><li className="asset">Research skills to find the best solutions to new challenges</li><li className="asset">Enthusiasm and passion for front end work</li><li className="asset">Positive attitude and willingness to handle a wide variety of responsibilities</li><li className="asset">Effective communicator with people from varying technical backgrounds</li><li className="asset">Dedicated to ongoing professional development</li><li className="asset">Natural problem solver</li><li className="asset">5+ years of Agile experience</li><li className="asset">10+ years of experience working on web applications in various capacities</li></ul></article>
+        <article>
+          <h2 css={Styled.SectionTitle}>
+            <span>
+              <i className="fal fa-gem"></i>
+              Assets
+            </span>
+          </h2>
+          <ul className="list">
+            <li className="asset"><i className="far fa-check"></i><span><b>Empathy</b> to be an effective teammate</span></li>
+            <li className="asset"><i className="far fa-check"></i><span>Organizational abilities for <b>managing projects</b> independently</span></li>
+            <li className="asset"><i className="far fa-check"></i><span>Research skills to find the <b>best solutions</b> to new challenges</span></li>
+            <li className="asset"><i className="far fa-check"></i><span>Enthusiasm and <b>passion</b> for front end work</span></li>
+            <li className="asset"><i className="far fa-check"></i><span>Positive attitude and <b>willingness</b> to handle a wide variety of responsibilities</span></li>
+            <li className="asset"><i className="far fa-check"></i><span><b>Effective communicator</b> with people from varying technical backgrounds</span></li>
+            <li className="asset"><i className="far fa-check"></i><span>Dedicated to ongoing <b>professional development</b></span></li>
+            <li className="asset"><i className="far fa-check"></i><span>Natural <b>problem solver</b></span></li>
+            <li className="asset"><i className="far fa-check"></i><span><b>5+ years</b> of Agile experience</span></li>
+            <li className="asset"><i className="far fa-check"></i><span><b>10+ years</b> of experience working on web applications in various capacities</span></li>
+          </ul>
+        </article>
 
-        <article><div className="card mt-4"><blockquote className="text-xs-center text-sm-right"><i className="fas fa-quote-left"></i>How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.<cite title="Annie Dillard">&mdash; Annie Dillard</cite></blockquote></div></article>
+        <article>
+          <div className="card mt-4">
+            <blockquote className="text-xs-center text-sm-right">
+              <i className="fas fa-quote-left" css={Styled.BlockquoteIcon}></i>
+              How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.
+              <cite title="Annie Dillard">&mdash; Annie Dillard</cite>
+            </blockquote>
+          </div>
+        </article>
       </div>
     </div>
   )

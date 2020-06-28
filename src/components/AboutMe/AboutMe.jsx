@@ -3,7 +3,7 @@ import * as Styled from "./AboutMe.styles"
 import Layout from "../Layout/Layout"
 import SEO from "../SEO/seo"
 import Header from "../Header/Header"
-import SectionTitle from './partials/SectionTitle'
+import SectionTitle from './partials/SectionTitle/SectionTitle'
 import Intro from './partials/Intro/Intro'
 import Service from './partials/Service/Service'
 import LatestPost from './partials/LatestPost/LatestPost'
@@ -30,7 +30,7 @@ const AboutMe = ({ ...data }) => {
             <div className="col-sm-12 col-md-7 col-lg-7">
               <SectionTitle
                 text="A Little About Me"
-                icon="fa fal fa-female"
+                icon="fas fa-female"
               />
               <Intro />
             </div>
@@ -38,7 +38,7 @@ const AboutMe = ({ ...data }) => {
             <div className="col-sm-12 col-md-5 col-lg-5">
               <SectionTitle
                 text="Profiles"
-                icon="fa fal fa-id-card"
+                icon="fal fa-id-card"
               />
               <IconList listItems={[
                   {
@@ -68,7 +68,7 @@ const AboutMe = ({ ...data }) => {
         
 
 
-          <SectionTitle text="Services" icon="fa fal fa-concierge-bell"/>
+          <SectionTitle text="Services" icon="fas fa-concierge-bell"/>
           <div className="row">
             <Service
               color="color2"
@@ -100,7 +100,7 @@ const AboutMe = ({ ...data }) => {
 
           <SectionTitle
             text="Latest from the Blog"
-            icon="fa fas fa-rss"
+            icon="fas fa-rss"
           />
           <div className="row">{posts}</div>
         </Styled.Container>

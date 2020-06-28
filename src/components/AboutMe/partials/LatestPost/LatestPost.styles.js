@@ -25,8 +25,8 @@ export const LatestPostHeading = styled.h2`
 
   .post-link {
     color: ${Theme.colors.default.base};
-    font-size: ${Theme.fonts.sizes.default};
-    line-height: ${Theme.fonts.sizes.lineHeights.default};
+    font-size: ${Theme.fonts.sizes.sm};
+    line-height: ${Theme.fonts.sizes.lineHeights.sm};
     text-decoration: none;
     padding-bottom: 1px;
     transition: all .3s;
@@ -68,12 +68,13 @@ export const ImageContainer = styled.span`
 export const Date = styled.time`
   display: block;
   text-transform: none;
-  font-size: 14px;
-  line-height: ${Theme.fonts.sizes.lineHeights.sm};
+  font-size: ${Theme.fonts.sizes.sm};
+  line-height: ${Theme.fonts.sizes.lineHeights.xs};
   color: ${Theme.colors.grays.textDark};
   text-align: center;
   font-family: ${Theme.fonts.accent.family};
   font-weight: 500;
+  text-transform: uppercase;
   letter-spacing: .25px;
   text-align: left;
   margin: .5rem 0 .5rem 7rem;

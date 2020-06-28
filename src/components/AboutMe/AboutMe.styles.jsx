@@ -17,22 +17,6 @@ export const Container = styled.div`
   }
 `
 
-export const Tweet = css`
-  margin: 0 0 0 15% !important;
-
-  @media all and (min-width: ${Theme.breakpoints.min.md}) {
-    margin: 0 auto !important;
-  }
-`
-
-export const HalfColumn = styled.div`
-  &:first-of-type {
-    @media all and (max-width: ${Theme.breakpoints.min.md}) {
-      margin-bottom: ${Theme.spacing.xl};
-    }
-  }
-`
-
 export const List = css`
   list-style-type: none;
 `

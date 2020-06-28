@@ -196,5 +196,23 @@ export const EntryContent = css`
       }
     }
 
+    .tagline {
+ 	    margin: 2em 0; padding: 1em 2em;
+    }
+    .tagline *:first-child {
+      margin-top: 0
+    }
+    .tagline * {
+      padding-bottom: 0; margin-bottom: 0;
+    }
+    .tagline h3 {
+      font-size: 2em; padding: 0; line-height: 1.4; font-weight: 300; color: #6A7686;
+    }
+
+  /* DROP CAP */
+   .drop-cap:first-letter {
+      font-size: 50px; font-weight: 800; line-height: .8; float: left; padding: 4px 16px 0px 0;
+    }
+
   }
 `

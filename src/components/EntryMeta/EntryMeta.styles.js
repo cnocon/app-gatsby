@@ -38,6 +38,7 @@ export const EntryMeta = css`
     letter-spacing: .03em;
     font-weight: 800;
     color: #6A7686;
+    display: inline-block;
     -webkit-transition: color 0.1s, background-color .2s, border-color .2s; transition: color 0.1s, background-color .2s, border-color .2s;
   }
 

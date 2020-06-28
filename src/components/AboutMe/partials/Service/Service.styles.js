@@ -60,7 +60,7 @@ export const ServiceDiv = styled.div`
       background-color: #fff;
 
       &::before {
-        text-shadow: 1px 1px 1px ${Theme.colors.accents.text.green};
+        text-shadow: 1px 2px 2px ${Theme.colors.accents.text.blue};
       }
     }
 
@@ -76,7 +76,7 @@ export const ServiceDiv = styled.div`
       background-color: #fff;
 
       &::before {
-        text-shadow: 1px 1px 1px ${Theme.colors.accents.text.blue};
+        text-shadow: 1px 2px 2px ${Theme.colors.accents.text.purple};
       }
     }
 
@@ -92,7 +92,7 @@ export const ServiceDiv = styled.div`
       background-color: #fff;
 
       &::before {
-        text-shadow: 1px 1px 1px ${Theme.colors.accents.text.yellow};
+        text-shadow: 1px 2px 2px ${Theme.colors.accents.green};
       }
     }
 
@@ -108,7 +108,7 @@ export const ServiceDiv = styled.div`
       background-color: #fff;
 
       &::before {
-        text-shadow: 1px 1px 1px ${Theme.colors.accents.text.red};
+        text-shadow: 1px 2px 2px ${Theme.colors.accents.text.yellow};
       }
     }
 

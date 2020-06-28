@@ -1,6 +1,6 @@
 const ResumeData = {
   name: "Cristin O'Connor",
-  jobTitle: "Front End Engineer",
+  jobTitle: "Front End Developer",
   experience: [
     // {
     //   startDate: "June 2019",
@@ -25,11 +25,11 @@ const ResumeData = {
       startDate: "Feb 2020",
       endDate: "Present",
       position: "Front End Developer",
-      company: "Clearlink | Salt Lake City, UT",
+      company: "Clearlink <i class='far fa-chevron-right'></i> <em>Salt Lake City, UT</em>",
       desc: "",
       descList: [
         "Use mockups to code responsive web pages using Handlebars, SCSS, and a proprietary component library",
-        "Assist in maintaining and extending proprietary applications using Javascript, NPM, and Node",
+        "Assist in maintaining and extending applications using Javascript, NPM, and Node",
         // "Migrate websites into a Gatsby, GraphQL, and Emotion powered front end."
       ],
       awards: [
@@ -48,7 +48,7 @@ const ResumeData = {
       startDate: "April 2018",
       endDate: "June 2019",
       position: "Software Engineer",
-      company: "The Scion Group | Chicago, IL",
+      company: "The Scion Group <i class='far fa-chevron-right'></i> <em>Chicago, IL</em>",
       desc: "Our small team worked with a large number of APIs and data to populate a data warehouse stored in Snowflake. I worked heavily with tools like DataTables and HighCharts in order to help visualize meaning. The internal tool housing all the resulting insights is a Rails 5 App.",
       descList: [
         "Launch a new Rails-based business intelligence platform from scratch on a two person team responsible for decision making and planning from start to finish",
@@ -61,13 +61,13 @@ const ResumeData = {
     },
     {
       year: 2015,
-      startDate: "2015",
-      endDate: "2017",
+      startDate: "July 2015",
+      endDate: "Sept 2017",
       position: "Software Engineer",
-      company: "NCSA Next College Student Athlete | Chicago, IL",
+      company: "NCSA Next College Student Athlete <i class='far fa-chevron-right'></i> <em>Chicago, IL</em>",
       descList: [
         "Serve simultaneously on both the UI and Software Engineering teams and float between teams as needed",
-        // "Lead UI/UX design on project to build a tool for families to estimate federal loan amounts",
+        "Lead UI/UX design on project to build a tool for families to estimate federal loan amounts",
         "Build and support existing Rails applications using TDD with RSPEC","Utilize Javascript, Slim, jQuery, CoffeeScript, and LESS for front end work",
         // "Write API documentation for internal and publicly available APIs"
       ],
@@ -86,7 +86,7 @@ const ResumeData = {
       startDate: "2014",
       endDate: "2015",
       position: "Jr. Front End Engineer",
-      company: "DialogTech",
+      company: "DialogTech <i class='far fa-chevron-right'></i> <em>Chicago, IL</em>",
       desc: "As a member of the Front-End Engineering team worked on several applications to assist our clients’ marketing efforts, including phone routing, tracking, and analytics tools. The primary framework we used was Backbone, although at the end of my tenure there we started transitioning into a React and Node based implementation. I almost exclusively coded in vanilla Javascript (ES5), although we used used Underscore and jQuery occasionally. I built out mockups using LESS and a Handlebars.",
       descList: [
         "Code extensively in Javascript to extend and support several single page applications built in Backbone,",
@@ -101,27 +101,27 @@ const ResumeData = {
       startDate: "2014",
       endDate: "2014",
       position: "Rails Developer",
-      company: "Blueye Creative",
+      company: "Blueye Creative <i class='far fa-chevron-right'></i> <em>Chicago, IL</em>",
       desc: "As a contractor, I worked on the MVC components for a Rails-based software application that would serve as an Airbnb-like product. Additionally, I was the sole developer responsible for building a database Wilson could use to track millions of racket purchases. This included writing a powerful algorithm to parse through years of inconsistently formatted records form Excel spreadsheets, as well as building out a front end for them to enter new purchase data efficiently in an aesthetically pleasing format.",
       descList: ["Assist in building an Airbnb-like web application using Rails 4", "Build a new database for Wilson’s tennis racket inventory with a Microsoft Access front end","Parse through and import years of inconsistently formatted spreadsheet data with Ruby scripts"],
       awards: []
     },
-    // {
-    //   year: 2013,
-    //   startDate: "2013",
-    //   endDate: "2013",
-    //   position: "Teaching Assistant",
-    //   company: "University of Notre Dame",
-    //   desc: "Served as a teaching assistant in an Introduction to Web Development course covering HTML, CSS, Javascript, wireframing, and responsive design.",
-    //   descList: ["Assist with answering questions and explaining concepts to students in a course covering HTML, CSS, Javascript, wireframing, and responsive design"],
-    //   awards: []
-    // },
+    {
+      year: 2013,
+      startDate: "2013",
+      endDate: "2013",
+      position: "Teaching Assistant",
+      company: "University of Notre Dame <i class='far fa-chevron-right'></i> <em>Notre Dame, IN</em>",
+      desc: "Served as a teaching assistant in an Introduction to Web Development course covering HTML, CSS, Javascript, wireframing, and responsive design.",
+      descList: ["Assist with answering questions and explaining concepts to students in a course covering HTML, CSS, Javascript, wireframing, and responsive design"],
+      awards: []
+    },
     {
       year: 2011,
       startDate: "2011",
       endDate: "2014",
       position: "Web Support Developer",
-      company: "University of Notre Dame | Notre Dame, IN",
+      company: "University of Notre Dame <i class='far fa-chevron-right'></i> <em>Notre Dame, IN</em>",
       desc: "I was the sole support developer for ~400 websites using our homegrown CMS, supporting the codebase for both the Rails app and the individual websites. Further, I trained clients to maintain their websites in our CMS with a focus on empowering them to generate content that would improve their search rankings and strive to reach the levels of accessibility/usability encouraged by WAI-ARIA.  I also created a series of responsive HTML email templates for brand-standards compliant email marketing for the Office of the Provost and the Office of the President, among others. I also had the occasional opportunity to build out custom designed mobile-first, responsive websites for university organizations.",
       descList: ["Sole support developer for ~400 websites using our homegrown CMS, providing support for both our Rails based CMS app and client websites",
       // "Train clients to maintain their websites in our CMS with a focus on empowering them to generate content that would improve their search rankings and strive to reach the levels of accessibility/usability encouraged by WAI-ARIA",
@@ -152,17 +152,17 @@ const ResumeData = {
     // }
   ],
   education: [
-    // {
-    //   year: 2014,
-    //   startDate: "2014",
-    //   endDate: "2014",
-    //   timespan: "Spring 2014",
-    //   position: "Student/Graduate",
-    //   company: "Dev Bootcamp (Chicago)",
-    //   desc: "Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field.",
-    //   descList: ["Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field."],
-    //   awards: []
-    // },
+    {
+      year: 2014,
+      startDate: "2014",
+      endDate: "2014",
+      timespan: "Spring 2014",
+      position: "Student/Graduate",
+      company: "Dev Bootcamp (Chicago)",
+      desc: "Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field.",
+      descList: ["Learned multiple languages and frameworks, including Ruby, JavaScript, Rails, SQL, HTML and CSS as well as techniques for fast, effective learning in an ever-evolving field."],
+      awards: []
+    },
     {
       year: 2011,
       startDate: "2007",
