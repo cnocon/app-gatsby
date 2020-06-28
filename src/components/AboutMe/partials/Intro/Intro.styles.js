@@ -20,7 +20,7 @@ export const RotateWords = styled.h2`
     margin-bottom: 0;
 
     @media all and (max-width: ${Theme.breakpoints.max.sm}) {
-      font-size: ${Theme.fonts.sizes.md};
+      font-size: 2.6rem;
       line-height: 1.6;
     }
 
@@ -35,11 +35,15 @@ export const RotateWords = styled.h2`
       font-family: ${Theme.fonts.headings.family};
       display: inline-block;
       min-width: 18rem;
-
       text-align: left;
 
       @media all and (max-width: ${Theme.breakpoints.max.sm}) {
-        min-height: 2.3rem;
+        min-height: 2.7rem;
+        min-width: 16rem;
+      }
+
+      @media all and (min-width: ${Theme.breakpoints.min.lg}) {
+        min-width: 21rem;
       }
 
       span {

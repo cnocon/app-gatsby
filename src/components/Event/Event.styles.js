@@ -1,6 +1,6 @@
 // import React from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+// import { css } from "@emotion/core"
 import Theme from '../Theme/Theme'
 
 export const Event = styled.article`
@@ -14,7 +14,6 @@ export const Event = styled.article`
   
   @media screen and (max-width: ${Theme.breakpoints.max.md}) {
     padding: 16px; 
-    // margin-top: 104px;
   }
 
   &::before,

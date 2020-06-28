@@ -3,12 +3,11 @@ import { css } from '@emotion/core'
 import Theme from '../../../Theme/Theme'
 
 export const LatestPost = styled.div`
-  padding: ${Theme.spacing.default} ${Theme.spacing.xs} ${Theme.spacing.md};
   margin: 0;
   background: #fff;
   display: inline-block;
   text-align: center;
-  padding: 0 ${Theme.spacing.default};
+  padding: ${Theme.spacing.default} 0;
 
   &::before {
     display: none !important;
