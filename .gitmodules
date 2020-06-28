@@ -1,0 +1,3 @@
+[submodule "gatsby-v3-plugin-page-transitions"]
+	path = plugins/gatsby-v3-plugin-page-transitions
+	url = https://github.com/cnocon/app-gatsby.git
