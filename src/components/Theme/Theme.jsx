@@ -27,7 +27,7 @@ module.exports = {
       borderMedium: `#dde4e6`,
       textLight: `#c7d7db`,
       textDark: `#a0adb1`,
-      text: `#bfc5cd`
+      text: `#DDE4E6`
     },
     accents: {
       red: 'hsl(1,100%,94%)',

@@ -29,3 +29,31 @@ export const PostTitle = styled.h1`
 export const HeaderStyles = css`
   font-size: ${Theme.fonts.sizes.default};
 `
+
+export const Navigation = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  .nav-prev {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-next {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  h4 {
+    color: ${Theme.colors.grays.text};
+  }
+
+  a {
+    font-family: ${Theme.fonts.headings.family};
+    font-weight: 300;
+    color: ${Theme.colors.default.base};
+    font-size: ${Theme.fonts.sizes.default};
+  }
+`

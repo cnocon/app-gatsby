@@ -114,7 +114,8 @@ export const Container = styled.div`
   flex-direction: column;
 
   .section-title {
-    margin-top: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
   h2 {
     text-align: left;
@@ -189,10 +190,10 @@ export const Date = styled.time`
 
   i {
     display: inline-block;
-    font-size: ${Theme.fonts.sizes.sm};
+    font-size: ${Theme.fonts.sizes.default};
     line-height: inherit;
     margin-right: 6px;
-    color: ${Theme.colors.grays.text};
+    color: ${Theme.colors.accents.text.red};
   }
 `
 
@@ -222,7 +223,7 @@ export const ServiceDiv = styled.div`
 
   p {
     font-size: ${Theme.fonts.sizes.sm};
-    color: ${Theme.colors.grays.text};
+    color: ${Theme.colors.grays.textDark};
     margin: ${Theme.spacing.xs} 0 0;
     font-weight: 400;
   }

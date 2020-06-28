@@ -126,6 +126,7 @@ exports.createPages = async ({ actions, graphql }) => {
     const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
     const chunkedPosts = chunk(sortedPosts, 3);
     const category = group.fieldValue.toLowerCase().replace(/\s/g, '-')
+
     chunkedPosts.forEach((collection, index) => {
       actions.createPage({
         path: `/articles/${category}/page-${index + 1}`,
@@ -158,12 +159,14 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
-  allPosts.forEach(({ node }) => {
+  allPosts.forEach(( node, index ) => {
     actions.createPage({
-      path: `/articles/${node.slug}`,
+      path: `/articles/${node.node.slug}`,
       component: path.resolve(`./src/components/Post/Post.jsx`),
       context: {
-        post: node,
+        post: node.node,
+        prevPost: index === 0 ? null : allPosts[index - 1].node,
+        nextPost: index === allPosts.length - 1 ? null : allPosts[index + 1].node,
         categories: categoriesData.data.allButterPost.distinct,
         categoriesMap: catMap,
         colors: colors,
@@ -177,7 +180,7 @@ exports.createPages = async ({ actions, graphql }) => {
             path: `/articles/page-1`,
           },
           {
-            name: node.title,
+            name: node.node.title,
             path: null,
           },
         ],

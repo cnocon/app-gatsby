@@ -21,7 +21,7 @@ export const CrumbItem = css`
   font-weight: 400;
   list-style-type: none;
   margin-left: 0;
-  color: ${Theme.colors.grays.text};
+  color: ${Theme.colors.grays.textDark};
   text-transform: uppercase;
   font-size: ${Theme.fonts.sizes.xs};
 `

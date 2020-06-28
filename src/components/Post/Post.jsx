@@ -10,9 +10,28 @@ import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions'
 import $ from 'jquery'
+import { Button, Navigation } from "../PostsList/PostsList.styles"
+import { Link } from 'gatsby'
+
 
 const Post = ({...data}) => {
-  const { post, breadcrumbs, categoriesMap } = data.pageContext
+  const { post, breadcrumbs, categoriesMap, prevPost, nextPost } = data.pageContext
+
+  const prevBtn = prevPost ?
+     <div className={nextPost ? "left-block" : "left-full-block"}>
+        <Link to={`/articles/${prevPost.slug}`}>
+          <span style={{transform: "rotate(180deg) translateY(-5%)", display: 'inline-block'}}>→</span>{` `}{prevPost.title}
+        </Link>
+      </div>
+    : null
+
+  const nextBtn = nextPost ?
+      <div className={prevPost ? "right-block" : "right-full-block"}>
+        <Link to={`/articles/${nextPost.slug}`}>
+          {nextPost.title}&nbsp;<span>→</span>
+        </Link>
+      </div>
+    : null
    
   useEffect(() => {
     $("html, body").animate({ scrollTop: 0 }, 0);
@@ -60,6 +79,18 @@ const Post = ({...data}) => {
               </div>
             </div>
           </ReadableContent>
+          
+          <Styled.Navigation>
+          <div className="col-sm-6 nav-previous left-block">
+            {prevBtn ? <h4>PREVIOUS POST</h4> : null }
+            {prevBtn}
+          </div>
+          <div className="col-sm-6 nav-next right-block">
+            {nextBtn ? <h4>NEXT POST</h4> : null }
+            {nextBtn}
+          </div>
+          </Styled.Navigation>
+          
         </section>
       </PageTransition>
     </Layout>
