@@ -17,6 +17,10 @@ export const ServiceDiv = styled.div`
     font-weight: 900;
     text-transform: uppercase;
     margin-top: 1rem;
+
+    span {
+      padding-bottom: 1px;
+    }
   }
 
   p {
@@ -31,20 +35,19 @@ export const ServiceDiv = styled.div`
   &.color3,
   &.color4 {
     i {
-      border-radius: 50%;
       box-sizing: border-box;
       display: inline-block;
-      width: 74px;
-      height: 74px;
+      width: 66px;
+      height: 66px;
       line-height: 66px;
       font-size: 35px;
-      border-radius: 50%;
       text-align: center;
+      background-color: #fff;
 
       @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
-        width: 70px;
-        height: 70px;
-        line-height: 66px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
       }
 
       &::before {
@@ -56,65 +59,49 @@ export const ServiceDiv = styled.div`
 
   &.color1 {
     i {
-      line-height: 74px;
-      background-color: #fff;
-
-      &::before {
-        text-shadow: 1px 2px 2px ${Theme.colors.accents.text.blue};
-      }
-    }
-
-    h4 span {
-      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.green};
-      padding-bottom: 2px;
-    }
-  }
-
-  &.color2 {
-    i {
-      line-height: 74px;
-      background-color: #fff;
-
-      &::before {
-        text-shadow: 1px 2px 2px ${Theme.colors.accents.text.purple};
-      }
-    }
-
-    h4 span {
-      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.blue};
-      padding-bottom: 2px;
-    }
-  }
-
-  &.color3 {
-    i {
-      line-height: 74px;
-      background-color: #fff;
-
       &::before {
         text-shadow: 1px 2px 2px ${Theme.colors.accents.green};
       }
     }
 
     h4 span {
+      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.green};
+    }
+  }
+
+  &.color2 {
+    i {
+      &::before {
+        text-shadow: 1px 2px 2px ${Theme.colors.accents.blue};
+      }
+    }
+
+    h4 span {
+      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.blue};
+    }
+  }
+
+  &.color3 {
+    i {
+      &::before {
+        text-shadow: 1px 2px 2px ${Theme.colors.accents.yellow};
+      }
+    }
+
+    h4 span {
       box-shadow: inset 0 -2px 0 ${Theme.colors.accents.yellow};
-      padding-bottom: 2px;
     }
   }
 
   &.color4 {
     i {
-      line-height: 74px;
-      background-color: #fff;
-
       &::before {
-        text-shadow: 1px 2px 2px ${Theme.colors.accents.text.yellow};
+        text-shadow: 1px 2px 2px ${Theme.colors.accents.purple};
       }
     }
 
     h4 span {
-      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.red};
-      padding-bottom: 2px;
+      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.purple};
     }
   }
 }

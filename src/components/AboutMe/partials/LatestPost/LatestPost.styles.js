@@ -6,8 +6,9 @@ export const LatestPost = styled.div`
   padding: ${Theme.spacing.default} ${Theme.spacing.xs} ${Theme.spacing.md};
   margin: 0;
   background: #fff;
-  text-align: left;
-  display: block;
+  display: inline-block;
+  text-align: center;
+  padding: 0 ${Theme.spacing.default};
 
   &::before {
     display: none !important;
@@ -16,26 +17,23 @@ export const LatestPost = styled.div`
 
 export const LatestPostHeading = styled.h2`
   display: block;
-  margin: 0 0 ${Theme.spacing.sm};
-  text-align: left;
-  font-family: ${Theme.fonts.accent.family};
+  margin: 0 auto ${Theme.spacing.sm};
   font-weight: 200;
   padding: 0;
-  text-align: left;
+  text-align: center;
+  line-height: ${Theme.fonts.sizes.lineHeights.xs};
 
   .post-link {
     color: ${Theme.colors.default.base};
-    font-size: ${Theme.fonts.sizes.sm};
-    line-height: ${Theme.fonts.sizes.lineHeights.sm};
+    font-size: ${Theme.fonts.sizes.default};
     text-decoration: none;
     padding-bottom: 1px;
     transition: all .3s;
-    line-height: 1.3em;
+    line-height: ${Theme.fonts.sizes.lineHeights.xs};
     font-family: ${Theme.fonts.body.family};
     font-weight: 800;
     text-transform: uppercase;
-    text-align: left;
-    box-shadow: none;
+    text-align: center;
     transition: box-shadow .4s;
 
     &:hover,
@@ -51,8 +49,7 @@ export const ImageContainer = styled.span`
   width: 6rem;
   height: auto;
   vertical-align: middle;
-  margin: 0 1rem .5rem 0;
-  float: left;
+  margin: 0 auto .5rem;
 
   img {
     display: block;
@@ -67,22 +64,21 @@ export const ImageContainer = styled.span`
 
 export const Date = styled.time`
   display: block;
-  text-transform: none;
   font-size: ${Theme.fonts.sizes.sm};
   line-height: ${Theme.fonts.sizes.lineHeights.xs};
   color: ${Theme.colors.grays.textDark};
-  text-align: center;
-  font-family: ${Theme.fonts.accent.family};
   font-weight: 500;
+  font-family: ${Theme.fonts.accent.family};
   text-transform: uppercase;
   letter-spacing: .25px;
-  text-align: left;
-  margin: .5rem 0 .5rem 7rem;
+  text-align: center;
+  margin: .5rem 0;
+
 `
 
 export const PostParagraph = css`
   font-size: ${Theme.fonts.sizes.sm};
   line-height: ${Theme.fonts.sizes.lineHeights.md};
   text-align: left;
-  margin: auto 0;
+  margin: 0 auto;
 `

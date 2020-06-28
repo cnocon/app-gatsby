@@ -90,10 +90,11 @@ module.exports = {
       xl: '3.6rem',
       xxl: '4.5rem',
       lineHeights: {
-        sm: `1.35em`,
+        xs: `1em`,
+        sm: `1.3em`,
         default: `1.5em`,
         md: `1.7em`,
-        lg: `1.9em`
+        lg: `1.85em`
       },
     },
   },

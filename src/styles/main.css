@@ -3591,22 +3591,23 @@ input[type=button]:active,
 button:active,
 a.button:active {
  	color: #eee;
-	}
+	/* }
 /* Large Buttons */
+/*
 input[type=submit].big,
 input[type=button].big,
 button.big,
 a.button.big {
 	padding: 1.8em 3.6em;
 	}
-/* Small Buttons */
+
 input[type=submit].small,
 input[type=button].small,
 button.small,
 a.button.small {
 	font-size: 10px; padding: .8em 1.6em;
 	}
-/* blue buttons  */
+
 input[type=submit].blue:hover,
 input[type=button].blue:hover,
 button.blue:hover,
@@ -3633,7 +3634,7 @@ button.blue.colored:active,
 a.button.blue.colored:active {
  	background: #5E9BB3
 	}
-/* red buttons  */
+
 input[type=submit].red:hover,
 input[type=button].red:hover,
 button.red:hover,
@@ -3660,7 +3661,7 @@ button.red.colored:active,
 a.button.red.colored:active {
  	background: #9B2A28
 	}
-/* green buttons  */
+
 input[type=submit].green:hover,
 input[type=button].green:hover,
 button.green:hover,
@@ -3687,7 +3688,7 @@ button.green.colored:active,
 a.button.green.colored:active {
  	background: #3F964A
 	}
-/* yellow buttons  */
+
 input[type=submit].yellow:hover,
 input[type=button].yellow:hover,
 button.yellow:hover,
@@ -3714,7 +3715,7 @@ button.yellow.colored:active,
 a.button.yellow.colored:active {
  	background: #DFBB38
 	}
-/* Buttons with icons */
+
 input[type=submit].button-icon,
 input[type=button].button-icon,
 button.button-icon,
@@ -3749,13 +3750,13 @@ button.colored i,
 a.colored i {
  	color: #fff; color: rgba(255, 255, 255, 0.9);
 	}
-/* Colored Buttons */
+
 input[type=submit].colored,
 input[type=button].colored,
 button.colored,
 a.button.colored {
  	color: #fff; border-color: transparent;
-	} */
+	} */ 
 
 /* TABS */
 .tabs {
