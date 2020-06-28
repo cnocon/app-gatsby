@@ -3,11 +3,12 @@ import { css } from '@emotion/core'
 import Theme from '../../../Theme/Theme'
 
 export const LatestPost = styled.div`
-  margin: 0;
+  padding: ${Theme.spacing.default} ${Theme.spacing.xs} ${Theme.spacing.md};
+  margin: 2rem auto 0;
   background: #fff;
   display: inline-block;
   text-align: center;
-  padding: ${Theme.spacing.default} 0;
+  padding: 0 ${Theme.spacing.default};
 
   &::before {
     display: none !important;
@@ -66,8 +67,9 @@ export const Date = styled.time`
   font-size: ${Theme.fonts.sizes.sm};
   line-height: ${Theme.fonts.sizes.lineHeights.xs};
   color: ${Theme.colors.grays.textDark};
-  font-weight: 500;
-  font-family: ${Theme.fonts.accent.family};
+  // font-weight: 500;
+  font-weight: 700;
+  // font-family: ${Theme.fonts.accent.family};
   text-transform: uppercase;
   letter-spacing: .25px;
   text-align: center;
