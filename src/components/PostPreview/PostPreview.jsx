@@ -15,6 +15,7 @@ const PostPreview = ({ post, catMap, color }) => {
             className={`box-shadow-${color}`}>
             {post.title}
           </Styled.TitleLink>
+          
         </Styled.Title>
         <EntryMeta
           categoriesMap={catMap}

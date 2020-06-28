@@ -72,47 +72,47 @@ export const TitleLink = styled(Link)`
   }
 
   &.box-shadow-purple {
-    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.purple};
+    box-shadow: inset 0 -3px 1px ${Theme.colors.accents.purple};
     padding-bottom: 3px;
 
     &:hover {
-      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.purple};
+      box-shadow: inset 0 -3px 1px ${Theme.colors.accents.text.purple};
     }
   }
 
   &.box-shadow-red {
-    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.red};
+    box-shadow: inset 0 -3px 1px ${Theme.colors.accents.red};
     padding-bottom: 3px;
     
     &:hover {
-      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.red};
+      box-shadow: inset 0 -3px 1px ${Theme.colors.accents.text.red};
     }
   }
 
   &.box-shadow-yellow {
-    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.yellow};
+    box-shadow: inset 0 -3px 1px ${Theme.colors.accents.yellow};
     padding-bottom: 3px;
     
     &:hover {
-      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.yellow};
+      box-shadow: inset 0 -3px 1px ${Theme.colors.accents.text.yellow};
     }
   }
 
   &.box-shadow-blue {
-    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.blue};
+    box-shadow: inset 0 -3px 1px ${Theme.colors.accents.blue};
     padding-bottom: 3px;
     
     &:hover {
-      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.blue};
+      box-shadow: inset 0 -3px 1px ${Theme.colors.accents.text.blue};
     }
   }
     
   &.box-shadow-green {
-    box-shadow: inset 0 -5px 1px ${Theme.colors.accents.green};
+    box-shadow: inset 0 -3px 1px ${Theme.colors.accents.green};
     padding-bottom: 3px;
     
     &:hover {
-      box-shadow: inset 0 -5px 1px ${Theme.colors.accents.text.green};
+      box-shadow: inset 0 -3px 1px ${Theme.colors.accents.text.green};
     }
   }
 `

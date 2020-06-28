@@ -10,7 +10,6 @@ import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions'
 import $ from 'jquery'
-import { Button, Navigation } from "../PostsList/PostsList.styles"
 import { Link } from 'gatsby'
 
 
@@ -73,7 +72,9 @@ const Post = ({...data}) => {
               />
 
             </header>
+
             <div className="entry-content clearfix">
+            {/* <img src={post.featured_image} style={{display: 'block', margin: '0 auto 1.6rem', height: '300px'}} alt=""/> */}
               <div className="main-content">
                 {ReactHtmlParser(post.body)}
               </div>
