@@ -10,7 +10,7 @@ export const ServiceDiv = styled.div`
   justify-content: space-evenly;
 
   h4 {
-    font-size: ${Theme.fonts.sizes.default};
+    font-size: ${Theme.fonts.sizes.sm};
     line-height: ${Theme.fonts.sizes.lineHeights.sm};
     font-family: ${Theme.fonts.accent.family};
     letter-spacing: 1px;
@@ -20,7 +20,7 @@ export const ServiceDiv = styled.div`
   }
 
   p {
-    font-size: ${Theme.fonts.sizes.default};
+    font-size: ${Theme.fonts.sizes.sm};
     color: ${Theme.colors.default.base};
     margin: ${Theme.spacing.xs} 0 0;
     font-weight: 400;
@@ -49,6 +49,7 @@ export const ServiceDiv = styled.div`
 
       &::before {
         color: #345;
+        font-weight: 200;
       }
     }
   }
@@ -64,7 +65,7 @@ export const ServiceDiv = styled.div`
     }
 
     h4 span {
-      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.green};
+      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.green};
       padding-bottom: 2px;
     }
   }
@@ -80,7 +81,7 @@ export const ServiceDiv = styled.div`
     }
 
     h4 span {
-      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.blue};
+      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.blue};
       padding-bottom: 2px;
     }
   }
@@ -96,7 +97,7 @@ export const ServiceDiv = styled.div`
     }
 
     h4 span {
-      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.yellow};
+      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.yellow};
       padding-bottom: 2px;
     }
   }
@@ -112,7 +113,7 @@ export const ServiceDiv = styled.div`
     }
 
     h4 span {
-      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.red};
+      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.red};
       padding-bottom: 2px;
     }
   }
