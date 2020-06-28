@@ -24,7 +24,7 @@ export const RuleWrapper = styled.h2`
   }
 
   i.fa {
-    color: #345;
+    color: ${Theme.colors.grays.text};
   }
 `
 
