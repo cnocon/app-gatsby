@@ -436,9 +436,7 @@ ul li ul {
   margin-left: 10px;
 }
 
-
-
-pre.prettyprint,
+/* pre.prettyprint,
 pre.prettyprinted {
   border: 2px solid #F4F6F7 !important;
   border-radius: 5px !important;
@@ -446,21 +444,7 @@ pre.prettyprinted {
     font-size: .825em;
   line-height: 1.75em;
   margin: 2rem auto;
-}
-
-
-/* // code { */
-/* //   :not(.pre) & { */
-/* //     padding: 0 3px 2px; */
-/* //     margin-bottom: 4em; */
-/* //     font-size: .825em; */
-/* //     color: #000; */
-/* //     white-space: pre; */
-/* //     overflow: auto; */
-/* //     background-color: #EDF1F3; */
-/* //   } */
-/* // } */
-
+} */
 
 .blog-posts .hentry {
   margin-bottom: .5rem;

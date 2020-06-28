@@ -45,8 +45,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const { data } = await graphql(`
     {
-      allButterPost(filter: {categories: {elemMatch: {slug: {in: [
-        "netlify", "webhooks", "gatsby", "cli", "git", "sass", "javascript", "workflow"]}}}}, sort: {fields: created}) {
+      allButterPost(filter: {categories: {elemMatch: {slug: {in: ["npm","node","netlify","webhooks","gatsby","cli","git","sass","javascript","workflow"]}}}}, sort: {fields: created}) {
         edges {
           node {
             id
@@ -115,13 +114,13 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
   const allPosts = data.allButterPost.edges.reverse();
-  const chunkedPosts = chunk(allPosts, 3);
+  const chunkedPosts = chunk(allPosts, 4);
   const colors = ['blue', 'green', 'yellow', 'purple']
   const groups = data.allButterPost.group;
 
   groups.forEach(group => {
     const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
-    const chunkedPosts = chunk(sortedPosts, 3);
+    const chunkedPosts = chunk(sortedPosts, 4);
     const category = group.fieldValue.toLowerCase().replace(/\s/g, '-')
 
     chunkedPosts.forEach((collection, index) => {
@@ -156,34 +155,6 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
-  allPosts.forEach(( node, index ) => {
-    actions.createPage({
-      path: `/articles/${node.node.slug}`,
-      component: path.resolve(`./src/components/Post/Post.jsx`),
-      context: {
-        post: node.node,
-        prevPost: index === 0 ? null : allPosts[index - 1].node,
-        nextPost: index === allPosts.length - 1 ? null : allPosts[index + 1].node,
-        categories: categoriesData.data.allButterPost.distinct,
-        colors: colors,
-        breadcrumbs: [
-          {
-            name: 'Home',
-            path: '/',
-          },
-          {
-            name: `Blog`,
-            path: `/articles/page-1`,
-          },
-          {
-            name: node.node.title,
-            path: null,
-          },
-        ],
-      },
-    })
-  })
-
   chunkedPosts.forEach((collection, index) => {
     actions.createPage({
       path: `/articles/page-${index + 1}`,
@@ -207,6 +178,34 @@ exports.createPages = async ({ actions, graphql }) => {
           },
           {
             name: `Page ${index + 1}`,
+            path: null,
+          },
+        ],
+      },
+    })
+  })
+
+  allPosts.forEach(( node, index ) => {
+    actions.createPage({
+      path: `/articles/${node.node.slug}`,
+      component: path.resolve(`./src/components/Post/Post.jsx`),
+      context: {
+        post: node.node,
+        prevPost: index === 0 ? null : allPosts[index - 1].node,
+        nextPost: index === allPosts.length - 1 ? null : allPosts[index + 1].node,
+        categories: categoriesData.data.allButterPost.distinct,
+        colors: colors,
+        breadcrumbs: [
+          {
+            name: 'Home',
+            path: '/',
+          },
+          {
+            name: `Blog`,
+            path: `/articles/page-1`,
+          },
+          {
+            name: node.node.title,
             path: null,
           },
         ],

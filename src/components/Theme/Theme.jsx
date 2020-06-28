@@ -30,17 +30,17 @@ module.exports = {
       text: `#DDE4E6`
     },
     accents: {
-      red: 'hsl(1,100%,94%)',
-      green: 'hsl(139, 70%, 86%)',
+      red: 'hsl(355, 100%, 92%)',
+      green: 'hsl(175, 99%, 86%)',
       blue: 'hsl(197,100%,85%)',
       yellow: 'hsl(58, 100%, 80%)',
-      purple: 'hsl(240, 100%, 94%)',
+      purple: 'hsl(240, 100%, 89%)',
       text: {
-        red: 'hsl(1,77%,82%)',
-        purple: 'hsl(240, 100%, 85%)',
-        green: 'hsl(139,50%,75%)',
-        yellow: 'hsla(58, 100%, 60%, 1)',
-        blue: 'hsl(197,85%,75%)'
+        red: 'hsl(355, 81%, 80%)',
+        green: 'hsl(175, 70%, 62%)',
+        blue: 'hsl(197, 80%, 65%)',
+        yellow: 'hsl(58, 100%, 60%)',
+        purple: 'hsl(240, 80%, 81%)'
       }
     }
   },

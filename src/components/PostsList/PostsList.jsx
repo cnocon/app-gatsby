@@ -11,10 +11,15 @@ import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions';
 
 const PostsList = ({...data}) => {
   const {posts, nextPagePath, prevPagePath, breadcrumbs, colors, title, seoDescription} = data.pageContext
-  let colorsCopy = colors
+  let colorsCopy = Object.assign([], colors)
 
   const getColor = () => {
-    return shuffle(colorsCopy).pop()
+    if (colorsCopy.length === 0) {
+      colorsCopy = Object.assign([], colors)
+      return shuffle(colorsCopy).pop()
+    } else {
+      return shuffle(colorsCopy).pop()
+    }
   }
   
   const articles = posts.map(node => {

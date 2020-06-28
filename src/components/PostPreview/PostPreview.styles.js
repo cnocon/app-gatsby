@@ -39,8 +39,7 @@ export const Button = styled(Link)`
   letter-spacing: .03rem;
   border-radius: 4px;
   outline: 0;
-  text-shadow: none;
-  transition: all .2s;
+  transiti5n: all .2s;
   font-size: ${Theme.fonts.sizes.xs};
   max-width: 18rem;
   line-height: 30px;
@@ -62,7 +61,7 @@ export const TitleLink = styled(Link)`
   font-size: ${Theme.fonts.sizes.lg};
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
   color: ${Theme.colors.default.base};
-  padding-bottom: 3px;
+  padding-bottom: 1px;
   transition: box-shadow .2s;
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
@@ -70,42 +69,42 @@ export const TitleLink = styled(Link)`
   }
 
   &.box-shadow-purple {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.purple};
+    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.purple};
 
     &:hover {
-      box-shadow: none;
+      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.purple};
     }
   }
 
   &.box-shadow-red {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.red};
+    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.red};
 
     &:hover {
-      box-shadow: none;
+      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.red};
     }
   }
 
   &.box-shadow-yellow {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.yellow};
+    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.yellow};
 
     &:hover {
-      box-shadow: none;
+      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.yellow};
     }
   }
 
   &.box-shadow-blue {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.blue};
+    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.blue};
 
     &:hover {
-      box-shadow: none;
+      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.blue};
     }
   }
     
   &.box-shadow-green {
-    box-shadow: inset 0 -3px 0 ${Theme.colors.accents.green};
+    box-shadow: inset 0 -3px 0px ${Theme.colors.accents.green};
 
     &:hover {
-      box-shadow: none;
+      box-shadow: inset 0 -4px 0px ${Theme.colors.accents.text.green};
     }
   } 
 

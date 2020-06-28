@@ -59,12 +59,12 @@ export const ServiceDiv = styled.div`
       background-color: #fff;
 
       &::before {
-        text-shadow: 1px 1px 1px ${Theme.colors.accents.text.blue};
+        text-shadow: 1px 1px 1px ${Theme.colors.accents.text.green};
       }
     }
 
     h4 span {
-      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.blue};
+      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.green};
       padding-bottom: 2px;
     }
   }
@@ -75,12 +75,12 @@ export const ServiceDiv = styled.div`
       background-color: #fff;
 
       &::before {
-        text-shadow: 1px 1px 1px ${Theme.colors.accents.text.green};
+        text-shadow: 1px 1px 1px ${Theme.colors.accents.text.blue};
       }
     }
 
     h4 span {
-      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.green};
+      box-shadow: inset 0 -3px 0 ${Theme.colors.accents.blue};
       padding-bottom: 2px;
     }
   }

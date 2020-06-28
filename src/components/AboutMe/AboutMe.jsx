@@ -23,7 +23,7 @@ const AboutMe = ({ ...data }) => {
     
     <Layout>
       <Header />
-      <SEO stitle="About Me" />
+      <SEO stitle="Home" />
       <PageTransition>
         <Styled.Container>
           <div className="row">
@@ -71,16 +71,16 @@ const AboutMe = ({ ...data }) => {
           <SectionTitle text="Services" icon="fa fal fa-concierge-bell"/>
           <div className="row">
             <Service
-              color="color1"
-              icon="fal fa-code"
-              title="Web Development"
-              text="This is my primary area of expertise. I have over <b>10 years of experience</b> in the field."
-            />
-            <Service
               color="color2"
               icon="fal fa-graduation-cap"
               title="Code Tutoring"
               text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages."
+            />
+            <Service
+              color="color1"
+              icon="fal fa-code"
+              title="Web Development"
+              text="This is my primary area of expertise. I have over <b>10 years of experience</b> in the field."
             />
             <Service
               color="color3"
