@@ -111,6 +111,8 @@ module.exports = {
     widths: {
       default: `90%`,
       defaultMax: `96rem`,
+      lg: `95%`,
+      lgMax: `110rem`,
       full: `100%`,
       fullMax: `none`
     }

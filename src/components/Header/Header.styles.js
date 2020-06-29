@@ -8,51 +8,28 @@ import Theme from "../Theme/Theme"
 export const Container = styled.div`
   position: relative;
   margin: 0 auto;
-  width: calc(${Theme.layout.widths.full} - 3.2rem);
+  width: 100%;
   padding: 0;
-  display: block;
+  display: flex;
   flex-direction: column;
-  align-items: initial;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   font-family: ${Theme.fonts.body};
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${Theme.breakpoints.min.lg}) {
     width: ${Theme.layout.widths.default};
     max-width: ${Theme.layout.widths.defaultMax};
   }
-
-  .box-shadow-blue {
-    box-shadow: inset 0 -4px 0 ${Theme.colors.accents.blue};
-    padding-bottom: 1px;
-  }
-  .box-shadow-yellow {
-    box-shadow: inset 0 -4px 0 ${Theme.colors.accents.yellow};
-    padding-bottom: 1px;
-  }
-  .box-shadow-purple {
-    box-shadow: inset 0 -4px 0 ${Theme.colors.accents.purple};
-    padding-bottom: 1px;
-  }
-  .box-shadow-red {
-    box-shadow: inset 0 -4px 0 ${Theme.colors.accents.red};
-    padding-bottom: 1px;
-  }
-
-.box-shadow-green {
-  box-shadow: inset 0 -4px 0 ${Theme.colors.accents.green};
-  padding-bottom: 1px;
-}
 `
 
 export const Header = styled.header(
-  () => ({
+  ({theme}) => ({
     backgroundColor: `#fff`,
     zIndex: 200,
     margin: `0 auto`,
-    padding: `1em 1.5rem 0`,
-    width: `${Theme.layout.widths.full}`,
+    padding: `3rem 0 0`,
+    width: `${theme.layout.widths.full}`,
     textAlign: `center`,
-    fontFamily: `Arial`,
     display: 'block',
     boxSizing: 'border-box'
   })
@@ -110,7 +87,7 @@ export const H1Link = styled(Link)`
 `
 
 export const Subhead = styled.p`
-  font-size: 1.6rem;
+  font-size: ${Theme.fonts.sizes.default};
   margin: .1em 0 .6em;
   display: inline-block;
   font-style: italic;
@@ -122,73 +99,58 @@ export const Subhead = styled.p`
   line-height: 1;
   text-transform: lowercase;
 
-@media screen and (max-width: ${Theme.breakpoints.max.sm}) {
-  font-size: ${Theme.fonts.sizes.sm};
-}
+  @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+    font-size: ${Theme.fonts.sizes.sm};
+  }
 `
 
 export const Nav = styled.ul`
     position: relative;
-    display: block;
-    margin: ${Theme.spacing.md} auto ${Theme.spacing.md} -1.6rem;
+    display: flex;
+    flex-direction: row;
+    margin: ${Theme.spacing.md} 0 0;
     padding: 0;
     list-style: none;
+    justify-content: space-around;
+    width: 100%;
 
     @media screen and (min-width: ${Theme.breakpoints.min.md}) {
-      height: 4rem;
-      margin: ${Theme.spacing.md} auto 7rem;
+      // height: 4rem;
+      margin: ${Theme.spacing.md} 0;
     }
 `
 
-
 export const NavItem = styled.li`
-  display: inline-block;
-  margin: 0 1.5% 1rem;
+  display: flex;
+  margin: 0 0 1rem;
   text-align: center;
   text-decoration: none;
-  position: static;
-  max-width: none;
-  width: 30%;
-
-  @media screen and (min-width: ${Theme.breakpoints.min.md}) {
-    width: 20%;
-    min-width: 175px;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  &:first-of-type {
-    margin-left: 0;
-  }
+  flex-basis: 33%;
+  justify-content: center;
 `
 
 export const NavLink = styled(Link)`
-  font-family: Arial, Helvetica, sans-serif;
-  position: static;
-  color: #D0DADC;
+  color: ${Theme.colors.grays.text};
   text-decoration: none;
-  font-weight: 300;
-  font-size: 2.6rem;
+  font-size: 3rem;
   cursor: pointer;
-  transition: all .6s;
   text-transform: lowercase;
   font-family: Lato, sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   letter-spacing: 1px;
+  padding: 0 3rem;
+  transition: all .4s;
+
+  @media screen and (min-width: ${Theme.breakpoints.min.md}) {
+    font-size: 4rem;
+  }
   
   &.active {
     color: #345;
   }
 
-  @media screen and (min-width: 760px) {
-    font-size: 4rem;
-  }
-
   &:hover {
-    color: hsla(197,92%,68%,1);
     color: #345;
   }
 `

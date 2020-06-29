@@ -68,7 +68,7 @@ export const Date = styled.time`
   line-height: ${Theme.fonts.sizes.lineHeights.xs};
   color: ${Theme.colors.grays.textDark};
   // font-weight: 500;
-  font-weight: 700;
+  font-weight: 400;
   // font-family: ${Theme.fonts.accent.family};
   text-transform: uppercase;
   letter-spacing: .25px;

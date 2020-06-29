@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 
 export const RuleWrapper = styled.h2`
   position: relative;
-  max-width: 100rem;
+  max-width: ${Theme.layout.widths.lgMax};
   width: ${Theme.layout.widths.full};
   margin: 1em 0;
   font-size: 1.2rem;
@@ -16,10 +16,11 @@ export const RuleWrapper = styled.h2`
     content: "";
     position: absolute;
     top: 50%;
-    left: 0;
-    margin-top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 3px auto 0;
     width: ${Theme.layout.widths.full};
-    max-width: 96rem;
+    max-width: none;
     border-bottom: 4px solid #F4F6F7;
   }
 

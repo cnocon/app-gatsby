@@ -3,6 +3,7 @@ import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
 import SEO from "../SEO/seo"
 import PostPreview from "../PostPreview/PostPreview"
+import { ReadableContent } from '../PostPreview/PostPreview.styles'
 import * as Styled from '../PostsList/PostsList.styles'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
@@ -58,15 +59,17 @@ const PostsList = ({...data}) => {
       <Header />
       <SEO stitle={title} sdescription={seoDescription} />
       <PageTransition>
-        <>
+        <ReadableContent>
           <Rule title={title} icon="rule-icon icon-rss" />
           <Breadcrumbs crumbs={breadcrumbs} />
-          {articles}
+          
+            {articles}
+
           <Styled.Navigation>
             {prevBtn}
             {nextBtn}
           </Styled.Navigation>
-        </>
+        </ReadableContent>
       </PageTransition>
     </Layout>
   )

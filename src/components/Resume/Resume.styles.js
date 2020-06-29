@@ -316,25 +316,17 @@ export const SectionTitle = css`
       width: 47px;
 
       &::before {
-        font-style: normal;
-        font-weight: normal;
-        speak: none;
         display: inline-block;
-        text-decoration: inherit;
         width: 39px;
         height: 39px;
-        margin-right: auto;
         text-align: center;
         opacity: .8;
-        font-variant: normal;
-        text-transform: none;
         line-height: 37px;
-        margin-left: auto;
         font-size: 120%;
         margin: 0 auto;
-        font-weight: 300;
-        vertical-align: middle;
+        font-weight: 500;
         color: ${Theme.colors.grays.textDark};
+        vertical-align: middle;
       }
     }
   }

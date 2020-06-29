@@ -3,8 +3,10 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 
 export const Container = styled.div`
-  // display: flex;
-  // flex-direction: column;
+  .row {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 `
 
 export const List = css`

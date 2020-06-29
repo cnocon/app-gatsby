@@ -64,7 +64,8 @@ export const Footer = styled.footer({
   // margin: `${Theme.spacing.lg} auto 0`,
   // padding: `${Theme.spacing.xl} 0`,
   width: `100%`,
-  backgroundColor: `${Theme.colors.accents.blue}`,
+  // backgroundColor: `${Theme.colors.accents.blue}`,
+  backgroundColor: `${Theme.colors.grays.background}`,
 })
 
 export const paragraph = css`

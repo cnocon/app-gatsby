@@ -12,7 +12,7 @@ export const ServiceDiv = styled.div`
   h4 {
     font-size: ${Theme.fonts.sizes.sm};
     line-height: ${Theme.fonts.sizes.lineHeights.sm};
-    font-family: ${Theme.fonts.accent.family};
+    // font-family: ${Theme.fonts.accent.family};
     letter-spacing: 1px;
     font-weight: 900;
     text-transform: uppercase;
@@ -24,8 +24,8 @@ export const ServiceDiv = styled.div`
   }
 
   p {
-    font-size: ${Theme.fonts.sizes.sm};
-    color: ${Theme.colors.default.base};
+    font-size: ${Theme.fonts.sizes.default};
+    color: ${Theme.colors.grays.textDark};
     margin: ${Theme.spacing.xs} 0 0;
     font-weight: 400;
   }
@@ -60,48 +60,52 @@ export const ServiceDiv = styled.div`
   &.color1 {
     i {
       &::before {
-        text-shadow: 1px 2px 2px ${Theme.colors.accents.green};
+        text-shadow: 2px 2px 2px ${Theme.colors.accents.green};
+        font-weight: 400;
       }
     }
 
     h4 span {
-      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.green};
+      // box-shadow: inset 0 -2px 0 ${Theme.colors.accents.green};
     }
   }
 
   &.color2 {
     i {
       &::before {
-        text-shadow: 1px 2px 2px ${Theme.colors.accents.blue};
+        text-shadow: 2px 2px 2px ${Theme.colors.accents.blue};
+        font-weight: 400;
       }
     }
 
     h4 span {
-      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.blue};
+      // box-shadow: inset 0 -2px 0 ${Theme.colors.accents.blue};
     }
   }
 
   &.color3 {
     i {
       &::before {
-        text-shadow: 1px 2px 2px ${Theme.colors.accents.yellow};
+        text-shadow: 2px 2px 2px ${Theme.colors.accents.yellow};
+        font-weight: 400;
       }
     }
 
     h4 span {
-      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.yellow};
+      // box-shadow: inset 0 -2px 0 ${Theme.colors.accents.yellow};
     }
   }
 
   &.color4 {
     i {
       &::before {
-        text-shadow: 1px 2px 2px ${Theme.colors.accents.purple};
+        text-shadow: 2px 2px 2px ${Theme.colors.accents.red};
+        font-weight: 400;
       }
     }
 
     h4 span {
-      box-shadow: inset 0 -2px 0 ${Theme.colors.accents.purple};
+      // box-shadow: inset 0 -2px 0 ${Theme.colors.accents.red};
     }
   }
 }

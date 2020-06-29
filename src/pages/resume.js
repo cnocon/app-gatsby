@@ -13,9 +13,9 @@ const IndexPage = () => {
   return (
     <Layout css={{position: 'relative'}}>
       <Header />
-      <Rule title={'Resume'} icon="rule-icon icon-leaf"/>
       <Breadcrumbs crumbs={[]} />
       <SEO stitle="Home"/>
+      <Rule title={'Resume'} icon="rule-icon icon-leaf"/>
       <PageTransition>
         <Resume />
       </PageTransition>

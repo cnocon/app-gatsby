@@ -14,7 +14,7 @@ export const SectionTitle = css`
 
   &:first-of-type {
     /* margin: 25px 0 40px 0; */
-    margin: 25px 0 0 0;
+    /* margin: 25px 0 0 0; */
   }
 
   &::before {

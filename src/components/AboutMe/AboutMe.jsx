@@ -27,7 +27,7 @@ const AboutMe = ({ ...data }) => {
       <PageTransition>
         <Styled.Container>
           <div className="row">
-            <div className="col-sm-12 col-md-7">
+            <div className="col-sm-12">
               <SectionTitle
                 text="A Little About Me"
                 icon="fas fa-female"
@@ -35,7 +35,7 @@ const AboutMe = ({ ...data }) => {
               <Intro />
             </div>
 
-            <div className="col-sm-12 col-md-5">
+            {/* <div className="col-sm-12 col-md-5 col-lg-4">
               <SectionTitle
                 text="Profiles"
                 icon="fal fa-id-card"
@@ -63,18 +63,10 @@ const AboutMe = ({ ...data }) => {
                   }
                 ]} 
               />
-            </div>
+            </div> */}
           </div>
 
-          <SectionTitle
-            text="Latest from the Blog"
-            icon="fas fa-rss"
-          />
-          <div className="row">{posts}</div>
-        
-{/* 
-
-        <SectionTitle text="Services" icon="fas fa-concierge-bell"/>
+          <SectionTitle text="Services" icon="fas fa-concierge-bell"/>
         <div className="row">
           <Service
             color="color2"
@@ -100,7 +92,15 @@ const AboutMe = ({ ...data }) => {
             title="Project Management"
             text="I have <b>strong project management</b> skills and can self-manage well as needed."
           />
-        </div> */}
+        </div> 
+
+
+          <SectionTitle
+            text="Latest from the Blog"
+            icon="fas fa-rss"
+          />
+          <div className="row">{posts}</div>
+        
 
 
         </Styled.Container>

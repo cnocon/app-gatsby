@@ -12,7 +12,6 @@ const Header = ({ ruleTitle, ruleIcon }) => {
   const setActiveOnLoad = () => {
     setResumeClass(window.location.href.match(/\/resume/) ? "active" : "")
     setArticlesClass(window.location.href.match(/\/articles/) ? "active" : "")
-
   }
 
   useEffect(() => {
@@ -32,13 +31,13 @@ const Header = ({ ruleTitle, ruleIcon }) => {
         <Sty.Subhead>Front End Developer</Sty.Subhead>
         <Sty.Nav>
           <Sty.NavItem>
-            <Sty.NavLink to="/" activeClassName="active">Home</Sty.NavLink>
-          </Sty.NavItem>
-          <Sty.NavItem>
-            <Sty.NavLink to="/articles/page-1" className={ArticlesClass}>Blog</Sty.NavLink>
+            <Sty.NavLink to="/" activeClassName="active">About</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
             <Sty.NavLink to="/resume" className={ResumeClass}>CV</Sty.NavLink>
+          </Sty.NavItem>
+          <Sty.NavItem>
+            <Sty.NavLink to="/articles/page-1" className={ArticlesClass}>Blog</Sty.NavLink>
           </Sty.NavItem>
         </Sty.Nav>
       </Sty.Container>
