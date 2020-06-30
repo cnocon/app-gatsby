@@ -30,15 +30,28 @@ const Post = ({...data}) => {
         </Link>
       </div>
     : null
+  
+  const loadAddThis = () => {
+    const isReady = (
+      window && 
+      window.addthis && 
+      window.addthis.layers 
+      && window.addthis.layers.hasOwnProperty('refresh')
+    )
+    
+    if (isReady) {
+      // Load the plugin on the page
+      window.addthis.layers.refresh();
+    } else {
+      // Wait a tick and try again in 1/10th of a second
+      setTimeout(() => loadAddThis(), 100);
+    }
+  }
    
   useEffect(() => {
+    loadAddThis();
     $("html, body").animate({ scrollTop: 0 }, 0);
-    $('.addthis_inline_share_toolbox_vo2p').hide();
-    setTimeout(() => {
-      window.addthis.layers.refresh();
-      $('.addthis_inline_share_toolbox_vo2p').fadeIn(500);
-    }, 500);
-  }, [])
+  })
 
   return (
     <Layout>
