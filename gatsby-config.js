@@ -85,7 +85,7 @@ module.exports = {
     {
       resolve: `gatsby-v3-plugin-page-transitions`,
       options: {
-        transitionTime: 0
+        transitionTime: 500
       }
     },
     {
