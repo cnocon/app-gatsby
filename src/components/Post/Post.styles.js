@@ -37,9 +37,10 @@ export const PostTitle = styled.h1`
   font-weight: 900;
   margin-top: 0;
   line-height: 1.2;
-  font-weight: 800;
+  // font-weight: 800;
+  font-weight: 300;
   text-align: center;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   @media screen and (max-width: ${Theme.breakpoints.max.lg}) {
     font-size: ${Theme.fonts.sizes.xl};
@@ -135,11 +136,10 @@ export const EntryContent = css`
   }
 
   h2 {
-      letter-spacing: 1px;
       text-transform: uppercase;
       font-size: 25px;
-      margin: 1.0em 0 0.6em 0;
-      font-weight: 800;
+      margin: 3.5rem 0 1rem 0;
+      font-weight: 900;
       font-family: ${Theme.fonts.headings.family};
     }
 
@@ -170,10 +170,11 @@ export const EntryContent = css`
     }
 
     img {
-      border: 1px solid ${Theme.colors.grays.borderDark};
-      padding: 1rem;
+      padding: 0;
       margin: 1rem 0;
-      border-radius: 6px;
+      border-radius: 4px;
+      max-width: 100%;
+      display: block;
     }
 
     p {

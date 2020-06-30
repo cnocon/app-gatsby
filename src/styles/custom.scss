@@ -610,13 +610,18 @@ ul li ul {
  pre.prettyprint {
 	padding: 1rem 1.5rem !important;
 	border-radius: 0 !important;
+	background-color: #282b36 !important;
+	margin: 1rem 0 !important;
+	border-radius: 4px !important;
+	border: 1px solid transparent;
+	padding: 2rem 3rem !important;
 }
 
 pre.prettyprint,
 pre.prettyprint span {
 	font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
-	/* font-weight: 600 !important; */
-	font-size: 1.4rem;
+	font-weight: 400 !important;
+	font-size: 1.6rem;
 	line-height: 1.8em;
 	-webkit-font-smoothing: antialiased;
 }

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, { useEffect } from "react"
 import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
 import SEO from "../SEO/seo"
@@ -35,60 +35,62 @@ const Post = ({...data}) => {
     const isReady = (
       window && 
       window.addthis && 
-      window.addthis.layers 
-      && window.addthis.layers.hasOwnProperty('refresh')
+      window.addthis.layers &&
+      window.addthis.layers.hasOwnProperty('refresh')
     )
     
     if (isReady) {
       // Load the plugin on the page
-      window.addthis.layers.refresh();
-    } else {
-      // Wait a tick and try again in 1/10th of a second
-      setTimeout(() => loadAddThis(), 100);
+      window.addthis.layers.refresh()
     }
   }
    
   useEffect(() => {
+    $('html, body').animate({ scrollTop: 0 }, 0)
     loadAddThis();
-    $("html, body").animate({ scrollTop: 0 }, 0);
   })
-
+  
   return (
     <Layout>
       <Header />
-      <SEO
-        stitle={post.title}
-        sdescription={post.summary}
-        slug={post.slug}
-      />
+
+      <SEO stitle={post.title} sdescription={post.summary} slug={post.slug}>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ed26ab486ccf280"></script>
+        <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>
+      </SEO>
 
       <PageTransition>
-        <section css={theme => ({paddingBottom: theme.spacing.lg})}>
+        <section css={theme => ({paddingTop: 0, paddingBottom: theme.spacing.lg})}>
           <Rule
             title={`Level: ${post.tags[0].name.toUpperCase()}`}
             icon="fas fa-chart-bar"
           />
+          
           <Breadcrumbs crumbs={breadcrumbs} />
           <Styled.ReadableContent className="post post-single">
             <header css={Styled.HeaderStyles}>
-              <Styled.PostTitle className="title">
+              <Styled.PostTitle>
                 {post.title}
               </Styled.PostTitle>
 
-              <div className="addthis_inline_share_toolbox_vo2p" style={{marginBottom: '1.6rem'}}></div>
+              <div 
+                className="addthis_inline_share_toolbox_vo2p" 
+                css={ theme => ({ marginBottom: theme.spacing.default }) }>
+              </div>
 
               <EntryMeta
                 categoriesMap={categoriesMap}
                 published={post.published}
-                categories={post.categories}
-              />
-
+                categories={post.categories} />
             </header>
 
             <div className="entry-content clearfix" css={Styled.EntryContent}>
-            {/* <img src={post.featured_image} style={{display: 'block', margin: '0 auto 1.6rem', height: '300px'}} alt=""/> */}
               <div className="main-content">
-                {ReactHtmlParser(post.body)}
+                {/* <img 
+                  src={post.featured_image} 
+                  style={{display: 'block', margin: '-.5rem 0 1.6rem 1.6rem', maxHeight: '300px', maxWidth: '30%', float: 'right', border: '0'}} 
+                  alt={post.featured_image_alt}/> */}
+                { ReactHtmlParser(post.body) }
               </div>
             </div>
           </Styled.ReadableContent>
