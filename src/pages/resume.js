@@ -15,7 +15,7 @@ const IndexPage = () => {
       <Header />
       <Breadcrumbs crumbs={[]} />
       <SEO stitle="Home"/>
-      <Rule title={'Resume'} icon="rule-icon icon-leaf"/>
+      <Rule title={'Resume'} icon="far fa-file-user"/>
       <PageTransition>
         <Resume />
       </PageTransition>

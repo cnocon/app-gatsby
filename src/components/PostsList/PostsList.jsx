@@ -54,9 +54,8 @@ const PostsList = ({...data}) => {
       <SEO stitle={title} sdescription={seoDescription} />
       <PageTransition>
         <div className="posts-list">
-          <Rule title={title} icon="rule-icon icon-rss" />
+          <Rule title={title} icon="fas fa-rss" />
           <Breadcrumbs crumbs={breadcrumbs} />
-            {/* <div className="row">{articles}</div> */}
             {articles}
           <Styled.Navigation>
             {prevBtn}

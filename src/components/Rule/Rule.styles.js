@@ -24,8 +24,18 @@ export const RuleWrapper = styled.h2`
     border-bottom: 4px solid #F4F6F7;
   }
 
-  i.fa {
-    color: ${Theme.colors.grays.text};
+  i  {
+    font-size: 22px;
+    margin-right: 14px;
+    line-height: 39px;
+    text-align: center;
+    color: #B7C6C9;
+    background: #fff;
+    border-radius: 50%;
+    border: 4px solid #F4F6F7;
+    display: inline-block;
+    width: 47px;
+    height: 47px;
   }
 `
 

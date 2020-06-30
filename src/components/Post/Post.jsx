@@ -53,7 +53,7 @@ const Post = ({...data}) => {
         <section css={theme => ({paddingBottom: theme.spacing.lg})}>
           <Rule
             title={`Level: ${post.tags[0].name.toUpperCase()}`}
-            icon="rule-icon icon-chart-bar"
+            icon="fas fa-chart-bar"
           />
           <Breadcrumbs crumbs={breadcrumbs} />
           <Styled.ReadableContent className="post post-single">

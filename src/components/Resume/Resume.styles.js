@@ -28,9 +28,12 @@ export const Timeline = styled.div`
       padding-left: 0;
     }
     
-    [class^="icon-"], 
-    [class*=" icon-"],
-    .far {
+    .far,
+    .fa,
+    .fas,
+    .fal,
+    .fad
+     {
       display: block;
       font-size: 28px;
       position: absolute;

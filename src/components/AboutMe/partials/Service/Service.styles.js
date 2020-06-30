@@ -12,11 +12,11 @@ export const ServiceDiv = styled.div`
   h4 {
     font-size: ${Theme.fonts.sizes.sm};
     line-height: ${Theme.fonts.sizes.lineHeights.sm};
-    // font-family: ${Theme.fonts.accent.family};
     letter-spacing: 1px;
     font-weight: 900;
     text-transform: uppercase;
-    margin-top: 1rem;
+    margin-top: 5px;
+    margin-bottom: 0;
 
     span {
       padding-bottom: 1px;

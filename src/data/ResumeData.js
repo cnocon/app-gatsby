@@ -30,6 +30,7 @@ const ResumeData = {
       descList: [
         "Use mockups to code responsive web pages using Handlebars, SCSS, and a proprietary component library",
         "Assist in maintaining and extending applications using Javascript, NPM, and Node",
+        "Support a broad range of browsers and devices"
         // "Migrate websites into a Gatsby, GraphQL, and Emotion powered front end."
       ],
       awards: [
@@ -187,15 +188,15 @@ const ResumeData = {
   ],
   skills: [
     {name: "SCSS, LESS, CSS", percent: "90", icon: "fab fa-sass"},
-    {name: "Responsive Development", percent: "88", icon: "pe-7s-phone bold"},
+    {name: "Responsive Development", percent: "88", icon: "fal fa-mobile-alt"},
     {name: "JavaScript", percent: "83", icon: "fab fa-js-square"},
-    {name: "APIs", percent: "80", icon: "pe-7s-network bold"},
+    {name: "APIs", percent: "80", icon: "fal fa-chart-network"},
     {name: "React", percent: "75", icon: "fab fa-react"},
-    {name: "Gatsby", percent: "72", icon: "pe-7s-gleam bold"},
+    {name: "Gatsby", percent: "72", icon: "fal fa-browser"},
     {name: "Node, NPM", percent: "70", icon: "fab fa-node-js"},
     {name: "Git", percent: "70", icon: "fab fa-git"},
-    {name: "Ruby", percent: "65", icon: "pe-7s-diamond bold"},
-    {name: "Rails 5", percent: "60", icon: "pe-7s-diamond bold"},
+    {name: "Ruby", percent: "65", icon: "fal fa-gem"},
+    {name: "Rails 5", percent: "60", icon: "fal fa-subway"},
   ],
   assets: [
     "Empathy to be an effective teammate",

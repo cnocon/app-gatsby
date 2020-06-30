@@ -9,7 +9,7 @@ const NotFoundPage = () => (
   <Layout>
     <SEO stitle="404: Not found" />
     <Header />
-    <Rule title="404: Page Not Found" icon="rule-icon icon-ie"/>
+    <Rule title="404: Page Not Found" icon="fas fa-poo-storm"/>
     <NotFound />
   </Layout>
 )
