@@ -108,7 +108,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/`, `/resume`, `/articles/page-1`, `/articles/page-2`],
+        precachePages: [``, `/resume`, `/articles/page-1`, `/articles/page-2`],
       },
     },
     {
@@ -132,10 +132,13 @@ module.exports = {
               return allButterPost.edges.map(edge => {
                 return Object.assign({}, edge.node, {
                   description: edge.node.summary,
-                  date: edge.node.created,
-                  url: site.siteMetadata.siteUrl + edge.node.slug,
+                  date: edge.node.published,
+                  url: site.siteMetadata.siteUrl + '/' + edge.node.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.slug,
-                  custom_elements: [{ "content:encoded": edge.node.body }],
+                  category: "Web Development",
+                  custom_elements: [
+                    { "content:encoded": edge.node.body },
+                  ],
                 })
               })
             },
@@ -152,13 +155,14 @@ module.exports = {
                       title
                       published
                       created
+                      featured_image
                     }
                   }
                 }
               }
             `,
             output: "/rss.xml",
-            title: "RSS Feed for Cristin O'Connor's Front End Blog",
+            title: "CRISTIN.IO // Front End Development Blog",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
