@@ -1,7 +1,5 @@
-// import React from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import { Link } from "gatsby"
 import Theme from "../Theme/Theme"
 
 export const LeftBlock = styled.div`
@@ -84,7 +82,7 @@ export const smParagraph = css`
   font-family: ${Theme.fonts.headings.family};
 `
 
-export const FooterLink = styled(Link)`
+export const FooterLink = styled.a`
   color: #000;
   text-decoration: underline;
   font-size: inherit;

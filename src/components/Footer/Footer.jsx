@@ -31,14 +31,14 @@ const Footer = () => {
           <p css={Styled.smParagraph}>
             Built using{` `}
             <Styled.FooterLink
-              to="https://www.gatsbyjs.org"
+              href="https://www.gatsbyjs.org"
               rel="noreferrer"
               target="_blank">
               Gatsby
             </Styled.FooterLink>
             {` `}and{` `}
             <Styled.FooterLink
-              to="https://emotion.sh/docs/introduction"
+              href="https://emotion.sh/docs/introduction"
               rel="noreferrer"
               target="_blank">
               Emotion

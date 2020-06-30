@@ -50,12 +50,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `CRISTIN.IO`,
+        short_name: `CRISTIN`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#ffffff`,
+        theme_color: `#5ec5ed`,
+        display: `standalone`,
         icon: `src/images/square-portrait.png`,
       },
     },
@@ -104,6 +104,12 @@ module.exports = {
         ],
         display: 'swap'
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/resume/`, `/articles/page-1/`, `/articles/page-2/`],
+      },
+    },
   ],
 }

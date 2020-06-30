@@ -223,7 +223,7 @@ export const EntryContent = css`
     .tagline {
  	    margin: 2em 0; padding: 1em 2em;
     }
-    .tagline *:first-child {
+    .tagline *:first-of-type {
       margin-top: 0
     }
     .tagline * {
