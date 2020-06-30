@@ -26,9 +26,90 @@ export default {styles: css`
     padding: 2rem 0;
   }
 
+  .wrapper-outer {
+    padding: ${Theme.spacing.xs} ${Theme.spacing.default} ${Theme.spacing.xl};
+    font-size: 1.4rem;
+  }
+
+  /* COLOR HELPER CLASSES */
+  .text-shadow-purple {
+    text-shadow: 0 1px 1px ${Theme.colors.accents.text.purple};
+    color: #345;
+  }
+
+  .text-shadow-red {
+    text-shadow: 0 1px 1px ${Theme.colors.accents.text.red};
+    color: #345;
+  }
+
+  .text-shadow-yellow {
+    text-shadow: 0 1px 1px ${Theme.colors.accents.text.yellow};
+    color: #345;
+  }
+
+  .text-shadow-blue {
+    text-shadow: 0 1px 1px ${Theme.colors.accents.text.blue};
+    color: #345;
+  }
+  
+  .text-shadow-green {
+    text-shadow: 0 1px 1px ${Theme.colors.accents.text.green};
+    color: #345;
+  }
+
   .box-shadow-purple {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.purple};
+    /* border-bottom: 1.5px solid ${Theme.colors.accents.purple}; */
     padding-bottom: 1px;
+    box-shadow: inset 0 -1.25em 1.25em -1.6em ${Theme.colors.accents.purple}, 0 3px 4px -2px ${Theme.colors.accents.purple};
+    
+    &:hover {
+      box-shadow: none;
+      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.purple};
+    }
+  }
+
+  .box-shadow-red {
+    /* border-bottom: 1.5px solid ${Theme.colors.accents.red}; */
+    padding-bottom: 1px;
+    box-shadow: inset 0 -1.25em 1.25em -1.55em ${Theme.colors.accents.red}, 0 3px 2px -1px ${Theme.colors.accents.red};
+    
+    &:hover {
+      box-shadow: none;
+      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.red};
+    }
+  }
+
+  .box-shadow-yellow {
+    /* border-bottom: 1.5px solid ${Theme.colors.accents.yellow}; */
+    padding-bottom: 1px;
+    box-shadow: inset 0 -1.25em 1.25em -1.5em ${Theme.colors.accents.yellow}, 0 3px 2px -2px ${Theme.colors.accents.yellow};
+    
+    &:hover {
+      box-shadow: none;
+      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.yellow};
+    }
+  }
+
+  .box-shadow-blue {
+    /* border-bottom: 1.5px solid ${Theme.colors.accents.blue}; */
+    padding-bottom: 1px;
+    box-shadow: inset 0 -1.25em 1.25em -1.5em ${Theme.colors.accents.blue}, 0 3px 3px -1px ${Theme.colors.accents.blue};
+    
+    &:hover {
+      box-shadow: none;
+      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.blue};
+    }
+  }
+  
+  .box-shadow-green {
+    /* border-bottom: 1.5px solid ${Theme.colors.accents.green}; */
+    padding-bottom: 1px;
+    box-shadow: inset 0 -1.25em 1.25em -1.6em ${Theme.colors.accents.green}, 0 3px 3px -2px ${Theme.colors.accents.green};
+    
+    &:hover {
+      box-shadow: none;
+      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.green};
+    }
   }
 
   .background-accent-purple {
@@ -36,38 +117,11 @@ export default {styles: css`
     color: #000;
     border: 1px solid ${Theme.colors.accents.purple};
   }
-
-  .border-accent-purple {
-    background-color: ${Theme.colors.accents.purple};
-  }
-  .border-accent-purple:hover {
-    background-color: ${Theme.colors.accents.purple};
-    border-color: transparent;
-    color: #fff;
-  }
-
-  .box-shadow-red {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.red};
-    padding-bottom: 1px;
-  }
-
+  
   .background-accent-red {
     background: ${Theme.colors.accents.red};
     color: #000;
     border: 1px solid ${Theme.colors.accents.red};
-  }
-
-    .border-accent-red:hover {
-      background-color: ${Theme.colors.accents.red};
-      border-color: transparent;
-      color: #fff;
-    }
-
-
-
-  .box-shadow-yellow {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.yellow};
-    padding-bottom: 1px;
   }
 
   .background-accent-yellow {
@@ -76,33 +130,10 @@ export default {styles: css`
     border: 1px solid ${Theme.colors.accents.yellow};
   }
 
-
-  .border-accent-yellow:hover {
-    background-color: ${Theme.colors.accents.yellow};
-    border-color: transparent;
-    color: ${Theme.colors.default.base};
-  }
-
-  .box-shadow-blue {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.blue};
-    padding-bottom: 1px;
-  }
-
   .background-accent-blue {
     background: ${Theme.colors.accents.blue};
     color: #000;
     border: 1px solid ${Theme.colors.accents.blue};
-  }
-  .border-accent-blue:hover {
-    background-color: ${Theme.colors.accents.blue};
-    border-color: transparent;
-    color: #fff;
-  }
-
-
-  .box-shadow-green {
-    box-shadow: inset 0 -.125em 0 ${Theme.colors.accents.green};
-    padding-bottom: 1px;
   }
 
   .background-accent-green {
@@ -111,9 +142,53 @@ export default {styles: css`
     border: 1px solid ${Theme.colors.accents.green};
   }
 
-  .border-accent-green:hover {
-      background-color: ${Theme.colors.accents.green};
-      border-color: ${Theme.colors.accents.green};
-      color: #345;
+  .border-accent-purple {
+    border: 2px solid ${Theme.colors.accents.purple};
+    padding: 1px 2px;
+    border-radius: 4px;
+    
+    &:hover {
+      border: 2px solid ${Theme.colors.accents.text.purple};
     }
+  }
+  
+  .border-accent-red {
+    border: 2px solid ${Theme.colors.accents.red};
+    padding: 1px 2px;
+    border-radius: 4px;
+    
+    &:hover {
+      border: 2px solid ${Theme.colors.accents.text.red};
+    }
+  }
+    
+  .border-accent-yellow {
+    border: 2px solid ${Theme.colors.accents.yellow};
+    padding: 1px 2px;
+    border-radius: 4px;
+    
+    &:hover {
+      border: 2px solid ${Theme.colors.accents.text.yellow};
+    }
+  }
+
+  .border-accent-blue {
+    border: 2px solid ${Theme.colors.accents.blue};
+    padding: 1px 2px;
+    border-radius: 4px;
+    
+    &:hover {
+      border: 2px solid ${Theme.colors.accents.text.blue};
+    }
+  }
+
+  .border-accent-green {
+    border: 2px solid ${Theme.colors.accents.green};
+    padding: 1px 2px;
+    border-radius: 4px;
+    
+    &:hover {
+      border: 2px solid ${Theme.colors.accents.text.green};
+    }
+  }
 `}

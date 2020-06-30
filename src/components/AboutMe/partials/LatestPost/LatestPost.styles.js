@@ -28,18 +28,18 @@ export const LatestPostHeading = styled.h2`
     font-size: ${Theme.fonts.sizes.default};
     text-decoration: none;
     padding-bottom: 1px;
-    transition: all .3s;
-    line-height: ${Theme.fonts.sizes.lineHeights.xs};
-    font-family: ${Theme.fonts.body.family};
-    font-weight: 800;
-    text-transform: uppercase;
+    line-height: ${Theme.fonts.sizes.lineHeights.default};
+    font-family: ${Theme.fonts.headings.family};
+    box-shadow: 0 2px 1px -1px ${Theme.colors.default.base};
+    font-weight: 900;
+    letter-spacing: .25px;
     text-align: center;
-    transition: box-shadow .4s;
+    transition: box-shadow .2s;
 
     &:hover,
     &:focus,
     &:active {
-      box-shadow: inset 0 -2px 0 ${Theme.colors.default.base};
+      box-shadow: none;
     }
   }
 `

@@ -16,15 +16,21 @@ export const EntryMeta = css`
 
   > span {
     display: block;
-    margin: 0 auto 14px auto;
-    max-width: 55px;
-    min-height: 20px;
     text-align: center;
     display: inline-block;
-    margin-right: 8px;
-    margin-bottom: 12px;
+    margin: 0 8px 5px auto;
     display: inline-block;
     max-width: none;
+
+    &.posted-in {
+      margin-right: 3px;
+    }
+
+    &.posted-on time {
+      margin-left: 0;
+      padding-left: 5px;
+      border: 0;
+    }
   }
 
   a,
@@ -54,15 +60,7 @@ export const EntryMeta = css`
     letter-spacing: .15em;
     color: #DDE4E6;
   }
-  .posted-in {
-    margin-right: 3px;
-  }
 
-  .posted-on time {
-    margin-left: 0;
-    padding-left: 5px;
-    border: 0;
-  }
   .border-accent-purple {
     border: 2px solid ${Theme.colors.accents.purple};
   }

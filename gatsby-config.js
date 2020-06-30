@@ -91,7 +91,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: ["styles/*.scss", "components/Theme/*.scss"],
+        includePaths: ["styles/*.scss"],
       },
     },
     {

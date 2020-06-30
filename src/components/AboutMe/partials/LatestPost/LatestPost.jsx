@@ -5,7 +5,7 @@ import * as Styled from './LatestPost.styles'
 
 const LatestPost = ({post, date}) => {
   return (
-    <div className="col-sm-12 col-md-6" key={post.published} style={{marginBottom: '3rem'}}>
+    <div className="col-sm-12 col-md-6 col-lg-4" key={post.published} style={{marginBottom: '3rem'}}>
       <Styled.LatestPost>
         <Styled.LatestPostHeading>
         
@@ -16,7 +16,7 @@ const LatestPost = ({post, date}) => {
             />
           </Styled.ImageContainer>
           
-          <Link to={`/articles/${post.slug}`} className="post-link">
+          <Link to={`/articles/${post.slug}`} className={`post-link`}>
             {post.title}
           </Link>
         <Styled.Date>

@@ -3,28 +3,22 @@ import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
 import SEO from "../SEO/seo"
 import PostPreview from "../PostPreview/PostPreview"
-import { ReadableContent } from '../PostPreview/PostPreview.styles'
 import * as Styled from '../PostsList/PostsList.styles'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
-import shuffle from "../utils/shuffle"
+import getColor from "../utils/getColor"
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions';
 
 const PostsList = ({...data}) => {
   const {posts, nextPagePath, prevPagePath, breadcrumbs, colors, title, seoDescription} = data.pageContext
   let colorsCopy = Object.assign([], colors)
-
-  const getColor = () => {
-    if (colorsCopy.length === 0) {
-      colorsCopy = Object.assign([], colors)
-      return shuffle(colorsCopy).pop()
-    } else {
-      return shuffle(colorsCopy).pop()
-    }
-  }
   
   const articles = posts.map(node => {
-    return <PostPreview post={node} key={node.slug} color={getColor()} />
+    return (
+      // <div className="col-sm-12 col-md-6">
+        <PostPreview post={node} key={node.slug} color={getColor(colors, colorsCopy)} />
+      // </div>
+    )
   });
 
   const prevBtn = (
@@ -59,17 +53,16 @@ const PostsList = ({...data}) => {
       <Header />
       <SEO stitle={title} sdescription={seoDescription} />
       <PageTransition>
-        <ReadableContent>
+        <div className="posts-list">
           <Rule title={title} icon="rule-icon icon-rss" />
           <Breadcrumbs crumbs={breadcrumbs} />
-          
+            {/* <div className="row">{articles}</div> */}
             {articles}
-
           <Styled.Navigation>
             {prevBtn}
             {nextBtn}
           </Styled.Navigation>
-        </ReadableContent>
+        </div>
       </PageTransition>
     </Layout>
   )

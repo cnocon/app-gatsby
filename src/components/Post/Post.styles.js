@@ -4,6 +4,30 @@ import { css } from "@emotion/core"
 // import { Link } from "gatsby"
 import Theme from "../Theme/Theme"
 
+export const ReadableContent = styled.article`
+  margin: ${Theme.spacing.default} auto;
+  padding: ${Theme.spacing.xs} 0 ${Theme.spacing.xl};
+  display: block;
+  width: 100%;
+  max-width: 100%;
+
+  &.post-preview {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    .entry-content {
+      padding-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: ${Theme.breakpoints.min.md}) {
+    width: ${Theme.layout.widths.default};
+    max-width: ${Theme.layout.widths.defaultMax};
+    padding-left: ${Theme.spacing.lg};
+    padding-right: ${Theme.spacing.lg};
+  }
+`;
+
 
 export const PostTitle = styled.h1`
   font-size: ${Theme.fonts.sizes.xxl};

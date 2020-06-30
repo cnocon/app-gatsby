@@ -22,7 +22,6 @@ const Breadcrumbs = ({ crumbs }) => {
     }
   </ul>
   )
-
 }
 
 

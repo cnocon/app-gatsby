@@ -7,6 +7,10 @@ export const Container = styled.div`
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+
+  h2 + .row {
+    padding-top: 0;
+  }
 `
 
 export const List = css`

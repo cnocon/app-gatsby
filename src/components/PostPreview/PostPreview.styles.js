@@ -4,120 +4,48 @@ import { Link } from "gatsby"
 import Theme from "../Theme/Theme"
 import { css } from "@emotion/core"
 
-export const ReadableContent = styled.article`
-  margin: ${Theme.spacing.default} auto;
-  padding: ${Theme.spacing.xs} 0 ${Theme.spacing.xl};
-  display: block;
+export const PostPreview = styled.article`
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 100%;
+  margin: ${Theme.spacing.lg} auto;
+  padding: ${Theme.spacing.xs} 15px ${Theme.spacing.xl};
 
-  &.post-preview {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-
-    p {
-      ${'' /* margin: 0; */}
-    }
-
-    .entry-content {
-      padding-bottom: 0;
-    }
+  @media screen and (max-width: ${Theme.breakpoints.max.md}) {
+    margin: ${Theme.spacing.md} auto;
   }
 
-  @media screen and (min-width: ${Theme.breakpoints.min.md}) {
-    width: ${Theme.layout.widths.default};
-    max-width: ${Theme.layout.widths.defaultMax};
-    padding-left: ${Theme.spacing.default};
-    padding-right: ${Theme.spacing.default};
-  }
 `;
 
-export const Button = styled(Link)`
-  margin-left: auto;
-  margin-right: auto;
+export const Header = styled.header`
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  color: ${Theme.colors.default.base};
-  padding: 0 ${Theme.spacing.default};
-  display: block;
-  text-align: center;
-  letter-spacing: .03rem;
-  border-radius: 4px;
-  outline: 0;
-  transiti5n: all .2s;
-  font-size: ${Theme.fonts.sizes.xs};
-  max-width: 18rem;
-  line-height: 30px;
-  height: 34px;
-  font-family: ${Theme.fonts.body.family};
-  font-weight: 700;
-  text-transform: uppercase;
-  border: 2px solid ${Theme.colors.default.base};
-  color: ${Theme.colors.default.base};
-  background-color: #fff;
+  
+  @media screen and (min-width: ${Theme.breakpoints.min.lg}) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 
-  &:hover {
-    background-color: ${Theme.colors.default.base};
-    color: #fff;
+  h2 {
+    text-align: center;
   }
 `
 
 export const TitleLink = styled(Link)`
   font-size: ${Theme.fonts.sizes.lg};
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
-  color: ${Theme.colors.default.base};
   padding-bottom: 0;
   transition: box-shadow .2s;
   font-weight: 700px;
-  color: ${Theme.colors.default.darker};
+  color: ${Theme.colors.default.base};
 
-  @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+
+  @media screen and (max-width: ${Theme.breakpoints.max.lg}) {
     font-size: ${Theme.fonts.sizes.md};
   }
 
-  &.box-shadow-purple {
-    box-shadow: 0 2px 1px ${Theme.colors.accents.purple};
-    text-shadow: 0 1px 0 ${Theme.colors.accents.text.purple};
-
-    &:hover {
-      box-shadow: 0 3px 1px ${Theme.colors.accents.text.purple};
-    }
-  }
-
-  &.box-shadow-red {
-    box-shadow: 0 2px 1px ${Theme.colors.accents.red};
-    text-shadow: 0 1px 0 ${Theme.colors.accents.text.red};
-
-    &:hover {
-      box-shadow: 0 3px 1px ${Theme.colors.accents.text.red};
-    }
-  }
-
-  &.box-shadow-yellow {
-    box-shadow: 0 2px 1px ${Theme.colors.accents.yellow};
-    text-shadow: 0 1px 0 ${Theme.colors.accents.yellow};
-
-    &:hover {
-      box-shadow: 0 3px 1px ${Theme.colors.accents.text.yellow};
-    }
-  }
-
-  &.box-shadow-blue {
-    box-shadow: 0 3px 1px ${Theme.colors.accents.blue};
-    text-shadow: 0 1px 0 ${Theme.colors.accents.text.blue};
-
-    &:hover {
-      box-shadow: 0 3px 1px ${Theme.colors.accents.text.blue};
-    }
-  }
-    
-  &.box-shadow-green {
-    box-shadow: 0 2px 1px ${Theme.colors.accents.green};
-    text-shadow: 0 1px 0 ${Theme.colors.accents.text.green};
-
-    &:hover {
-      box-shadow: 0 3px 1px ${Theme.colors.accents.text.green};
-    }
-  } 
 
   &:hover {
     color: ${Theme.colors.default.base};
@@ -129,48 +57,38 @@ export const Title = styled.h2`
 `
 
 export const EntryMeta = css`
-  float: left;
-  width: 66px;
-  font-weight: 400;
-  font-size: 0.750em;
-  color: #BFC5CD;
-  font-weight: 400;
-  font-size: 0.750em;
-  line-height: 1.9;
-  text-align: center;
-  padding-bottom: 0;
+  display: block;
   float: none;
   width: 100%;
-  margin-bottom: 0;
-  display: block;
   max-width: none;
-  width: 100%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 0.750em;
+  color: ${Theme.colors.grays.textDarker};
+  font-weight: 400;
+  font-size: ${Theme.fonts.sizes.xs};;
+  line-height: ${Theme.fonts.sizes.lineHeights.xl};;
   text-align: center;
 
   > span {
-    display: block;
-    margin: 0 auto 14px auto;
-    max-width: 55px;
+    display: inline-block;
+    margin: 0 8px 12px auto;
+    max-width: none;
     min-height: 20px;
     text-align: center;
-    display: inline-block;
-    margin-right: 8px;
-    margin-bottom: 12px;
-    display: inline-block;
-    max-width: none;
   }
 
   a,
   .entry-date {
     padding: 4px 10px;
     margin: 0 2px;
-    border: 1px solid #DDE4E6;
+    border: 1px solid ${Theme.colors.grays.borderMedium};
     border-radius: 4px;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: ${Theme.fonts.sizes.xs};
     letter-spacing: .03em;
     font-weight: 800;
-    color: #6A7686;
+    color: ${Theme.colors.grays.textDarker};
     -webkit-transition: color 0.1s, background-color .2s, border-color .2s; transition: color 0.1s, background-color .2s, border-color .2s;
   }
 
@@ -184,12 +102,43 @@ export const EntryMeta = css`
     font-weight: 900;
     letter-spacing: .15em;
     color: #DDE4E6;
-	}
+  }
+  
   .posted-in {
     margin-right: 3px;
   }
 
   .posted-on time {
+    margin-left: 5px;
+  }
+`
+
+export const Button = styled(Link)`
+  display: flex;  
+  height: 34px;
+  max-width: 17rem;
+  margin: auto;
+  padding: 0 ${Theme.spacing.default};
+  text-align: center;
+  letter-spacing: .03rem;
+  color: ${Theme.colors.default.base};
+  line-height: 30px;
+  font-size: ${Theme.fonts.sizes.xs};
+  font-family: ${Theme.fonts.body.family};
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: 0;
+  border: 2px solid ${Theme.colors.default.base};
+  border-radius: 4px;
+  background-color: #fff;
+  transition: all .2s;
+
+  &:hover {
+    background-color: ${Theme.colors.default.base};
+    color: #fff;
+  }
+
+  .meta-nav {
     margin-left: 5px;
   }
 `

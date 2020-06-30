@@ -12,14 +12,13 @@ import * as Styled from "./Layout.styles"
 import ThemeProvider from "../Theme/ThemeProvider"
 import Theme from "../Theme/Theme"
 import Footer from "../Footer/Footer"
-import {SiteStyles} from "../Theme/Site.styles"
 
 const Layout = (props) => {
   return (
     <ThemeProvider theme={Theme}>
-      <Styled.Container className="wrapper" {...props}>
+      <Styled.Container {...props}>
         <main className={props.classNames}>
-          <div css={SiteStyles}>
+          <div className="wrapper-outer">
             {props.children}
           </div>
         </main>

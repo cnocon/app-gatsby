@@ -114,13 +114,14 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
   const allPosts = data.allButterPost.edges.reverse();
-  const chunkedPosts = chunk(allPosts, 4);
+  const chunkedPosts = chunk(allPosts, 3);
   const colors = ['blue', 'green', 'yellow', 'purple']
+  
   const groups = data.allButterPost.group;
 
   groups.forEach(group => {
     const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
-    const chunkedPosts = chunk(sortedPosts, 4);
+    const chunkedPosts = chunk(sortedPosts, 3);
     const category = group.fieldValue.toLowerCase().replace(/\s/g, '-')
 
     chunkedPosts.forEach((collection, index) => {
@@ -217,7 +218,7 @@ exports.createPages = async ({ actions, graphql }) => {
     path: `/`,
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
-      posts: allPosts.slice(0,4),
+      posts: allPosts.slice(0,3),
       colors: colors,
       categories: categoriesData.data.allButterPost.distinct,
       breadcrumbs: [

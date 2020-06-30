@@ -7,15 +7,18 @@ import SectionTitle from './partials/SectionTitle/SectionTitle'
 import Intro from './partials/Intro/Intro'
 import Service from './partials/Service/Service'
 import LatestPost from './partials/LatestPost/LatestPost'
-import IconList from './partials/IconList/IconList'
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions';
+import getColor from "../utils/getColor"
 
 const AboutMe = ({ ...data }) => {
-  const posts = (
-    data.pageContext.posts.map(obj => {
+  const { posts, colors } = data.pageContext
+  let colorsCopy = Object.assign([], colors)
+
+  const articles = (
+    posts.map((obj, i) => {
       const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
       const date = new Date(obj.node.published).toLocaleDateString(undefined, options)
-      return <LatestPost post={obj.node} date={date} key={obj.node.published}/>
+      return <LatestPost post={obj.node} date={date} key={obj.node.published} color={getColor(colors, colorsCopy)} />
     })
   )
 
@@ -72,17 +75,20 @@ const AboutMe = ({ ...data }) => {
             color="color2"
             icon="fal fa-graduation-cap"
             title="Code Tutoring"
+            classes="box-shadow-blue"
             text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages."
           />
           <Service
             color="color1"
             icon="fal fa-code"
             title="Web Development"
+            classes="box-shadow-green"
             text="This is my primary area of expertise. I have over <b>10 years of experience</b> in the field."
           />
           <Service
             color="color3"
             icon="fal fa-typewriter"
+            classes="box-shadow-yellow"
             title="Blog Writer"
             text="I believe it's important to <b>share and contribute</b> content to the developer community."
           />
@@ -90,6 +96,7 @@ const AboutMe = ({ ...data }) => {
             color="color4"
             icon="fal fa-project-diagram"
             title="Project Management"
+            classes="box-shadow-red"
             text="I have <b>strong project management</b> skills and can self-manage well as needed."
           />
         </div> 
@@ -99,7 +106,7 @@ const AboutMe = ({ ...data }) => {
             text="Latest from the Blog"
             icon="fas fa-rss"
           />
-          <div className="row">{posts}</div>
+          <div className="row">{articles}</div>
         
 
 

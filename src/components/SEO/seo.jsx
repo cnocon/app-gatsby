@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import defaultImage from '../../images/default.png';
 import imageGetter from '../utils/imageGetter';
 
-function SEO({ sdescription, lang, meta, stitle, imagePath, slug='' }) {
+function SEO({ sdescription, lang, meta, stitle, imagePath, slug='', keywords }) {
   const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`;
   const image = `https://cristin.io${imageGetter(slug)}` || `https://cristin.io${defaultImage}`;
   const title = stitle || `Cristin O'Connor | Front End Developer`;
@@ -68,6 +68,7 @@ function SEO({ sdescription, lang, meta, stitle, imagePath, slug='' }) {
           name: `twitter:image`,
           content: image,
         },
+
       ].concat(meta)}
     >
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous"/>

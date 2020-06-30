@@ -1,7 +1,6 @@
 import React, {useEffect} from "react"
 import Layout from "../Layout/Layout"
 import Header from "../Header/Header"
-import { ReadableContent } from '../PostPreview/PostPreview.styles'
 import SEO from "../SEO/seo"
 import ReactHtmlParser from 'react-html-parser'
 import * as Styled from "./Post.styles"
@@ -37,8 +36,8 @@ const Post = ({...data}) => {
     $('.addthis_inline_share_toolbox_vo2p').hide();
     setTimeout(() => {
       window.addthis.layers.refresh();
-      $('.addthis_inline_share_toolbox_vo2p').fadeIn(800);
-    }, 1200);
+      $('.addthis_inline_share_toolbox_vo2p').fadeIn(500);
+    }, 800);
     
   }, [])
 
@@ -58,7 +57,7 @@ const Post = ({...data}) => {
             icon="rule-icon icon-chart-bar"
           />
           <Breadcrumbs crumbs={breadcrumbs} />
-          <ReadableContent className="hentry post post-single">
+          <Styled.ReadableContent className="post post-single">
             <header css={Styled.HeaderStyles}>
               <Styled.PostTitle className="title">
                 {post.title}
@@ -79,7 +78,7 @@ const Post = ({...data}) => {
                 {ReactHtmlParser(post.body)}
               </div>
             </div>
-          </ReadableContent>
+          </Styled.ReadableContent>
           
           <Styled.Navigation>
           <div className="col-sm-6 nav-previous left-block">

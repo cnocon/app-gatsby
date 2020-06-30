@@ -9,5 +9,4 @@
 @import "bootstrap-grid.min.css";
 @import "./fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css";
 @import "./fonts/fontello/css/fontello.css";
-@import "main.css";
-@import "custom.css";
+@import "custom.scss";
