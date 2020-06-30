@@ -22,6 +22,20 @@ const chunk = (array, size) => {
 
   return [firstChunk].concat(chunk(array.slice(size, array.length), size));
 }
+// MY NODE TYPES ARE "SitePage"
+// const { createFilePath } = require(`gatsby-source-filesystem`)
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions
+//   console.log(node.internal.type);
+//   if (node.internal.type === `MarkdownRemark`) {
+//     const value = createFilePath({ node, getNode })
+//     createNodeField({
+//       name: `slug`,
+//       node,
+//       value,
+//     })
+//   }
+// }
 
 exports.createPages = async ({ actions, graphql }) => {
   const categoriesData = await graphql(`
@@ -116,7 +130,14 @@ exports.createPages = async ({ actions, graphql }) => {
   const allPosts = data.allButterPost.edges.reverse();
   const chunkedPosts = chunk(allPosts, 3);
   const colors = ['blue', 'green', 'yellow', 'purple']
-  
+  // var butter = require('buttercms')(process.env.GATSBY_BUTTER_API_KEY);
+
+  // butter.feed.retrieve('rss')
+  // .then(function(resp) {
+  //   console.log(resp.data)
+  // }).catch(function(resp) {
+  //   console.log(resp)
+  // });
   const groups = data.allButterPost.group;
 
   groups.forEach(group => {
@@ -229,4 +250,5 @@ exports.createPages = async ({ actions, graphql }) => {
       ],
     },
   })
+
 }

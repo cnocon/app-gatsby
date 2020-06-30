@@ -14,7 +14,7 @@ module.exports = {
     title: `Cristin O'Connor | Front End Developer`,
     author: `Cristin O'Connor`,
     jobTitle: `Front End Developer`,
-    description: `Professional Front End Development blog and CV`,
+    description: `Professional Front End Development Blog and CV Site`,
     twitter: `@cnocon`,
   },
   plugins: [
@@ -108,7 +108,64 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/`, `/resume/`, `/articles/page-1/`, `/articles/page-2/`],
+        precachePages: [`/`, `/resume`, `/articles/page-1`, `/articles/page-2`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allButterPost } }) => {
+              return allButterPost.edges.map(edge => {
+                return Object.assign({}, edge.node, {
+                  description: edge.node.summary,
+                  date: edge.node.created,
+                  url: site.siteMetadata.siteUrl + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.slug,
+                  custom_elements: [{ "content:encoded": edge.node.body }],
+                })
+              })
+            },
+            query: `
+              {
+                allButterPost(
+                  sort: { order: DESC, fields: [created] },
+                ) {
+                  edges {
+                    node {
+                      summary
+                      body
+                      slug
+                      title
+                      published
+                      created
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "RSS Feed for Cristin O'Connor's Front End Blog",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/"
+          },
+        ],
       },
     },
   ],
