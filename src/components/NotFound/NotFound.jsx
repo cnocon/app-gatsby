@@ -8,8 +8,7 @@ const NotFound = () => {
       <h1 css={Styled.Heading}>404</h1>
       <p style={{fontSize: '1.6rem', fontStyle: 'italic'}}>The page you are looking for was not found!</p>
       <Button to="/">
-        <span className="meta-nav" style={{transform: "rotate(180deg)", display: "inline-block"}}>→</span>
-        {` `}Homepage
+      <i className="far fa-long-arrow-left"></i>{`   `}Homepage
       </Button>
     </div>
   )

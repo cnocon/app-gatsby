@@ -32,7 +32,7 @@ const PostPreview = ({ post, color }) => {
       </div>
 
       <Styled.Button to={`/articles/${post.slug}`}>
-        Read Full Article <span className="meta-nav">→</span>
+        Read Full Article <i className="far fa-long-arrow-right"></i>
       </Styled.Button>
     </ReadableContent>
   )

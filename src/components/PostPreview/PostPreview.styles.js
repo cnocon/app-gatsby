@@ -114,7 +114,7 @@ export const EntryMeta = css`
 `
 
 export const Button = styled(Link)`
-  display: flex;  
+  display: block;  
   height: 34px;
   max-width: 17rem;
   margin: auto;
