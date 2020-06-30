@@ -50,8 +50,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `CRISTIN.IO`,
-        short_name: `CRISTIN`,
+        name: `CristinIO`,
+        short_name: `CristinIO`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#5ec5ed`,

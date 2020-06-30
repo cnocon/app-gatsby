@@ -37,8 +37,7 @@ const Post = ({...data}) => {
     setTimeout(() => {
       window.addthis.layers.refresh();
       $('.addthis_inline_share_toolbox_vo2p').fadeIn(500);
-    }, 800);
-    
+    }, 500);
   }, [])
 
   return (
@@ -64,6 +63,7 @@ const Post = ({...data}) => {
               </Styled.PostTitle>
 
               <div className="addthis_inline_share_toolbox_vo2p" style={{marginBottom: '1.6rem'}}></div>
+
               <EntryMeta
                 categoriesMap={categoriesMap}
                 published={post.published}
