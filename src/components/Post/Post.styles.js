@@ -175,6 +175,14 @@ export const EntryContent = css`
       border-radius: 4px;
       max-width: 100%;
       display: block;
+      
+      &.featured-image {
+        float: right;
+        /* max-width: 160px; */
+        max-width: 175px;
+        width: 33%;
+        margin: -.5rem 0 1.6rem 3.15rem;
+      }
     }
 
     p {
