@@ -60,55 +60,61 @@ export default {styles: css`
   .box-shadow-purple {
     /* border-bottom: 1.5px solid ${Theme.colors.accents.purple}; */
     padding-bottom: 1px;
-    box-shadow: inset 0 -1.25em 1.25em -1.6em ${Theme.colors.accents.purple}, 0 3px 4px -2px ${Theme.colors.accents.purple};
+    /* box-shadow: inset 0 -1.25em 1.25em -1.6em ${Theme.colors.accents.purple}, 0 3px 4px -2px ${Theme.colors.accents.purple}; */
+    box-shadow: 0 4px 0 ${Theme.colors.accents.purple};
+    transition: all .4s;
     
     &:hover {
       box-shadow: none;
-      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.purple};
+      /* box-shadow: 0 3px 2px -1px ${Theme.colors.accents.purple}; */
     }
   }
 
   .box-shadow-red {
     /* border-bottom: 1.5px solid ${Theme.colors.accents.red}; */
     padding-bottom: 1px;
-    box-shadow: inset 0 -1.25em 1.25em -1.55em ${Theme.colors.accents.red}, 0 3px 2px -1px ${Theme.colors.accents.red};
+    /* box-shadow: inset 0 -1.25em 1.25em -1.55em ${Theme.colors.accents.red}, 0 3px 2px -1px ${Theme.colors.accents.red}; */
+    box-shadow: 0 4px 0 ${Theme.colors.accents.red};
     
     &:hover {
       box-shadow: none;
-      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.red};
+      /* box-shadow: 0 3px 2px -1px ${Theme.colors.accents.red}; */
     }
   }
 
   .box-shadow-yellow {
     /* border-bottom: 1.5px solid ${Theme.colors.accents.yellow}; */
     padding-bottom: 1px;
-    box-shadow: inset 0 -1.25em 1.25em -1.5em ${Theme.colors.accents.yellow}, 0 3px 2px -2px ${Theme.colors.accents.yellow};
+    /* box-shadow: inset 0 -1.25em 1.25em -1.5em ${Theme.colors.accents.yellow}, 0 3px 2px -2px ${Theme.colors.accents.yellow}; */
+    box-shadow: 0 4px 0 ${Theme.colors.accents.yellow};
     
     &:hover {
       box-shadow: none;
-      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.yellow};
+      /* box-shadow: 0 3px 2px -1px ${Theme.colors.accents.yellow}; */
     }
   }
 
   .box-shadow-blue {
     /* border-bottom: 1.5px solid ${Theme.colors.accents.blue}; */
     padding-bottom: 1px;
-    box-shadow: inset 0 -1.25em 1.25em -1.5em ${Theme.colors.accents.blue}, 0 3px 3px -1px ${Theme.colors.accents.blue};
+    /* box-shadow: inset 0 -1.25em 1.25em -1.5em ${Theme.colors.accents.blue}, 0 3px 3px -1px ${Theme.colors.accents.blue}; */
+    box-shadow: 0 4px 0 ${Theme.colors.accents.blue};
     
     &:hover {
       box-shadow: none;
-      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.blue};
+      /* box-shadow: 0 3px 2px -1px ${Theme.colors.accents.blue}; */
     }
   }
   
   .box-shadow-green {
     /* border-bottom: 1.5px solid ${Theme.colors.accents.green}; */
     padding-bottom: 1px;
-    box-shadow: inset 0 -1.25em 1.25em -1.6em ${Theme.colors.accents.green}, 0 3px 3px -2px ${Theme.colors.accents.green};
+    /* box-shadow: inset 0 -1.25em 1.25em -1.6em ${Theme.colors.accents.green}, 0 3px 3px -2px ${Theme.colors.accents.green}; */
+    box-shadow: 0 4px 0 ${Theme.colors.accents.green};
     
     &:hover {
       box-shadow: none;
-      box-shadow: 0 3px 2px -1px ${Theme.colors.accents.green};
+      /* box-shadow: 0 3px 2px -1px ${Theme.colors.accents.green}; */
     }
   }
 

@@ -205,7 +205,8 @@ export const EntryContent = css`
       color: ${Theme.colors.default.base};
       text-decoration: none;
 
-      box-shadow: inset 0 -3px 1px ${Theme.colors.accents.text.yellow};
+      /* box-shadow: inset 0 -3px 1px ${Theme.colors.accents.text.yellow}; */
+      box-shadow: 0 3px 0 ${Theme.colors.accents.purple};
       transition: box-shadow .3s;
       padding-bottom: 1px;
 
