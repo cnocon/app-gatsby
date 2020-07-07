@@ -128,21 +128,13 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
   const allPosts = data.allButterPost.edges.reverse();
-  const chunkedPosts = chunk(allPosts, 3);
-  const colors = ['blue', 'green', 'yellow', 'purple']
-  // var butter = require('buttercms')(process.env.GATSBY_BUTTER_API_KEY);
-
-  // butter.feed.retrieve('rss')
-  // .then(function(resp) {
-  //   console.log(resp.data)
-  // }).catch(function(resp) {
-  //   console.log(resp)
-  // });
+  const chunkedPosts = chunk(allPosts, 4);
+  const colors = ['blue', 'green', 'purple', 'yellow']
   const groups = data.allButterPost.group;
 
   groups.forEach(group => {
     const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
-    const chunkedPosts = chunk(sortedPosts, 3);
+    const chunkedPosts = chunk(sortedPosts, 4);
     const category = group.fieldValue.toLowerCase().replace(/\s/g, '-')
 
     chunkedPosts.forEach((collection, index) => {
@@ -216,7 +208,7 @@ exports.createPages = async ({ actions, graphql }) => {
         prevPost: index === 0 ? null : allPosts[index - 1].node,
         nextPost: index === allPosts.length - 1 ? null : allPosts[index + 1].node,
         categories: categoriesData.data.allButterPost.distinct,
-        colors: colors,
+        colors: ['blue', 'green', 'purple', 'blue'],
         breadcrumbs: [
           {
             name: 'Home',

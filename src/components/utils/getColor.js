@@ -1,8 +1,6 @@
 import shuffle from './shuffle'
 
-
 const getColor = (colors, colorsCopy) => {
-  
   if (colorsCopy.length === 0) {
     colorsCopy = Object.assign([], colors)
     return shuffle(colorsCopy).pop()

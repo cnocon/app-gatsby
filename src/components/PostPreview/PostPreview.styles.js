@@ -34,11 +34,11 @@ export const Header = styled.header`
 `
 
 export const TitleLink = styled(Link)`
-  font-size: ${Theme.fonts.sizes.lg};
-  line-height: ${Theme.fonts.sizes.lineHeights.sm};
+  font-size: ${Theme.fonts.sizes.md};
+  line-height: ${Theme.fonts.sizes.lineHeights.xs};
   padding-bottom: 0;
   transition: box-shadow .2s;
-  font-weight: 700px;
+  font-weight: 700;
   color: ${Theme.colors.default.base};
 
 

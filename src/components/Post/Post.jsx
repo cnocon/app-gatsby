@@ -8,12 +8,14 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions'
+import getColor from "../utils/getColor"
 import $ from 'jquery'
 import { Link } from 'gatsby'
 
-
 const Post = ({...data}) => {
   const { post, breadcrumbs, categoriesMap, prevPost, nextPost } = data.pageContext
+  // let colorsCopy = Object.assign([], colors)
+  // let color = getColor(colors, colorsCopy)
 
   const prevBtn = prevPost ?
      <div className={nextPost ? "left-block" : "left-full-block"}>
@@ -86,10 +88,6 @@ const Post = ({...data}) => {
 
             <div className="entry-content clearfix" css={Styled.EntryContent}>
               <div className="main-content">
-                {/* <img 
-                  src={post.featured_image} 
-                  style={{display: 'block', margin: '-.5rem 0 1.6rem 1.6rem', maxHeight: '300px', maxWidth: '30%', float: 'right', border: '0'}} 
-                  alt={post.featured_image_alt}/> */}
                 { ReactHtmlParser(post.body) }
               </div>
             </div>
