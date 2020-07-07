@@ -13,7 +13,7 @@ const PostPreview = ({ post, color }) => {
           <Styled.TitleLink
             to={`/articles/${post.slug}`}
             rel="bookmark"
-            className={`box-shadow-green`}>
+            className={`box-shadow-${color}`}>
             {post.title}
           </Styled.TitleLink>
           
