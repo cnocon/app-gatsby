@@ -18,7 +18,7 @@ const Header = ({ ruleTitle, ruleIcon }) => {
     if (window) {
       setActiveOnLoad()
     }
-  })
+  }, [])
 
   return (
     <Sty.Header>

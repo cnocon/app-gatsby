@@ -86,7 +86,7 @@ export const ServiceDiv = styled.div`
   &.color3 {
     i {
       &::before {
-        text-shadow: 2px 2px 2px ${Theme.colors.accents.yellow};
+        text-shadow: 1px 1px 1px ${Theme.colors.accents.yellow};
         font-weight: 400;
       }
     }

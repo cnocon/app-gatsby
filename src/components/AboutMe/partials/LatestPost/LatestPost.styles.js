@@ -30,11 +30,11 @@ export const LatestPostHeading = styled.h2`
     padding-bottom: 1px;
     line-height: ${Theme.fonts.sizes.lineHeights.default};
     font-family: ${Theme.fonts.headings.family};
-    box-shadow: 0 1px 0 0 ${Theme.colors.default.base};
     font-weight: 900;
     letter-spacing: .25px;
     text-align: center;
     transition: box-shadow .2s;
+    box-shadow: 0 1px 0 0 ${Theme.colors.default.base};
 
     &:hover,
     &:focus,

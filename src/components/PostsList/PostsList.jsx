@@ -15,9 +15,9 @@ const PostsList = ({...data}) => {
   
   const articles = posts.map(node => {
     return (
-      // <div className="col-sm-12 col-md-6">
+      <div className="col-sm-12 col-md-6">
         <PostPreview post={node} key={node.slug} color={getColor(colors, colorsCopy)} />
-      // </div>
+      </div>
     )
   });
 
@@ -56,7 +56,7 @@ const PostsList = ({...data}) => {
         <div className="posts-list">
           <Rule title={title} icon="fas fa-rss" />
           <Breadcrumbs crumbs={breadcrumbs} />
-            {articles}
+            <div className="row">{articles}</div>
           <Styled.Navigation>
             {prevBtn}
             {nextBtn}
