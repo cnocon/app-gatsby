@@ -30,17 +30,20 @@ export const Header = styled.header`
 
   h2 {
     text-align: center;
+    max-width: 80%;
   }
 `
 
 export const TitleLink = styled(Link)`
   font-size: ${Theme.fonts.sizes.md};
-  line-height: ${Theme.fonts.sizes.lineHeights.xs};
+  line-height: ${Theme.fonts.sizes.lineHeights.default};
   padding-bottom: 0;
   transition: box-shadow .2s;
-  font-weight: 700;
+  font-weight: 900;
   color: ${Theme.colors.default.base};
-
+  font-family: ${Theme.fonts.headings.family};
+  font-weight: 900;
+  letter-spacing: .5px;
 
   @media screen and (max-width: ${Theme.breakpoints.max.lg}) {
     font-size: ${Theme.fonts.sizes.md};

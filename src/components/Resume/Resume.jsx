@@ -1,6 +1,8 @@
 import React from "react";
 import { ResumeData } from "../../data/ResumeData"
 import Event from "../Event/Event"
+import IconList from "../IconList/IconList"
+import SectionTitle from "../SectionTitle/SectionTitle"
 import * as Styled from "./Resume.styles"
 
 const workEvents = ResumeData.experience.map((item, i) => {
@@ -55,7 +57,35 @@ const Resume = () => {
           </span>
         </h2>
         {eduEvents}
-
+        <article>
+          <SectionTitle
+            text="Profiles"
+            icon="fal fa-id-card"
+          />
+          <IconList listItems={[
+            {
+              icon: 'fab fa-github',
+              link: 'https://github.com/cnocon',
+              text: 'Github'
+            },
+            {
+              icon: 'fab fa-codepen',
+              link: 'https://codepen.io/cnocon',
+              text: 'Codepen'
+            },
+            {
+              icon: 'fab fa-twitter',
+              link: 'https://twitter.com/cnocon',
+              text: 'Twitter'
+            },
+            {
+              icon: 'fab fa-linkedin-in',
+              link: 'https://linkedin.com/cristinoconnor',
+              text: 'LinkedIn'
+            }
+          ]} 
+          />
+        </article>
         <article>
           <h2 css={Styled.SectionTitle}>
             <span>

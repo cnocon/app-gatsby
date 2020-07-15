@@ -15,8 +15,9 @@ const PostsList = ({...data}) => {
   
   const articles = posts.map(node => {
     return (
-      <div className="col-sm-12 col-md-6">
+      <div className="col-sm-12">
         <PostPreview post={node} key={node.slug} color={getColor(colors, colorsCopy)} />
+        {/* <PostPreview post={node} key={node.slug} color='yellow' /> */}
       </div>
     )
   });

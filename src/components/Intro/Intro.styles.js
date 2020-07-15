@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import Theme from '../../../Theme/Theme'
+import Theme from '../Theme/Theme'
 
 export const RotateWordsWrapper = styled.div`
   text-align: center;

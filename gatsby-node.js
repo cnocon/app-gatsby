@@ -129,7 +129,7 @@ exports.createPages = async ({ actions, graphql }) => {
   `)
   const allPosts = data.allButterPost.edges.reverse();
   const chunkedPosts = chunk(allPosts, 4);
-  const colors = ['blue', 'green', 'purple', 'yellow']
+  const colors = ['blue', 'green', 'yellow', 'purple']
   const groups = data.allButterPost.group;
 
   groups.forEach(group => {
@@ -231,7 +231,7 @@ exports.createPages = async ({ actions, graphql }) => {
     path: `/`,
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
-      posts: allPosts.slice(0,3),
+      posts: allPosts.slice(0,4),
       colors: colors,
       categories: categoriesData.data.allButterPost.distinct,
       breadcrumbs: [

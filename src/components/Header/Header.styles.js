@@ -92,7 +92,7 @@ export const Subhead = styled.p`
   display: inline-block;
   font-style: italic;
   padding: .3rem 1rem;
-  background-color: ${Theme.colors.accents.yellow};
+  background-color: ${Theme.colors.accents.background.yellow};
   color: #345;
   color: rgba(0,0,0,.7);
   border-radius: .4rem;
@@ -135,12 +135,13 @@ export const NavLink = styled(Link)`
   font-size: 3rem;
   cursor: pointer;
   text-transform: lowercase;
-  font-family: Lato, sans-serif;
+  font-family: ${Theme.fonts.body.family};
   font-size: 3rem;
   font-weight: 900;
   letter-spacing: 1px;
   padding: 0 3rem;
   transition: all .4s;
+  text-transform: uppercase;
 
   @media screen and (min-width: ${Theme.breakpoints.min.md}) {
     font-size: 4rem;

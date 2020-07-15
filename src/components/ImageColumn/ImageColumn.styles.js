@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import Theme from '../../../Theme/Theme'
+import Theme from '../Theme/Theme'
 
-export const LatestPost = styled.div`
+export const ImageColumn = styled.div`
   padding: ${Theme.spacing.default} ${Theme.spacing.xs} ${Theme.spacing.md};
   margin: 2rem auto 0;
   background: #fff;
@@ -15,26 +15,28 @@ export const LatestPost = styled.div`
   }
 `
 
-export const LatestPostHeading = styled.h2`
+export const ImageColumnHeading = styled.h2`
   display: block;
   margin: 0 auto ${Theme.spacing.sm};
   font-weight: 200;
   padding: 0;
   text-align: center;
-  line-height: ${Theme.fonts.sizes.lineHeights.xs};
+  color: ${Theme.colors.default.base};
+  font-size: ${Theme.fonts.sizes.default};
+  font-family: ${Theme.fonts.headings.family};
+  line-height: ${Theme.fonts.sizes.lineHeights.lg};
+  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  text-align: center;
+  text-transform: uppercase;
 
-  .post-link {
-    color: ${Theme.colors.default.base};
-    font-size: ${Theme.fonts.sizes.default};
+  a {
+    color: inherit;
+    transition: box-shadow .2s;
+    box-shadow: 0 .5px 0 0 ${Theme.colors.default.base};
     text-decoration: none;
     padding-bottom: 1px;
-    line-height: ${Theme.fonts.sizes.lineHeights.default};
-    font-family: ${Theme.fonts.headings.family};
-    font-weight: 900;
-    letter-spacing: .25px;
-    text-align: center;
-    transition: box-shadow .2s;
-    box-shadow: 0 1px 0 0 ${Theme.colors.default.base};
 
     &:hover,
     &:focus,
@@ -67,9 +69,7 @@ export const Date = styled.time`
   font-size: ${Theme.fonts.sizes.sm};
   line-height: ${Theme.fonts.sizes.lineHeights.xs};
   color: ${Theme.colors.grays.textDark};
-  // font-weight: 500;
   font-weight: 400;
-  // font-family: ${Theme.fonts.accent.family};
   text-transform: uppercase;
   letter-spacing: .25px;
   text-align: center;
@@ -77,7 +77,7 @@ export const Date = styled.time`
 
 `
 
-export const PostParagraph = css`
+export const Paragraph = css`
   font-size: ${Theme.fonts.sizes.sm};
   line-height: ${Theme.fonts.sizes.lineHeights.md};
   text-align: left;

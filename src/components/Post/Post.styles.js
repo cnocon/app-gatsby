@@ -37,10 +37,9 @@ export const PostTitle = styled.h1`
   font-weight: 900;
   margin-top: 0;
   line-height: 1.2;
-  // font-weight: 800;
   font-weight: 300;
   text-align: center;
-  // text-transform: uppercase;
+  font-weight: 900;
 
   @media screen and (max-width: ${Theme.breakpoints.max.lg}) {
     font-size: ${Theme.fonts.sizes.xl};

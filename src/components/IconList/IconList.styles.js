@@ -22,35 +22,56 @@ export const IconList = styled.ul`
   }
 
   a {
-    font-size: ${Theme.fonts.sizes.default};
+    font-size: ${Theme.fonts.sizes.sm};
     font-family: ${Theme.fonts.body.family};
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: ${Theme.colors.grays.textDark};
+    color: ${Theme.colors.default.base};
 
     i {
       flex-basis: 100%;
       font-size: ${Theme.fonts.sizes.lg};
       font-weight: 300;
       display: block;
-      color: ${Theme.colors.grays.text};
       margin-bottom: ${Theme.spacing.sm};
       color: ${Theme.colors.default.base};
+      width: 50px;
+      height: 50px; 
+      border: 1px solid transparent;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: ${Theme.colors.default.base};
       
       @media screen and (min-width: ${Theme.breakpoints.min.xl}) {
         flex-basis: 40%;
         max-width: 40%;
         display: inline-block;
       }
+
+      &.fa-codepen {
+        color: ${Theme.colors.accents.background.yellow};
+      }
+
+      &.fa-twitter {
+        color: ${Theme.colors.accents.blue};
+      }
+
+      &.fa-linkedin-in {
+        color: ${Theme.colors.accents.green};
+      }
+
+      &.fa-github {
+        color: ${Theme.colors.accents.purple};
+      }
     }
 
     span {
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-size: ${Theme.fonts.sizes.xs};
+      display: inline-block;
+      font-weight: 400;
+      font-size: ${Theme.fonts.sizes.default};
+      font-family: ${Theme.fonts.headings.family};
     }
 
     &:hover {
