@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import Theme from '../../../Theme/Theme'
+import Theme from '../Theme/Theme'
 
 export const IconList = styled.ul`
   list-style: none;
@@ -21,37 +21,38 @@ export const IconList = styled.ul`
     padding: 0;
   }
 
-  i {
-    flex-basis: 100%;
-    font-size: ${Theme.fonts.sizes.lg};
-    font-weight: 300;
-    display: block;
-  }
-
   a {
     font-size: ${Theme.fonts.sizes.default};
-    font-family: ${Theme.fonts.headings.family};
+    font-family: ${Theme.fonts.body.family};
     flex-basis: 100%;
-    color: ${Theme.colors.default.base};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: ${Theme.colors.grays.textDark};
 
-    @media screen and (min-width: ${Theme.breakpoints.min.lg}) {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      i {
+    i {
+      flex-basis: 100%;
+      font-size: ${Theme.fonts.sizes.lg};
+      font-weight: 300;
+      display: block;
+      color: ${Theme.colors.grays.text};
+      margin-bottom: ${Theme.spacing.sm};
+      color: ${Theme.colors.default.base};
+      
+      @media screen and (min-width: ${Theme.breakpoints.min.xl}) {
         flex-basis: 40%;
         max-width: 40%;
         display: inline-block;
       }
-      
     }
 
     span {
-      font-weight: 300;
+      font-weight: 900;
+      letter-spacing: 1px;
       text-transform: uppercase;
       font-size: ${Theme.fonts.sizes.xs};
     }
+
     &:hover {
       span {
         text-decoration: underline;

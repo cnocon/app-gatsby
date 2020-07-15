@@ -3,6 +3,7 @@ import * as Styled from "./AboutMe.styles"
 import Layout from "../Layout/Layout"
 import SEO from "../SEO/seo"
 import Header from "../Header/Header"
+import IconList from "../IconList/IconList"
 import SectionTitle from './partials/SectionTitle/SectionTitle'
 import Intro from './partials/Intro/Intro'
 import Service from './partials/Service/Service'
@@ -30,7 +31,7 @@ const AboutMe = ({ ...data }) => {
       <PageTransition>
         <Styled.Container>
           <div className="row">
-            <div className="col-sm-12">
+            <div className="col-sm-12 col-md-8 col-lg-8">
               <SectionTitle
                 text="A Little About Me"
                 icon="fas fa-female"
@@ -38,7 +39,7 @@ const AboutMe = ({ ...data }) => {
               <Intro />
             </div>
 
-            {/* <div className="col-sm-12 col-md-5 col-lg-4">
+            <div className="col-sm-12 col-md-4 col-lg-4">
               <SectionTitle
                 text="Profiles"
                 icon="fal fa-id-card"
@@ -66,7 +67,7 @@ const AboutMe = ({ ...data }) => {
                   }
                 ]} 
               />
-            </div> */}
+            </div>
           </div>
 
           <SectionTitle text="Services" icon="fas fa-concierge-bell"/>
