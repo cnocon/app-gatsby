@@ -1,6 +1,8 @@
 import React from "react";
 import { ResumeData } from "../../data/ResumeData"
 import Event from "../Event/Event"
+import IconList from "../IconList/IconList"
+import SectionTitle from "../SectionTitle/SectionTitle"
 import * as Styled from "./Resume.styles"
 
 const workEvents = ResumeData.experience.map((item, i) => {
@@ -55,7 +57,6 @@ const Resume = () => {
           </span>
         </h2>
         {eduEvents}
-
         <article>
           <h2 css={Styled.SectionTitle}>
             <span>
@@ -77,6 +78,35 @@ const Resume = () => {
           </ul>
         </article>
 
+        <article style={{marginBottom: '4rem'}}>
+          <SectionTitle
+            text="Profiles"
+            icon="fal fa-id-card"
+          />
+          <IconList listItems={[
+            {
+              icon: 'fab fa-github',
+              link: 'https://github.com/cnocon',
+              text: 'GitHub'
+            },
+            {
+              icon: 'fab fa-codepen',
+              link: 'https://codepen.io/cnocon',
+              text: 'CodePen'
+            },
+            {
+              icon: 'fab fa-twitter',
+              link: 'https://twitter.com/cnocon',
+              text: 'Twitter'
+            },
+            {
+              icon: 'fab fa-linkedin-in',
+              link: 'https://www.linkedin.com/in/cristinoconnor',
+              text: 'LinkedIn'
+            }
+          ]} 
+          />
+        </article>
         <article>
           <div className="card mt-4">
             <blockquote className="text-xs-center text-sm-right">
@@ -86,6 +116,7 @@ const Resume = () => {
             </blockquote>
           </div>
         </article>
+        
       </div>
     </div>
   )

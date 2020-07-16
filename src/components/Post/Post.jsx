@@ -8,7 +8,7 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions'
-import getColor from "../utils/getColor"
+// import getColor from "../utils/getColor"
 import $ from 'jquery'
 import { Link } from 'gatsby'
 

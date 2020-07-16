@@ -33,77 +33,124 @@ export default {styles: css`
 
   /* COLOR HELPER CLASSES */
   .text-shadow-purple {
-    text-shadow: 0 1px 1px ${Theme.colors.accents.text.purple};
-    color: #345;
+    text-shadow: 1px 2px 1px ${Theme.colors.accents.purple};
   }
 
   .text-shadow-red {
-    text-shadow: 0 1px 1px ${Theme.colors.accents.text.red};
-    color: #345;
+    text-shadow: 1px 2px 1px ${Theme.colors.accents.background.red};
   }
 
   .text-shadow-yellow {
-    text-shadow: 0 1px 1px ${Theme.colors.accents.text.yellow};
-    color: #345;
+    text-shadow: 1px 2px 1px ${Theme.colors.accents.background.yellow};
   }
 
   .text-shadow-blue {
-    text-shadow: 0 1px 1px ${Theme.colors.accents.text.blue};
-    color: #345;
+    text-shadow: 1px 2px 1px ${Theme.colors.accents.blue};
   }
   
   .text-shadow-green {
-    text-shadow: 0 1px 1px ${Theme.colors.accents.text.green};
-    color: #345;
+    text-shadow: 1px 2px 1px ${Theme.colors.accents.background.green};
+  }
+
+  .color-purple {
+    color: ${Theme.colors.accents.text.purple};
+  }
+
+  .color-red {
+    color: ${Theme.colors.accents.text.red};
+  }
+
+  .color-yellow {
+    color: ${Theme.colors.accents.text.yellow};
+  }
+
+  .color-blue {
+    color: ${Theme.colors.accents.text.blue};
+  }
+  
+  .color-green {
+    color: ${Theme.colors.accents.text.green};
+  }
+
+
+
+  .background-color-purple {
+    padding: 1px 3px;
+    border-radius: 1px;
+    background-color: ${Theme.colors.accents.background.purple};
+  }
+
+  .background-color-red {
+    padding: 1px 3px;
+    border-radius: 1px;
+    background-color: ${Theme.colors.accents.background.red};
+  }
+
+  .background-color-yellow {
+    padding: 1px 3px;
+    border-radius: 1px;
+    background-color: ${Theme.colors.accents.background.yellow};
+  }
+
+  .background-color-blue {
+    padding: 1px 3px;
+    border-radius: 1px;
+    background-color: ${Theme.colors.accents.background.blue};
+  }
+  
+  .background-color-green {
+    padding: 1px 3px;
+    border-radius: 1px;
+    background-color: ${Theme.colors.accents.background.green};
   }
 
   .box-shadow-purple {
     padding-bottom: 1px;
-    box-shadow: 0 2px 0 ${Theme.colors.accents.purple};
+    box-shadow: 0 3px 0 ${Theme.colors.accents.purple};
     transition: all .4s;
     
     &:hover {
-      box-shadow: 0 2px 0 ${Theme.colors.accents.text.purple};
+      box-shadow: 0 3px 0 ${Theme.colors.accents.text.purple};
     }
   }
 
   .box-shadow-red {
     padding-bottom: 1px;
-    box-shadow: 0 2px 0 ${Theme.colors.accents.red};
+    box-shadow: 0 3px 0 ${Theme.colors.accents.red};
     transition: all .4s;
     
     &:hover {
-      box-shadow: 0 2px 0 ${Theme.colors.accents.text.red};
+      box-shadow: 0 3px 0 ${Theme.colors.accents.text.red};
     }
   }
 
   .box-shadow-yellow {
     padding-bottom: 1px;
-    box-shadow: 0 2px 0 ${Theme.colors.accents.yellow};
+    box-shadow: 0 3px 0 ${Theme.colors.accents.yellow};
     transition: all .4s;
     
     &:hover {
-      box-shadow: 0 2px 0 ${Theme.colors.accents.text.yellow};
+      box-shadow: 0 3px 0 ${Theme.colors.accents.text.yellow};
     }
   }
 
   .box-shadow-blue {
     padding-bottom: 1px;
-    box-shadow: 0 2px 0 ${Theme.colors.accents.blue};
+    box-shadow: 0 3px 0 ${Theme.colors.accents.blue};
     transition: all .4s;
     
     &:hover {
-      box-shadow: 0 2px 0 ${Theme.colors.accents.text.blue};
+      box-shadow: 0 3px 0 ${Theme.colors.accents.text.blue};
     }
   }
   
   .box-shadow-green {
     padding-bottom: 1px;
-    box-shadow: 0 2px 0 ${Theme.colors.accents.green};
+    box-shadow: 0 3px 0 ${Theme.colors.accents.green};
     transition: all .4s;
     
     &:hover {
-      box-shadow: 0 2px 0 ${Theme.colors.accents.text.green};
+      box-shadow: 0 3px 0 ${Theme.colors.accents.text.green};
     }
   }
 
@@ -138,52 +185,171 @@ export default {styles: css`
   }
 
   .border-accent-purple {
-    border: 2px solid ${Theme.colors.accents.purple};
+    border: 2px solid ${Theme.colors.accents.background.purple};
     padding: 1px 2px;
     border-radius: 4px;
     
-    &:hover {
+    &a:hover {
       border: 2px solid ${Theme.colors.accents.text.purple};
     }
   }
   
   .border-accent-red {
-    border: 2px solid ${Theme.colors.accents.red};
+    border: 2px solid ${Theme.colors.accents.background.red};
     padding: 1px 2px;
     border-radius: 4px;
     
-    &:hover {
+    &a:hover {
       border: 2px solid ${Theme.colors.accents.text.red};
     }
   }
     
   .border-accent-yellow {
-    border: 2px solid ${Theme.colors.accents.yellow};
+    border: 2px solid ${Theme.colors.accents.background.yellow};
     padding: 1px 2px;
     border-radius: 4px;
     
-    &:hover {
-      border: 2px solid ${Theme.colors.accents.text.yellow};
+    &a:hover {
+      border: 2px solid ${Theme.colors.accents.yellow};
     }
   }
 
   .border-accent-blue {
-    border: 2px solid ${Theme.colors.accents.blue};
+    border: 2px solid ${Theme.colors.accents.background.blue};
     padding: 1px 2px;
     border-radius: 4px;
     
-    &:hover {
+    &a:hover {
       border: 2px solid ${Theme.colors.accents.text.blue};
     }
   }
 
   .border-accent-green {
-    border: 2px solid ${Theme.colors.accents.green};
+    border: 2px solid ${Theme.colors.accents.background.green};
     padding: 1px 2px;
     border-radius: 4px;
     
-    &:hover {
+    &a:hover {
       border: 2px solid ${Theme.colors.accents.text.green};
     }
   }
+
+  .border-radius {
+    border-radius: 50%;
+    line-height: 1;
+  }
+
+  .rainbow-border,
+  .rainbow-border-sm {
+    background-image: linear-gradient(90deg, 
+    ${Theme.colors.accents.background.yellow} 10.5%,
+    ${Theme.colors.accents.green} 39.5%, 
+    ${Theme.colors.accents.blue} 50%, 
+    ${Theme.colors.accents.purple} 67.5%,
+    ${Theme.colors.accents.red} 82.5%);
+
+    background-size: 100% 4px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    &-sm { background-size: 100% 2px; }
+  }
+
+  .rainbow-box-shadow-rounded { 
+    font-weight: 100;
+    border: .1px solid transparent;
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    line-height: 56px;
+    vertical-align: middle;
+    box-shadow: 0 2.5px 1.5px ${Theme.colors.accents.green},       
+                -2.5px 0 1.5px ${Theme.colors.accents.yellow},
+                2.5px 0 1.5px ${Theme.colors.accents.text.purple},
+                0 -2.5px 1.5px ${Theme.colors.accents.text.red};
+  }
+
+  .rainbow {
+    &-icon {
+      position: relative;
+      border-radius: 50%;
+      display: inline-block;
+      z-index: 1000;
+      background-color: none;
+      
+      &:before {
+        font-weight: 100;
+        position: absolute;
+        width: 66px;
+        height: 66px;
+        z-index: 3;
+        left: 50%;
+        border-radius: 50%;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        transform: translate(-50%, 0);
+        content: '';
+        background-color: rgb(245,237,0);
+        background-image: linear-gradient(90deg, 
+                                        ${Theme.colors.accents.text.yellow} 10.5%,
+                                        ${Theme.colors.accents.text.green} 39.5%, 
+                                        ${Theme.colors.accents.text.blue} 50%, 
+                                        ${Theme.colors.accents.text.purple} 67.5%,
+                                        ${Theme.colors.accents.text.red} 82.5%,
+                                        ${Theme.colors.accents.text.yellow} 95%);
+      }
+
+      &-narrow {
+        display: inline-block;
+
+        &::before {
+            opacity: 1;
+            z-index: 0;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-image: linear-gradient(90deg,
+                                          ${Theme.colors.accents.background.yellow} 0%,
+                                          ${Theme.colors.accents.text.green} 10%, 
+                                          ${Theme.colors.accents.text.blue} 25%, 
+                                          ${Theme.colors.accents.text.purple} 55%,
+                                          ${Theme.colors.accents.text.red} 75%,
+                                          ${Theme.colors.accents.yellow} 90%);
+            
+          
+        }
+      }
+    }
+  }
+    
+  .rainbow-text {
+    display: inline-block;
+    z-index: 0;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg,
+                      ${Theme.colors.accents.text.yellow} 0%,
+                      ${Theme.colors.accents.text.green} 10%, 
+                      ${Theme.colors.accents.text.blue} 30%, 
+                      ${Theme.colors.accents.text.purple} 50%,
+                      ${Theme.colors.accents.text.red} 65%,
+                      ${Theme.colors.accents.text.yellow} 80%);
+  }
+
+  .rainbow-button {
+      position: absolute;
+      width: 100%;
+      display: block;
+      content: '';
+      z-index: 1;
+      background-image: linear-gradient(90deg,
+                      ${Theme.colors.accents.text.red} 0%,
+                      ${Theme.colors.accents.text.yellow} 30%, 
+                      ${Theme.colors.accents.text.green} 45%,
+                      ${Theme.colors.accents.text.blue} 65%,
+                      ${Theme.colors.accents.text.purple} 100%);
+    }
+  
 `}

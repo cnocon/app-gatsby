@@ -1,6 +1,5 @@
-
 import { css } from '@emotion/core'
-import Theme from '../../../Theme/Theme'
+import Theme from '../Theme/Theme'
 
 export const SectionTitle = css`
   position: relative;

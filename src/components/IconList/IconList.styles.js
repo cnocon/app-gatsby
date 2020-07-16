@@ -1,65 +1,85 @@
 import styled from '@emotion/styled'
-import Theme from '../../../Theme/Theme'
+import Theme from '../Theme/Theme'
 
 export const IconList = styled.ul`
   list-style: none;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 3rem 0 auto;
-  padding: 0;
+  margin:  0 auto;
+  text-align: center;
+  margin: 2rem 0;
   
   li {
     list-style-type: none;
     list-style: none;
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: 33%;
+    max-width: 33%;
     text-align: center;
     flex-grow: 0;
     display: flex;
     flex-direction: column;
     margin: ${Theme.spacing.default} 0;
-    padding: 0;
-  }
+    padding: 2rem 0;
+    flex-direction: row;
+    justify-content: center;
 
-  i {
-    flex-basis: 100%;
-    font-size: ${Theme.fonts.sizes.lg};
-    font-weight: 300;
-    display: block;
+    @media all and (min-width: ${Theme.breakpoints.min.md}) {
+      padding: 0;
+      flex-basis: 20%;
+      max-width: 20%;
+    }
   }
 
   a {
-    font-size: ${Theme.fonts.sizes.default};
-    font-family: ${Theme.fonts.headings.family};
-    flex-basis: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: ${Theme.fonts.sizes.sm};
+    line-height: ${Theme.fonts.sizes.lineHeights.default};
     color: ${Theme.colors.default.base};
-
-    @media screen and (min-width: ${Theme.breakpoints.min.lg}) {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      i {
-        flex-basis: 40%;
-        max-width: 40%;
-        display: inline-block;
-      }
-      
-    }
-
-    span {
-      font-weight: 300;
-      text-transform: uppercase;
-      font-size: ${Theme.fonts.sizes.xs};
-    }
+    font-family: ${Theme.fonts.headings.family};
+    
     &:hover {
-      span {
-        text-decoration: underline;
-      }
+      text-decoration: none;
 
       i {
         text-decoration: none;
+        background-color: ${Theme.colors.default.base};
+        color: #fff;
+        
       }
+
+      > span { 
+        color: #345;
+        text-decoration: none;
+      }
+    }
+
+    > span {
+      display: block; 
+      font-weight: 400;
+      margin-left: 0px;
+      font-size: 14px;
+      font-family: ${Theme.fonts.headings.family};
+      letter-spacing: 1px;
+      // text-transform: uppercase;
+      // color: ${Theme.colors.grays.textDark};
+    }
+    
+    i {
+      flex-basis: 32px;
+      max-width: 32px;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      vertical-align: middle;
+      font-size: 18px;
+      border-radius: 50%;
+      border-width: 0;
+      box-sizing: border-box;
+      margin: 0 ${Theme.spacing.xs} 1rem 0;
+      background-color: ${Theme.colors.grays.background};
     }
   }
 `

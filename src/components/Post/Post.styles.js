@@ -37,10 +37,9 @@ export const PostTitle = styled.h1`
   font-weight: 900;
   margin-top: 0;
   line-height: 1.2;
-  // font-weight: 800;
   font-weight: 300;
   text-align: center;
-  // text-transform: uppercase;
+  font-weight: 900;
 
   @media screen and (max-width: ${Theme.breakpoints.max.lg}) {
     font-size: ${Theme.fonts.sizes.xl};
@@ -203,17 +202,25 @@ export const EntryContent = css`
 
     a {
       color: ${Theme.colors.default.base};
+      font-weight: 500;
       text-decoration: none;
-
-      /* box-shadow: inset 0 -3px 1px ${Theme.colors.accents.text.yellow}; */
-      box-shadow: 0 3px 0 ${Theme.colors.accents.green};
-      transition: box-shadow .3s;
       padding-bottom: 1px;
+      background-image: linear-gradient(90deg, 
+        ${Theme.colors.accents.text.yellow} 10.5%,
+        ${Theme.colors.accents.text.green} 39.5%, 
+        ${Theme.colors.accents.text.blue} 50%, 
+        ${Theme.colors.accents.text.purple} 67.5%,
+        ${Theme.colors.accents.text.red} 82.5%);
+      background-size: 100% 2px;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      transition: background-image .3s;
 
       &:hover,
       &:focus,
       &:active {
         box-shadow: none;
+        background-image: none;
       }
     }
 

@@ -33,7 +33,7 @@ const Intro = () => {
           <span className="rotate-out">a&nbsp;web developer.</span>
           {/* <span className="rotate-out">a&nbsp;tutor.</span> */}
           <span className="rotate-out">an&nbsp;animal lover.</span>
-          <span className="rotate-out">a&nbsp;&ldquo;casual&rdquo; designer.</span>
+          {/* <span className="rotate-out">a&nbsp;&ldquo;casual&rdquo; designer.</span> */}
           <span className="rotate-in active">an&nbsp;avid learner.</span>
           
         </span><br/>

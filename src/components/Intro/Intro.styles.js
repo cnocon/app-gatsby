@@ -1,11 +1,15 @@
 import styled from '@emotion/styled'
-import Theme from '../../../Theme/Theme'
+import Theme from '../Theme/Theme'
 
 export const RotateWordsWrapper = styled.div`
   text-align: center;
   padding: 0;
   font-family: ${Theme.fonts.headings.family};
-`
+
+  @media all and (max-width: ${Theme.breakpoints.max.md}) {
+    padding: 0 0 3rem;
+  }
+ `
 
 export const RotateWords = styled.h2`
   &.rotate-header {

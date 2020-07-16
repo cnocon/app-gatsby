@@ -34,21 +34,24 @@ export const Header = styled.header`
 `
 
 export const TitleLink = styled(Link)`
-  font-size: ${Theme.fonts.sizes.md};
-  line-height: ${Theme.fonts.sizes.lineHeights.xs};
+  font-size: ${Theme.fonts.sizes.xl};
+  line-height: ${Theme.fonts.sizes.lineHeights.default};
   padding-bottom: 0;
   transition: box-shadow .2s;
-  font-weight: 700;
+  font-weight: 200;
   color: ${Theme.colors.default.base};
+  font-family: ${Theme.fonts.headings.family};
 
 
   @media screen and (max-width: ${Theme.breakpoints.max.lg}) {
     font-size: ${Theme.fonts.sizes.md};
+    line-height: ${Theme.fonts.sizes.lineHeights.xs};
   }
 
 
   &:hover {
     color: ${Theme.colors.default.base};
+    background-image: none;
   }
 `
 
@@ -130,12 +133,13 @@ export const Button = styled(Link)`
   outline: 0;
   border: 2px solid ${Theme.colors.default.base};
   border-radius: 4px;
-  background-color: #fff;
+  color: #fff;
+  background-color: #345;
   transition: all .2s;
 
   &:hover {
-    background-color: ${Theme.colors.default.base};
-    color: #fff;
+    background-color: #fff;
+    color: ${Theme.colors.default.base};
   }
 
   .meta-nav {
