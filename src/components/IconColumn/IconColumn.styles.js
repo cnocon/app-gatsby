@@ -32,24 +32,34 @@ export const IconColumnDiv = styled.div`
     font-weight: 400;
     color: ${Theme.colors.grays.textDark};
 
-    b { 
+    b {  
       font-weight: 500;
     }
   }
 
   i {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
-    // font-size: 18px;
-    font-size: 30px;
+    display: block;
+    font-size: 27px;
+    width: 40px;
+    height: 40px;
+    line-height: 24px;
+    padding: 8px;
     text-align: center;
-    // background-color: #345;
+    background-color: #345;
     font-weight: 200;
     margin: 0 auto ${Theme.spacing.default};
     border-radius: 50%;
+    display: block;
+    font-size: 24px;
+    width: 44px;
+    height: 44px;
+    line-height: 28px;
+    padding: 8px;
+    text-align: center;
+    background-color: #345;
+    font-weight: 400;
+    margin: 0 auto 1.6rem;
+    // border-radius: 50%;
   }
 }
 `

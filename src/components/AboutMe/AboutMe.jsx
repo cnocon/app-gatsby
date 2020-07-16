@@ -3,7 +3,7 @@ import * as Styled from "./AboutMe.styles"
 import Layout from "../Layout/Layout"
 import SEO from "../SEO/seo"
 import Header from "../Header/Header"
-import IconList from "../IconList/IconList"
+// import IconList from "../IconList/IconList"
 import SectionTitle from '../SectionTitle/SectionTitle'
 import Intro from '../Intro/Intro'
 import IconColumn from '../IconColumn/IconColumn'
@@ -92,7 +92,7 @@ const AboutMe = ({ ...data }) => {
         />
         <div className="row">{articles}</div>
 
-        <div className="row">    
+        {/* <div className="row">    
           <div className="col-sm-12">
             <SectionTitle
                 text="Profiles"
@@ -127,7 +127,7 @@ const AboutMe = ({ ...data }) => {
               ]} 
             />
           </div> 
-        </div>
+        </div> */}
 
 
         </Styled.Container>
