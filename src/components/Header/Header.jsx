@@ -23,12 +23,15 @@ const Header = ({ ruleTitle, ruleIcon }) => {
   return (
     <Sty.Header>
       <Sty.Container>
-        <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar" className=""/>
+        <Sty.ImageEl 
+          src={portrait} 
+          alt="Cristin O'Connor" 
+          className="rainbow-box-shadow-rounded-lg" />
         <Sty.Heading1>
           <Sty.H1Link to="/">Cristin O'Connor</Sty.H1Link>
         </Sty.Heading1>
 
-        <Sty.Subhead>Front End Developer</Sty.Subhead>
+        <Sty.Subhead className='rainbow-text'>Front End Developer</Sty.Subhead>
         <Sty.Nav>
           <Sty.NavItem>
             <Sty.NavLink to="/" activeClassName="active">About</Sty.NavLink>

@@ -36,25 +36,25 @@ export const Header = styled.header(
 )
 
 export const Image = styled(Img)`
-  height: 16rem;
-  width: 16rem;
+  height: 12rem;
+  width: 12rem;
   border-radius: 50%;
   vertical-align: middle;
   margin: 0 auto;
-  border-radius: 8rem;
-  display: block !important;
-  border: .4rem solid #F4F6F7;
+  display: block;
+  // border: .4rem solid #F4F6F7;
+  border: 0;
 `
 
 export const ImageEl = styled.img`
-  height: 16rem;
-  width: 16rem;
-  border-radius: 50%;
+  height: 12rem;
+  width: 12rem;
   vertical-align: middle;
   margin: 0 auto;
-  border-radius: 8rem;
+  border-radius: 50%;
   display: block !important;
-  border: .4rem solid #F4F6F7;
+  // border: .4rem solid #F4F6F7;
+  border: 0;
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     height: 12rem;
@@ -66,10 +66,13 @@ export const Heading1 = styled.h1`
   margin: .9em 0 0 0;
   padding: 0;
   font-weight: 300;
-  font-size: 2.25rem;
+  font-size: 24px;
   line-height: 1.5em;
   -webkit-backface-visibility: hidden;
   font-family: Lato, sans-serif;
+  // text-transform: lowercase;
+  font-weight: 600;
+
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     font-size: ${Theme.fonts.sizes.md};
@@ -80,6 +83,7 @@ export const H1Link = styled(Link)`
   color: #345;
   text-decoration: none;
   font-family: inherit;
+  
 
   &:hover {
     color: #000;
@@ -90,34 +94,23 @@ export const Subhead = styled.p`
   font-size: ${Theme.fonts.sizes.default};
   margin: .1em 0 .6em;
   display: inline-block;
-  font-style: italic;
   padding: .3rem 1rem;
-  background-color: ${Theme.colors.accents.background.yellow};
-  color: #345;
-  color: rgba(0,0,0,.7);
-  border-radius: .4rem;
   line-height: 1;
-  text-transform: lowercase;
-
-  @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
-    font-size: ${Theme.fonts.sizes.sm};
-  }
+  color: transparent;
+  font-weight: 500;
+  font-size: 17px;
+  font-family: ${Theme.fonts.body.family};
+  letter-spacing: .5px;
 `
 
 export const Nav = styled.ul`
     position: relative;
     display: flex;
     flex-direction: row;
-    margin: ${Theme.spacing.md} 0 0;
+    justify-content: flex-end;
+    margin: 0;
     padding: 0;
     list-style: none;
-    justify-content: space-around;
-    width: 100%;
-
-    @media screen and (min-width: ${Theme.breakpoints.min.md}) {
-      // height: 4rem;
-      margin: ${Theme.spacing.md} 0;
-    }
 `
 
 export const NavItem = styled.li`
@@ -125,8 +118,8 @@ export const NavItem = styled.li`
   margin: 0 0 1rem;
   text-align: center;
   text-decoration: none;
-  flex-basis: 33%;
-  justify-content: center;
+  flex-basis: 15.9%;
+  justify-content: flex-end;
 `
 
 export const NavLink = styled(Link)`

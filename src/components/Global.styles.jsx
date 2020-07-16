@@ -255,13 +255,25 @@ export default {styles: css`
     &-sm { background-size: 100% 2px; }
   }
 
+.black-bg {
+  background-color: ${Theme.colors.default.base};
+  }
+
+.rainbow-box-shadow-rounded-lg {
+  font-weight: 100;
+  border: .1px solid transparent;
+  border-radius: 50%;
+  vertical-align: middle;
+  box-shadow: 0 3px 3px ${Theme.colors.accents.green},       
+              -3px 0 3px ${Theme.colors.accents.yellow},
+              3px 0 3px ${Theme.colors.accents.text.purple},
+              0 -3px 3px ${Theme.colors.accents.text.red};
+}
+
   .rainbow-box-shadow-rounded { 
     font-weight: 100;
     border: .1px solid transparent;
     border-radius: 50%;
-    height: 56px;
-    width: 56px;
-    line-height: 56px;
     vertical-align: middle;
     box-shadow: 0 2.5px 1.5px ${Theme.colors.accents.green},       
                 -2.5px 0 1.5px ${Theme.colors.accents.yellow},
@@ -269,57 +281,54 @@ export default {styles: css`
                 0 -2.5px 1.5px ${Theme.colors.accents.text.red};
   }
 
-  .rainbow {
-    &-icon {
-      position: relative;
+  .rainbow-icon {
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 1000;
+    background-color: none;
+
+    &:before {
+      font-weight: 100;
+      position: absolute;
+      width: 66px;
+      height: 66px;
+      z-index: 3;
+      left: 50%;
       border-radius: 50%;
-      display: inline-block;
-      z-index: 1000;
-      background-color: none;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      transform: translate(-50%, 0);
+      content: '';
+      background-color: rgb(245,237,0);
+      background-image: linear-gradient(90deg, 
+                                      ${Theme.colors.accents.text.yellow} 10.5%,
+                                      ${Theme.colors.accents.text.green} 39.5%, 
+                                      ${Theme.colors.accents.text.blue} 50%, 
+                                      ${Theme.colors.accents.text.purple} 67.5%,
+                                      ${Theme.colors.accents.text.red} 82.5%,
+                                      ${Theme.colors.accents.text.yellow} 95%);
+    }
+  }
+
+  .rainbow-icon-narrow {
+    display: inline-block;
+
+    &::before {
+      opacity: 1;
+      z-index: 0;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(90deg,
+                        ${Theme.colors.accents.background.yellow} 0%,
+                        ${Theme.colors.accents.text.green} 5%,
+                        ${Theme.colors.accents.text.blue} 25%,
+                        ${Theme.colors.accents.text.purple} 50%,
+                        ${Theme.colors.accents.text.red} 85%,
+                        ${Theme.colors.accents.yellow} 95%);
       
-      &:before {
-        font-weight: 100;
-        position: absolute;
-        width: 66px;
-        height: 66px;
-        z-index: 3;
-        left: 50%;
-        border-radius: 50%;
-        color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        transform: translate(-50%, 0);
-        content: '';
-        background-color: rgb(245,237,0);
-        background-image: linear-gradient(90deg, 
-                                        ${Theme.colors.accents.text.yellow} 10.5%,
-                                        ${Theme.colors.accents.text.green} 39.5%, 
-                                        ${Theme.colors.accents.text.blue} 50%, 
-                                        ${Theme.colors.accents.text.purple} 67.5%,
-                                        ${Theme.colors.accents.text.red} 82.5%,
-                                        ${Theme.colors.accents.text.yellow} 95%);
-      }
-
-      &-narrow {
-        display: inline-block;
-
-        &::before {
-            opacity: 1;
-            z-index: 0;
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            background-image: linear-gradient(90deg,
-                                          ${Theme.colors.accents.background.yellow} 0%,
-                                          ${Theme.colors.accents.text.green} 10%, 
-                                          ${Theme.colors.accents.text.blue} 25%, 
-                                          ${Theme.colors.accents.text.purple} 55%,
-                                          ${Theme.colors.accents.text.red} 75%,
-                                          ${Theme.colors.accents.yellow} 90%);
-            
-          
-        }
-      }
     }
   }
     
@@ -327,15 +336,15 @@ export default {styles: css`
     display: inline-block;
     z-index: 0;
     color: transparent;
-    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-background-clip: text;
     background-image: linear-gradient(90deg,
                       ${Theme.colors.accents.text.yellow} 0%,
                       ${Theme.colors.accents.text.green} 10%, 
                       ${Theme.colors.accents.text.blue} 30%, 
                       ${Theme.colors.accents.text.purple} 50%,
-                      ${Theme.colors.accents.text.red} 65%,
-                      ${Theme.colors.accents.text.yellow} 80%);
+                      ${Theme.colors.accents.text.red} 80%,
+                      ${Theme.colors.accents.text.yellow} 95%);
   }
 
   .rainbow-button {
