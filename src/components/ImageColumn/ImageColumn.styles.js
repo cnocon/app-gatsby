@@ -75,26 +75,25 @@ export const ImageContainer = styled.span`
   }
 `
 
-
 export const Date = styled.time`
   display: inline-block;
   font-size: ${Theme.fonts.sizes.sm};
-  line-height: ${Theme.fonts.sizes.lineHeights.default};
-  color: ${Theme.colors.grays.textDark};
-  font-weight: 600;
-  text-transform: uppercase;
+  line-height: ${Theme.fonts.sizes.lineHeights.default};  
+  font-weight: 500;
+  // text-transform: uppercase;
   letter-spacing: .25px;
   text-align: left;
   float: left;
   margin-right: .5rem;
-
+  color: ${Theme.colors.default.base};
 `
 
 export const Paragraph = css`
-  font-size: ${Theme.fonts.sizes.sm};
+  font-size: ${Theme.fonts.sizes.default};
   line-height: ${Theme.fonts.sizes.lineHeights.default};
   text-align: left;
   margin: 0 auto;
+  color: ${Theme.colors.grays.textDark};
 
   span {
     float: left;

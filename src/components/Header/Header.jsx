@@ -23,12 +23,15 @@ const Header = ({ ruleTitle, ruleIcon }) => {
   return (
     <Sty.Header>
       <Sty.Container>
-        <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar" className=""/>
-        <Sty.Heading1>
-          <Sty.H1Link to="/">Cristin O'Connor</Sty.H1Link>
-        </Sty.Heading1>
-
-        <Sty.Subhead>Front End Developer</Sty.Subhead>
+        <div className="top-bar">
+          <div className="logo-header">
+            <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar" className="rainbow-box-shadow-rounded"/>
+            <Sty.Heading1>
+              <Sty.H1Link to="/">Cristin O'Connor</Sty.H1Link>
+              <Sty.Subhead>Front End Developer</Sty.Subhead>
+            </Sty.Heading1>
+          </div>
+        
         <Sty.Nav>
           <Sty.NavItem>
             <Sty.NavLink to="/" activeClassName="active">About</Sty.NavLink>
@@ -40,9 +43,9 @@ const Header = ({ ruleTitle, ruleIcon }) => {
             <Sty.NavLink to="/articles/page-1" className={ArticlesClass}>Blog</Sty.NavLink>
           </Sty.NavItem>
         </Sty.Nav>
-      </Sty.Container>
-
-    </Sty.Header>
+      </div>
+    </Sty.Container>
+  </Sty.Header>
   )
 }
 

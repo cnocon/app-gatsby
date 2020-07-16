@@ -48,7 +48,7 @@ export const IconColumnDiv = styled.div`
     background-color: #345;
     font-weight: 200;
     margin: 0 auto ${Theme.spacing.default};
-    border-radius: 50%;
+    // border-radius: 50%;
     display: block;
     font-size: 24px;
     width: 44px;

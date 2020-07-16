@@ -35,26 +35,26 @@ export const Header = styled.header(
   })
 )
 
-export const Image = styled(Img)`
-  height: 16rem;
-  width: 16rem;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin: 0 auto;
-  border-radius: 8rem;
-  display: block !important;
-  border: .4rem solid #F4F6F7;
-`
+// export const Image = styled(Img)`
+//   height: 16rem;
+//   width: 16rem;
+//   border-radius: 50%;
+//   vertical-align: middle;
+//   margin: 0 auto;
+//   border-radius: 8rem;
+//   display: block !important;
+//   // border: .4rem solid #F4F6F7;
+// `
 
 export const ImageEl = styled.img`
-  height: 16rem;
-  width: 16rem;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
   vertical-align: middle;
   margin: 0 auto;
-  border-radius: 8rem;
+  border-radius: 50%;
   display: block !important;
-  border: .4rem solid #F4F6F7;
+  // border: .4rem solid #F4F6F7;
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     height: 12rem;
