@@ -28,10 +28,9 @@ const Header = ({ ruleTitle, ruleIcon }) => {
             <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar" className="rainbow-box-shadow-rounded"/>
             <Sty.Heading1>
               <Sty.H1Link to="/">Cristin O'Connor</Sty.H1Link>
-              <Sty.Subhead>Front End Developer</Sty.Subhead>
+              <Sty.Subhead className="rainbow-text">Front End Developer</Sty.Subhead>
             </Sty.Heading1>
           </div>
-        
         <Sty.Nav>
           <Sty.NavItem>
             <Sty.NavLink to="/" activeClassName="active">About</Sty.NavLink>

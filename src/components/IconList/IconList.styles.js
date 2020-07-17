@@ -2,32 +2,32 @@ import styled from '@emotion/styled'
 import Theme from '../Theme/Theme'
 
 export const IconList = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin:  0 auto;
-  text-align: center;
-  margin: 2rem 0;
+  // list-style: none;
+  // display: flex;
+  // justify-content: center;
+  // flex-wrap: wrap;
+  // margin:  0 auto;
+  // text-align: center;
+  // margin: 2rem 0;
   
   li {
     list-style-type: none;
     list-style: none;
-    flex-basis: 33%;
-    max-width: 33%;
-    text-align: center;
-    flex-grow: 0;
-    display: flex;
-    flex-direction: column;
-    margin: ${Theme.spacing.default} 0;
-    padding: 2rem 0;
-    flex-direction: row;
-    justify-content: center;
+    // flex-basis: 33%;
+    // max-width: 33%;
+    // text-align: center;
+    // flex-grow: 0;
+    // display: flex;
+    // flex-direction: column;
+    // margin: ${Theme.spacing.default} 0;
+    // padding: 2rem 0;
+    // flex-direction: row;
+    // justify-content: center;
 
     @media all and (min-width: ${Theme.breakpoints.min.md}) {
-      padding: 0;
-      flex-basis: 20%;
-      max-width: 20%;
+      // padding: 0;
+      // flex-basis: 20%;
+      // max-width: 20%;
     }
   }
 

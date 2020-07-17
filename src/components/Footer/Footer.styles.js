@@ -2,13 +2,23 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import Theme from "../Theme/Theme"
 
-export const LeftBlock = styled.div`
-  width: ${Theme.layout.widths.full};
-  flex-basis: ${Theme.layout.widths.full};
+
+export const Row = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  flex-direction: row;
+  justify-content: space-between; 
+`
+
+export const LeftBlock = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  // width: ${Theme.layout.widths.full};
+  // flex-basis: ${Theme.layout.widths.full}
+  // flex-direction: column;
+  // align-items: center;
+  // text-align: center;
 
   @media all and (min-width: 641px) {
     width: 50%;
@@ -19,41 +29,43 @@ export const LeftBlock = styled.div`
 `
 
 export const RightBlock = styled.div`
-  width:${Theme.layout.widths.full};
-  flex-basis:${Theme.layout.widths.full};
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: ${Theme.spacing.default};
+display: flex;
+flex-direction: row;
+  // width:${Theme.layout.widths.full};
+  // flex-basis:${Theme.layout.widths.full};
+  // display: flex;
+  // align-items: center;
+  // text-align: center;
+  // flex-direction: column;
+  // justify-content: center;
+  // margin-top: ${Theme.spacing.default};
 
   @media all and (min-width: 641px) {
-    width: 50%;
-    flex-basis: 50%;
-    flex-direction: row;
-    align-items: normal;
-    justify-content: flex-end;
-    text-align: normal;
-    margin-top: 0;
+    // width: 50%;
+    // flex-basis: 50%;
+    // flex-direction: row;
+    // align-items: normal;
+    // justify-content: flex-end;
+    // text-align: normal;
+    // margin-top: 0;
   }
 `
 
 export const FooterInner = styled.div`
-  width: ${Theme.layout.widths.default};
-  max-width: ${Theme.layout.widths.defaultMax};
-  margin: 0 auto;
-  font-size: ${Theme.fonts.sizes.sm};
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  // width: ${Theme.layout.widths.default};
+  // max-width: ${Theme.layout.widths.defaultMax};
+  // margin: 0 auto;
+  // font-size: ${Theme.fonts.sizes.sm};
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
+  // text-align: center;
 
-  @media all and (min-width: 641px) {
-    flex-direction: row;
-    text-align: unset;
-    justify-content: space-between;
-  }
+  // @media all and (min-width: 641px) {
+  //   flex-direction: row;
+  //   text-align: unset;
+  //   justify-content: space-between;
+  // }
 `
 
 export const Footer = styled.footer({
