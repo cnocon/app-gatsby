@@ -2,7 +2,7 @@
 import styled from "@emotion/styled"
 // import { css } from "@emotion/core"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import Theme from "../Theme/Theme"
 
 export const Container = styled.div`
@@ -35,30 +35,18 @@ export const Header = styled.header(
   })
 )
 
-// export const Image = styled(Img)`
-//   height: 16rem;
-//   width: 16rem;
-//   border-radius: 50%;
-//   vertical-align: middle;
-//   margin: 0 auto;
-//   border-radius: 8rem;
-//   display: block !important;
-//   // border: .4rem solid #F4F6F7;
-// `
-
 export const ImageEl = styled.img`
-  height: 6rem;
-  width: 6rem;
+  height: 15rem;
+  width: 15rem;
   border-radius: 50%;
   vertical-align: middle;
   margin: 0 auto;
   border-radius: 50%;
-  display: block !important;
-  // border: .4rem solid #F4F6F7;
+  display: block;
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
-    height: 12rem;
-    width: 12rem;
+    height: 10rem;
+    width: 10rem;
   }
 `
 
@@ -80,9 +68,17 @@ export const H1Link = styled(Link)`
   color: #345;
   text-decoration: none;
   font-family: inherit;
+  display: block;
+  font-size: ${Theme.fonts.sizes.lg};
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-transform: none;
 
   &:hover {
-    color: #000;
+    color: transparent;
   }
 `
 
@@ -148,10 +144,13 @@ export const NavLink = styled(Link)`
   
   &.active {
     color: #345;
+    // color: transparent;
   }
 
-  &:hover {
-    color: #345;
+  &:hover,
+  &:focus {
+    // color: #345;
+    color: transparent;
   }
 `
 
