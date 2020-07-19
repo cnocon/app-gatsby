@@ -469,6 +469,66 @@ export const RightCol = css`
     }
   }
 
+  .card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 3px solid #345;
+    border-radius: 6px;
+    padding: 0;
+    margin: 60px 0;
+
+    @media all and (max-width: 1002px) {
+      margin: 60px auto;
+    }
+
+	  @media all and (max-width: 767px) {
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    blockquote {
+      position: relative;
+      margin: 1.6em 0;
+      padding: 0 2em;
+      text-align: right;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      font-weight: bold;
+      letter-spacing: -1px;
+      font-family: "Roboto", Monaco, sans-serif;
+      line-height: 1.5em;
+      padding: 1rem 2em 0;
+      
+      &::before {
+        display: none;
+      }
+      
+      i {
+        padding-right: 10px;
+      }
+
+      cite {
+        display: block;
+        font-size: 13px;
+        padding-right: 1em;
+        margin-top: 1em;
+        font-style: normal;
+        font-weight: 400;
+        color: #ccc;
+        letter-spacing: 0.03em;
+      }
+    }
+  }
 `
 
 export const BlockquoteIcon = css`

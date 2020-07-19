@@ -259,9 +259,9 @@ export default {styles: css`
     font-weight: 100;
     border: .1px solid transparent;
     border-radius: 50%;
-    height: 56px;
-    width: 56px;
-    line-height: 56px;
+    /* height: 56px; */
+    /* width: 56px; */
+    /* line-height: 56px; */
     vertical-align: middle;
     box-shadow: 0 2.5px 1.5px ${Theme.colors.accents.green},       
                 -2.5px 0 1.5px ${Theme.colors.accents.yellow},
@@ -324,7 +324,7 @@ export default {styles: css`
   }
     
   .rainbow-text {
-    display: inline-block;
+    /* display: inline-block; */
     z-index: 0;
     color: transparent;
     -webkit-background-clip: text;

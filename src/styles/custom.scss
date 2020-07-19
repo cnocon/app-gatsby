@@ -302,66 +302,6 @@ a.button.colored.blue:hover {
   color: #fff;
 }
 
-.card {
-  position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 3px solid #345;
-    border-radius: 6px;
-    padding: 0;
-    margin: 40px 0 60px;
-}
-
-@media screen and (max-width: 1002px) {
-  .card {
-    /* max-width: 400px; */
-    margin: 0 auto 60px;
-
-  }
-}
-
-.card blockquote {
-  position: relative;
-  margin: 1.6em 0;
-  padding: 0 2em;
-  text-align: right;
-  font-size: 2.5rem;
-  line-height: 1.2;
-  font-weight: bold;
-  letter-spacing: -1px;
-  font-family: "Roboto", Monaco, sans-serif;
-  line-height: 1.5em;
-  padding: 1rem 2em 0;
-}
-
-.card blockquote::before {
-  display: none;
-}
-
-.card blockquote i {
-  padding-right: 10px;
-}
-
-.card blockquote cite {
-  display: block;
-  font-size: 13px;
-  padding-right: 1em;
-  margin-top: 1em;
-  font-style: normal;
-  font-weight: 400;
-  color: #ccc;
-  letter-spacing: 0.03em;
-}
-
 .right-col .event::before,
 .right-col .event::after,
 .right-col .event p::before  {
@@ -395,12 +335,7 @@ a.button.colored.blue:hover {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .card {
-    margin-top: 30px;
-    margin-bottom: 40px;
-  }
-}
+
 
 .event span,
 .event small {

@@ -2,7 +2,7 @@ import React from "react";
 import { ResumeData } from "../../data/ResumeData"
 import Event from "../Event/Event"
 import IconList from "../IconList/IconList"
-import SectionTitle from "../SectionTitle/SectionTitle"
+// import SectionTitle from "../SectionTitle/SectionTitle"
 import * as Styled from "./Resume.styles"
 
 const workEvents = ResumeData.experience.map((item, i) => {
@@ -78,11 +78,15 @@ const Resume = () => {
           </ul>
         </article>
 
-        <article style={{marginBottom: '4rem'}}>
-          <SectionTitle
-            text="Profiles"
-            icon="fal fa-id-card"
-          />
+        <article>
+          <div className="card mt-3">
+            <blockquote className="text-xs-center text-sm-right">
+              <i className="fas fa-quote-left" css={Styled.BlockquoteIcon}></i>
+              How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.
+              <cite title="Annie Dillard">&mdash; Annie Dillard</cite>
+            </blockquote>
+          </div>
+
           <IconList listItems={[
             {
               icon: 'fab fa-github',
@@ -93,6 +97,11 @@ const Resume = () => {
               icon: 'fab fa-codepen',
               link: 'https://codepen.io/cnocon',
               text: 'CodePen'
+            },
+            {
+              icon: 'fab fa-stack-overflow',
+              link: 'https://stackoverflow.com/users/2187039/cnocon',
+              text: 'Stack Overflow'
             },
             {
               icon: 'fab fa-twitter',
@@ -106,15 +115,6 @@ const Resume = () => {
             }
           ]} 
           />
-        </article>
-        <article>
-          <div className="card mt-4">
-            <blockquote className="text-xs-center text-sm-right">
-              <i className="fas fa-quote-left" css={Styled.BlockquoteIcon}></i>
-              How we spend our days is, of course, how we spend our lives. What we do with this hour, and that one, is what we are doing.
-              <cite title="Annie Dillard">&mdash; Annie Dillard</cite>
-            </blockquote>
-          </div>
         </article>
         
       </div>

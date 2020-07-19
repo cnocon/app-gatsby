@@ -54,31 +54,31 @@ const AboutMe = ({ ...data }) => {
                   icon: 'fab fa-codepen',
                   link: 'https://codepen.io/cnocon',
                   text: 'CodePen',
-                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                  classes: 'rainbow-box-shadow-rounded'
                 },
                 {
                   icon: 'fab fa-github',
                   link: 'https://github.com/cnocon',
                   text: 'GitHub',
-                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                  classes: 'rainbow-box-shadow-rounded'
                 },
                 {
                   icon: 'fab fa-twitter',
                   link: 'https://twitter.com/cnocon',
                   text: 'Twitter',
-                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                  classes: 'rainbow-box-shadow-rounded'
                 },
                 {
                   icon: 'fab fa-linkedin-in',
                   link: 'https://www.linkedin.com/in/cristinoconnor',
                   text: 'LinkedIn',
-                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                  classes: 'rainbow-box-shadow-rounded'
                 },
                 {
                   icon: 'fab fa-stack-overflow',
                   link: 'https://stackoverflow.com/users/2187039/cnocon',
                   text: 'Stack Overflow',
-                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                  classes: 'rainbow-box-shadow-rounded'
                 }
               ]} 
             />

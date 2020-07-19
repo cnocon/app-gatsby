@@ -79,6 +79,17 @@ export const H1Link = styled(Link)`
 
   &:hover {
     color: transparent;
+    z-index: 0;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg,
+                      ${Theme.colors.accents.text.yellow} 0%,
+                      ${Theme.colors.accents.text.green} 10%, 
+                      ${Theme.colors.accents.text.blue} 30%, 
+                      ${Theme.colors.accents.text.purple} 50%,
+                      ${Theme.colors.accents.text.red} 65%,
+                      ${Theme.colors.accents.text.yellow} 80%);
   }
 `
 
@@ -126,7 +137,6 @@ export const NavItem = styled.li`
 `
 
 export const NavLink = styled(Link)`
-  color: ${Theme.colors.grays.text};
   text-decoration: none;
   font-size: 3rem;
   cursor: pointer;
@@ -137,6 +147,7 @@ export const NavLink = styled(Link)`
   letter-spacing: 1px;
   padding: 0 3rem;
   transition: all .4s;
+  color: ${Theme.colors.grays.text};
 
   @media screen and (min-width: ${Theme.breakpoints.min.md}) {
     font-size: 4rem;
@@ -151,6 +162,17 @@ export const NavLink = styled(Link)`
   &:focus {
     // color: #345;
     color: transparent;
+    z-index: 0;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg,
+                      ${Theme.colors.accents.text.yellow} 0%,
+                      ${Theme.colors.accents.text.green} 10%, 
+                      ${Theme.colors.accents.text.blue} 30%, 
+                      ${Theme.colors.accents.text.purple} 50%,
+                      ${Theme.colors.accents.text.red} 65%,
+                      ${Theme.colors.accents.text.yellow} 80%);
   }
 `
 

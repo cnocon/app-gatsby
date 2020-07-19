@@ -27,20 +27,20 @@ const Header = ({ ruleTitle, ruleIcon }) => {
           <div className="logo-header">
             <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar" className="rainbow-box-shadow-rounded"/>
             <Sty.Heading1>
-              <Sty.H1Link to="/" className="rainbow-text">Cristin O'Connor</Sty.H1Link>
+              <Sty.H1Link to="/">Cristin O'Connor</Sty.H1Link>
               <Sty.Subhead>Front End Developer</Sty.Subhead>
             </Sty.Heading1>
           </div>
         
         <Sty.Nav>
           <Sty.NavItem>
-            <Sty.NavLink to="/" className='rainbow-text' activeClassName="active">About</Sty.NavLink>
+            <Sty.NavLink to="/" activeClassName="active">About</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/resume" className={`${ResumeClass} rainbow-text`}>CV</Sty.NavLink>
+            <Sty.NavLink to="/resume" className={`${ResumeClass}`}>CV</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/articles/page-1" className={`${ArticlesClass} rainbow-text`}>Blog</Sty.NavLink>
+            <Sty.NavLink to="/articles/page-1" className={`${ArticlesClass}`}>Blog</Sty.NavLink>
           </Sty.NavItem>
         </Sty.Nav>
       </div>

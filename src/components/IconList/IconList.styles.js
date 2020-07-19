@@ -6,7 +6,7 @@ export const IconList = styled.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: ${Theme.spacing.xl} auto;
+  margin: ${Theme.spacing.md} auto;
   text-align: center;
 
   @media all and (max-width: ${Theme.breakpoints.max.md}) {
@@ -31,6 +31,9 @@ export const IconList = styled.ul`
       padding: 0;
       flex-basis: 20%;
       max-width: 20%;
+    }
+    @media all and (max-width: ${Theme.breakpoints.max.md}) {
+      margin: ${Theme.spacing.xxs} 0;
     }
   }
 

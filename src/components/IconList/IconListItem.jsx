@@ -4,11 +4,7 @@ const IconListItem = ({ icon, link, text, classes }) => {
   return(
     <li>
       <a href={link} rel="noreferrer" target="_blank">
-        <i className={`${icon} ${classes}`}></i>
-        {/* <i className={`${icon} rainbow-icon-narrow rainbow-box-shadow-rounded`}></i> */}
-        {/* <i className={`${icon}`}></i> */}
-        {` `}
-        {/* <span className="rainbow-border-sm">{text}</span> */}
+        <i className={`${icon} ${classes} rainbow-text`}></i>
         <span>{text}</span>
       </a>
     </li>
