@@ -7,8 +7,6 @@ const IconColumn = ({ color, icon, title, text, columnClasses }) => {
     <div className={`${columnClasses}`}>
       <IconColumnDiv className={`IconColumn ${color}`}>
         <i className={`${icon} rainbow-icon-narrow`}></i>
-        {/* <i className={`${icon} rainbow-icon-narrow`}></i> */}
-        {/* <i className={`${icon} rainbow-icon-narrow`}></i> */}
         <h4>
           <span>{ title }</span>
         </h4>

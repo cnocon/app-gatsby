@@ -256,17 +256,19 @@ export default {styles: css`
   }
 
   .rainbow-box-shadow-rounded { 
-    font-weight: 100;
-    border: .1px solid transparent;
     border-radius: 50%;
-    /* height: 56px; */
-    /* width: 56px; */
-    /* line-height: 56px; */
-    vertical-align: middle;
-    box-shadow: 0 2.5px 1.5px ${Theme.colors.accents.green},       
-                -2.5px 0 1.5px ${Theme.colors.accents.yellow},
-                2.5px 0 1.5px ${Theme.colors.accents.text.purple},
-                0 -2.5px 1.5px ${Theme.colors.accents.text.red};
+    box-shadow: 0 1px 1px ${Theme.colors.accents.green},       
+                -1px 0 1px ${Theme.colors.accents.yellow},
+                1px 0 1px ${Theme.colors.accents.text.purple},
+                0 -1px 1px ${Theme.colors.accents.text.red};
+    
+    &-thick {
+      border-radius: 50%;
+      box-shadow: 0 3px 2px ${Theme.colors.accents.green},       
+                -3px 0 2px ${Theme.colors.accents.yellow},
+                3px 0 2px ${Theme.colors.accents.text.purple},
+                0 -3px 2px ${Theme.colors.accents.text.red};
+    }
   }
 
   .rainbow {
@@ -324,7 +326,6 @@ export default {styles: css`
   }
     
   .rainbow-text {
-    /* display: inline-block; */
     z-index: 0;
     color: transparent;
     -webkit-background-clip: text;
@@ -336,20 +337,5 @@ export default {styles: css`
                       ${Theme.colors.accents.text.purple} 50%,
                       ${Theme.colors.accents.text.red} 65%,
                       ${Theme.colors.accents.text.yellow} 80%);
-  }
-
-  .rainbow-button {
-      position: absolute;
-      width: 100%;
-      display: block;
-      content: '';
-      z-index: 1;
-      background-image: linear-gradient(90deg,
-                      ${Theme.colors.accents.text.red} 0%,
-                      ${Theme.colors.accents.text.yellow} 30%, 
-                      ${Theme.colors.accents.text.green} 45%,
-                      ${Theme.colors.accents.text.blue} 65%,
-                      ${Theme.colors.accents.text.purple} 100%);
-    }
-  
+  }  
 `}

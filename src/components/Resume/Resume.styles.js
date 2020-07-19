@@ -32,8 +32,7 @@ export const Timeline = styled.div`
     .fa,
     .fas,
     .fal,
-    .fad
-     {
+    .fad {
       display: block;
       font-size: 28px;
       position: absolute;
@@ -84,33 +83,28 @@ export const Timeline = styled.div`
         height: 100%;
       }
 
-
-    
       &:first-of-type {
         margin-top: 20px;
-        
-        .date {
-          // top: -74px;
-        }
       }
 
+      &:before, 
+      &:after {
+        display: none;
+      }
 
-    &:before, 
-    &:after {
-      display: none;
-    }
-    .date {
-      // top: -64px; left: 50%; margin-left: -32px;
-      display: none;
-    }
-    h4,
-    h5 {
-      text-align: center;
-    }
-    p:before,
-    ul:before {
-      left: 50%; z-index: -1;
-    }
+      .date {
+        display: none;
+      }
+
+      h4,
+      h5 {
+        text-align: center;
+      }
+
+      p:before,
+      ul:before {
+        left: 50%; z-index: -1;
+      }
     }
 
     &::after, 
@@ -147,48 +141,7 @@ export const Timeline = styled.div`
       width: 4px;
       background: #F4F6F7;
     }
-
-    // .date {
-    //   top: 34px;
-    //   color: #345;
-    //   border: 4px solid whitesmoke;
-    //   background-color: white;
-    //   font-family: 'Oswald', 'sans-serif';
-    //   position: absolute;
-    //   top: 45%;
-    //   margin-top: -24px;
-    //   left: -106px;
-    //   width: 68px;
-    //   line-height: 58px;
-    //   text-align: center;
-    //   background: #fff;
-    //   display: block;
-    //   z-index: 120;
-    //   color: #345;
-    //   border-radius: 50%;
-    //   border: 5px solid ${Theme.colors.grays.border};
-    //   font-family: Oswald;
-    //   font-weight: 400;
-    //   font-size: 11px;
-    //   letter-spacing: 1px;
-
-    //   @media screen and (max-width: ${Theme.breakpoints.max.md}) {
-    //     display: none;
-    //   }
-    // }
-
-    // &.current {
-    //   &::before {
-    //     // top: -34px;
-    //   }
-
-    //   .date {
-    //     background: #345;
-    //     color: #fff;
-    //     border: 4px solid transparent;
-    //   }
-    // }
-  // }
+  }
 `
 
 export const HistoryHeading = css`
@@ -205,17 +158,11 @@ export const HistoryHeading = css`
 
 
   @media screen and (max-width: ${Theme.breakpoints.max.md}) {
-    /* font-size: 16px; */
     text-transform: uppercase;
-    /* font-weight: 700; */
-    /* font-family: "Roboto", sans-serif; */
-    /* opacity: .8; */
     padding-left: 102px;
     text-align: left;
 
     &:first-of-type i {
-      /* width: 86px;
-      height: 86px; */
       font-size: 43px;
       line-height: 72px;
     }
@@ -231,7 +178,6 @@ export const HistoryHeading = css`
   
   i {
     &::before {
-      font-size: 54px;
       font-size: 28px;
       line-height: 72px;
       vertical-align: middle;
@@ -256,7 +202,7 @@ export const HistoryHeading = css`
   }
 `
 
-export const SectionTitle = css`
+export const ResumeSectionTitle = css`
   position: relative;
   font-size: 12px;
   letter-spacing: 1px;
@@ -264,6 +210,9 @@ export const SectionTitle = css`
   font-family: Lato, sans-serif;
   text-align: left;
   display: block;
+  margin: 0 0 2rem;
+  text-align: left;
+
   &:first-of-type span {
     margin: 25px 0 30px 0;
     line-height: 37px;
@@ -281,19 +230,14 @@ export const SectionTitle = css`
     margin: 25px 0 14px;
   }
 
-  & {
-    margin: 0 0 2rem;
-    text-align: left;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      margin-top: 4px;
-      width: 100%;
-      border-bottom: 4px solid ${Theme.colors.grays.border};
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: 4px;
+    width: 100%;
+    border-bottom: 4px solid ${Theme.colors.grays.border};
   }
 
   span {
@@ -307,30 +251,21 @@ export const SectionTitle = css`
     text-transform: uppercase;
 
     i {
-      font-size: 16px;
-      margin-right: 14px;
-      line-height: 39px;
-      text-align: center;
-      /* color: #345; */
-      background: #fff;
-      border-radius: 50%;
-      border: 4px solid #F4F6F7;
       display: inline-block;
       width: 47px;
-
-      &::before {
-        display: inline-block;
-        width: 39px;
-        height: 39px;
-        text-align: center;
-        opacity: .8;
-        line-height: 37px;
-        font-size: 120%;
-        margin: 0 auto;
-        font-weight: 500;
-        color: ${Theme.colors.grays.textDark};
-        vertical-align: middle;
-      }
+      height: 47px;
+      text-align: center;
+      opacity: .8;
+      line-height: 37px;
+      font-size: ${Theme.fonts.sizes.default};
+      margin: 0 ${Theme.spacing.sm} 0 auto;
+      font-weight: 400;
+      color: ${Theme.colors.grays.textDark};
+      border: 4px solid #F4F6F7;
+      border-radius: 50%;
+      line-height: 39px;
+      vertical-align: middle;
+      text-indent: 2px;
     }
   }
 `
@@ -353,120 +288,8 @@ export const RightCol = css`
     display: none;
   }
 
-  .event {
-  }
-
-  .list {
-    display: inline-block;
-
-    li {
-      list-style: none;
-      font-size: 16px;
-      font-weight: 300;
-      font-family: Roboto;
-      color: ${Theme.colors.default.base};
-      line-height: 1.4;
-      margin-left: 0;
-
-      i, span {
-        display: table-cell;
-      }
-
-      i {
-        padding-right: 10px;
-        font-size: 16px;
-        color: ${Theme.colors.accents.text.blue};
-        text-shadow: 0 -1px 1px ${Theme.colors.accents.blue};
-        font-weight: 400;
-      }
-
-      b {
-        font-weight: 400;
-      }
-    }
-  }
-
   article:not(:first-of-type) h2 {
     margin: 25px 0 0;
-  }
-
-  .skillset {
-    padding: 0 0 3.2em 1em;
-
-    .skill-unit {
-      padding-bottom: 2rem;
-
-      @media screen and (max-width: ${Theme.breakpoints.max.md}) {
-        padding-bottom: 1rem;
-      }
-
-      h4 {    
-        font-weight: 300;
-        font-size: 15px !important;
-        position: relative;
-        z-index: 100;
-        color: ${Theme.colors.default.darker};
-        line-height: 1.4em;
-        vertical-align: baseline;
-        font-family: Lato, sans-serif;
-        margin: 0 0 .25rem;
-
-        @media screen and (max-width: ${Theme.breakpoints.max.md}) {      
-          margin-bottom: 8px;
-          padding-left: 0;
-        }
-      }
-
-      i {
-        font-size: 16px;
-        vertical-align: baseline;
-        line-height: 1.4em;
-        margin-right: 3px;
-        transform: translateY(1px);
-      }
-
-      .bar {
-        position: relative;
-        /* background-color: hsla(197, 100%, 94%, 1); */
-        background-color: ${Theme.colors.grays.border};
-        border: 1px solid transparent;
-        width: 100%;
-        height: 6px;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-        display: block;
-        outline: 0;
-
-        .progress {
-          position: absolute;
-          border: 1px solid ${Theme.colors.accents.green};
-          background-color: ${Theme.colors.accents.green};
-          top: 0;
-          left: 0;
-          width: 0;
-          height: 4px;
-          border-top-left-radius: 2px;
-          border-bottom-left-radius: 2px;
-        }
-      }
-
-      .score {
-        position: absolute;
-        right: 0;
-        bottom: -1px;
-        width: 2.7rem;
-        height: 2rem;
-        background-color: #345;
-        color: #fff;
-        text-align: center;
-        line-height: 2rem;
-        font-weight: 500;
-        font-size: 1rem;
-        font-family: Roboto, sans-serif;
-        border-top-right-radius: 2px;
-        border-top-left-radius: 2px;
-      }
-    }
   }
 
   .card {
@@ -531,6 +354,122 @@ export const RightCol = css`
   }
 `
 
+export const Skillset = css`
+  padding: 0 0 3.2em 1em;
+
+  .skill-unit {
+    padding-bottom: 2rem;
+
+    @media screen and (max-width: ${Theme.breakpoints.max.md}) {
+      padding-bottom: 1rem;
+    }
+
+    h4 {    
+      font-weight: 300;
+      font-size: 15px !important;
+      position: relative;
+      z-index: 100;
+      color: ${Theme.colors.default.darker};
+      line-height: 1.4em;
+      vertical-align: baseline;
+      font-family: Lato, sans-serif;
+      margin: 0 0 .25rem;
+
+      @media screen and (max-width: ${Theme.breakpoints.max.md}) {      
+        margin-bottom: 8px;
+        padding-left: 0;
+      }
+    }
+
+    i {
+      font-size: 16px;
+      vertical-align: baseline;
+      line-height: 1.4em;
+      margin-right: 3px;
+      transform: translateY(1px);
+    }
+
+    .bar {
+      position: relative;
+      background-color: ${Theme.colors.grays.border};
+      border: 1px solid transparent;
+      width: 100%;
+      height: 6px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      display: block;
+      outline: 0;
+
+      .progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 6px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        background-image: linear-gradient(90deg, 
+          ${Theme.colors.accents.background.yellow} 10.5%,
+          ${Theme.colors.accents.green} 39.5%, 
+          ${Theme.colors.accents.blue} 50%, 
+          ${Theme.colors.accents.purple} 67.5%,
+          ${Theme.colors.accents.red} 82.5%);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .score {
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      width: 2.7rem;
+      height: 2rem;
+      background-color: #345;
+      color: #fff;
+      text-align: center;
+      line-height: 2rem;
+      font-weight: 500;
+      font-size: 1rem;
+      font-family: Roboto, sans-serif;
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
+    }
+  }
+`
+
 export const BlockquoteIcon = css`
   color: ${Theme.colors.grays.text};
+`
+
+export const Asset = styled.li`
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Roboto;
+  color: ${Theme.colors.default.base};
+  line-height: 1.4;
+  margin-left: 0;
+  padding-bottom: 10px;
+
+  i, span {
+    display: table-cell;
+  }
+
+  i {
+    padding-right: 10px;
+    font-size: 16px;
+    color: ${Theme.colors.accents.green};
+    font-weight: 400;
+  }
+
+  b {
+    font-weight: 400;
+  }
+}
+`
+export const AssetList = styled.ul`
+  display: inline-block;
+  margin: ${Theme.spacing.default} 0 ${Theme.spacing.xl};
 `
