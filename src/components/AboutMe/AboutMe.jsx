@@ -38,7 +38,7 @@ const AboutMe = ({ ...data }) => {
     
     <Layout>
       <Header />
-      <SEO stitle="Home" />
+      <SEO stitle="Cristin O'Connor | Front End Developer" />
       <PageTransition>
         <Styled.Container>
           <div className="row">

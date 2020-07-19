@@ -1,4 +1,5 @@
 import animationImg from '../../images/animation.png'
+import cleanHistoryImg from '../../images/clean-history.png'
 import destructuringImg from '../../images/destructuring.png'
 import redesignImg from '../../images/redesign.png'
 import sassImg from '../../images/sass.png'
@@ -10,6 +11,8 @@ import netlifyImg from '../../images/netlify.png'
 const imageGetter = (slug) => {
   if (slug.match(/animate-page-transitions-with-fade-effect-in-gatsby/)) {
     return animationImg
+  } else if (slug.match(/creating-a-single-production-ready-git-commit-from-multiple-commits/)) {
+    return cleanHistoryImg
   } else if (slug.match(/what-is-destructuring-in-javascript/)) {
     return destructuringImg
   } else if (slug.match(/about-the-cristinio-redesign/)) {
