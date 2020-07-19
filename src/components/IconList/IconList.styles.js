@@ -6,9 +6,12 @@ export const IconList = styled.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin:  0 auto;
+  margin: ${Theme.spacing.xl} auto;
   text-align: center;
-  margin: 2rem 0;
+
+  @media all and (max-width: ${Theme.breakpoints.max.md}) {
+    margin: ${Theme.spacing.xxs} auto;
+  }
   
   li {
     list-style-type: none;
@@ -46,8 +49,7 @@ export const IconList = styled.ul`
       i {
         text-decoration: none;
         background-color: ${Theme.colors.default.base};
-        color: #fff;
-        
+        color: transparent;
       }
 
       > span { 
@@ -80,6 +82,7 @@ export const IconList = styled.ul`
       box-sizing: border-box;
       margin: 0 ${Theme.spacing.xs} 1rem 0;
       background-color: ${Theme.colors.grays.background};
+      color: #345;
     }
   }
 `

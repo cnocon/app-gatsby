@@ -48,7 +48,6 @@ export const IconColumnDiv = styled.div`
     background-color: #345;
     font-weight: 200;
     margin: 0 auto ${Theme.spacing.default};
-    // border-radius: 50%;
     display: block;
     font-size: 24px;
     width: 44px;
@@ -59,7 +58,6 @@ export const IconColumnDiv = styled.div`
     background-color: #345;
     font-weight: 400;
     margin: 0 auto 1.6rem;
-    // border-radius: 50%;
   }
 }
 `

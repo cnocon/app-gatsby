@@ -3,7 +3,7 @@ import * as Styled from "./AboutMe.styles"
 import Layout from "../Layout/Layout"
 import SEO from "../SEO/seo"
 import Header from "../Header/Header"
-// import IconList from "../IconList/IconList"
+import IconList from "../IconList/IconList"
 import SectionTitle from '../SectionTitle/SectionTitle'
 import Intro from '../Intro/Intro'
 import IconColumn from '../IconColumn/IconColumn'
@@ -49,6 +49,39 @@ const AboutMe = ({ ...data }) => {
                 icon="fas fa-female"
               />
               <Intro />
+              <IconList listItems={[
+                {
+                  icon: 'fab fa-codepen',
+                  link: 'https://codepen.io/cnocon',
+                  text: 'CodePen',
+                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                },
+                {
+                  icon: 'fab fa-github',
+                  link: 'https://github.com/cnocon',
+                  text: 'GitHub',
+                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                },
+                {
+                  icon: 'fab fa-twitter',
+                  link: 'https://twitter.com/cnocon',
+                  text: 'Twitter',
+                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                },
+                {
+                  icon: 'fab fa-linkedin-in',
+                  link: 'https://www.linkedin.com/in/cristinoconnor',
+                  text: 'LinkedIn',
+                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                },
+                {
+                  icon: 'fab fa-stack-overflow',
+                  link: 'https://stackoverflow.com/users/2187039/cnocon',
+                  text: 'Stack Overflow',
+                  classes: 'rainbow-text rainbow-box-shadow-rounded'
+                }
+              ]} 
+            />
             </div>
           </div>
 
