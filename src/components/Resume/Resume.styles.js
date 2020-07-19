@@ -149,7 +149,7 @@ export const HistoryHeading = css`
   font-size: 19px;
   font-weight: 300;
   letter-spacing: 1px;
-  font-family: "Lato", sans-serif;
+  font-family: ${Theme.fonts.headings.family};
   margin: 35px 0 50px 0;
   text-align: left;
   color: #345;
@@ -207,7 +207,7 @@ export const ResumeSectionTitle = css`
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 700;
-  font-family: Lato, sans-serif;
+  font-family: ${Theme.fonts.headings.family};
   text-align: left;
   display: block;
   margin: 0 0 2rem;
@@ -219,7 +219,7 @@ export const ResumeSectionTitle = css`
     letter-spacing: 1px;
     opacity: 1;
     color: #345;
-    font-family: Lato, sans-serif;
+    font-family: ${Theme.fonts.headings.family};
     position: relative;
     display: inline-block;
     padding-right: 1em;
@@ -247,7 +247,7 @@ export const ResumeSectionTitle = css`
     background: #fff;
     font-size: 12px;
     letter-spacing: 1px;
-    font-family: Lato, sans-serif;
+    font-family: ${Theme.fonts.headings.family};
     text-transform: uppercase;
 
     i {
@@ -314,9 +314,11 @@ export const RightCol = css`
       margin: 60px auto;
     }
 
-	  @media all and (max-width: 767px) {
+	  @media all and (max-width: ${Theme.breakpoints.max.lg}) {
       margin-top: 30px;
       margin-bottom: 40px;
+      margin: 60px auto;
+      max-width: 500px;
     }
 
     blockquote {
@@ -372,7 +374,7 @@ export const Skillset = css`
       color: ${Theme.colors.default.darker};
       line-height: 1.4em;
       vertical-align: baseline;
-      font-family: Lato, sans-serif;
+      font-family: ${Theme.fonts.headings.family};
       margin: 0 0 .25rem;
 
       @media screen and (max-width: ${Theme.breakpoints.max.md}) {      
@@ -461,7 +463,7 @@ export const Asset = styled.li`
   i {
     padding-right: 10px;
     font-size: 16px;
-    color: ${Theme.colors.accents.green};
+    color: ${Theme.colors.accents.vivid.green};
     font-weight: 400;
   }
 

@@ -265,7 +265,6 @@ export default {styles: css`
       ${Theme.colors.accents.text.blue} 65%,
       ${Theme.colors.accents.vivid.blue} 80%,
       ${Theme.colors.accents.vivid.purple} 100%);
-      
     }
   }
 
@@ -351,5 +350,6 @@ export default {styles: css`
                       ${Theme.colors.accents.text.purple} 50%,
                       ${Theme.colors.accents.text.red} 65%,
                       ${Theme.colors.accents.text.yellow} 80%);
+    }
   }  
 `}

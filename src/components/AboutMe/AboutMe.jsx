@@ -47,7 +47,17 @@ const AboutMe = ({ ...data }) => {
                 icon="fas fa-female"
               />
               <Intro />
-              <IconList listItems={[
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-12">
+              <SectionTitle
+                text="Connect with Me"
+                icon="fal fa-handshake-alt"
+              />
+              <IconList 
+                classes='larger' 
+                listItems={[
                 {
                   icon: 'fab fa-codepen',
                   link: 'https://codepen.io/cnocon',
@@ -76,6 +86,12 @@ const AboutMe = ({ ...data }) => {
                   icon: 'fab fa-stack-overflow',
                   link: 'https://stackoverflow.com/users/2187039/cnocon',
                   text: 'Stack Overflow',
+                  classes: 'rainbow-box-shadow-rounded'
+                },
+                {
+                  icon: 'fal fa-envelope',
+                  link: 'mailto:her@cristin.io',
+                  text: 'Email',
                   classes: 'rainbow-box-shadow-rounded'
                 }
               ]} 

@@ -65,17 +65,14 @@ export const Heading1 = styled.h1`
 `
 
 export const H1Link = styled(Link)`
-  color: #345;
-  text-decoration: none;
-  font-family: inherit;
   display: block;
-  font-size: ${Theme.fonts.sizes.lg};
-  font-weight: 300;
+  font-family: ${Theme.fonts.accent.family};
+  color: ${Theme.colors.default.base};
+  font-size: ${Theme.fonts.sizes.md};
+  letter-spacing: 1px;
+  font-weight: 400;
   text-transform: uppercase;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  font-weight: 300;
-  text-transform: none;
+  text-decoration: none;
 
   &:hover {
     color: transparent;
@@ -84,27 +81,27 @@ export const H1Link = styled(Link)`
     -webkit-background-clip: text;
     background-clip: text;
     background-image: linear-gradient(90deg,
-                      ${Theme.colors.accents.text.yellow} 0%,
-                      ${Theme.colors.accents.text.green} 10%, 
-                      ${Theme.colors.accents.text.blue} 30%, 
-                      ${Theme.colors.accents.text.purple} 50%,
-                      ${Theme.colors.accents.text.red} 65%,
-                      ${Theme.colors.accents.text.yellow} 80%);
+      ${Theme.colors.accents.text.yellow} 0%,
+      ${Theme.colors.accents.text.green} 10%, 
+      ${Theme.colors.accents.text.blue} 30%, 
+      ${Theme.colors.accents.text.purple} 50%,
+      ${Theme.colors.accents.text.red} 65%,
+      ${Theme.colors.accents.text.yellow} 80%);
   }
 `
 
 export const Subhead = styled.p`
-  font-size: ${Theme.fonts.sizes.default};
-  margin: .1em 0 .6em;
+  margin: ${Theme.spacing.min} 0 ${Theme.spacing.xxs};
   display: inline-block;
   font-style: italic;
-  padding: .3rem 1rem;
+  padding: ${Theme.spacing.min} ${Theme.spacing.sm};
   background-color: ${Theme.colors.accents.background.yellow};
-  color: #345;
-  color: rgba(0,0,0,.7);
-  border-radius: .4rem;
-  line-height: 1;
-  text-transform: lowercase;
+  color: ${Theme.colors.default.base};
+  border-radius: ${Theme.spacing.xs};
+  font-size: ${Theme.fonts.sizes.default};
+  line-height: ${Theme.fonts.sizes.lineHeights.default};
+  font-family: ${Theme.fonts.accent.family};
+  letter-spacing: 1px;
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     font-size: ${Theme.fonts.sizes.sm};
@@ -122,57 +119,45 @@ export const Nav = styled.ul`
     width: 100%;
 
     @media screen and (min-width: ${Theme.breakpoints.min.md}) {
-      // height: 4rem;
       margin: ${Theme.spacing.md} 0;
     }
 `
 
 export const NavItem = styled.li`
   display: flex;
-  margin: 0 0 1rem;
+  margin: 0 0 ${Theme.spacing.sm};
   text-align: center;
   text-decoration: none;
-  flex-basis: 33%;
+  flex-basis: 33.333%;
   justify-content: center;
 `
 
 export const NavLink = styled(Link)`
-  text-decoration: none;
-  font-size: 3rem;
-  cursor: pointer;
+  margin: 0 ${Theme.spacing.sm};
+  text-decoration: none;  
   text-transform: lowercase;
-  font-family: Lato, sans-serif;
-  font-size: 3rem;
+  font-family: ${Theme.fonts.headings.family};
+  font-size: ${Theme.fonts.sizes.md};
   font-weight: 900;
-  letter-spacing: 1px;
-  padding: 0 3rem;
-  transition: all .4s;
+  letter-spacing: 3px;
+  cursor: pointer;
   color: ${Theme.colors.grays.text};
+  transition: all .4s;
 
   @media screen and (min-width: ${Theme.breakpoints.min.md}) {
-    font-size: 4rem;
+    font-size: ${Theme.fonts.sizes.xxl};
+    margin: 0 ${Theme.spacing.lg};
   }
   
   &.active {
     color: #345;
-    // color: transparent;
   }
 
   &:hover,
   &:focus {
-    // color: #345;
     color: transparent;
     z-index: 0;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: linear-gradient(90deg,
-                      ${Theme.colors.accents.text.yellow} 0%,
-                      ${Theme.colors.accents.text.green} 10%, 
-                      ${Theme.colors.accents.text.blue} 30%, 
-                      ${Theme.colors.accents.text.purple} 50%,
-                      ${Theme.colors.accents.text.red} 65%,
-                      ${Theme.colors.accents.text.yellow} 80%);
+    color: ${Theme.colors.default.base};
   }
 `
 

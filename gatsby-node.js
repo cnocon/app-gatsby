@@ -127,6 +127,7 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `)
+
   const allPosts = data.allButterPost.edges.reverse();
   const chunkedPosts = chunk(allPosts, 3);
   const colors = ['blue', 'green', 'yellow', 'purple']
@@ -146,8 +147,8 @@ exports.createPages = async ({ actions, graphql }) => {
           prevPagePath: index < 1 ? null : `/articles/${category}/page-${index}`,
           nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}/page-${index + 2}`,
           colors: colors,
-          title: `Posts from ${group.fieldValue}`,
-          seoDescription: `Latest Posts on ${group.fieldValue} from the Front End Development Blog`,
+          title: `Posts in ${group.fieldValue} | Front End Development Blog`,
+          seoDescription: `Latest ${group.fieldValue} posts from Cristin O'Connor's Front End Development Blog`,
           category: category,
           posts: collection.reverse(),
           breadcrumbs: [
@@ -179,8 +180,8 @@ exports.createPages = async ({ actions, graphql }) => {
         colors: colors,
         prevPagePath: index < 1 ? null : `/articles/page-${index}`,
         nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
-        title: "Latest Posts",
-        seoDescription: `Latest Posts from the Front End Development Blog`,
+        title: "Latest Posts | Front End Development Blog",
+        seoDescription: `Latest Posts from Cristin O'Connor's Front End Development Blog`,
         breadcrumbs: [
           {
             name: 'Home',

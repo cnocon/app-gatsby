@@ -40,13 +40,11 @@ export const RightBlock = styled.div`
 `
 
 export const FooterInner = styled.div`
-  width: ${Theme.layout.widths.default};
-  max-width: ${Theme.layout.widths.defaultMax};
+  width: 100%;
+  max-width: ${Theme.layout.widths.lgMax};
   margin: 0 auto;
   font-size: ${Theme.fonts.sizes.sm};
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: block;
   text-align: center;
 
   @media all and (min-width: 641px) {
@@ -59,10 +57,7 @@ export const FooterInner = styled.div`
 export const Footer = styled.footer({
   margin: `4rem auto 0`,
   padding: `4.5rem 0 2.5rem`,
-  // margin: `${Theme.spacing.lg} auto 0`,
-  // padding: `${Theme.spacing.xl} 0`,
   width: `100%`,
-  // backgroundColor: `${Theme.colors.accents.blue}`,
   backgroundColor: `${Theme.colors.grays.background}`,
 })
 
@@ -121,4 +116,25 @@ export const date = css`
   font-family: ${Theme.fonts.headings.family};
   font-weight: 300;
   text-transform: none;
+`
+
+export const Row = styled.div`
+  flex-basis: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  @media all and (max-width: ${Theme.breakpoints.max.sm}) {
+    flex-direction: column;
+  }
+
+  
+
+  ul {
+    flex-basis: 100%;
+    justify-content: space-between;
+    flex-wrap: unset;
+    flex-direction: row;
+  }
 `

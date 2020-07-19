@@ -13,6 +13,10 @@ export const ImageColumn = styled.div`
   &::before {
     display: none !important;
   }
+
+  @media all and (max-width: ${Theme.breakpoints.max.sm}) {
+    margin: 2rem auto 4rem;
+  }
 `
 
 export const ImageColumnHeading = styled.h2`

@@ -43,7 +43,6 @@ export const Event = styled.article`
   .date {
     position: absolute;
     top: 50%;
-    // margin-top: -24px;
     transform: translateY(-50%);
     left: -106px;
     width: 68px;
@@ -53,10 +52,10 @@ export const Event = styled.article`
     background: ${Theme.colors.grays.border} !important;
     display: block;
     z-index: 120;
-    color: #345 !important;
+    color: ${Theme.colors.default.base} !important;
     border-radius: 50%;
     border: 5px solid ${Theme.colors.grays.border} !important;
-    font-family: Oswald, sans-serif;
+    font-family: ${Theme.fonts.accent.family};
     font-weight: 400;
     font-size: 11px;
     letter-spacing: 1px;
@@ -117,11 +116,10 @@ export const Event = styled.article`
     h4 {
       margin: 0; 
       padding: 0;
-      font-family: Lato, Arial, sans-serif;
       font-size: 1.4rem;
       line-height: 1.2;
       font-size: 15px;
-      font-family: Lato;
+      font-family: ${Theme.fonts.accent.family};
       font-weight: 900;
       text-transform: uppercase;
     }

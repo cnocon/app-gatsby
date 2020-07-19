@@ -14,8 +14,8 @@ const IndexPage = () => {
     <Layout css={{position: 'relative'}}>
       <Header />
       <Breadcrumbs crumbs={[]} />
-      <SEO stitle="Home"/>
-      <Rule title={'Resume'} icon="far fa-file-user"/>
+      <SEO stitle="Résumé | Cristin O'Connor"/>
+      <Rule title={'Résumé'} icon="far fa-file-user"/>
       <PageTransition>
         <Resume />
       </PageTransition>

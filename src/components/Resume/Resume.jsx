@@ -116,31 +116,44 @@ const Resume = () => {
             </blockquote>
           </div>
 
-          <IconList listItems={[
+          <IconList 
+            classes='wrap'
+            listItems={[
             {
               icon: 'fab fa-github',
               link: 'https://github.com/cnocon',
-              text: 'GitHub'
+              text: 'GitHub',
+              classes: 'rainbow-icon-narrow'
             },
             {
               icon: 'fab fa-codepen',
               link: 'https://codepen.io/cnocon',
-              text: 'CodePen'
+              text: 'CodePen',
+              classes: 'rainbow-icon-narrow'
             },
             {
               icon: 'fab fa-stack-overflow',
               link: 'https://stackoverflow.com/users/2187039/cnocon',
-              text: 'Stack Overflow'
+              text: 'Stack Overflow',
+              classes: 'rainbow-icon-narrow'
             },
             {
               icon: 'fab fa-twitter',
               link: 'https://twitter.com/cnocon',
-              text: 'Twitter'
+              text: 'Twitter',
+              classes: 'rainbow-icon-narrow'
             },
             {
               icon: 'fab fa-linkedin-in',
               link: 'https://www.linkedin.com/in/cristinoconnor',
-              text: 'LinkedIn'
+              text: 'LinkedIn',
+              classes: 'rainbow-icon-narrow'
+            },
+            {
+              icon: 'fal fa-envelope',
+              link: 'mailto:her@cristin.io',
+              text: 'Email',
+              classes: 'rainbow-icon-narrow'
             }
           ]} 
           />

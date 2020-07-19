@@ -45,7 +45,7 @@ module.exports = {
         purple: 'hsl(240, 100%, 80%)',
       },
       background: {
-        yellow: 'hsl(58, 100%, 86%)',
+        yellow: 'hsl(58, 100%, 82%)',
         green: 'hsl(175, 100%, 91%)',
         blue: 'hsl(197, 100%, 90%)',
         purple: 'hsl(240, 100%, 96%)',
@@ -118,10 +118,12 @@ module.exports = {
     xxl: `6rem`,
     xl: `4.5rem`,
     lg: `3rem`,
-    default: `1.6rem`,
     md: `2rem`,
+    default: `1.6rem`,
     sm: `1rem`,
-    xs: `.5rem`
+    xs: `.4rem`,
+    xxs: '.2rem',
+    min: '.1rem'
   },
   layout: {
     widths: {
@@ -138,14 +140,14 @@ module.exports = {
       xs: `462px`,
       sm: `641px`,
       md: `768px`,
-      lg: `960px`,
+      lg: `991px`,
       xl: `1024px`
     },
     min: {
       xs: `463px`,
       sm: `642px`,
       md: `769px`,
-      lg: `961px`,
+      lg: `992px`,
       xl: `1025px`
     }
   },

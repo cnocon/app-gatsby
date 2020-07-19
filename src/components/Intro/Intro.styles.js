@@ -24,7 +24,7 @@ export const RotateWords = styled.h2`
     margin-bottom: 0;
 
     @media all and (max-width: ${Theme.breakpoints.max.sm}) {
-      font-size: 2.3rem;
+      font-size: 2rem;
       line-height: 1.6;
     }
 
@@ -42,7 +42,7 @@ export const RotateWords = styled.h2`
       text-align: left;
 
       @media all and (max-width: ${Theme.breakpoints.max.sm}) {
-        min-height: 2.5rem;
+        min-height: 2.25rem;
         min-width: 16rem;
       }
 
