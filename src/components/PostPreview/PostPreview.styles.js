@@ -37,21 +37,18 @@ export const TitleLink = styled(Link)`
   font-size: ${Theme.fonts.sizes.xl};
   line-height: ${Theme.fonts.sizes.lineHeights.default};
   padding-bottom: 0;
-  transition: box-shadow .2s;
   font-weight: 200;
   color: ${Theme.colors.default.base};
   font-family: ${Theme.fonts.headings.family};
-
+  transition: all .4s;
 
   @media screen and (max-width: ${Theme.breakpoints.max.lg}) {
     font-size: ${Theme.fonts.sizes.md};
     line-height: ${Theme.fonts.sizes.lineHeights.xs};
   }
 
-
   &:hover {
     color: ${Theme.colors.default.base};
-    background-image: none;
   }
 `
 

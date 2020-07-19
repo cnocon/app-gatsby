@@ -25,7 +25,7 @@ const Header = ({ ruleTitle, ruleIcon }) => {
       <Sty.Container>
         <div className="top-bar">
           <div className="logo-header">
-            <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar" className="rainbow-box-shadow-rounded"/>
+            <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar" className="rainbow-box-shadow-rounded-thick"/>
             <Sty.Heading1>
               <Sty.H1Link to="/">Cristin O'Connor</Sty.H1Link>
               <Sty.Subhead>Front End Developer</Sty.Subhead>

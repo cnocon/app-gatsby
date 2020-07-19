@@ -33,11 +33,15 @@ module.exports = {
     },
     accents: {
       red: 'hsl(355, 100%, 92%)',
-      green: 'hsl(175, 100%, 85%)',
+      green: 'hsl(175, 100%, 65%)',
       blue: 'hsl(197,100%,86%)',
       yellow: 'hsl(58, 100%, 65%)',
-      purple: 'hsl(240, 100%, 92%)',
-      darker: {
+      purple: 'hsl(240, 100%, 87%)',
+      vivid: {
+        red: 'hsl(355, 100%, 78%)',
+        yellow: 'hsl(58, 100%, 49%)',
+        green: 'hsl(175, 100%, 50%)',
+        blue: 'hsl(197, 100%, 50%)',
         purple: 'hsl(240, 100%, 80%)',
       },
       background: {
@@ -51,7 +55,7 @@ module.exports = {
         red: 'hsl(355, 81%, 80%)',
         green: 'hsl(175, 70%, 62%)',
         blue: 'hsl(197, 80%, 65%)',
-        yellow: 'hsl(58, 100%, 48%)',
+        yellow: 'hsl(58, 100%, 60%)',
         purple: 'hsl(240, 80%, 75%)'
       }
     }

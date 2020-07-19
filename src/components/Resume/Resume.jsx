@@ -2,7 +2,6 @@ import React from "react";
 import { ResumeData } from "../../data/ResumeData"
 import Event from "../Event/Event"
 import IconList from "../IconList/IconList"
-// import SectionTitle from "../SectionTitle/SectionTitle"
 import * as Styled from "./Resume.styles"
 
 const workEvents = ResumeData.experience.map((item, i) => {
@@ -28,7 +27,6 @@ const skills = ResumeData.skills.map((skill, i) => {
 })
 
 const Resume = () => {
-
   return (
     <div className="row resume">
       <div className="col-md-12 col-lg-7" css={Styled.LeftCol}>
@@ -42,40 +40,71 @@ const Resume = () => {
       </div>
 
       <div className="col-md-12 col-lg-5" css={Styled.RightCol}>
-        <h2 css={Styled.SectionTitle}>
+        <h2 css={Styled.ResumeSectionTitle}>
           <span>
             <i className="fas fa-code"></i>
             Skills
           </span>
         </h2>
-        <div className="skillset">{skills}</div>
+        <div css={Styled.Skillset}>{skills}</div>
 
-        <h2 css={Styled.SectionTitle}>
+        <h2 css={Styled.ResumeSectionTitle}>
           <span>
             <i className="fas fa-graduation-cap"></i>
             Education
           </span>
         </h2>
         {eduEvents}
+
         <article>
-          <h2 css={Styled.SectionTitle}>
+          <h2 css={Styled.ResumeSectionTitle}>
             <span>
               <i className="fal fa-gem"></i>
               Assets
             </span>
           </h2>
-          <ul className="list">
-            <li className="asset"><i className="far fa-check"></i><span><b>Empathy</b> to be an effective teammate</span></li>
-            <li className="asset"><i className="far fa-check"></i><span>Organizational abilities for <b>managing projects</b> independently</span></li>
-            <li className="asset"><i className="far fa-check"></i><span>Research skills to find the <b>best solutions</b> to new challenges</span></li>
-            <li className="asset"><i className="far fa-check"></i><span>Enthusiasm and <b>passion</b> for front end work</span></li>
-            <li className="asset"><i className="far fa-check"></i><span>Positive attitude and <b>willingness</b> to handle a wide variety of responsibilities</span></li>
-            <li className="asset"><i className="far fa-check"></i><span><b>Effective communicator</b> with people from varying technical backgrounds</span></li>
-            <li className="asset"><i className="far fa-check"></i><span>Dedicated to ongoing <b>professional development</b></span></li>
-            <li className="asset"><i className="far fa-check"></i><span>Natural <b>problem solver</b></span></li>
-            <li className="asset"><i className="far fa-check"></i><span><b>5+ years</b> of Agile experience</span></li>
-            <li className="asset"><i className="far fa-check"></i><span><b>10+ years</b> of experience working on web applications in various capacities</span></li>
-          </ul>
+          <Styled.AssetList>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span><b>Empathy</b> to be an effective teammate</span>
+            </Styled.Asset>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span>Organizational abilities for <b>managing projects</b> independently</span>
+            </Styled.Asset>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span>Research skills to find the <b>best solutions</b> to new challenges</span>
+            </Styled.Asset>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span>Enthusiasm and <b>passion</b> for front end work</span>
+            </Styled.Asset>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span>Positive attitude and <b>willingness</b> to handle a wide variety of responsibilities</span>
+            </Styled.Asset>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span><b>Effective communicator</b> with people from varying technical backgrounds</span>
+            </Styled.Asset>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span>Dedicated to ongoing <b>professional development</b></span>
+            </Styled.Asset>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span>Natural <b>problem solver</b></span>
+            </Styled.Asset>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span><b>5+ years</b> of Agile experience</span>
+            </Styled.Asset>
+            <Styled.Asset>
+              <i className="far fa-check"></i>
+              <span><b>10+ years</b> of experience working on web applications in various capacities</span>
+            </Styled.Asset>
+          </Styled.AssetList>
         </article>
 
         <article>
@@ -116,7 +145,6 @@ const Resume = () => {
           ]} 
           />
         </article>
-        
       </div>
     </div>
   )
