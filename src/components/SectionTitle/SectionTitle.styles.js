@@ -40,35 +40,32 @@ export const SectionTitle = css`
     i {
       font-size: 16px;
       margin-right: 14px;
-      line-height: 39px;
-      text-align: center;
-      color: #B7C6C9;
-      background: #fff;
-      border-radius: 50%;
-      border: 4px solid ${Theme.colors.grays.border};
-      display: inline-block;
+      line-height: 37px;
+      font-size: inherit;
       width: 47px;
+      height: 47px;
+      border: 4px solid ${Theme.colors.grays.border};
+      text-align: center;
+      border-radius: 50%;
+      display: inline-block;
+      font-size: 18px;
 
+      color: ${Theme.colors.grays.text};
+      opacity: .8;
+
+      
+    
       &::before {
-        font-style: normal;
-        font-weight: normal;
-        speak: none;
         display: inline-block;
-        text-decoration: inherit;
-        width: 39px;
-        height: 39px;
-        margin-right: auto;
+        margin: 0 auto 0 0;
         text-align: center;
-        opacity: .8;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 39px;
-        margin-left: auto;
-        font-size: 120%;
-        margin: 0 auto 0 0px;
         vertical-align: middle;
-        color: ${Theme.colors.grays.text};
-        font-weight: normal;
+          font-weight: 400;
+        /* font-weight: normal;
+        font-weight: bold;  */
+      }
+
+      &.fas::before {
         font-weight: bold;
       }
     }

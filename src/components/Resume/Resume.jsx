@@ -117,7 +117,7 @@ const Resume = () => {
           </div>
 
           <IconList 
-            classes='wrap'
+            classes='wrap dark'
             listItems={[
             {
               icon: 'fab fa-github',
@@ -138,7 +138,7 @@ const Resume = () => {
               classes: 'rainbow-icon-narrow'
             },
             {
-              icon: 'fab fa-twitter',
+              icon: 'fal fa-hashtag',
               link: 'https://twitter.com/cnocon',
               text: 'Twitter',
               classes: 'rainbow-icon-narrow'

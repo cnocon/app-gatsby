@@ -2,11 +2,11 @@ import React from 'react'
 import { IconColumnDiv } from './IconColumn.styles'
 import ReactHtmlParser from 'react-html-parser'
 
-const IconColumn = ({ color, icon, title, text, columnClasses }) => {
+const IconColumn = ({ icon, title, text, columnClasses, classes }) => {
   return (
     <div className={`${columnClasses}`}>
-      <IconColumnDiv className={`IconColumn ${color}`}>
-        <i className={`${icon} rainbow-icon-narrow`}></i>
+      <IconColumnDiv className='IconColumn'>
+        <i className={`${icon} ${classes}`}></i>
         <h4>
           <span>{ title }</span>
         </h4>

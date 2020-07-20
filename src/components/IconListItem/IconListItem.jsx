@@ -5,7 +5,7 @@ const IconListItem = ({ icon, link, text, classes }) => {
   return(
     <Styled.Item>
       <Styled.ItemLink href={link} rel="noreferrer" target="_blank">
-        <Styled.ItemIcon className={`${icon} ${classes} rainbow-text`}></Styled.ItemIcon>
+        <Styled.ItemIcon className={`${icon} ${classes}`}></Styled.ItemIcon>
         <Styled.ItemText>{text}</Styled.ItemText>
       </Styled.ItemLink>
     </Styled.Item>

@@ -4,7 +4,7 @@ import Theme from '../Theme/Theme'
 
 export const ImageColumn = styled.div`
   padding: ${Theme.spacing.default} ${Theme.spacing.xs} ${Theme.spacing.md};
-  margin: 2rem auto 2rem;
+  margin: 2rem 1rem;
   background: #fff;
   display: inline-block;
   text-align: center;

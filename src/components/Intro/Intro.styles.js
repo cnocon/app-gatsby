@@ -35,7 +35,7 @@ export const RotateWords = styled.h2`
 
     .rotate-words {
       font-size: inherit;
-      min-height: 3.2rem;
+      min-height: 2.8rem;
       font-family: ${Theme.fonts.headings.family};
       display: inline-block;
       min-width: 18rem;

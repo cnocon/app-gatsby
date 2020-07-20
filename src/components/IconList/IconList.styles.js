@@ -13,7 +13,8 @@ export const IconList = styled.ul`
     flex-wrap: wrap;
   }
 
-  &.wrap {
+  &.wrap,
+  &.wrap-more {
     flex-wrap: wrap;
     padding-left: 0;
   }

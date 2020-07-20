@@ -39,35 +39,23 @@ export const IconColumnDiv = styled.div`
 
   i {
     display: block;
-    font-size: 27px;
-    width: 40px;
-    height: 40px;
-    line-height: 24px;
-    padding: 8px;
-    text-align: center;
-    background-color: #345;
-    font-weight: 200;
-    margin: 0 auto ${Theme.spacing.default};
-    // display: block;
-    // font-size: 24px;
-    // width: 44px;
-    // height: 44px;
-    // line-height: 28px;
-    // padding: 8px;
-    // text-align: center;
-    // background-color: #345;
-    // font-weight: 400;
-    // margin: 0 auto 1.6rem;
-    font-size: 18px;
+    font-size: 16px;
     width: 36px;
     height: 36px;
     line-height: 20px;
     padding: 8px;
     text-align: center;
-    background-color: #345;
-    font-weight: 400;
-    margin: 0 auto 1.6rem;
+    font-weight: 100;
+    margin: 0 auto ${Theme.spacing.default};
     border-radius: 50%;
+
+    &.dark {
+      background-color: #345 !important;
+      
+      &::before {
+        
+      }
+    }
   }
 }
 `

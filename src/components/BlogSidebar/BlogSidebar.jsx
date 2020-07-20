@@ -3,6 +3,7 @@ import React from "react"
 // import gitImg from '../../images/git.png'
 // import cleanHistoryImg from '../../images/clean-history.png'
 import * as Styled from "./BlogSidebar.styles"
+// import IconList from '../IconList/IconList'
 
 const BlogSidebar = ({ colClasses, categories }) => {
   const links = categories.map(c => {
@@ -45,6 +46,54 @@ const BlogSidebar = ({ colClasses, categories }) => {
         </h4>
         <Styled.TagsWrapper>{links}</Styled.TagsWrapper>
       </article>
+      {/* <article>
+        <h4>
+          <i className="fal fa-handshake" style={{fontWeight: '400'}}></i>
+          <span>CONNECT</span>
+        </h4>
+  
+        <IconList 
+          classes='wrap-more left' 
+          listItems={[
+          {
+            icon: 'fab fa-codepen',
+            link: 'https://codepen.io/cnocon',
+            text: 'CodePen',
+            classes: 'rainbow-box-shadow-rounded'
+          },
+          {
+            icon: 'fab fa-github',
+            link: 'https://github.com/cnocon',
+            text: 'GitHub',
+            classes: 'rainbow-box-shadow-rounded'
+          },
+          {
+            icon: 'fal fa-hashtag',
+            link: 'https://twitter.com/cnocon',
+            text: 'Twitter',
+            classes: 'rainbow-box-shadow-rounded'
+          },
+          {
+            icon: 'fab fa-linkedin-in',
+            link: 'https://www.linkedin.com/in/cristinoconnor',
+            text: 'LinkedIn',
+            classes: 'rainbow-box-shadow-rounded'
+          },
+          {
+            icon: 'fab fa-stack-overflow',
+            link: 'https://stackoverflow.com/users/2187039/cnocon',
+            text: 'Stack Overflow',
+            classes: 'rainbow-box-shadow-rounded'
+          },
+          {
+            icon: 'fal fa-envelope',
+            link: 'mailto:her@cristin.io',
+            text: 'Email',
+            classes: 'rainbow-box-shadow-rounded'
+          }
+        ]} 
+      />
+      </article> */}
     </Styled.BlogSidebar>
   )
 }

@@ -270,10 +270,10 @@ export default {styles: css`
 
   .rainbow-box-shadow-rounded { 
     border-radius: 50%;
-    box-shadow: 0 1px 1px ${Theme.colors.accents.green},       
-                -1px 0 1px ${Theme.colors.accents.yellow},
-                1px 0 1px ${Theme.colors.accents.text.purple},
-                0 -1px 1px ${Theme.colors.accents.text.red};
+    box-shadow: 0 1.75px 1px ${Theme.colors.accents.green},       
+                -1.75px 0 1px ${Theme.colors.accents.yellow},
+                1.75px 0 1px ${Theme.colors.accents.text.purple},
+                0 -1.75px 1px ${Theme.colors.accents.text.red};
     
     &-thick {
       border-radius: 50%;
@@ -325,12 +325,11 @@ export default {styles: css`
             -webkit-background-clip: text;
             background-clip: text;
             background-image: linear-gradient(90deg,
-                                          ${Theme.colors.accents.background.yellow} 0%,
-                                          ${Theme.colors.accents.text.green} 10%, 
-                                          ${Theme.colors.accents.text.blue} 25%, 
-                                          ${Theme.colors.accents.text.purple} 55%,
-                                          ${Theme.colors.accents.text.red} 75%,
-                                          ${Theme.colors.accents.yellow} 90%);
+                      ${Theme.colors.accents.red} 0%,                   
+                      ${Theme.colors.accents.yellow} 20%,
+                      ${Theme.colors.accents.text.green} 50%, 
+                      ${Theme.colors.accents.text.blue} 60%, 
+                      ${Theme.colors.accents.text.purple} 87%);
             
           
         }

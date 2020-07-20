@@ -19,6 +19,21 @@ export const Item = styled.li`
     margin: ${Theme.spacing.xxs} 0;
   }
 
+  .left & {
+    text-align: left;
+    
+    span {
+      line-height: 28px;
+      vertical-align: middle;
+    }
+
+    i {
+      text-align: center;
+      float: left;
+      margin-right: 1rem;
+    }
+  }
+
   .wrap & {
     padding-left: 0;
     
@@ -28,12 +43,26 @@ export const Item = styled.li`
       max-width: 33.333%;
     }
   }
+
+
+  .wrap-more & {
+    padding-left: 0;
+    
+    @media all and (min-width: ${Theme.breakpoints.min.md}) {
+      padding: 0;
+      flex-basis: 100%;
+      max-width: 100%;
+      line-height: 37px;
+      vertical-align: middle;
+    }
+  }
 `
 
 export const ItemLink = styled.a`
   font-size: ${Theme.fonts.sizes.sm};
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
   color: ${Theme.colors.default.base};
+  transition: all .3s;
 
   &:hover {
     text-decoration: none;
@@ -41,15 +70,16 @@ export const ItemLink = styled.a`
 
   &:hover i {
     text-decoration: none;
-    background-color: ${Theme.colors.default.base};
-    color: transparent;
+    // background-color: ${Theme.colors.default.base};
+    color: ${Theme.colors.grays.textDark};
   }
 
   &:hover span { 
     color: #345;
-    text-decoration: none;
+    text-decoration: underline;
   }
 `
+
 export const ItemIcon = styled.i`
   flex-basis: 32px;
   max-width: 32px;
@@ -62,11 +92,22 @@ export const ItemIcon = styled.i`
   border-width: 0;
   box-sizing: border-box;
   margin: 0 ${Theme.spacing.xs} ${Theme.spacing.xs};
-  background-color: ${Theme.colors.grays.background};
-  color: ${Theme.colors.default.base};
+  font-weight: 400;
+  // background-color: ${Theme.colors.grays.background};
+  transition: all .3s;
+  margin: 0 ${Theme.spacing.xs} ${Theme.spacing.sm};
+  
+  a:hover & {
+    color: ${Theme.colors.default.base};  
+  }
 
-  .larger & {
-    margin: 0 ${Theme.spacing.xs} ${Theme.spacing.sm};
+  .dark & {
+    background-color: ${Theme.colors.default.base};
+    font-weight: 500;
+  }
+
+  .dark a:hover & {
+    &::before { color: #fff; }
   }
 `
 

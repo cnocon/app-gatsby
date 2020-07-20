@@ -41,19 +41,55 @@ const AboutMe = ({ ...data }) => {
             <div className="col-sm-12">
               <SectionTitle
                 text="A Little About Me"
-                icon="fas fa-female"
+                icon="fal fa-user-astronaut"
               />
               <Intro />
             </div>
           </div>
+
+
+          <SectionTitle text="Services" icon="fas fa-concierge-bell"/>
           <div className="row">
-            <div className="col-sm-12">
+            <IconColumn
+              columnClasses="col-sm-6 col-md-3"
+              icon="fal fa-graduation-cap"
+              title="Code Tutoring"
+              classes='rainbow-box-shadow-rounded rainbow-icon-narrow dark'
+              text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages."
+            />
+            <IconColumn
+              columnClasses="col-sm-6 col-md-3"
+              icon="fal fa-code"
+              title="Web Development"
+              classes='rainbow-box-shadow-rounded rainbow-icon-narrow dark'
+              text="This is my primary area of expertise. I have <b>10+ years of experience</b> in the field."
+            />
+            <IconColumn
+              columnClasses="col-sm-6 col-md-3"
+              icon="fal fa-typewriter"
+              title="Blog Writer"
+              classes='rainbow-box-shadow-rounded rainbow-icon-narrow dark'
+              text="I believe it's important to <b>share and contribute</b> content to the developer community."
+            />
+            <IconColumn
+              columnClasses="col-sm-6 col-md-3"
+              icon="fal fa-project-diagram"
+              title="Project Management"
+              classes='rainbow-box-shadow-rounded rainbow-icon-narrow dark'
+              text="I have strong <b>project management</b> skills and can self-manage well as needed."
+            />
+          </div> 
+
+
+          <SectionTitle text="Latest from the Blog" icon="fas fa-rss" />
+          <div className="row">{articles}</div>
+
               <SectionTitle
-                text="Connect with Me"
-                icon="fal fa-handshake-alt"
+                text="Connect"
+                icon="fal fa-handshake"
               />
               <IconList 
-                classes='larger' 
+                classes='' 
                 listItems={[
                 {
                   icon: 'fab fa-codepen',
@@ -68,7 +104,7 @@ const AboutMe = ({ ...data }) => {
                   classes: 'rainbow-box-shadow-rounded'
                 },
                 {
-                  icon: 'fab fa-twitter',
+                  icon: 'fal fa-hashtag',
                   link: 'https://twitter.com/cnocon',
                   text: 'Twitter',
                   classes: 'rainbow-box-shadow-rounded'
@@ -93,43 +129,6 @@ const AboutMe = ({ ...data }) => {
                 }
               ]} 
             />
-            </div>
-          </div>
-
-          <SectionTitle text="Services" icon="fas fa-concierge-bell"/>
-          <div className="row">
-            <IconColumn
-              color="blue"
-              columnClasses="col-sm-6 col-md-3"
-              icon="fal fa-graduation-cap"
-              title="Code Tutoring"
-              text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages."
-            />
-            <IconColumn
-              color="green"
-              columnClasses="col-sm-6 col-md-3"
-              icon="fal fa-code"
-              title="Web Development"
-              text="This is my primary area of expertise. I have <b>10+ years of experience</b> in the field."
-            />
-            <IconColumn
-              color="yellow"
-              columnClasses="col-sm-6 col-md-3"
-              icon="fal fa-typewriter"
-              title="Blog Writer"
-              text="I believe it's important to <b>share and contribute</b> content to the developer community."
-            />
-            <IconColumn
-              color="purple"
-              columnClasses="col-sm-6 col-md-3"
-              icon="fal fa-project-diagram"
-              title="Project Management"
-              text="I have strong <b>project management</b> skills and can self-manage well as needed."
-            />
-          </div> 
-
-          <SectionTitle text="Latest from the Blog" icon="fas fa-rss" />
-          <div className="row">{articles}</div>
         </Styled.Container>
       </PageTransition>
     </Layout>
