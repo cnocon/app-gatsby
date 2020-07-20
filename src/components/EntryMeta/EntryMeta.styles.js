@@ -47,7 +47,7 @@ export const EntryMeta = css`
     font-size: 11px;
     letter-spacing: .03em;
     font-weight: 800;
-    color: #6A7686;
+    color: ${Theme.colors.grays.textDarkest};
     display: inline-block;
     line-height: 1.8;
     -webkit-transition: color 0.1s, background-color .2s, border-color .2s; transition: color 0.1s, background-color .2s, border-color .2s;

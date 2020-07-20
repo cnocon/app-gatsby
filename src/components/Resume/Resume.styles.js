@@ -57,7 +57,7 @@ export const Timeline = styled.div`
         color: #DDE4E6;
         background: #fff;
         border-radius: 50%;
-        border: 4px solid #f4f6f7;
+        border: 4px solid ${Theme.colors.grays.border};
         display: inline-block;
         width: 47px;
       }
@@ -139,7 +139,7 @@ export const Timeline = styled.div`
       left: -72px;
       height: 120%;
       width: 4px;
-      background: #F4F6F7;
+      background: ${Theme.colors.grays.border};
     }
   }
 `
@@ -196,7 +196,7 @@ export const HistoryHeading = css`
       color: #b7c6c9;
       background: #fff;
       border-radius: 50%;
-      border: 4px solid #f4f6f7;
+      border: 4px solid ${Theme.colors.grays.border};
       color: ${Theme.colors.grays.textDark};
     }
   }
@@ -224,9 +224,7 @@ export const ResumeSectionTitle = css`
     display: inline-block;
     padding-right: 1em;
     font-size: 12px;
-    font-family: Lato,sans-serif;
     text-transform: uppercase;
-    margin: 20px 0 15px;
     margin: 25px 0 14px;
   }
 
@@ -237,7 +235,7 @@ export const ResumeSectionTitle = css`
     left: 0;
     margin-top: 4px;
     width: 100%;
-    border-bottom: 4px solid ${Theme.colors.grays.border};
+    border-bottom: 4px solid ${Theme.colors.grays.background};
   }
 
   span {
@@ -261,7 +259,7 @@ export const ResumeSectionTitle = css`
       margin: 0 ${Theme.spacing.sm} 0 auto;
       font-weight: 400;
       color: ${Theme.colors.grays.textDark};
-      border: 4px solid #F4F6F7;
+      border: 4px solid ${Theme.colors.grays.border};
       border-radius: 50%;
       line-height: 39px;
       vertical-align: middle;

@@ -249,7 +249,7 @@ export default {styles: css`
     ${Theme.colors.accents.blue} 62%, 
     ${Theme.colors.accents.purple} 70%,
     ${Theme.colors.accents.red} 90%);
-    background-size: 100% 2.5px;
+    background-size: 100% 2px;
     background-position: center bottom;
     background-repeat: no-repeat;
     transition: background-image .4s;

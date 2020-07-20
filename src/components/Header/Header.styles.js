@@ -43,6 +43,7 @@ export const ImageEl = styled.img`
   margin: 0 auto;
   border-radius: 50%;
   display: block;
+  border: 4px solid ${Theme.colors.grays.border};
 
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     height: 10rem;
@@ -125,7 +126,7 @@ export const Nav = styled.ul`
 
 export const NavItem = styled.li`
   display: flex;
-  margin: 0 0 ${Theme.spacing.sm};
+  margin: 0 0 ${Theme.spacing.default};
   text-align: center;
   text-decoration: none;
   flex-basis: 33.333%;
@@ -137,20 +138,20 @@ export const NavLink = styled(Link)`
   text-decoration: none;  
   text-transform: lowercase;
   font-family: ${Theme.fonts.headings.family};
-  font-size: ${Theme.fonts.sizes.md};
+  font-size: ${Theme.fonts.sizes.default};
+  text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   cursor: pointer;
   color: ${Theme.colors.grays.text};
   transition: all .4s;
 
   @media screen and (min-width: ${Theme.breakpoints.min.md}) {
-    font-size: ${Theme.fonts.sizes.xxl};
     margin: 0 ${Theme.spacing.lg};
   }
   
   &.active {
-    color: #345;
+    color: ${Theme.colors.default.base};
   }
 
   &:hover,

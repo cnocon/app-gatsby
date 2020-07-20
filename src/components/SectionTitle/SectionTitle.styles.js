@@ -23,7 +23,7 @@ export const SectionTitle = css`
     left: 0;
     margin-top: 0;
     width: 100%;
-    border-bottom: 4px solid #F4F6F7;
+    border-bottom: 4px solid ${Theme.colors.grays.border};
   }
 
   span {
@@ -45,7 +45,7 @@ export const SectionTitle = css`
       color: #B7C6C9;
       background: #fff;
       border-radius: 50%;
-      border: 4px solid #F4F6F7;
+      border: 4px solid ${Theme.colors.grays.border};
       display: inline-block;
       width: 47px;
 

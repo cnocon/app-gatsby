@@ -10,7 +10,7 @@ export const LeftBlock = styled.div`
   align-items: center;
   text-align: center;
 
-  @media all and (min-width: 641px) {
+  @media all and (min-width: ${Theme.breakpoints.min.sm}) {
     width: 50%;
     flex-basis: 50%;
     align-items: flex-start;
@@ -28,7 +28,7 @@ export const RightBlock = styled.div`
   justify-content: center;
   margin-top: ${Theme.spacing.default};
 
-  @media all and (min-width: 641px) {
+  @media all and (min-width: ${Theme.breakpoints.min.sm}) {
     width: 50%;
     flex-basis: 50%;
     flex-direction: row;
@@ -47,10 +47,15 @@ export const FooterInner = styled.div`
   display: block;
   text-align: center;
 
-  @media all and (min-width: 641px) {
+  @media all and (min-width: ${Theme.breakpoints.min.sm}) {
     flex-direction: row;
     text-align: unset;
     justify-content: space-between;
+  }
+
+  @media all and (min-width: ${Theme.breakpoints.min.md}) {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 `
 

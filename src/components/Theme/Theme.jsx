@@ -21,14 +21,14 @@ module.exports = {
     },
     grays: {
       background: '#f7f7f7',
-      border: '#f4f6f7',
-      borderLight: '#F9F9F9',
-      borderDark: '#e7e8e9',
-      borderMedium: `#dde4e6`,
-      textLight: `#c7d7db`,
+      border: 'hsl(200, 16%, 96%)',
+      borderDark: 'hsl(210, 5%, 75%)',
+      borderMedium: 'hsl(210, 15%, 85%)',
+      textLight: `hsl(194, 15%, 85%)`,
+      text: `hsl(194, 15%, 75%)`,
       textDark: `hsl(194, 10%, 70%)`,
-      textDarker: `hsl(194, 10%, 50%)`,
-      text: `#d5dbdd`,
+      textDarker: `hsl(194, 5%, 60%)`,
+      textDarkest: `hsl(200deg 10% 45%)`,
       boxShadow: `hsl(210, 10%, 60%)`
     },
     accents: {

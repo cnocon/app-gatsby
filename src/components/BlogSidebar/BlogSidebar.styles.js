@@ -13,17 +13,23 @@ export const BlogSidebar = styled.div`
 
   h4 {
     text-align: left;
-    font-family: ${Theme.fonts.accent.family};
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: ${Theme.fonts.sizes.default};
-    color: ${Theme.colors.grays.textDark};
+    vertical-align: baseline;
+    font-size: ${Theme.fonts.sizes.sm};
+    line-height: ${Theme.fonts.sizes.lineHeights.sm};
+    color: ${Theme.colors.grays.textDarker};
+    
+    @media all and (max-width: ${Theme.breakpoints.max.md}) {
+      max-width: 375px;
+      margin-left: 0;
+      margin-right: 0;
+    }
 
-    span {
-      padding: 0 0 0 6px;
-      background-color: #fff;
-      z-index: 1;
-      color: ${Theme.colors.default.base};
+    i {
+      color: ${Theme.colors.grays.borderMedium};
+      margin-right: 6px;
+      font-weight: 700;
     }
   }
 `
@@ -31,10 +37,10 @@ export const BlogSidebar = styled.div`
 export const ArticleLink = styled(Link)`
   color: ${Theme.colors.default.base};
   font-size: ${Theme.fonts.sizes.sm};
-  line-height: ${Theme.fonts.sizes.lineHeights.sm};
+  line-height: ${Theme.fonts.sizes.lineHeights.md};
   display: block;
   font-family: ${Theme.fonts.headings.family};
-  padding-bottom: 28px;
+  padding-bottom: ${Theme.spacing.md};
 `
 
 export const PopularPost = styled.div`
@@ -47,9 +53,9 @@ export const PopularPost = styled.div`
   }
 
   @media all and (max-width: ${Theme.breakpoints.max.md}) {
-    width: 45%;
-    margin: 1rem 5% 1rem 0;
-    display: inline-block;
+    max-width: 375px;
+    margin-left: 0;
+    margin-right: 0;
   }
 `
 
@@ -67,21 +73,25 @@ export const ImgWrapper = styled.div`
 
 export const TagsWrapper = styled.div`
   text-align: left;
+
+  @media all and (max-width: ${Theme.breakpoints.max.md}) {
+    max-width: 375px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 `
 
 export const Tag = styled(Link)`
-  padding: 0 8px;
-  margin: 0 2px;
-  // border: 1px solid ${Theme.colors.grays.borderMedium};
   border-radius: 4px;
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: .03em;
   font-weight: 800;
-  color: #6A7686;
+  color: ${Theme.colors.grays.textDarkest};
   display: inline-block;
   line-height: ${Theme.fonts.sizes.lineHeights.md};
-  margin: 5px;
+  margin: 5px 5px 5px 0;
+  padding: 0 8px;
   box-shadow: 0 .5px .5px ${Theme.colors.accents.vivid.red},       
     -.5px 0 .5px ${Theme.colors.accents.vivid.green},
     .5px 0 .5px ${Theme.colors.accents.vivid.yellow},
@@ -89,10 +99,10 @@ export const Tag = styled(Link)`
   transition: box-shadow .3s;
 
   &:hover {
-    box-shadow: 0 .5px .5px ${Theme.colors.accents.text.red},       
-    -.5px 0 .5px ${Theme.colors.accents.vivid.green},
-    .5px 0 .5px ${Theme.colors.accents.vivid.yellow},
-    0 -.5px .5px ${Theme.colors.accents.vivid.blue};
+    box-shadow: 0 1px 1px ${Theme.colors.accents.text.red},       
+    -1px 0 1px ${Theme.colors.accents.vivid.green},
+    1px 0 1px ${Theme.colors.accents.vivid.yellow},
+    0 -1px 1px ${Theme.colors.accents.vivid.blue};
     color: #345;
   }
 `

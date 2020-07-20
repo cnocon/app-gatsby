@@ -21,18 +21,19 @@ export const RuleWrapper = styled.h2`
     margin: 3px auto 0;
     width: ${Theme.layout.widths.full};
     max-width: none;
-    border-bottom: 4px solid #F4F6F7;
+    border-bottom: 4px solid ${Theme.colors.grays.border};
   }
 
   i  {
     font-size: 22px;
     margin-right: 14px;
+    margin-left: 14px;
     line-height: 39px;
     text-align: center;
     color: #B7C6C9;
     background: #fff;
     border-radius: 50%;
-    border: 4px solid #F4F6F7;
+    border: 4px solid ${Theme.colors.grays.border};
     display: inline-block;
     width: 47px;
     height: 47px;
@@ -44,7 +45,7 @@ export const RuleSpan = css`
   display: inline-block;
   padding-right: 1.4em;
   background: #fff;
-  font-size: 1.25rem;
+  font-size: ${Theme.fonts.sizes.xs};
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;

@@ -60,7 +60,7 @@ export const Navigation = styled.div`
   }
 
   h4 {
-    color: ${Theme.colors.grays.text};
+    color: ${Theme.colors.grays.textLight};
   }
 
   a {

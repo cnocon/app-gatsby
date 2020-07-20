@@ -6,7 +6,7 @@ export const CrumbLink = css`
   font-family: inherit;
   color: inherit;
   font-weight: inherit;
-  border-bottom: 1px solid ${Theme.colors.grays.textLight};
+  border-bottom: 1px solid ${Theme.colors.grays.borderDark};
   text-decoration: none;
 
   &:hover {
