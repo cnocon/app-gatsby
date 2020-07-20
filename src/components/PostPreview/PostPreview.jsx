@@ -1,13 +1,12 @@
 import React from "react"
 import ReactHtmlParser from 'react-html-parser';
 import * as Styled from './PostPreview.styles'
-import { ReadableContent } from '../Post/Post.styles'
 import EntryMeta from "../EntryMeta/EntryMeta"
 
-const PostPreview = ({ post, color }) => {
+const PostPreview = ({ post }) => {
   
   return (
-    <ReadableContent>
+    <Styled.PostPreview>
       <Styled.Header>
         <Styled.Title>
           <Styled.TitleLink
@@ -34,7 +33,7 @@ const PostPreview = ({ post, color }) => {
       <Styled.Button to={`/articles/${post.slug}`}>
         Read Full Article <i className="far fa-long-arrow-right"></i>
       </Styled.Button>
-    </ReadableContent>
+    </Styled.PostPreview>
   )
 }
 

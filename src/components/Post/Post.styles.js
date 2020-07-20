@@ -4,42 +4,17 @@ import { css } from "@emotion/core"
 // import { Link } from "gatsby"
 import Theme from "../Theme/Theme"
 
-export const ReadableContent = styled.article`
-  margin: ${Theme.spacing.default} auto;
-  padding: ${Theme.spacing.xs} 0 ${Theme.spacing.xl};
-  display: block;
-  width: 100%;
-  max-width: 100%;
-
-  @media screen and (min-width: ${Theme.breakpoints.min.md}) {
-    width: ${Theme.layout.widths.default};
-    max-width: ${Theme.layout.widths.defaultMax};
-    padding-left: ${Theme.spacing.lg};
-    padding-right: ${Theme.spacing.lg};
-  }
-
-  &.post-preview {
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-
-    .entry-content {
-      padding-bottom: 0;
-    }
-  }
-`;
-
-
 export const PostTitle = styled.h1`
   font-size: ${Theme.fonts.sizes.xxl};
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
-  margin: 20px 0 1.6rem;
   font-family: ${Theme.fonts.headings.family};
   font-weight: 900;
-  margin-top: 0;
   line-height: 1.2;
   font-weight: 300;
   text-align: center;
   font-weight: 900;
+  margin: ${Theme.spacing.default} 0;
+  padding: ${Theme.spacing.xs} 0;
 
   @media screen and (max-width: ${Theme.breakpoints.max.lg}) {
     font-size: ${Theme.fonts.sizes.xl};
@@ -47,13 +22,16 @@ export const PostTitle = styled.h1`
   @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
     font-size: ${Theme.fonts.sizes.lg};
   }
-  @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
-    margin-top: 0;
-  }
+  // @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
+  //   margin-top: 0;
+  // }
 `
 
 export const HeaderStyles = css`
   font-size: ${Theme.fonts.sizes.default};
+  padding-left: 0;
+  padding-right: 0;
+
 `
 
 export const Navigation = styled.div`
@@ -211,7 +189,7 @@ export const EntryContent = css`
         ${Theme.colors.accents.text.blue} 50%, 
         ${Theme.colors.accents.text.purple} 67.5%,
         ${Theme.colors.accents.text.red} 82.5%);
-      background-size: 100% 2px;
+      background-size: 100% 1.5px;
       background-position: center bottom;
       background-repeat: no-repeat;
       transition: background-image .3s;
@@ -256,7 +234,12 @@ export const EntryContent = css`
       padding-bottom: 0; margin-bottom: 0;
     }
     .tagline h3 {
-      font-size: 2em; padding: 0; line-height: 1.4; font-weight: 300; color: #6A7686;
+      font-size: 2rem;
+      padding: 0;
+      line-height: 1.8;
+      font-weight: 300; 
+      /* color: #6A7686; */
+      color: ${Theme.colors.grays.textDarker};
     }
 
   /* DROP CAP */

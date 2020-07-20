@@ -8,9 +8,6 @@ export const Button = styled.a`
   line-height: 1.2;
   display: block;
   text-align: center;
-  // letter-spacing: .03em;
-  // border: 2px solid ${Theme.colors.default.base};
-  // border-radius: 4px;
   text-transform: uppercase;
   font-weight: 200;
   font-size: ${Theme.fonts.sizes.default};
@@ -36,48 +33,6 @@ export const Button = styled.a`
     font-size: ${Theme.fonts.sizes.default};
     font-weight:900;
   }
-`
-
-// export const Navigation = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   align-items: space-between;
-//   justify-content: start;
-
-//   [class$='full-block'] {
-//     flex-basis: 100%;
-//     max-width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//   }
-
-//   .right-full-block {
-//     align-items: flex-start;
-//   }
-
-// .left-full-block {
-//   align-items: flex-end;
-// }
-
-//   .left-block,
-//   .right-block {
-//     display: flex;
-//     flex-basis: 50%;
-//     max-width: 50%;
-//   }
-
-//   .left-block {
-//     justify-content: flex-start;
-//   }
-
-//   .right-block {
-//     justify-content: flex-end;
-//   }
-// `
-
-export const Section = styled.section`
-  padding-bottom: 3rem;
 `
 
 export const Navigation = styled.div`

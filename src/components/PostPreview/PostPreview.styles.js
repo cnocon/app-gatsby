@@ -9,8 +9,18 @@ export const PostPreview = styled.article`
   flex-direction: column;
   width: 100%;
   max-width: 100%;
-  margin: ${Theme.spacing.lg} auto;
-  padding: ${Theme.spacing.xs} 15px ${Theme.spacing.xl};
+  // margin: 2rem auto;
+  margin: 0 auto;
+  padding: ${Theme.spacing.xl} 15px ${Theme.spacing.xl};
+  border-bottom: 2px solid ${Theme.colors.grays.border};
+
+  &:first-of-type {
+    padding-top: 2.25rem;
+  }
+  
+  &:last-of-type {
+    border-bottom: 0;
+  }
 
   @media screen and (max-width: ${Theme.breakpoints.max.md}) {
     margin: ${Theme.spacing.md} auto;
@@ -22,22 +32,15 @@ export const Header = styled.header`
   display: flex;
   flex-direction: column;
   text-align: center;
-  
-  @media screen and (min-width: ${Theme.breakpoints.min.lg}) {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  h2 {
-    text-align: center;
-  }
+  padding: 0 4rem;
 `
 
 export const TitleLink = styled(Link)`
-  font-size: ${Theme.fonts.sizes.xl};
+  // font-size: ${Theme.fonts.sizes.lg};
+  font-size: ${Theme.fonts.sizes.md};
   line-height: ${Theme.fonts.sizes.lineHeights.default};
   padding-bottom: 0;
-  font-weight: 200;
+  font-weight: 900;
   color: ${Theme.colors.default.base};
   font-family: ${Theme.fonts.headings.family};
   transition: all .4s;
@@ -66,7 +69,7 @@ export const EntryMeta = css`
   font-size: 0.750em;
   color: ${Theme.colors.grays.textDarker};
   font-weight: 400;
-  font-size: ${Theme.fonts.sizes.xs};;
+  font-size: ${Theme.fonts.sizes.xs};
   line-height: ${Theme.fonts.sizes.lineHeights.xl};;
   text-align: center;
 
@@ -130,13 +133,14 @@ export const Button = styled(Link)`
   outline: 0;
   border: 2px solid ${Theme.colors.default.base};
   border-radius: 4px;
-  color: #fff;
-  background-color: #345;
+  background-color: #fff;
+  color: ${Theme.colors.default.base};
   transition: all .2s;
 
   &:hover {
-    background-color: #fff;
-    color: ${Theme.colors.default.base};
+    
+    background-color: #345;
+    color: #fff;
   }
 
   .meta-nav {

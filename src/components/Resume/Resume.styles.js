@@ -396,7 +396,7 @@ export const Skillset = css`
       background-color: ${Theme.colors.grays.border};
       border: 1px solid transparent;
       width: 100%;
-      height: 6px;
+      height: 4px;
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
       display: block;
@@ -407,7 +407,7 @@ export const Skillset = css`
         top: 0;
         left: 0;
         width: 0;
-        height: 6px;
+        height: 4px;
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
         background-color: ${Theme.colors.accents.green};

@@ -14,6 +14,10 @@ export const EntryMeta = css`
   line-height: ${Theme.fonts.sizes.lineHeights.lg};
   text-align: center;
 
+  &.left {
+    text-align: left;
+  }
+
   > span {
     display: block;
     text-align: center;
@@ -60,52 +64,5 @@ export const EntryMeta = css`
     letter-spacing: .15em;
     color: #DDE4E6;
   }
-
-  .border-accent-purple {
-    border: 2px solid ${Theme.colors.accents.purple};
-  }
-  .border-accent-red {
-    border: 2px solid ${Theme.colors.accents.red};
-  }
-  .border-accent-yellow {
-    border: 2px solid ${Theme.colors.accents.yellow};
-  }
-  .border-accent-blue {
-    border: 2px solid ${Theme.colors.accents.blue};
-  }
-  .border-accent-green {
-    border: 2px solid ${Theme.colors.accents.green};
-  }
-
-  .background-accent-purple {
-    background: ${Theme.colors.accents.purple};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.purple};
-  }
-
-  .background-accent-red {
-    background: ${Theme.colors.accents.red};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.red};
-  }
-
-  .background-accent-yellow {
-    background: ${Theme.colors.accents.yellow};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.yellow};
-  }
-
-  .background-accent-blue {
-    background: ${Theme.colors.accents.blue};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.blue};
-  }
-
-  .background-accent-green {
-    background: ${Theme.colors.accents.green};
-    color: #000;
-    border: 1px solid ${Theme.colors.accents.green};
-  }
-
 `
 

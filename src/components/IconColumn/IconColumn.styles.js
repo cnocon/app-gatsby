@@ -48,16 +48,26 @@ export const IconColumnDiv = styled.div`
     background-color: #345;
     font-weight: 200;
     margin: 0 auto ${Theme.spacing.default};
-    display: block;
-    font-size: 24px;
-    width: 44px;
-    height: 44px;
-    line-height: 28px;
+    // display: block;
+    // font-size: 24px;
+    // width: 44px;
+    // height: 44px;
+    // line-height: 28px;
+    // padding: 8px;
+    // text-align: center;
+    // background-color: #345;
+    // font-weight: 400;
+    // margin: 0 auto 1.6rem;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    line-height: 20px;
     padding: 8px;
     text-align: center;
     background-color: #345;
     font-weight: 400;
     margin: 0 auto 1.6rem;
+    border-radius: 50%;
   }
 }
 `

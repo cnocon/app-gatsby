@@ -97,10 +97,11 @@ export const Event = styled.article`
   
       .far {
         &::before {
-          color: ${Theme.colors.default.base};
-          font-weight: 200;
+          color: ${Theme.colors.grays.textDark};
+          font-weight: 400;
           display: inline-block;
           margin: 0 2px;
+          display: none;
           
         }
       }
@@ -108,7 +109,7 @@ export const Event = styled.article`
       em {
         font-weight: 400;
         text-transform: none;
-        font-style: normal;
+        font-style: italic;
       }
     }
 
@@ -123,7 +124,6 @@ export const Event = styled.article`
       font-weight: 900;
       text-transform: uppercase;
     }
-
 
     .range,
     small {

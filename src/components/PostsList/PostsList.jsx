@@ -1,24 +1,20 @@
 import React from "react"
 import Layout from "../Layout/Layout"
+import BlogSidebar from '../BlogSidebar/BlogSidebar'
 import Header from "../Header/Header"
 import SEO from "../SEO/seo"
 import PostPreview from "../PostPreview/PostPreview"
 import * as Styled from '../PostsList/PostsList.styles'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
-import getColor from "../utils/getColor"
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions';
 
 const PostsList = ({...data}) => {
-  const {posts, nextPagePath, prevPagePath, breadcrumbs, colors, title, seoDescription} = data.pageContext
-  let colorsCopy = Object.assign([], colors)
+  const {stitle, posts, nextPagePath, prevPagePath, breadcrumbs, title, seoDescription, categories} = data.pageContext
   
   const articles = posts.map(node => {
     return (
-      <div className="col-sm-12">
-        <PostPreview post={node} key={node.slug} color={getColor(colors, colorsCopy)} />
-        {/* <PostPreview post={node} key={node.slug} color='yellow' /> */}
-      </div>
+      <PostPreview post={node} key={node.slug} />
     )
   });
 
@@ -52,17 +48,33 @@ const PostsList = ({...data}) => {
   return (
     <Layout className="blog-posts">
       <Header />
-      <SEO stitle={title} sdescription={seoDescription} />
+      <SEO stitle={stitle} sdescription={seoDescription} />
       <PageTransition>
         <div className="posts-list">
           <Rule title={title} icon="fas fa-rss" />
           <Breadcrumbs crumbs={breadcrumbs} />
-            <div className="row">{articles}</div>
-          <Styled.Navigation>
-            {prevBtn}
-            {nextBtn}
-          </Styled.Navigation>
+          <div className="row">
+            <div className="col-sm-12 col-md-9">
+              {articles}
+              <Styled.Navigation>
+                {prevBtn}
+                {nextBtn}
+              </Styled.Navigation>
+            </div>
+            <BlogSidebar categories={categories} colClasses='col-sm-12 col-md-3' />
+          </div>
         </div>
+
+        {/* <div className="row">
+            <div className="col-sm-12">
+
+            <Styled.Navigation>
+                {prevBtn}
+                {nextBtn}
+              </Styled.Navigation>
+              </div>
+          </div>
+        </div> */}
       </PageTransition>
     </Layout>
   )

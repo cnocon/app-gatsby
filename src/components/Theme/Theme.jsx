@@ -27,7 +27,7 @@ module.exports = {
       borderMedium: `#dde4e6`,
       textLight: `#c7d7db`,
       textDark: `hsl(194, 10%, 70%)`,
-      textDarker: `#BFC5CD`,
+      textDarker: `hsl(194, 10%, 50%)`,
       text: `#d5dbdd`,
       boxShadow: `hsl(210, 10%, 60%)`
     },
@@ -102,7 +102,7 @@ module.exports = {
       sm: '1.4rem',
       default: '1.6rem',
       md: '2.25rem',
-      lg: '3rem',
+      lg: '2.75rem',
       xl: '3.6rem',
       xxl: '4.5rem',
       lineHeights: {

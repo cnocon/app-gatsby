@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import Layout from "../Layout/Layout"
+import BlogSidebar from '../BlogSidebar/BlogSidebar'
 import Header from "../Header/Header"
 import SEO from "../SEO/seo"
 import ReactHtmlParser from 'react-html-parser'
@@ -8,14 +9,11 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions'
-// import getColor from "../utils/getColor"
 import $ from 'jquery'
 import { Link } from 'gatsby'
 
 const Post = ({...data}) => {
-  const { post, breadcrumbs, categoriesMap, prevPost, nextPost } = data.pageContext
-  // let colorsCopy = Object.assign([], colors)
-  // let color = getColor(colors, colorsCopy)
+  const { post, breadcrumbs, categoriesMap, prevPost, nextPost, categories } = data.pageContext
 
   const prevBtn = prevPost ?
      <div className={nextPost ? "left-block" : "left-full-block"}>
@@ -62,49 +60,69 @@ const Post = ({...data}) => {
       </SEO>
 
       <PageTransition>
-        <section css={theme => ({paddingTop: 0, paddingBottom: theme.spacing.lg})}>
-          <Rule
-            title={`Level: ${post.tags[0].name.toUpperCase()}`}
-            icon="fas fa-chart-bar"
-          />
-          
-          <Breadcrumbs crumbs={breadcrumbs} />
-          <Styled.ReadableContent className="post post-single">
-            <header css={Styled.HeaderStyles}>
-              <Styled.PostTitle>
-                {post.title}
-              </Styled.PostTitle>
 
-              <div 
-                className="addthis_inline_share_toolbox_vo2p" 
-                css={ theme => ({ marginBottom: theme.spacing.default }) }>
-              </div>
+      <Rule
+          title={`Level: ${post.tags[0].name.toUpperCase()}`}
+          icon="fas fa-chart-bar"
+        />
+        <div className="row">
+          <div className="col-sm-12">
+            <Breadcrumbs crumbs={breadcrumbs} />
+              <header css={Styled.HeaderStyles}>
+                <Styled.PostTitle>
+                  {post.title}
+                </Styled.PostTitle>
 
-              <EntryMeta
-                categoriesMap={categoriesMap}
-                published={post.published}
-                categories={post.categories} />
-            </header>
+                <div className="addthis_inline_share_toolbox_vo2p" 
+                  css={ theme => ({ marginBottom: theme.spacing.default, textAlign: 'center' }) }>
+                </div>
 
-            <div className="entry-content clearfix" css={Styled.EntryContent}>
-              <div className="main-content">
-                { ReactHtmlParser(post.body) }
-              </div>
-            </div>
-          </Styled.ReadableContent>
-          
-          <Styled.Navigation>
-          <div className="col-sm-6 nav-previous left-block">
-            {prevBtn ? <h4>PREVIOUS POST</h4> : null }
-            {prevBtn}
+                <EntryMeta
+                  categoriesMap={categoriesMap}
+                  published={post.published}
+                  categories={post.categories}
+                  classes='' />
+              </header>
           </div>
-          <div className="col-sm-6 nav-next right-block">
-            {nextBtn ? <h4>NEXT POST</h4> : null }
-            {nextBtn}
-          </div>
-          </Styled.Navigation>
           
-        </section>
+          <div className="col-sm-12 col-md-9">
+            <section css={theme => ({paddingTop: 0, paddingBottom: theme.spacing.lg})}>
+
+                <div className="entry-content clearfix" css={Styled.EntryContent}>
+                  <div className="main-content">
+                    { ReactHtmlParser(post.body) }
+                  </div>
+                </div>
+              
+            </section>
+
+            <Styled.Navigation>
+              <div className="col-sm-6 nav-previous left-block">
+                {prevBtn ? <h4>PREVIOUS POST</h4> : null }
+                {prevBtn}
+              </div>
+              <div className="col-sm-6 nav-next right-block">
+                {nextBtn ? <h4>NEXT POST</h4> : null }
+                {nextBtn}
+              </div>
+            </Styled.Navigation>
+          </div>
+          <BlogSidebar categories={categories} colClasses='col-sm-12 col-md-3' />
+        </div>
+        {/* <div className="row">
+          <div className="col-sm-12">
+            <Styled.Navigation>
+              <div className="col-sm-6 nav-previous left-block">
+                {prevBtn ? <h4>PREVIOUS POST</h4> : null }
+                {prevBtn}
+              </div>
+              <div className="col-sm-6 nav-next right-block">
+                {nextBtn ? <h4>NEXT POST</h4> : null }
+                {nextBtn}
+              </div>
+            </Styled.Navigation>
+          </div>
+        </div> */}
       </PageTransition>
     </Layout>
   )

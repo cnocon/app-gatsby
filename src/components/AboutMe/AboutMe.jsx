@@ -9,11 +9,9 @@ import Intro from '../Intro/Intro'
 import IconColumn from '../IconColumn/IconColumn'
 import ImageColumn from '../ImageColumn/ImageColumn'
 import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions';
-import getColor from "../utils/getColor"
 
 const AboutMe = ({ ...data }) => {
-  const { posts, colors } = data.pageContext
-  let colorsCopy = Object.assign([], colors)
+  const { posts } = data.pageContext
 
   const articles = (
     posts.map((obj, i) => {
@@ -29,8 +27,7 @@ const AboutMe = ({ ...data }) => {
         slug={post.slug}
         summary={post.summary}
         date={date} 
-        key={obj.node.published} 
-        color={getColor(colors, colorsCopy)} />
+        key={obj.node.published} />
     })
   )
 

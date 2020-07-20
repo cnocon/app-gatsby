@@ -142,12 +142,12 @@ exports.createPages = async ({ actions, graphql }) => {
       actions.createPage({
         path: `/articles/${category}/page-${index + 1}`,
         component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
-        categories: categoriesData.data.allButterPost.distinct,
         context: {
+          categories: categoriesData.data.allButterPost.distinct,
           prevPagePath: index < 1 ? null : `/articles/${category}/page-${index}`,
           nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}/page-${index + 2}`,
-          colors: colors,
-          title: `Posts in ${group.fieldValue} | Front End Development Blog`,
+          title: `Posted in ${group.fieldValue}`,
+          stitle: `Latest Posts | Front End Development Blog`,
           seoDescription: `Latest ${group.fieldValue} posts from Cristin O'Connor's Front End Development Blog`,
           category: category,
           posts: collection.reverse(),
@@ -177,10 +177,10 @@ exports.createPages = async ({ actions, graphql }) => {
       context: {
         categories: categoriesData.data.allButterPost.distinct,
         posts: collection.map(p => p.node),
-        colors: colors,
         prevPagePath: index < 1 ? null : `/articles/page-${index}`,
         nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
-        title: "Latest Posts | Front End Development Blog",
+        title: "Latest Posts",
+        stitle: "Latest Posts | Front End Development Blog",
         seoDescription: `Latest Posts from Cristin O'Connor's Front End Development Blog`,
         breadcrumbs: [
           {
@@ -206,6 +206,7 @@ exports.createPages = async ({ actions, graphql }) => {
       component: path.resolve(`./src/components/Post/Post.jsx`),
       context: {
         post: node.node,
+        categories: categoriesData.data.allButterPost.distinct,
         prevPost: index === 0 ? null : allPosts[index - 1].node,
         nextPost: index === allPosts.length - 1 ? null : allPosts[index + 1].node,
         categories: categoriesData.data.allButterPost.distinct,
@@ -233,7 +234,6 @@ exports.createPages = async ({ actions, graphql }) => {
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
       posts: allPosts.slice(0,6),
-      colors: colors,
       categories: categoriesData.data.allButterPost.distinct,
       breadcrumbs: [
         {
