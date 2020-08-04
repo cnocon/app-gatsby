@@ -6,22 +6,6 @@
 
 // You can delete this file if you're not using it
 
-
-
-const path = require(`path`)
-
-const chunk = (array, size) => {
-  if (!array) return [];
-  // create the first chunk of the given array
-  const firstChunk = array.slice(0, size);
-
-  if (!firstChunk.length) {
-    // this is the base case to terminate the recursion
-    return array;
-  }
-
-  return [firstChunk].concat(chunk(array.slice(size, array.length), size));
-}
 // MY NODE TYPES ARE "SitePage"
 // const { createFilePath } = require(`gatsby-source-filesystem`)
 // exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -36,6 +20,36 @@ const chunk = (array, size) => {
 //     })
 //   }
 // }
+
+const https = require("https");
+const path = require(`path`);
+const { Console } = require("console");
+
+const chunk = (array, size) => {
+  if (!array) return [];
+  // create the first chunk of the given array
+  const firstChunk = array.slice(0, size);
+
+  if (!firstChunk.length) {
+    // this is the base case to terminate the recursion
+    return array;
+  }
+
+  return [firstChunk].concat(chunk(array.slice(size, array.length), size));
+}
+
+// Points from Treehouse
+// https.get('https://teamtreehouse.com/cristinoconnor.json', res => {
+//   res.setEncoding("utf8");
+//   let body = "";
+//   res.on("data", data => {
+//     body += data;
+//   });
+//   res.on("end", () => {
+//     body = JSON.parse(body);
+//     console.log(body.points);
+//   });
+// });
 
 exports.createPages = async ({ actions, graphql }) => {
   const categoriesData = await graphql(`
@@ -130,7 +144,6 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const allPosts = data.allButterPost.edges.reverse();
   const chunkedPosts = chunk(allPosts, 3);
-  const colors = ['blue', 'green', 'yellow', 'purple']
   const groups = data.allButterPost.group;
 
   groups.forEach(group => {
