@@ -24,7 +24,7 @@ const ResumeData = {
       year: 2020,
       startDate: "Feb 2020",
       endDate: "Present",
-      position: "Front End Developer",
+      position: "Front End Developer II",
       company: "Clearlink <i class='far fa-chevron-right'></i> <em>Salt Lake City, UT</em>",
       desc: "",
       descList: [
@@ -34,10 +34,10 @@ const ResumeData = {
         // "Migrate websites into a Gatsby, GraphQL, and Emotion powered front end."
       ],
       awards: [
-        // {
-        //   name: "Treehouse Badges",
-        //   detail: "April 2020"
-        // },
+        {
+          name: "FED Project Showcase Winner ",
+          detail: "July 2020"
+        }
         // {
         //   name: "2x Sprint Shoutout Winner",
         //   detail: "March 2020, April 2020"
