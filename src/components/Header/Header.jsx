@@ -37,11 +37,16 @@ const Header = ({ ruleTitle, ruleIcon }) => {
             <Sty.NavLink to="/" activeClassName="active">About</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/resume" className={`${ResumeClass}`}>Résumé</Sty.NavLink>
-          </Sty.NavItem>
-          <Sty.NavItem>
             <Sty.NavLink to="/articles/page-1" className={`${ArticlesClass}`}>Blog</Sty.NavLink>
           </Sty.NavItem>
+          
+          <Sty.NavItem>
+            <Sty.NavLink to="/portfolio" className={`${ArticlesClass}`}>Portfolio</Sty.NavLink>
+          </Sty.NavItem>
+          <Sty.NavItem>
+            <Sty.NavLink to="/resume" className={`${ResumeClass}`}>Résumé</Sty.NavLink>
+          </Sty.NavItem>
+          
         </Sty.Nav>
       </div>
     </Sty.Container>
