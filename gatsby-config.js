@@ -50,8 +50,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `CristinIO`,
-        short_name: `CristinIO`,
+        name: `CRISTINIO`,
+        short_name: `CRISTINIO`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#5ec5ed`,
@@ -67,7 +67,11 @@ module.exports = {
         resolveEnv: () => process.env.NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: '*', allow: ['/', '/static/'] }]
+            policy: [{ 
+              userAgent: '*', 
+              allow: ['/', '/static/'],
+              disallow: '/sandbox'
+            }]
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],

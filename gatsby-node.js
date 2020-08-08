@@ -6,9 +6,6 @@
 
 const https = require("https");
 const path = require(`path`);
-const { Console } = require("console");
-// const { getSandboxData } = require('./apis');
-// const https = require("https");
 const options = {
   'hostname': 'arcane-stream-45843.herokuapp.com',
   'path': '/categories/',
@@ -19,18 +16,14 @@ const options = {
 let sandboxData;
 https.get(options, function (res) {
   const chunks = [];
-  
-
   res.on("data", function (chunk) {
     chunks.push(chunk);
   });
-
   res.on("end", async function (chunk) {
     const body = Buffer.concat(chunks);
     const x = await body.toString();
     sandboxData = x;
   });
-
   res.on("error", function (error) {
     console.error(error);
   });

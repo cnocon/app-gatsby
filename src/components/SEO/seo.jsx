@@ -14,7 +14,7 @@ import imageGetter from '../utils/imageGetter';
 function SEO({ sdescription, lang, meta, stitle, slug='', children }) {
   const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`;
   const image = `https://cristin.io${imageGetter(slug)}` || `https://cristin.io${defaultImage}`;
-  const title = stitle || `Cristin O'Connor | Front End Developer`;
+  const title = stitle || `CRISTIN.IO`;
   
   return (
     <Helmet
@@ -68,7 +68,6 @@ function SEO({ sdescription, lang, meta, stitle, slug='', children }) {
           name: `twitter:image`,
           content: image,
         },
-
       ].concat(meta)}
     >
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous"/>
