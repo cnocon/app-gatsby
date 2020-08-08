@@ -4,52 +4,49 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
-
-// MY NODE TYPES ARE "SitePage"
-// const { createFilePath } = require(`gatsby-source-filesystem`)
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions
-//   console.log(node.internal.type);
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const value = createFilePath({ node, getNode })
-//     createNodeField({
-//       name: `slug`,
-//       node,
-//       value,
-//     })
-//   }
-// }
-
 const https = require("https");
 const path = require(`path`);
 const { Console } = require("console");
+// const { getSandboxData } = require('./apis');
+// const https = require("https");
+const options = {
+  'hostname': 'arcane-stream-45843.herokuapp.com',
+  'path': '/categories/',
+  'headers': {
+    'Content-Type': 'application/json'
+  }
+};
+let sandboxData;
+https.get(options, function (res) {
+  const chunks = [];
+  
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", async function (chunk) {
+    const body = Buffer.concat(chunks);
+    const x = await body.toString();
+    sandboxData = x;
+  });
+
+  res.on("error", function (error) {
+    console.error(error);
+  });
+});
+
 
 const chunk = (array, size) => {
   if (!array) return [];
   // create the first chunk of the given array
   const firstChunk = array.slice(0, size);
-
   if (!firstChunk.length) {
     // this is the base case to terminate the recursion
     return array;
   }
-
   return [firstChunk].concat(chunk(array.slice(size, array.length), size));
 }
-
-// Points from Treehouse
-// https.get('https://teamtreehouse.com/cristinoconnor.json', res => {
-//   res.setEncoding("utf8");
-//   let body = "";
-//   res.on("data", data => {
-//     body += data;
-//   });
-//   res.on("end", () => {
-//     body = JSON.parse(body);
-//     console.log(body.points);
-//   });
-// });
 
 exports.createPages = async ({ actions, graphql }) => {
   const categoriesData = await graphql(`
@@ -243,6 +240,14 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   actions.createPage({
+    path: `/sandbox`,
+    component: path.resolve(`./src/components/Sandbox/Sandbox.jsx`),
+    context: {
+      sandboxData: JSON.parse(sandboxData)
+    },
+  })
+
+  actions.createPage({
     path: `/`,
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
@@ -258,3 +263,33 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
 }
+
+// You can delete this file if you're not using it
+
+// MY NODE TYPES ARE "SitePage"
+// const { createFilePath } = require(`gatsby-source-filesystem`)
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions
+//   console.log(node.internal.type);
+//   if (node.internal.type === `MarkdownRemark`) {
+//     const value = createFilePath({ node, getNode })
+//     createNodeField({
+//       name: `slug`,
+//       node,
+//       value,
+//     })
+//   }
+// }
+
+// Points from Treehouse
+// https.get('https://teamtreehouse.com/cristinoconnor.json', res => {
+//   res.setEncoding("utf8");
+//   let body = "";
+//   res.on("data", data => {
+//     body += data;
+//   });
+//   res.on("end", () => {
+//     body = JSON.parse(body);
+//     console.log(body.points);
+//   });
+// });
