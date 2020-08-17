@@ -7,25 +7,24 @@ const path = require(`path`);
 const sandboxData = require('./queries/sandboxData');
 const { postCategoriesDataQuery } = require('./queries/postCategoriesData');
 const { allPostsDataQuery } = require('./queries/allPostsData');
-
-const chunkArray = (array, size) => {
-  if (!array) return [];
-  const firstChunk = array.slice(0, size);
-  if (!firstChunk.length) return array; // base case/terminates recursion
-  return [firstChunk].concat(chunkArray(array.slice(size, array.length), size));
-}
+const { chunkArray } = require('./helpers/chunkArray');
 
 exports.createPages = async ({ actions, graphql }) => {
   const categoriesData = await graphql(postCategoriesDataQuery);
   const allPostsData = await graphql(allPostsDataQuery);
   const allPosts = allPostsData.data.allButterPost.edges.reverse();
   const chunkedPosts = chunkArray(allPosts, 3);
-  const groups = allPostsData.data.allButterPost.group;
+  const categoryGroups = allPostsData.data.allButterPost.group;
 
-  groups.forEach(group => {
-    const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
+  /**
+   * CATEGORY PAGES
+   * 
+   * 3 posts per page (unlimited pages per category)
+   */
+  categoryGroups.forEach(categoryGroup => {
+    const sortedPosts = categoryGroup.nodes.sort((a, b) => a.published < b.published)
     const chunkedPosts = chunkArray(sortedPosts, 3);
-    const category = group.fieldValue.toLowerCase().replace(/\s/g, '-')
+    const category = categoryGroup.fieldValue.toLowerCase().replace(/\s/g, '-')
 
     chunkedPosts.forEach((collection, index) => {
       actions.createPage({
@@ -35,30 +34,26 @@ exports.createPages = async ({ actions, graphql }) => {
           categories: categoriesData.data.allButterPost.distinct,
           prevPagePath: index < 1 ? null : `/articles/${category}/page-${index}`,
           nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}/page-${index + 2}`,
-          title: `Posted in ${group.fieldValue}`,
+          title: `Posted in ${categoryGroup.fieldValue}`,
           stitle: `Latest Posts | Front End Development Blog`,
-          seoDescription: `Latest ${group.fieldValue} posts from Cristin O'Connor's Front End Development Blog`,
+          seoDescription: `Latest ${categoryGroup.fieldValue} posts from Cristin O'Connor's Front End Development Blog`,
           category: category,
           posts: collection.reverse(),
           breadcrumbs: [
-            {
-              name: 'Home',
-              path: '/',
-            },
-            {
-              name: `Blog`,
-              path: `/articles/page-1`,
-            },
-            {
-              name: category.charAt(0).toUpperCase() + category.slice(1),
-              path: null,
-            },
+            {name: 'Home', path: '/'},
+            {name: `Blog`,path: `/articles/page-1`},
+            {name: category.charAt(0).toUpperCase() + category.slice(1), path: null},
           ]
         },
       })
     })
   })
 
+  /**
+   * LATEST POST PAGES 
+   * 
+   * 3 posts per page
+   */
   chunkedPosts.forEach((collection, index) => {
     actions.createPage({
       path: `/articles/page-${index + 1}`,
@@ -72,23 +67,18 @@ exports.createPages = async ({ actions, graphql }) => {
         stitle: "Latest Posts | Front End Development Blog",
         seoDescription: `Latest Posts from Cristin O'Connor's Front End Development Blog`,
         breadcrumbs: [
-          {
-            name: 'Home',
-            path: '/',
-          },
-          {
-            name: `Blog`,
-            path: `/articles/page-1`,
-          },
-          {
-            name: `Page ${index + 1}`,
-            path: null,
-          },
+          {name: 'Home', path: '/'},
+          {name: `Blog`, path: `/articles/page-1`},
+          {name: `Page ${index + 1}`, path: null},
         ],
       },
     })
   })
 
+  /**
+   * POST SINGLE PAGES 
+   * 
+   */
   allPosts.forEach(( node, index ) => {
     actions.createPage({
       path: `/articles/${node.node.slug}`,
@@ -99,48 +89,38 @@ exports.createPages = async ({ actions, graphql }) => {
         prevPost: index === 0 ? null : allPosts[index - 1].node,
         nextPost: index === allPosts.length - 1 ? null : allPosts[index + 1].node,
         categories: categoriesData.data.allButterPost.distinct,
-        colors: ['blue', 'green', 'purple', 'blue'],
         breadcrumbs: [
-          {
-            name: 'Home',
-            path: '/',
-          },
-          {
-            name: `Blog`,
-            path: `/articles/page-1`,
-          },
-          {
-            name: node.node.title,
-            path: null,
-          },
+          { name: 'Home', path: '/'},
+          { name: `Blog`, path: `/articles/page-1`},
+          { name: node.node.title, path: null},
         ],
       },
     })
   })
 
-  actions.createPage({
-    path: `/sandbox`,
-    component: path.resolve(`./src/components/Sandbox/Sandbox.jsx`),
-    context: {
-      sandboxData: sandboxData
-    },
-  })
-
+  /**
+   * ABOUT ME PAGE
+   * 
+   */
   actions.createPage({
     path: `/`,
     component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
     context: {
-      posts: allPosts.slice(0,6),
+      posts: allPosts.slice(0, 6),
       categories: categoriesData.data.allButterPost.distinct,
-      breadcrumbs: [
-        {
-          name: 'Home',
-          path: null,
-        },
-      ],
+      breadcrumbs: [{name: 'Home', path: null}],
     },
   })
 
+  /**
+   * SANDBOX PAGE FOR Q-AND-API DATA
+   * 
+   */
+  actions.createPage({
+    path: `/sandbox`,
+    component: path.resolve(`./src/components/Sandbox/Sandbox.jsx`),
+    context: {sandboxData: sandboxData},
+  })
 }
 
 // You can delete this file if you're not using it

@@ -25,18 +25,16 @@ const dataPromise = new Promise((resolve, reject) => {
       [{path: `/categories/${id}`, key: 'category'},
       {path: `/categories/${id}/questions`, key: 'categoryQuestions'}
       ].forEach(set => {
-        const options = {
-          'hostname': 'arcane-stream-45843.herokuapp.com',
-          'path': set.path,
-          'headers': { 'Content-Type': 'application/json' }
-        };
+        const options = {'path': set.path, 'hostname': 'arcane-stream-45843.herokuapp.com', 'headers': { 'Content-Type': 'application/json' }};
         https.get(options, res => {
           const chunks = [];
           res.on("data", chunk => chunks.push(chunk));
           res.on("end", () => {
-            sandboxData[`${id}`] = {};
+            if (!sandboxData[id]) {
+              sandboxData[id] = {};
+            }
             const str = Buffer.concat(chunks).toString();
-            sandboxData[`${id}`][set.key] = JSON.parse(str);
+            sandboxData[id][set.key] = JSON.parse(str);
             if (i === categoryIds.length - 1) {
               resolve(sandboxData);
             };
