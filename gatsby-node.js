@@ -3,42 +3,15 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-
-const https = require("https");
 const path = require(`path`);
-const options = {
-  'hostname': 'arcane-stream-45843.herokuapp.com',
-  'path': '/categories/',
-  'headers': {
-    'Content-Type': 'application/json'
-  }
-};
-let sandboxData;
-https.get(options, function (res) {
-  const chunks = [];
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
-  res.on("end", async function (chunk) {
-    const body = Buffer.concat(chunks);
-    const x = await body.toString();
-    sandboxData = x;
-  });
-  res.on("error", function (error) {
-    console.error(error);
-  });
-});
+// const { data } = require("jquery");
+const sandboxData = require('./queries/sandboxData');
 
-
-const chunk = (array, size) => {
+const chunkArray = (array, size) => {
   if (!array) return [];
-  // create the first chunk of the given array
   const firstChunk = array.slice(0, size);
-  if (!firstChunk.length) {
-    // this is the base case to terminate the recursion
-    return array;
-  }
-  return [firstChunk].concat(chunk(array.slice(size, array.length), size));
+  if (!firstChunk.length) return array; // base case/terminates recursion
+  return [firstChunk].concat(chunkArray(array.slice(size, array.length), size));
 }
 
 exports.createPages = async ({ actions, graphql }) => {
@@ -133,12 +106,12 @@ exports.createPages = async ({ actions, graphql }) => {
   `)
 
   const allPosts = data.allButterPost.edges.reverse();
-  const chunkedPosts = chunk(allPosts, 3);
+  const chunkedPosts = chunkArray(allPosts, 3);
   const groups = data.allButterPost.group;
 
   groups.forEach(group => {
     const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
-    const chunkedPosts = chunk(sortedPosts, 3);
+    const chunkedPosts = chunkArray(sortedPosts, 3);
     const category = group.fieldValue.toLowerCase().replace(/\s/g, '-')
 
     chunkedPosts.forEach((collection, index) => {
@@ -236,7 +209,7 @@ exports.createPages = async ({ actions, graphql }) => {
     path: `/sandbox`,
     component: path.resolve(`./src/components/Sandbox/Sandbox.jsx`),
     context: {
-      sandboxData: JSON.parse(sandboxData)
+      sandboxData: sandboxData
     },
   })
 
