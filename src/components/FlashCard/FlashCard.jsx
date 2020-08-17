@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import EmbeddedGist from '../EmbeddedGist/EmbeddedGist'
 import ReactHtmlParser from 'react-html-parser'
 import * as Styled from './FlashCard.styles'
@@ -17,15 +17,15 @@ const Snippet = ({item}) => {
 
 const FlashCard = ({...props}) => {
   const { question, name } = props;
-  const [ visible, setVisible ] = useState(props.visible);
+  const [ frontVisible, setFrontVisible ] = useState(true);
 
-  const generateAnswerMedia = item => {
+  const generateMedia = item => {
     switch (item.type) {
       case 'image':
         return <img 
           src={item.url}
           alt={item.desc} 
-          style={{width: `${item.width}px`}}
+          style={{minWidth: `${item.width}px`, maxWidth: '100%'}}
           key={item.url} />;
       case 'gist':
         return <EmbeddedGist gist={item.gist} key={item.id}/>;
@@ -37,42 +37,54 @@ const FlashCard = ({...props}) => {
     }
   }
 
-  const answerMedia = question.answer_media.map(item => {
-    return generateAnswerMedia(item);
-  });
+  const answerMedia = question.answer_media.map(item => generateMedia(item));
+  const questionMedia = question.prompt_media.map(item => generateMedia(item));
+  const frontStyle = frontVisible ? {display: 'block'} : { display: 'none'};
+  const backStyle = !frontVisible ? {display: 'block'} : { display: 'none'};
 
-  const style = visible ? {display: 'block'} : { display: 'none'};
+  useEffect(() => {}, [frontVisible]);
 
   return (
-    <div className="flashcard" style={style} css={Styled.Card}>
-      <SEO stitle='Sandbox' sdescription='Testing out the Q-and-API API I built using Node and Express' slug="sandbox">
-        <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>
-      </SEO>
-      {/* <img src={imgPath} width={300} alt="" role="presentation"/> */}
-      {/* <EmbeddedGist gist={`cnocon/25c10c5a228ef004de9ca54fe64f7411`} /> */}
-      {/* <h4>Prompt:</h4> {ReactHtmlParser(test.prompt)} */}
-      {/* <h4>Answer:</h4> {ReactHtmlParser(test.answer)} */}
-
-      <section className="front">
+    <div className="flashcard" css={Styled.Card}>
+      <section className="front" style={frontStyle}>
         <header>
           <h2>Question</h2>
           <h4>Category: {name}</h4>
+          <h5>Difficulty: {question.difficulty}/10</h5>
         </header>
         {ReactHtmlParser(question.prompt)}
-        <footer><h5>Difficulty: {question.difficulty}/10</h5></footer>
+        <br/>
+        <br/>
+        {questionMedia}
+        <footer>
+        <button onClick={() => setFrontVisible(false)}>Flip Card</button>
+        </footer>
+        {frontVisible ?
+          <SEO stitle='Sandbox' sdescription='Testing out the Q-and-API API I built using Node and Express' slug="sandbox" frontVisible={frontVisible}>
+            <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>
+          </SEO>
+          : null }
       </section>
 
-      <section className="back">
+      <section className="back" style={backStyle}>
         <header>
           <h2>Answer</h2>
           <h4>Category: {name}</h4>
+          <h5>Difficulty: {question.difficulty}/10</h5>
         </header>
         {ReactHtmlParser(question.answer)}
+        <br/>
+        <br/>
         {answerMedia}
-        <footer><h5>Difficulty: {question.difficulty}/10</h5></footer>
+        <footer>
+          <button onClick={() => setFrontVisible(true)}>Flip Card</button>
+        </footer>
+        {!frontVisible ?
+          <SEO stitle='Sandbox' sdescription='Testing out the Q-and-API API I built using Node and Express' slug="sandbox" frontVisible={frontVisible}>
+            <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>
+          </SEO>
+          : null }
       </section>
-      
-      
     </div>
   );
 };
