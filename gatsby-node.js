@@ -4,8 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require(`path`);
-// const { data } = require("jquery");
 const sandboxData = require('./queries/sandboxData');
+const { postCategoriesDataQuery } = require('./queries/postCategoriesData');
+const { allPostsDataQuery } = require('./queries/allPostsData');
 
 const chunkArray = (array, size) => {
   if (!array) return [];
@@ -15,99 +16,11 @@ const chunkArray = (array, size) => {
 }
 
 exports.createPages = async ({ actions, graphql }) => {
-  const categoriesData = await graphql(`
-    {
-      allButterPost(filter: {categories: {elemMatch: {}}}) {
-        distinct(field: categories___slug)
-        group(field: categories___slug) {
-          edges {
-            node {
-              id
-              categories {
-                name
-                slug
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const { data } = await graphql(`
-    {
-      allButterPost(filter: {categories: {elemMatch: {slug: {in: ["npm","node","netlify","webhooks","gatsby","cli","git","sass","javascript","workflow"]}}}}, sort: {fields: created}) {
-        edges {
-          node {
-            id
-            title
-            slug
-            url
-            summary
-            categories {
-              name
-              slug
-            }
-            tags {
-              name
-              slug
-            }
-            body
-            featured_image
-            featured_image_alt
-            meta_description
-            published
-            seo_title
-            internal {
-              content
-              description
-              ignoreType
-              mediaType
-            }
-          }
-          previous {
-            tags {
-              name
-              slug
-            }
-            internal {
-              content
-              description
-              ignoreType
-              mediaType
-            }
-          }
-        }
-        group(field: categories___slug) {
-          field
-          fieldValue
-          nodes {
-            featured_image
-            featured_image_alt
-            meta_description
-            slug
-            tags {
-              name
-              slug
-            }
-            summary
-            title
-            url
-            seo_title
-            published
-            categories {
-              name
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const allPosts = data.allButterPost.edges.reverse();
+  const categoriesData = await graphql(postCategoriesDataQuery);
+  const allPostsData = await graphql(allPostsDataQuery);
+  const allPosts = allPostsData.data.allButterPost.edges.reverse();
   const chunkedPosts = chunkArray(allPosts, 3);
-  const groups = data.allButterPost.group;
+  const groups = allPostsData.data.allButterPost.group;
 
   groups.forEach(group => {
     const sortedPosts = group.nodes.sort((a, b) => a.published < b.published)
