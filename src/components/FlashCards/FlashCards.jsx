@@ -18,7 +18,7 @@ const FlashCards = ({ ...data }) => {
   const cards = cardData.map((card, i) => {
     const { id, name, slug, question } = card
     const visible = true
-    return <FlashCard key={i} id={id} question={question} slug={slug} visible={visible} name={name} />
+    return <FlashCard key={`${question._id}-${i}`} id={id} question={question} slug={slug} visible={visible} name={name} />
   });
   
   return (
