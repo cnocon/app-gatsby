@@ -69,8 +69,7 @@ module.exports = {
           production: {
             policy: [{ 
               userAgent: '*', 
-              allow: ['/', '/static/'],
-              disallow: '/sandbox'
+              allow: ['/', '/static/']
             }]
           },
           'branch-deploy': {

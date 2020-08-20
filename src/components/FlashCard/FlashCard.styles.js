@@ -8,7 +8,11 @@ export const Card = css`
   border-radius: 3px;
   padding: ${Theme.spacing.default} ${Theme.spacing.default} 0;
   margin: 60px auto 0;
-  max-width: 600px;
+
+  .img-container { max-width: 100%; overflow: scroll; }
+  .img-container img {
+    min-width: 400px;
+  }
 
   pre:not(.prettyprint) {
     display: inline-block;

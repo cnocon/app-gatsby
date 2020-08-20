@@ -1,5 +1,5 @@
 const https = require("https");
-const sandboxData = {};
+const flashCardsData = {};
 
 const categoriesPromise = new Promise((resolve, reject) => {
   https.get({
@@ -17,7 +17,7 @@ const categoriesPromise = new Promise((resolve, reject) => {
   );
 });
 
-const dataPromise = new Promise((resolve, reject) => { 
+new Promise((resolve, reject) => { 
   categoriesPromise.then(categoryIds => {
     const array = JSON.parse(categoryIds);
     array.forEach((pair, i) => {
@@ -30,13 +30,13 @@ const dataPromise = new Promise((resolve, reject) => {
           const chunks = [];
           res.on("data", chunk => chunks.push(chunk));
           res.on("end", () => {
-            if (!sandboxData[id]) {
-              sandboxData[id] = {};
+            if (!flashCardsData[id]) {
+              flashCardsData[id] = {};
             }
             const str = Buffer.concat(chunks).toString();
-            sandboxData[id][set.key] = JSON.parse(str);
+            flashCardsData[id][set.key] = JSON.parse(str);
             if (i === categoryIds.length - 1) {
-              resolve(sandboxData);
+              resolve(flashCardsData);
             };
           });
           res.on("error", error => reject(error));
@@ -46,4 +46,4 @@ const dataPromise = new Promise((resolve, reject) => {
   });
 });
 
-module.exports = sandboxData;
+module.exports = flashCardsData;

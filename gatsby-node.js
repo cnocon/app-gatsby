@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require(`path`);
-const sandboxData = require('./queries/sandboxData');
+const flashCardsData = require('./queries/flashCardsData');
 const { postCategoriesDataQuery } = require('./queries/postCategoriesData');
 const { allPostsDataQuery } = require('./queries/allPostsData');
 const { chunkArray } = require('./helpers/chunkArray');
@@ -113,13 +113,14 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   /**
-   * SANDBOX PAGE FOR Q-AND-API DATA
+   * FLASH CARDS PAGE FOR Q-AND-API DATA
    * 
    */
+  console.log('flashCardsData', flashCardsData);
   actions.createPage({
-    path: `/sandbox`,
-    component: path.resolve(`./src/components/Sandbox/Sandbox.jsx`),
-    context: {sandboxData: sandboxData},
+    path: `/flash-cards`,
+    component: path.resolve(`./src/components/FlashCards/FlashCards.jsx`),
+    context: {flashCardsData: flashCardsData},
   })
 }
 

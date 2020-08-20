@@ -22,11 +22,10 @@ const FlashCard = ({...props}) => {
   const generateMedia = item => {
     switch (item.type) {
       case 'image':
-        return <img 
+        return <div className='img-container'><img 
           src={item.url}
-          alt={item.desc} 
-          style={{minWidth: `${item.width}px`, maxWidth: '100%'}}
-          key={item.url} />;
+          alt={item.desc}
+          key={item.url} /></div>;
       case 'gist':
         return <EmbeddedGist gist={item.gist} key={item.id}/>;
       case 'snippet':
@@ -60,7 +59,7 @@ const FlashCard = ({...props}) => {
         <button onClick={() => setFrontVisible(false)}>Flip Card</button>
         </footer>
         {frontVisible ?
-          <SEO stitle='Sandbox' sdescription='Testing out the Q-and-API API I built using Node and Express' slug="sandbox" frontVisible={frontVisible}>
+          <SEO stitle='F.E.D. Flash Cards' sdescription='F.E.D. (Front End Development) Flash Cards App' slug="flash-cards">
             <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>
           </SEO>
           : null }
@@ -80,7 +79,7 @@ const FlashCard = ({...props}) => {
           <button onClick={() => setFrontVisible(true)}>Flip Card</button>
         </footer>
         {!frontVisible ?
-          <SEO stitle='Sandbox' sdescription='Testing out the Q-and-API API I built using Node and Express' slug="sandbox" frontVisible={frontVisible}>
+          <SEO stitle='F.E.D. Flash Cards' sdescription='F.E.D. (Front End Development) Flash Cards App' slug="flash-cards">
             <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>
           </SEO>
           : null }
