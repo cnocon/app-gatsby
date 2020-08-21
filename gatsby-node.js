@@ -116,11 +116,14 @@ exports.createPages = async ({ actions, graphql }) => {
    * FLASH CARDS PAGE FOR Q-AND-API DATA
    * 
    */
-  console.log('flashCardsData', flashCardsData);
+  setTimeout(() => {
+    console.log('flashCardsData', flashCardsData);
+  }, 5000);
+
   actions.createPage({
     path: `/flash-cards`,
     component: path.resolve(`./src/components/FlashCards/FlashCards.jsx`),
-    context: {flashCardsData: flashCardsData},
+    context: { flashCardsData: flashCardsData }
   })
 }
 
@@ -140,16 +143,4 @@ exports.createPages = async ({ actions, graphql }) => {
 //     })
 //   }
 // }
-
-// Points from Treehouse
-// https.get('https://teamtreehouse.com/cristinoconnor.json', res => {
-//   res.setEncoding("utf8");
-//   let body = "";
-//   res.on("data", data => {
-//     body += data;
-//   });
-//   res.on("end", () => {
-//     body = JSON.parse(body);
-//     console.log(body.points);
-//   });
 // });

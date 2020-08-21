@@ -1,9 +1,9 @@
 {
   "name": "cristin-io",
-  "private": false,
+  "private": true,
   "description": "Cristin O'Connor's Front End Development Blog and Portfolio Site",
   "version": "1.0.0",
-  "author": "Cristin O'Connor <her@cristin.io>",
+  "author": "Cristin O'Connor",
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
@@ -56,9 +56,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/cnocon/app-gatsby"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/cnocon/app-gatsby/issues"
   }
 }

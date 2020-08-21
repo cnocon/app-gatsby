@@ -3,7 +3,9 @@ module.exports = {
     default: {
       base: 'hsl(210, 25%, 27%)',
       darker: 'hsl(210, 40%, 10%)',
-      lighter: 'hsl(210, 25%, 60%)'
+      lighter: 'hsl(210, 25%, 60%)',
+      // background: 'hsl(210,70%,31%)',
+      mid: 'hsl(210,50%,15%)'
     },
     blue: {
       base: 'hsla(197,92%,68%,1)',
@@ -29,7 +31,8 @@ module.exports = {
       textDark: `hsl(194, 10%, 70%)`,
       textDarker: `hsl(194, 5%, 60%)`,
       textDarkest: `hsl(200deg 10% 45%)`,
-      boxShadow: `hsl(210, 10%, 60%)`
+      boxShadow: `hsl(210, 10%, 60%)`,
+      base: `hsl(210, 10%, 45%)`
     },
     accents: {
       red: 'hsl(355, 100%, 92%)',
@@ -37,6 +40,15 @@ module.exports = {
       blue: 'hsl(197,100%,86%)',
       yellow: 'hsl(58, 100%, 65%)',
       purple: 'hsl(240, 100%, 87%)',
+      royalBlue: 'hsl(224, 96%, 65%)',
+      orange: 'hsl(39, 100%, 70%)',
+      dark: {
+        green: 'hsl(175, 85%, 47%)',
+        yellow: 'hsl(58, 95%, 48%)',
+        red: 'hsl(355, 95%, 75%)',
+        purple: 'hsl(240, 85%, 78%)',
+        blue: 'hsl(197, 95%, 64%)'
+      },
       vivid: {
         red: 'hsl(355, 100%, 78%)',
         yellow: 'hsl(58, 100%, 49%)',
@@ -50,13 +62,15 @@ module.exports = {
         blue: 'hsl(197, 100%, 90%)',
         purple: 'hsl(240, 100%, 96%)',
         red: 'hsl(355, 100%, 95%)',
+        orange: 'hsl(39,100%,85%)',
+        royalBlue: 'hsl(224, 100%, 85%)',
       },
       text: {
         red: 'hsl(355, 81%, 80%)',
         green: 'hsl(175, 70%, 62%)',
         blue: 'hsl(197, 80%, 65%)',
         yellow: 'hsl(58, 100%, 60%)',
-        purple: 'hsl(240, 80%, 75%)'
+        purple: 'hsl(240, 80%, 75%)',
       }
     }
   },

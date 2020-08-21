@@ -1,9 +1,10 @@
 // , { useState, useEffect }
-import React, { useEffect } from 'react'
+import React from 'react'
 import EmbeddedGist from '../EmbeddedGist/EmbeddedGist'
 import ReactHtmlParser from 'react-html-parser'
 import * as Styled from './Side.styles'
 import SEO from "../SEO/seo"
+// import { useEffect } from 'react'
 
 const Snippet = ({item}) => {
   const { lines, lang } = item;
@@ -16,68 +17,124 @@ const Snippet = ({item}) => {
   )
 }
 
-const FlashCard = ({...props}) => {
-  const { type, name, question, isVisible, clickHandler } = props;
-  const visible = isVisible
-  const sideStyle = visible ? { display: 'block' } : { display: 'none' }
-
-  const generateMedia = item => {
-    switch (item.type) {
-      case 'image':
-        return (
-          <div className="img-container-outer" key={item.url}>
-            <div className='img-container'key={item.url} >
-              <img 
-                src={item.url}
-                alt={item.desc}
-              />
-            </div>
-            <p className="image-note">Swipe or scroll to see rest of image.</p>
+const generateMedia = item => {
+  switch (item.type) {
+    case 'image':
+      return (
+        <div className="img-container-outer" key={item.url}>
+          <div className='img-container'key={item.url} >
+            <img 
+              src={item.url}
+              alt={item.desc}
+              width={`${item.hasOwnProperty('width') ? item.width : '100%'}`}
+            />
           </div>
-        )
-      case 'gist':
-        return <EmbeddedGist gist={item.gist} key={item.id}/>;
-      case 'snippet':
-        return <Snippet item={item} key={Math.random()} />;
-      default:
-        // do nothing
-    }
+          <p className="image-note">Swipe or scroll to see rest of image.</p>
+        </div>
+      )
+    case 'gist':
+      return <EmbeddedGist gist={item.gist} key={item.id}/>;
+    case 'snippet':
+      return <Snippet item={item} key={Math.random()} />;
+    default:
+      // do nothing
   }
+}
 
-  const level = () => {
-    const score = question.difficulty;
-    if (score <= 3) {
-      return "Easy"
-    } else if (score <= 7) {
-      return "Mid-Level"
+const level = difficulty => {
+  if (difficulty <= 3) {
+    return {
+      text: 'Easy',
+      tagClass: 'fa-tachometer-slowest'
     }
-    return "Hard"
+  } else if (difficulty > 7) {
+    return {
+      tagClass: 'fa-tachometer-fastest', 
+      text: 'Hard'
+    } 
   }
+  return {
+    tagClass: 'fa-tachometer-average',
+    text: 'Mid-Level'
+  } 
+}
 
+const categoryClass = category => {
+  const yellowTags = ['Performance']
+  const purpleTags = ['Gatsby']
+  const royalBlueTags = ['React']
+  const blueTags = ['JavaScript']
+  const greenTags = ['Node']
+  const redTags = ['CSS']
+  const orangeTags = ['Git']
+
+  if (yellowTags.includes(category)) {
+    return 'yellow'
+  } else if (purpleTags.includes(category)) {
+    return 'purple'
+  } else if (blueTags.includes(category)) {
+    return 'blue'
+  } else if (greenTags.includes(category)) {
+    return 'green'
+  } else if (redTags.includes(category)) {
+    return 'red'
+  } else if (orangeTags.includes(category)) {
+    return 'orange'
+  } else if (royalBlueTags.includes(category)) {
+    return 'royal-blue'
+  }
+}
+
+const FlashCard = ({...props}) => {
+  const { type, name, question, isVisible, clickHandler, nextBtnClickHandler } = props;
+  const sideStyle = isVisible ? { display: 'block' } : { display: 'none' }
+  const levelData = level(question.difficulty)
   const prompt = type === 'front' ? question.prompt : question.answer;
   const media = type === 'front' 
-    ? question.prompt_media.map(item => generateMedia(item)) 
+    ? question.prompt_media.map(item => generateMedia(item))
     : question.answer_media.map(item => generateMedia(item))
+  const categoryTagClass = categoryClass(name)
 
   return (
     <section className={type} css={Styled.Side} style={sideStyle}>
       <header>
         <div className="subheader">
-          <span className="level tag">{level()}</span>
-          <h3>{type === 'front' ? 'Question' : 'Answer'}</h3>
-          <span className="category tag">{name}</span>
+          <div>
+            <span className="level tag rainbow-box-shadow">
+              {levelData.text}
+              <i className={`fal ${levelData.tagClass}`}></i>
+            </span>
+          </div>
+          <h3 className="rainbow-border">{type === 'front' ? 'Question' : 'Answer'}</h3>
+          <div>
+            <span className={`category rainbow-box-shadow tag`}>
+              <i className={`fas fa-tag ${categoryTagClass}`}></i>
+              {name}
+            </span>
+          </div>
         </div>
       </header>
       <section>
         <div className="section-inner">
-          { ReactHtmlParser(prompt) }
-          { media }
+          <div className="prompt">
+            { ReactHtmlParser(prompt) }
+            <div className="media">{ media }</div>
+          </div>
         </div>
       </section>
       <footer>
-        <button onClick={() => clickHandler()}>{type === 'front' ? 'Show Answer' : 'Show Question'}</button>
+        {/* <i className="fas fa-question"></i> */}
+        <button onClick={clickHandler()}>
+          {/* {type === 'front' ? 'See Answer' : 'See Question'} */}
+          <i className="far fa-sync-alt rainbow-text"></i>&nbsp;&nbsp;
+          Flip
+        </button>
+        <button onClick={nextBtnClickHandler()}>
+          {type === 'front' ? 'Skip' : 'Next'}&nbsp;&nbsp;
+          <i className="fas fa-forward rainbow-text"></i>
+        </button>
       </footer>
-      {visible ?
+      {isVisible ?
         <SEO stitle='F.E.D. Flash Cards' sdescription='F.E.D. (Front End Development) Flash Cards App' slug="flash-cards">
           <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>
         </SEO>

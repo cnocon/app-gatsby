@@ -3,6 +3,5 @@ import { css } from "@emotion/core"
 // import Theme from '../Theme/Theme'
 
 export const FlashCards = css`
-  /* overflow: hidden;
-  max-width: 100%; */
+  margin: 0 auto;
 `

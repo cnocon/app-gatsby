@@ -239,6 +239,20 @@ export default {styles: css`
     line-height: 1;
   }
 
+  .rainbow-background {
+    background-image: linear-gradient(140deg, 
+    ${Theme.colors.accents.yellow} 0%,
+    ${Theme.colors.accents.background.green} 35%, 
+    ${Theme.colors.accents.blue} 55%, 
+    ${Theme.colors.accents.background.purple} 75%,
+    ${Theme.colors.accents.red} 95%,
+    ${Theme.colors.accents.red} 100%);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transition: background-image .4s;
+  }
+
   .rainbow-border,
   .rainbow-border-sm {
     background-image: linear-gradient(90deg, 
@@ -256,7 +270,7 @@ export default {styles: css`
 
     &-sm { background-size: 100% 1.5px; }
 
-    &:hover {
+    &a:hover {
     background-image: linear-gradient(90deg, 
       ${Theme.colors.accents.vivid.red} 5%,
       ${Theme.colors.accents.vivid.yellow} 20%, 
@@ -266,6 +280,21 @@ export default {styles: css`
       ${Theme.colors.accents.vivid.blue} 80%,
       ${Theme.colors.accents.vivid.purple} 100%);
     }
+  }
+
+  .rainbow-border-top {
+
+    background-image: linear-gradient(90deg, 
+    ${Theme.colors.accents.yellow} 10%,
+    ${Theme.colors.accents.green} 30%, 
+    ${Theme.colors.accents.green} 40%, 
+    ${Theme.colors.accents.blue} 52%, 
+    ${Theme.colors.accents.blue} 62%, 
+    ${Theme.colors.accents.purple} 70%,
+    ${Theme.colors.accents.red} 90%);
+    background-size: 100% 3px;
+    background-position: center top;
+    background-repeat: no-repeat;
   }
 
   .rainbow-box-shadow-rounded { 
@@ -281,6 +310,21 @@ export default {styles: css`
                 -3px 0 2px ${Theme.colors.accents.yellow},
                 3px 0 2px ${Theme.colors.accents.text.purple},
                 0 -3px 2px ${Theme.colors.accents.text.red};
+    }
+  }
+
+  .rainbow-box-shadow { 
+    border-radius: 4px;
+    box-shadow: 0 1.75px 1px ${Theme.colors.accents.green},       
+                -1.75px 0 1px ${Theme.colors.accents.yellow},
+                1.75px 0 1px ${Theme.colors.accents.text.purple},
+                0 -1.75px 1px ${Theme.colors.accents.text.red};
+    
+    &-thick {
+      box-shadow: inset 0 2px 1px ${Theme.colors.accents.green},       
+      inset -2px 0 1px ${Theme.colors.accents.vivid.yellow},
+      inset 2px 0 1px ${Theme.colors.accents.vivid.purple},
+      inset 0 -1.5px 1px ${Theme.colors.accents.vivid.red};
     }
   }
 
@@ -349,6 +393,21 @@ export default {styles: css`
                       ${Theme.colors.accents.text.purple} 50%,
                       ${Theme.colors.accents.text.red} 65%,
                       ${Theme.colors.accents.text.yellow} 80%);
+    }
+
+    
+  .rainbow-text-narrow {
+    z-index: 0;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg,
+                      ${Theme.colors.accents.text.yellow} 10%,
+                      ${Theme.colors.accents.text.green} 20%, 
+                      ${Theme.colors.accents.text.blue} 40%, 
+                      ${Theme.colors.accents.text.purple} 50%,
+                      ${Theme.colors.accents.text.red} 60%,
+                      ${Theme.colors.accents.text.yellow} 70%);
     }
   }  
 `}
