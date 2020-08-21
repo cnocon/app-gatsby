@@ -17,13 +17,13 @@ const Layout = (props) => {
   return (
     <ThemeProvider theme={Theme}>
       <Styled.Container {...props}>
-        <main className={props.classNames}>
-          <div className="wrapper-outer">
+        <Styled.Main className={props.classNames}>
+          <div className="wrapper-outer" css={Styled.WrapperOuter}>
             {props.children}
           </div>
-        </main>
+        </Styled.Main>
+        <Footer />
       </Styled.Container>
-      <Footer />
     </ThemeProvider>
   )
 }

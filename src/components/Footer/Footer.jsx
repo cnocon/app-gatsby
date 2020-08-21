@@ -19,7 +19,8 @@ const Footer = () => {
   }, [])
 
   return(
-    <Styled.Footer className="footer" style={{top: offset}} offsetTop={offset}>
+    // <Styled.Footer className="footer" style={{top: offset}} offsetTop={offset}>
+    <Styled.Footer className="footer">
       <Styled.FooterInner>
         <Styled.Row>
           <Styled.LeftBlock>

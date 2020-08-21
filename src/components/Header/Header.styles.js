@@ -20,6 +20,8 @@ export const Container = styled.div`
     width: ${Theme.layout.widths.default};
     max-width: ${Theme.layout.widths.defaultMax};
   }
+
+  .hidden { display: none; }
 `
 
 export const Header = styled.header(

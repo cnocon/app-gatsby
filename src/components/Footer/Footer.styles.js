@@ -60,9 +60,10 @@ export const FooterInner = styled.div`
 `
 
 export const Footer = styled.footer({
-  margin: `4rem auto 0`,
+  margin: `4rem 0 0`,
   padding: `4.5rem 0 2.5rem`,
-  width: `100%`,
+  width: `107.5%`,
+  transform: 'translateX(-1.75%)',
   backgroundColor: `${Theme.colors.grays.background}`,
 })
 
@@ -133,8 +134,6 @@ export const Row = styled.div`
   @media all and (max-width: ${Theme.breakpoints.max.sm}) {
     flex-direction: column;
   }
-
-  
 
   ul {
     flex-basis: 100%;

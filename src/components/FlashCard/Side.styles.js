@@ -42,10 +42,12 @@ export const Side = css`
     background-color: ${Theme.colors.grays.background};
     padding: 1px 6px;
     margin: 0;
+    text-align: left;
   }
 
   pre > code span {
     font-size: 12px;
+    text-align: left;
   }
 
   .section-inner {
@@ -94,25 +96,30 @@ export const Side = css`
     background-color: ${Theme.colors.grays.border};
     padding: 20px 15px;
     margin: 0 -16px;
-
-    /* border-top: 3px solid ${Theme.colors.grays.border}; */
     display: flex;
     justify-content: space-between;
+    perspective: 1000;
 
     button {
       background-color: ${Theme.colors.default.mid};
-      font-size: 19px;
+      font-size: 18px;
       color: #fff;
       border: 0;
       padding: 0 10px;
       margin: 0 10px;
       width: 90px;
-      height: 40px;
+      height: 30px;
       border-radius: 4px;
       font-weight: 500;
       font-family: ${Theme.fonts.headings.family};
       cursor: pointer;
       letter-spacing: -.5px;
+
+      @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+        font-size: 15px;
+        width: 60px; 
+        i { display: none; }
+      }
 
       &:hover {
         background-color: ${Theme.colors.default.base};
@@ -120,28 +127,48 @@ export const Side = css`
       }
 
       &:nth-of-type(2) {
+        background-color: rgba(0,0,0,0);
+        color: ${Theme.colors.default.mid};
+        font-weight: 500;
+        font-family: ${Theme.fonts.accent.family};
+        text-transform: lowercase;
+        margin: 0;
         padding: 0;
-        font-weight: 900;
-        text-transform: uppercase;
-        width: 56px;
-        height: 56px;
-        line-height: 60px;
-        border: 2px solid #345;
+        height: 50px;
+        width: 50px;
         border-radius: 50%;
-        margin: -10px 0;
         text-align: center;
-        background-color: transparent;
+        transform: rotateZ(0deg);
+        background-size: 40px;
+        backface-visibility: hidden;
+        transition: transform .4s ease-in;
+        line-height: 50px;
+        vertical-align: middle;
+        position: relative;
 
-        i,
-        i::before {
-          font-weight: 400;
-          font-size: 45px;
-          text-shadow: 1px 3px 1px rgba(0,0,0,.8);
+        @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+          font-size: 15px;
         }
-      }
 
-      i { 
-        &::before {font-weight: 900;}
+        i {
+          display: flex;
+          font-size: 60px;
+          font-weight: 200;
+          position: absolute;
+          left: -5px;
+          top: -3px;
+
+          @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+            font-size: 30px;
+          }
+        }
+
+        &:hover {
+          /* opacity: .65; */
+          /* transform: rotateZ(360deg); */
+          color: transparent;
+          i {color: transparent}
+        }
       }
 
       &:last-of-type {margin-right: 0;}
@@ -191,43 +218,28 @@ export const Side = css`
   }
 
   .tag {
-    background-color: ${Theme.colors.default.mid};
-    padding: 2px 8px;
-    border-radius: 4px;
-    vertical-align: baseline;
-    height: 32px;
-    line-height: 18px;
-    color: white;
+    background-color: #fff;
+    color: ${Theme.colors.default.mid};
+    /* padding: 3px 6px; */
+    /* border-radius: 8px; */
+    vertical-align: middle;
+    /* height: 32px; */
+    line-height: 14px;
     font-weight: 500;
     font-family: ${Theme.fonts.headings.family};
-    font-size: 17px;
-    letter-spacing: -1px;
+    font-size: 14px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
 
-    i {font-size: 16px;}
-
-    &.level {
-      padding: 5px 8px 4px 10px;
-      
-      i {
-        font-size: 18px;
-        margin-left: 6px;
-        line-height: 18px;
-        vertical-align: inherit;
-      }
+    @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
+      font-size: 12px;
+      word-break: break-all;
+      letter-spacing: -.5px;
     }
 
-    &.category {
-      padding: 5px 12px 4px 8px;
-      
-      i {
-        margin-right: 6px;
-        font-size: 18px;
-        line-height: 18px;
-        vertical-align: inherit;
+    &.level i {color: ${Theme.colors.default.background};}
 
-        &::before {font-size: 15px; line-height: 22px; vertical-align: middle;}
-      }
-    }
+    i {font-size: 13px; line-height: 13px; margin-right: 3px;}
   }
 
   .blue {
@@ -243,7 +255,7 @@ export const Side = css`
   }
   
   .yellow {
-    color: ${Theme.colors.accents.background.yellow};
+    color: ${Theme.colors.accents.dark.yellow};
   }
   
   .purple {
@@ -251,11 +263,11 @@ export const Side = css`
   }
 
   .royal-blue {
-    color: ${Theme.colors.accents.background.royalBlue};
+    color: ${Theme.colors.accents.royalBlue};
   }
   
   .orange {
-    color: ${Theme.colors.accents.background.orange};
+    color: ${Theme.colors.accents.orange};
   }
   
   p,
@@ -268,6 +280,7 @@ export const Side = css`
   .img-container-outer { text-align: center; }
   .image-note {
     display: none;
+
     @media screen and (max-width: 600px) {
       display: block;
       text-align: center;

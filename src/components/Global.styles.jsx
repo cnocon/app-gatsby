@@ -6,6 +6,7 @@ export default {styles: css`
     font-size: 10px;
     overflow-x: hidden;
     max-width: 100%;
+    height: 100vh;
     box-sizing: border-box;
   }
 
@@ -253,9 +254,36 @@ export default {styles: css`
     transition: background-image .4s;
   }
 
+
+  .rainbow-background-skewed {
+    background-image: linear-gradient(25deg, 
+    ${Theme.colors.accents.background.yellow} 0%,
+    ${Theme.colors.accents.green} 35%, 
+    ${Theme.colors.accents.blue} 52%, 
+    ${Theme.colors.accents.purple} 75%,
+    ${Theme.colors.accents.red} 100%);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transition: background-image .4s;
+  }
+  .rainbow-background-vivid {
+    background-image: linear-gradient(90deg, 
+    ${Theme.colors.accents.green} 0, 
+    ${Theme.colors.accents.blue} 25%, 
+    ${Theme.colors.accents.purple} 50%,
+    ${Theme.colors.accents.red} 70%,
+    ${Theme.colors.accents.yellow} 85%,
+    ${Theme.colors.accents.yellow} 100%);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transition: background-image .4s;
+  }
+
   .rainbow-border,
   .rainbow-border-sm {
-    background-image: linear-gradient(90deg, 
+    background-image: linear-gradient(205deg, 
     ${Theme.colors.accents.yellow} 10%,
     ${Theme.colors.accents.green} 30%, 
     ${Theme.colors.accents.green} 40%, 
@@ -283,7 +311,6 @@ export default {styles: css`
   }
 
   .rainbow-border-top {
-
     background-image: linear-gradient(90deg, 
     ${Theme.colors.accents.yellow} 10%,
     ${Theme.colors.accents.green} 30%, 
@@ -410,4 +437,9 @@ export default {styles: css`
                       ${Theme.colors.accents.text.yellow} 70%);
     }
   }  
+
+
+  .peach-bg-gradient {
+    background-image: linear-gradient(45deg, #DE6262 10%, #FFB88C 90%);
+  }
 `}
