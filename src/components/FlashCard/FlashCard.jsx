@@ -4,9 +4,7 @@ import Side from './Side'
 import * as Styled from './FlashCard.styles'
 
 const FlashCard = ({...props}) => {
-  console.log('props', props)
-  const { question, name, nextClickHandler, isFrontVisible, flipClickHandler } = props.data
-  // const [frontVisible, setFrontVisible] = useState(isFrontVisible)
+  const { question, name, nextClickHandler, isFrontVisible, flipClickHandler, order, prevClickHandler } = props.data
 
   return (
     <div 
@@ -18,17 +16,21 @@ const FlashCard = ({...props}) => {
        key={`front-${question._id}`}
        isVisible={isFrontVisible}
        nextBtnClickHandler={nextClickHandler}
+       prevBtnClickHandler={prevClickHandler}
        clickHandler={flipClickHandler}
        question={question}
-       name={name} />
+       name={name}
+       order={order} />
       <Side
         type="back"
         isVisible={!isFrontVisible}
         key={`back-${question._id}`}
+        prevBtnClickHandler={prevClickHandler}
         nextBtnClickHandler={nextClickHandler}
         clickHandler={flipClickHandler}
         question={question}
-        name={name} />
+        name={name}
+        order={order} />
     </div>
   );
 };

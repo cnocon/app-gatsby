@@ -23,6 +23,17 @@ const FlashCards = ({ ...data }) => {
     setActiveIndex(prevActiveIndex => prevActiveIndex + 1 >= cardData.length ? 0 : prevActiveIndex + 1)
   }
 
+  const handleFlipClick = () => {
+    setIsFrontVisible(prevIsFrontVisible => !prevIsFrontVisible)
+  }
+
+  const handlePrevClick = () => {
+    setIsFrontVisible(true)
+    setActiveIndex(prevActiveIndex => {
+      return ((prevActiveIndex - 1 >= 0) ? prevActiveIndex - 1 : cardData.length - 1)
+    })
+  }
+
   const cardsProps = cardData.map((card, i) => {
     const { id, name, slug, question } = card
 
@@ -32,16 +43,13 @@ const FlashCards = ({ ...data }) => {
         question: question,
         slug: slug,
         name: name,
+        order: i,
         isFrontVisible: isFrontVisible,
+        prevClickHandler: () => handlePrevClick,
         nextClickHandler: () => handleNextClick,
         flipClickHandler: () => handleFlipClick
       })
   });
-
-  const handleFlipClick = () => {
-    setIsFrontVisible(prevIsFrontVisible => !prevIsFrontVisible)
-  }
-  // const [currentData, setCurrentData] = cardsProps[activeIndex]
 
   useEffect(() => {
     // setCurrentData(cardsProps[activeIndex])

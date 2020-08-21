@@ -6,7 +6,6 @@ export const Card = css`
   line-height: ${Theme.fonts.sizes.lineHeights.sm};
   border: 3px solid ${Theme.colors.grays.border};
   border-bottom-width: 2px;
-
   border-radius: 4px;
   max-width: 650px;
   padding: 0 ${Theme.spacing.default};

@@ -57,13 +57,13 @@ module.exports = {
         purple: 'hsl(240, 100%, 80%)',
       },
       background: {
-        yellow: 'hsl(58, 100%, 82%)',
+        yellow: 'hsl(58, 100%, 78%)',
         green: 'hsl(175, 100%, 91%)',
         blue: 'hsl(197, 100%, 90%)',
         purple: 'hsl(240, 100%, 96%)',
         red: 'hsl(355, 100%, 95%)',
-        orange: 'hsl(39,100%,85%)',
-        royalBlue: 'hsl(224, 100%, 85%)',
+        orange: 'hsl(39, 100%, 75%)',
+        royalBlue: 'hsl(224,100%,75%)',
       },
       text: {
         red: 'hsl(355, 81%, 80%)',

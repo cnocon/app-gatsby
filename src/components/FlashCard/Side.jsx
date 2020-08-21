@@ -26,7 +26,7 @@ const generateMedia = item => {
             <img 
               src={item.url}
               alt={item.desc}
-              width={`${item.hasOwnProperty('width') ? item.width : '100%'}`}
+              style={{minWidth: 'unset', width: item.hasOwnProperty('width') ? item.width : `100%`}}
             />
           </div>
           <p className="image-note">Swipe or scroll to see rest of image.</p>
@@ -86,7 +86,7 @@ const categoryClass = category => {
 }
 
 const FlashCard = ({...props}) => {
-  const { type, name, question, isVisible, clickHandler, nextBtnClickHandler } = props;
+  const { type, name, question, isVisible, clickHandler, nextBtnClickHandler, order, prevBtnClickHandler } = props;
   const sideStyle = isVisible ? { display: 'block' } : { display: 'none' }
   const levelData = level(question.difficulty)
   const prompt = type === 'front' ? question.prompt : question.answer;
@@ -100,14 +100,16 @@ const FlashCard = ({...props}) => {
       <header>
         <div className="subheader">
           <div>
-            <span className="level tag rainbow-box-shadow">
+            <span className="level tag">
               {levelData.text}
               <i className={`fal ${levelData.tagClass}`}></i>
             </span>
           </div>
-          <h3 className="rainbow-border">{type === 'front' ? 'Question' : 'Answer'}</h3>
+          <h3 className="rainbow-border">
+            {type === 'front' ? `Question #${order + 1}` : 'Answer'}
+          </h3>
           <div>
-            <span className={`category rainbow-box-shadow tag`}>
+            <span className={`category tag`}>
               <i className={`fas fa-tag ${categoryTagClass}`}></i>
               {name}
             </span>
@@ -123,15 +125,19 @@ const FlashCard = ({...props}) => {
         </div>
       </section>
       <footer>
+        <button onClick={prevBtnClickHandler()}>
+          <i className="fas fa-backward"></i>
+          &nbsp;&nbsp;Prev
+        </button>
         {/* <i className="fas fa-question"></i> */}
-        <button onClick={clickHandler()}>
+        <button onClick={clickHandler()} className="rainbow-box-shadow-rounded">
           {/* {type === 'front' ? 'See Answer' : 'See Question'} */}
-          <i className="far fa-sync-alt rainbow-text"></i>&nbsp;&nbsp;
-          Flip
+          <i className="far fa-sync-alt rainbow-text"></i>
+          {/* &nbsp;&nbsp;Flip */}
         </button>
         <button onClick={nextBtnClickHandler()}>
-          {type === 'front' ? 'Skip' : 'Next'}&nbsp;&nbsp;
-          <i className="fas fa-forward rainbow-text"></i>
+          Next&nbsp;&nbsp;
+          <i className="fas fa-forward"></i>
         </button>
       </footer>
       {isVisible ?

@@ -3,6 +3,34 @@ import { css } from "@emotion/core"
 import Theme from '../Theme/Theme'
 
 export const Side = css`
+
+  > section:first-of-type {
+    height: 280px;
+    overflow-y: scroll;
+    padding: 20px 0;
+    margin-right: -11px;
+    padding-right: 11px;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+        width: 11px;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+        height: 11px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid #fff; /* should match background, can't be transparent */
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+  }
+
   .img-container { max-width: 100%; overflow: scroll; }
   .img-container img {
     min-width: 500px;
@@ -21,7 +49,7 @@ export const Side = css`
   }
 
   .section-inner {
-    min-height: 100px;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,10 +65,11 @@ export const Side = css`
     .prompt  { 
       display: flex;
       flex-direction: column;
-      min-height: 150px;
       justify-content: center;
+      padding: 0 20px;
       max-width: 600px;
       margin: auto;
+      align-items: center;
 
       ul, ol {text-align: left; list-style-position: outside;}
 
@@ -58,32 +87,29 @@ export const Side = css`
 
         strong, b, em {font-weight: 900;}
       }
-
-      .media {}
     }
   }
 
   footer {
-    /* background-color: ${Theme.colors.grays.border}; */
-    padding: 25px 15px 5px;
-    margin: 0 -16px 20px;
+    background-color: ${Theme.colors.grays.border};
+    padding: 20px 15px;
+    margin: 0 -16px;
 
     /* border-top: 3px solid ${Theme.colors.grays.border}; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
     button {
       background-color: ${Theme.colors.default.mid};
       font-size: 19px;
       color: #fff;
-      /* ${Theme.colors.default.base}; */
       border: 0;
-      /* 2px solid ${Theme.colors.default.base}; */
-      padding: 8px 10px;
-      margin: 0 20px;
-      width: 130px;
+      padding: 0 10px;
+      margin: 0 10px;
+      width: 90px;
+      height: 40px;
       border-radius: 4px;
-      font-weight: 900;
+      font-weight: 500;
       font-family: ${Theme.fonts.headings.family};
       cursor: pointer;
       letter-spacing: -.5px;
@@ -93,19 +119,39 @@ export const Side = css`
         color: #fff;
       }
 
+      &:nth-of-type(2) {
+        padding: 0;
+        font-weight: 900;
+        text-transform: uppercase;
+        width: 56px;
+        height: 56px;
+        line-height: 60px;
+        border: 2px solid #345;
+        border-radius: 50%;
+        margin: -10px 0;
+        text-align: center;
+        background-color: transparent;
+
+        i,
+        i::before {
+          font-weight: 400;
+          font-size: 45px;
+          text-shadow: 1px 3px 1px rgba(0,0,0,.8);
+        }
+      }
+
       i { 
-        color: transparent;
         &::before {font-weight: 900;}
       }
 
-      &:last-of-type {margin-right: 0; padding-right: 0px;}
-      &:first-of-type {margin-left: 0; }
+      &:last-of-type {margin-right: 0;}
+      &:first-of-type {margin-left: 0;}
     }
   }
 
   header {
     margin: 0 -16px;
-    padding: 0 16px;
+    padding: 0;
     border-bottom: 3px solid ${Theme.colors.grays.border};
 
     .subheader {
@@ -131,11 +177,11 @@ export const Side = css`
       > h3 {
         text-transform: uppercase; 
         font-family: ${Theme.fonts.accent.family};
-        font-size: 34px;
-        line-height: 34px;
-        font-weight: 300;
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+        font-weight: 400;
         text-transform: uppercase;
-        /* letter-spacing: 1px; */
+        margin: 20px 0;
         padding-bottom: 6px;
         background-size: 100% 3px;
         transform: translateY(-1px);
@@ -196,8 +242,8 @@ export const Side = css`
     color: ${Theme.colors.accents.text.green};
   }
   
-  .fuschia {
-    color: ${Theme.colors.accents.yellow};
+  .yellow {
+    color: ${Theme.colors.accents.background.yellow};
   }
   
   .purple {
@@ -205,11 +251,11 @@ export const Side = css`
   }
 
   .royal-blue {
-    color: ${Theme.colors.accents.royalBlue};
+    color: ${Theme.colors.accents.background.royalBlue};
   }
   
   .orange {
-    color: ${Theme.colors.accents.orange};
+    color: ${Theme.colors.accents.background.orange};
   }
   
   p,
