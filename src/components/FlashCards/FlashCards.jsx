@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import SEO from "../SEO/seo"
 import Header from "../Header/Header"
 import FlashCard from "../FlashCard/FlashCard"
+import Rule from "../Rule/Rule"
 import Layout from "../Layout/Layout"
 import * as Styled from "./FlashCards.styles"
 
@@ -57,8 +58,9 @@ const FlashCards = ({ ...data }) => {
   
   return (
     <Layout>
-      <Header />
-      <SEO stitle='F.E.D. Flash Cards' sdescription='F.E.D. (Front End Development) Flash Cards App' slug="flash-cards"/>
+      <Header showLogo={false}/>
+      <Rule title="Front End Development Flash Cards App" icon="fad fa-elephant" />
+      <SEO stitle='Front End Flash Cards' sdescription='F.E.D. (Front End Development) Flash Cards App' slug="flash-cards"/>
       <div className="row">
         <div className="col-sm-12 col-lg-9" css={Styled.FlashCards}>
           <FlashCard data={cardsProps[activeIndex]} />

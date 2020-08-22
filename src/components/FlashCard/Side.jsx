@@ -26,7 +26,7 @@ const generateMedia = item => {
             <img 
               src={item.url}
               alt={item.desc}
-              style={{minWidth: 'unset', width: item.hasOwnProperty('width') ? item.width : `100%`}}
+              style={{minWidth: 'unset', width: '100%', maxHeight: item.hasOwnProperty('height') ? `${item.height}px` : ``}}
             />
           </div>
           <p className="image-note">Swipe or scroll to see rest of image.</p>
@@ -97,21 +97,21 @@ const FlashCard = ({...props}) => {
 
   return (
     <section className={type} css={Styled.Side} style={sideStyle}>
-      <header>
+      <header className="rainbow-border">
         <div className="subheader">
           <div>
             <span className="level tag">
-              {levelData.text}
-              <i className={`fal ${levelData.tagClass}`}></i>
+              <i className={`fas ${levelData.tagClass}`}></i>
+              &nbsp;{levelData.text}
             </span>
           </div>
-          <h3 className="rainbow-border">
-            {type === 'front' ? `Question #${order + 1}` : 'Answer'}
-          </h3>
+          <div><h3>
+            {type === 'front' ? `${order + 1}. Question` : `${order + 1}. Answer`}
+          </h3></div>
           <div>
             <span className={`category tag`}>
-              <i className={`fas fa-tag ${categoryTagClass}`}></i>
-              {name}
+              <i className={`fad fa-tag ${categoryTagClass}`}></i>
+              &nbsp;{name}
             </span>
           </div>
         </div>
@@ -126,18 +126,17 @@ const FlashCard = ({...props}) => {
       </section>
       <footer>
         <button onClick={prevBtnClickHandler()}>
-          <i className="fas fa-backward"></i>
+          <i className="far fa-arrow-left"></i>
           &nbsp;&nbsp;Prev
         </button>
-        {/* <i className="fas fa-question"></i> */}
-        <button onClick={clickHandler()} className="rainbow-box-shadow-rounded">
-          {/* {type === 'front' ? 'See Answer' : 'See Question'} */}
+        {/* className="peach-bg-gradient"> */}
+        <button onClick={clickHandler()} className='rainbow-text'>
           <i className="far fa-sync-alt rainbow-text"></i>
-          {/* &nbsp;&nbsp;Flip */}
+          Flip
         </button>
         <button onClick={nextBtnClickHandler()}>
-          Next&nbsp;&nbsp;
-          <i className="fas fa-forward"></i>
+          Next&nbsp;
+          <i className="far fa-arrow-right"></i>
         </button>
       </footer>
       {isVisible ?

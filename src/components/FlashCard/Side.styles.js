@@ -94,11 +94,11 @@ export const Side = css`
 
   footer {
     background-color: ${Theme.colors.grays.border};
-    padding: 20px 15px;
-    margin: 0 -16px;
+    padding: 20px 18px;
+    margin: 0 -18px;
     display: flex;
     justify-content: space-between;
-    perspective: 1000;
+    align-items: center;
 
     button {
       background-color: ${Theme.colors.default.mid};
@@ -114,6 +114,7 @@ export const Side = css`
       font-family: ${Theme.fonts.headings.family};
       cursor: pointer;
       letter-spacing: -.5px;
+      perspective: 1000;
 
       @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
         font-size: 15px;
@@ -128,7 +129,7 @@ export const Side = css`
 
       &:nth-of-type(2) {
         background-color: rgba(0,0,0,0);
-        color: ${Theme.colors.default.mid};
+        color: #345;
         font-weight: 500;
         font-family: ${Theme.fonts.accent.family};
         text-transform: lowercase;
@@ -138,10 +139,6 @@ export const Side = css`
         width: 50px;
         border-radius: 50%;
         text-align: center;
-        transform: rotateZ(0deg);
-        background-size: 40px;
-        backface-visibility: hidden;
-        transition: transform .4s ease-in;
         line-height: 50px;
         vertical-align: middle;
         position: relative;
@@ -153,10 +150,16 @@ export const Side = css`
         i {
           display: flex;
           font-size: 60px;
+          width: 60px;
+          height: 60px;
           font-weight: 200;
           position: absolute;
-          left: -5px;
-          top: -3px;
+          left: -4px;
+          top: -4px;
+          transform: rotateZ(0deg);
+          backface-visibility: hidden;
+          opacity: .6;
+          transition: transform .2s ease-in-out;
 
           @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
             font-size: 30px;
@@ -164,10 +167,12 @@ export const Side = css`
         }
 
         &:hover {
-          /* opacity: .65; */
-          /* transform: rotateZ(360deg); */
-          color: transparent;
-          i {color: transparent}
+          color: #345;
+          i {
+            backface-visibility: visible;
+            /* rotateZ(360deg)  */
+            transform: rotateX(360deg); 
+          }
         }
       }
 
@@ -179,67 +184,98 @@ export const Side = css`
   header {
     margin: 0 -16px;
     padding: 0;
-    border-bottom: 3px solid ${Theme.colors.grays.border};
+    background-size: 100% 4px;
 
     .subheader {
       display: flex;
       flex-direction: row;
       flex-basis: auto;
       width: 100%;
-      justify-content: space-around;
-      align-items: space-between;
+      padding: 20px;
+      /* height: 60px; */
+      justify-content: space-between;
+      align-items: center;
       text-align: center;
+      height: 100%;
 
-      > * {
+      @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
+        padding: 20px 10px;
+      }
+
+      > div {
         flex-basis: auto;
         width: 33.333%;
         display: flex;
         align-self: center;
         justify-content: center;
+        justify-items: center;
+        height: 100%;
 
-        &:first-of-type:not(h3) { justify-content: flex-start; }
-        &:last-of-type:not(h3) { justify-content: flex-end; }
-      }
+        @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
+          i {display: none;}
+        }
 
-      > h3 {
-        text-transform: uppercase; 
-        font-family: ${Theme.fonts.accent.family};
-        font-size: 2.25rem;
-        line-height: 2.25rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        margin: 20px 0;
-        padding-bottom: 6px;
-        background-size: 100% 3px;
-        transform: translateY(-1px);
-        width: unset;
+        &:first-of-type {
+          justify-content: flex-start;
+          line-height: 2.25rem;
+        }
+
+        &:last-of-type {
+          justify-content: flex-end;
+          line-height: 2.25rem;
+
+          .tag {
+            background-color: #fff;
+            color: ${Theme.colors.default.mid};
+            vertical-align: middle;
+            line-height: 14px;
+            font-weight: 500;
+            font-family: ${Theme.fonts.headings.family};
+            font-size: 14px;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+
+            @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
+              font-size: 12px;
+              letter-spacing: -.5px;
+            }
+
+            &.level i {color: ${Theme.colors.default.background};}
+
+            i {font-size: 13px; line-height: 13px; margin-right: 3px;}
+          }
+        }
+
+        h3,
+        > span {
+          line-height: 22.5px;
+          vertical-align: middle;
+          height: auto;
+        }
+        
+        h3 {
+          text-transform: uppercase; 
+          font-family: ${Theme.fonts.accent.family};
+          font-size: 2.25rem;
+          line-height: 2.25rem;
+          line-height: 1;
+          font-weight: 400;
+          text-transform: uppercase;
+          height: auto;
+          margin: 0 auto;
+          padding-bottom: 6px;
+          background-size: 100% 3px;
+          transform: translateY(-1px);
+          width: unset;
+
+          @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
+            font-size: 13px;
+            /* background-size: 100% 2px; */
+            /* padding-bottom: 2px; */
+          }
+        }
       }
     }
-  }
-
-  .tag {
-    background-color: #fff;
-    color: ${Theme.colors.default.mid};
-    /* padding: 3px 6px; */
-    /* border-radius: 8px; */
-    vertical-align: middle;
-    /* height: 32px; */
-    line-height: 14px;
-    font-weight: 500;
-    font-family: ${Theme.fonts.headings.family};
-    font-size: 14px;
-    letter-spacing: .5px;
-    text-transform: uppercase;
-
-    @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
-      font-size: 12px;
-      word-break: break-all;
-      letter-spacing: -.5px;
-    }
-
-    &.level i {color: ${Theme.colors.default.background};}
-
-    i {font-size: 13px; line-height: 13px; margin-right: 3px;}
   }
 
   .blue {

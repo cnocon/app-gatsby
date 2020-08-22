@@ -8,31 +8,28 @@ export const Container = styled.div(
     margin: `0 auto`,
     width: `${theme.layout.widths.lg}`,
     padding: `0`,
-    display: `block`,
     fontFamily: `${theme.fonts.body.family}`,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: '100vh'
+    alignContent: 'center',
+    height: '100%'
   })
 )
 
 export const Main = styled.main(
   ({theme}) => ({
     maxWidth: `${theme.layout.widths.lgMax}`,
-    display: 'flex',
-    flexDirection: 'column',
     margin: '0 auto',
-    justifyContent: 'center',
-    alignContent: 'center',
+    height: '100%',
     width: '100%'
-
   })
 )
 
 export const WrapperOuter = css`
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center; */
+  align-items: stretch;
+  height: 100%;
 `

@@ -5,7 +5,7 @@ import portrait from "../../images/square-portrait.png"
 import { window } from 'browser-monads';
 
 
-const Header = ({ ruleTitle, ruleIcon, showLogo }) => {
+const Header = ({ ruleTitle, ruleIcon, showLogo=true }) => {
   const [ArticlesClass, setArticlesClass] = useState("")
   const [ResumeClass, setResumeClass] = useState("")
 
@@ -23,9 +23,9 @@ const Header = ({ ruleTitle, ruleIcon, showLogo }) => {
   return (
     <Sty.Header>
       <Sty.Container>
-        <div className={`top-bar ${showLogo ? '' : 'hidden'}`}>
+        <div>
           <div className="logo-header">
-            <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar"/>
+            <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar" className={`top-bar ${showLogo ? '' : 'hidden'}`}/>
             <Sty.Heading1>
               <Sty.H1Link to="/">Cristin O'Connor</Sty.H1Link>
               <Sty.Subhead>Front End Developer</Sty.Subhead>

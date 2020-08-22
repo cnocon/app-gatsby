@@ -23,8 +23,8 @@ export default {styles: css`
 
   main {
     height: 100%;
-    display: block;
-    padding: 2rem 0;
+    /* display: block; */
+    /* padding: 2rem 0; */
   }
 
   .wrapper-outer {
