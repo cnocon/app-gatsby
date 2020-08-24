@@ -8,15 +8,18 @@ import * as Styled from "./FlashCards.styles"
 
 const FlashCards = ({ ...data }) => {
   const { flashCardsData } = data.pageContext;
+  console.log('flashCardsData', flashCardsData);
   const [activeIndex, setActiveIndex] = useState(0)
   const [isFrontVisible, setIsFrontVisible] = useState(true)
+  let cardDataObj = {};
 
   const cardData = Object.values(flashCardsData).map((object, i) => {
     const { _id, name, slug } = object.category
-
-    return object.categoryQuestions.questions.map(question => {
+    cardDataObj[slug] = {name: name, questions: []} 
+    cardDataObj[slug]['questions'] = object.categoryQuestions.questions.map(question => {
       return {id: _id, name: name, slug: slug, question: question}
     })
+    return cardDataObj[slug]['questions'];
   }).flat()
 
   const handleNextClick = () => {
@@ -54,6 +57,7 @@ const FlashCards = ({ ...data }) => {
 
   useEffect(() => {
     // setCurrentData(cardsProps[activeIndex])
+    // console.log('cardDataObj', cardDataObj);
   }, [])
   
   return (

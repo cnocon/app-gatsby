@@ -121,7 +121,7 @@ exports.createPages = async ({ actions, graphql }) => {
   }, 5000);
 
   actions.createPage({
-    path: `/flash-cards`,
+    path: `/portfolio/flash-cards`,
     component: path.resolve(`./src/components/FlashCards/FlashCards.jsx`),
     context: { flashCardsData: flashCardsData }
   })

@@ -13,15 +13,14 @@ const PortfolioList = () => {
       <div className="col-sm-6 col-md-4">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/q-and-api" target="_blank" rel="noreferrer">GitHub (API only)</a>
+            <a href="https://github.com/cnocon/q-and-api" target="_blank" rel="noreferrer">GitHub (API)</a>
             &nbsp;|&nbsp; 
-            <a href="/flash-cards" target="_blank">App Demo</a>
+            <a href="/portfolio/flash-cards" target="_blank">Demo</a>
           </h4>
         </header>
         <img src="https://www.dropbox.com/s/bw7ieclv31g6g5j/Screen%20Shot%202020-08-24%20at%203.05.47%20PM.png?dl=1" alt="Screenshot of Flash Cards App" />
       </div>
       <div className="col-sm-12 col-md-8">
-        
         <h4>Summary</h4>
         <p>I built a REST API using Node, Express, Mongoose, and MongoDB to store flash card question and answer data. This API is pulled in by the Flash Cards app to populate all the questions.</p>
         <h4>Technologies</h4>

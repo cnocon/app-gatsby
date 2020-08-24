@@ -26,7 +26,7 @@ const generateMedia = item => {
             <img 
               src={item.url}
               alt={item.desc}
-              style={{minWidth: 'unset', width: '100%', maxHeight: item.hasOwnProperty('height') ? `${item.height}px` : ``}}
+              style={{minWidth: 'unset', maxWidth: '100%', maxHeight: item.hasOwnProperty('height') ? `${item.height}px` : ``}}
             />
           </div>
           <p className="image-note">Swipe or scroll to see rest of image.</p>
