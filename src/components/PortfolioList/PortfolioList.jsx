@@ -8,29 +8,29 @@ const PortfolioList = () => {
     <>
     <div className="row" css={Styled.PortfolioItem}>
       <div className="col-sm-12">
-        <h2>Weather Charts App</h2>
+        <h2>Front End Development Flash Cards App</h2>
       </div>
       <div className="col-sm-6 col-md-4">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/weather-charts-app-new" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://github.com/cnocon/q-and-api" target="_blank" rel="noreferrer">GitHub (API only)</a>
             &nbsp;|&nbsp; 
-            <a href="https://weather-charts-app.netlify.app/" target="_blank" rel="noreferrer">Demo</a>
+            <a href="/flash-cards" target="_blank">App Demo</a>
           </h4>
         </header>
-        <img src={weatherAppImg} alt="Screenshot of Weather Charts App" />
+        <img src="https://www.dropbox.com/s/bw7ieclv31g6g5j/Screen%20Shot%202020-08-24%20at%203.05.47%20PM.png?dl=1" alt="Screenshot of Flash Cards App" />
       </div>
       <div className="col-sm-12 col-md-8">
         
         <h4>Summary</h4>
-        <p>This app lets you see a 7-day forecast including temperature, pressure, and humidity for any major U.S. city you search for. As a bonus, you can see the city rendered in satellite view in a Google Map.</p>
+        <p>I built a REST API using Node, Express, Mongoose, and MongoDB to store flash card question and answer data. This API is pulled in by the Flash Cards app to populate all the questions.</p>
         <h4>Technologies</h4>
         <ul>
+          <li>MongoDB</li>
+          <li>Mongoose</li>
+          <li>Express</li>
+          <li>Gatsby</li>
           <li>React</li>
-          <li>Redux</li>
-          <li>Google Maps API</li>
-          <li>Open Weather API</li>
-          <li>Bootstrap</li>
         </ul>
       </div>
     </div>
@@ -59,6 +59,35 @@ const PortfolioList = () => {
         </ul>
       </div>
     </div> 
+
+    <div className="row" css={Styled.PortfolioItem}>
+      <div className="col-sm-12">
+        <h2>Weather Charts App</h2>
+      </div>
+      <div className="col-sm-6 col-md-4">
+        <header>
+          <h4>
+            <a href="https://github.com/cnocon/weather-charts-app-new" target="_blank" rel="noreferrer">GitHub</a>
+            &nbsp;|&nbsp; 
+            <a href="https://weather-charts-app.netlify.app/" target="_blank" rel="noreferrer">Demo</a>
+          </h4>
+        </header>
+        <img src={weatherAppImg} alt="Screenshot of Weather Charts App" />
+      </div>
+      <div className="col-sm-12 col-md-8">
+        
+        <h4>Summary</h4>
+        <p>This app lets you see a 7-day forecast including temperature, pressure, and humidity for any major U.S. city you search for. As a bonus, you can see the city rendered in satellite view in a Google Map.</p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>React</li>
+          <li>Redux</li>
+          <li>Google Maps API</li>
+          <li>Open Weather API</li>
+          <li>Bootstrap</li>
+        </ul>
+      </div>
+    </div>
     </>
   )
 }
