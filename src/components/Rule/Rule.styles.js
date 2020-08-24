@@ -50,4 +50,12 @@ export const RuleSpan = css`
   letter-spacing: 1px;
   font-weight: 700;
   font-family: "Lato", Arial, sans-serif;
+  
+  @media screen and (max-width: ${Theme.breakpoints.max.md}) {
+    i {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
   `

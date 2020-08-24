@@ -5,7 +5,7 @@ import Theme from '../Theme/Theme'
 export const Side = css`
 
   > section:first-of-type {
-    height: 280px;
+    height: 400px;
     overflow-y: scroll;
     padding: 20px 0;
     margin-right: -11px;
@@ -73,15 +73,31 @@ export const Side = css`
       margin: auto;
       align-items: center;
 
+      @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+        padding: 0;
+      }
+
       ul, ol {text-align: left; list-style-position: outside;}
 
       li, p, div, td, th {
         font-family: ${Theme.fonts.headings.family};
         font-size: 18px;
         line-height: 26px;
+
+        @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+          font-size: 15px;
+          line-height: 22px;
+        }
       }
 
-      li { font-size: 16px;}
+      li { 
+        font-size: 16px;
+
+        @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
       
       p:first-of-type,
       .text:first-of-type {
@@ -101,7 +117,7 @@ export const Side = css`
     align-items: center;
 
     button {
-      background-color: ${Theme.colors.default.mid};
+      background-color: ${Theme.colors.default.base};
       font-size: 18px;
       color: #fff;
       border: 0;
@@ -128,46 +144,38 @@ export const Side = css`
       }
 
       &:nth-of-type(2) {
-        background-color: rgba(0,0,0,0);
-        color: #345;
-        font-weight: 500;
-        font-family: ${Theme.fonts.accent.family};
-        text-transform: lowercase;
+        text-transform: uppercase;
+        font-weight: 900;
         margin: 0;
-        padding: 0;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
+        padding: 2px 10px;
         text-align: center;
-        line-height: 50px;
-        vertical-align: middle;
-        position: relative;
 
         @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
           font-size: 15px;
         }
 
         i {
-          display: flex;
-          font-size: 60px;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          /* font-size: 60px;
           width: 60px;
           height: 60px;
           font-weight: 200;
           position: absolute;
           left: -4px;
-          top: -4px;
+          top: -4px; */
           transform: rotateZ(0deg);
           backface-visibility: hidden;
-          opacity: .6;
           transition: transform .2s ease-in-out;
+          margin-right: 6px;
 
           @media screen and (max-width: ${Theme.breakpoints.max.sm}) {
-            font-size: 30px;
+            display: none;
           }
         }
 
         &:hover {
-          color: #345;
           i {
             backface-visibility: visible;
             /* rotateZ(360deg)  */
@@ -263,15 +271,11 @@ export const Side = css`
           text-transform: uppercase;
           height: auto;
           margin: 0 auto;
-          padding-bottom: 6px;
-          background-size: 100% 3px;
           transform: translateY(-1px);
           width: unset;
 
           @media screen and (max-width: ${Theme.breakpoints.max.xs}) {
             font-size: 13px;
-            /* background-size: 100% 2px; */
-            /* padding-bottom: 2px; */
           }
         }
       }

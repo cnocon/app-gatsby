@@ -130,7 +130,7 @@ const FlashCard = ({...props}) => {
           &nbsp;&nbsp;Prev
         </button>
         {/* className="peach-bg-gradient"> */}
-        <button onClick={clickHandler()} className='rainbow-text'>
+        <button onClick={clickHandler()}>
           <i className="far fa-sync-alt rainbow-text"></i>
           Flip
         </button>

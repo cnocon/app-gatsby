@@ -120,9 +120,11 @@ export const Nav = styled.ul`
     list-style: none;
     justify-content: space-around;
     width: 100%;
+    flex-wrap: wrap;
 
     @media screen and (min-width: ${Theme.breakpoints.min.md}) {
       margin: ${Theme.spacing.md} 0;
+      flex-wrap: unset;
     }
 `
 
