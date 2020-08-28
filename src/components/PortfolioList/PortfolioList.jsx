@@ -6,7 +6,7 @@ import youTubeAppImg from "../../images/youtube-app-screenshot.png"
 const PortfolioList = () => {
   return (
     <>
-    <div className="row" css={Styled.PortfolioItem}>
+    {/* <div className="row" css={Styled.PortfolioItem}>
       <div className="col-sm-12">
         <h2>Front End Development Flash Cards App</h2>
       </div>
@@ -32,7 +32,8 @@ const PortfolioList = () => {
           <li>React</li>
         </ul>
       </div>
-    </div>
+    </div> */}
+
     <div className="row" css={Styled.PortfolioItem}>
       <div className="col-sm-12">
         <h2>YouTube Search App</h2>

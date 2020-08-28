@@ -1,5 +1,5 @@
 // , useEffect
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Side from './Side'
 import * as Styled from './FlashCard.styles'
 

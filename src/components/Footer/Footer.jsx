@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import * as Styled from "./Footer.styles"
 import logo from "./buttercms-logo.png"
 // import IconList from "../IconList/IconList"
-import { window, document } from 'browser-monads';
+// import { window, document } from 'browser-monads';
+// import { document } from 'browser-monads';
 
 const Footer = () => {
-  const [offset, setOffset] = useState(`2000px`);
+  // const [offset, setOffset] = useState(`2000px`);
 
-  const positionFooter = () => {
-    const footerHeight = document.querySelector('.footer').offsetHeight;
-    const contentHeight = document.querySelector('main').offsetHeight;
-    const topOffset = contentHeight < window.innerHeight ? (window.innerHeight + .25*footerHeight) : contentHeight + footerHeight;
-    setOffset(topOffset)
-  }
+  // const positionFooter = () => {
+    // const footerHeight = document.querySelector('.footer').offsetHeight;
+    // const contentHeight = document.querySelector('main').offsetHeight;
+    // const topOffset = contentHeight < window.innerHeight ? (window.innerHeight + .25*footerHeight) : contentHeight + footerHeight;
+    // setOffset(topOffset)
+  // }
 
   useEffect(() => {
-    positionFooter();
+    // positionFooter();
   }, [])
 
   return(
@@ -55,7 +56,6 @@ const Footer = () => {
               <a href="https://buttercms.com" rel="noreferrer" target="_blank">
                 <Styled.Image src={logo} alt="ButterCMS"/>
               </a>
-
             </p>
           </Styled.RightBlock>
         </Styled.Row>
