@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require(`path`);
-const flashCardsData = require('./queries/flashCardsData');
 const { postCategoriesDataQuery } = require('./queries/postCategoriesData');
 const { allPostsDataQuery } = require('./queries/allPostsData');
 const { chunkArray } = require('./helpers/chunkArray');
@@ -110,20 +109,6 @@ exports.createPages = async ({ actions, graphql }) => {
       categories: categoriesData.data.allButterPost.distinct,
       breadcrumbs: [{name: 'Home', path: null}],
     },
-  })
-
-  /**
-   * FLASH CARDS PAGE FOR Q-AND-API DATA
-   * 
-   */
-  setTimeout(() => {
-    console.log('flashCardsData', flashCardsData);
-  }, 5000);
-
-  actions.createPage({
-    path: `/portfolio/flash-cards`,
-    component: path.resolve(`./src/components/FlashCards/FlashCards.jsx`),
-    context: { flashCardsData: flashCardsData }
   })
 }
 

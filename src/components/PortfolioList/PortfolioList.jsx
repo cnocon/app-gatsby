@@ -2,37 +2,39 @@ import React from "react"
 import * as Styled from "./PortfolioList.styles"
 import weatherAppImg from "../../images/weather-app-screenshot.png"
 import youTubeAppImg from "../../images/youtube-app-screenshot.png"
+import flashcardsAppImg from "../../images/flashcards-app-screenshot.png"
 
 const PortfolioList = () => {
   return (
     <>
-    {/* <div className="row" css={Styled.PortfolioItem}>
+    <div className="row" css={Styled.PortfolioItem}>
       <div className="col-sm-12">
         <h2>Front End Development Flash Cards App</h2>
       </div>
       <div className="col-sm-6 col-md-4">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/q-and-api" target="_blank" rel="noreferrer">GitHub (API)</a>
+            <a href="https://github.com/cnocon/flash-cards" target="_blank" rel="noreferrer">GitHub</a>
             &nbsp;|&nbsp; 
-            <a href="/portfolio/flash-cards" target="_blank">Demo</a>
+            <a href="https://fed-flash-cards.netlify.app/" target="_blank" rel="noreferrer">Demo</a>
           </h4>
         </header>
-        <img src="https://www.dropbox.com/s/bw7ieclv31g6g5j/Screen%20Shot%202020-08-24%20at%203.05.47%20PM.png?dl=1" alt="Screenshot of Flash Cards App" />
+        <img src={flashcardsAppImg} alt="Screenshot of Flash Cards App" />
       </div>
       <div className="col-sm-12 col-md-8">
         <h4>Summary</h4>
-        <p>I built a REST API using Node, Express, Mongoose, and MongoDB to store flash card question and answer data. This API is pulled in by the Flash Cards app to populate all the questions.</p>
+        <p>A flash card app specifically geared toward teaching front end development skills. The questions are pulled in from a custom-built API and MongoDB database.</p>
         <h4>Technologies</h4>
         <ul>
-          <li>MongoDB</li>
-          <li>Mongoose</li>
-          <li>Express</li>
-          <li>Gatsby</li>
+          <li>MongoDB (custom API)</li>
+          <li>Mongoose (custom API)</li>
+          <li>Express (custom API)</li>
+          <li>Node (custom API)</li>
           <li>React</li>
+          <li>React Context API</li>
         </ul>
       </div>
-    </div> */}
+    </div>
 
     <div className="row" css={Styled.PortfolioItem}>
       <div className="col-sm-12">
