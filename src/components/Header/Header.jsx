@@ -6,12 +6,14 @@ import { window } from 'browser-monads';
 
 
 const Header = ({ ruleTitle, ruleIcon, showLogo=true }) => {
-  const [ArticlesClass, setArticlesClass] = useState("")
-  const [ResumeClass, setResumeClass] = useState("")
+  const [articlesClass, setArticlesClass] = useState("")
+  const [resumeClass, setResumeClass] = useState("")
+  const [portfolioClass, setPortfolioClass] = useState("")
 
   const setActiveOnLoad = () => {
     setResumeClass(window.location.href.match(/\/resume/) ? "active" : "")
     setArticlesClass(window.location.href.match(/\/articles/) ? "active" : "")
+    setPortfolioClass(window.location.href.match(/\/portfolio/) ? "active" : "")
   }
 
   useEffect(() => {
@@ -37,14 +39,14 @@ const Header = ({ ruleTitle, ruleIcon, showLogo=true }) => {
             <Sty.NavLink to="/" activeClassName="active">About</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/articles/page-1" className={`${ArticlesClass}`}>Blog</Sty.NavLink>
+            <Sty.NavLink to="/articles/page-1" className={`${articlesClass}`}>Blog</Sty.NavLink>
           </Sty.NavItem>
           
           <Sty.NavItem>
-            <Sty.NavLink to="/portfolio" className={`${ArticlesClass}`}>Portfolio</Sty.NavLink>
+            <Sty.NavLink to="/portfolio" className={`${portfolioClass}`}>Portfolio</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
-            <Sty.NavLink to="/resume" className={`${ResumeClass}`}>Résumé</Sty.NavLink>
+            <Sty.NavLink to="/resume" className={`${resumeClass}`}>Résumé</Sty.NavLink>
           </Sty.NavItem>
           
         </Sty.Nav>
