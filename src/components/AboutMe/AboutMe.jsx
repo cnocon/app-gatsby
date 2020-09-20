@@ -55,7 +55,8 @@ const AboutMe = ({ ...data }) => {
               icon="fal fa-graduation-cap"
               title="Code Tutoring"
               classes='rainbow-box-shadow-rounded rainbow-icon-narrow dark'
-              text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages."
+              text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages. <a href='mailto:her@cristin.io' class=
+              rainbow-box-shadow'>Contact me about tutoring</a>."
             />
             <IconColumn
               columnClasses="col-sm-6 col-md-3"

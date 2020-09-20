@@ -57,6 +57,21 @@ export const IconColumnDiv = styled.div`
       }
     }
   }
-}
+
+  a {
+    color: inherit;
+    background-image: linear-gradient(205deg, 
+    ${Theme.colors.accents.yellow} 10%,
+    ${Theme.colors.accents.green} 30%, 
+    ${Theme.colors.accents.green} 40%, 
+    ${Theme.colors.accents.blue} 52%, 
+    ${Theme.colors.accents.blue} 62%, 
+    ${Theme.colors.accents.purple} 70%,
+    ${Theme.colors.accents.red} 90%);
+    background-size: 100% 2px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transition: background-image .4s;
+  }
 `
 
