@@ -1,5 +1,5 @@
 const allPostsDataQuery = `{
-  allButterPost(filter: {categories: {elemMatch: {slug: {in: ["npm","node","netlify","webhooks","gatsby","cli","git","sass","javascript","workflow"]}}}}, sort: {fields: created}) {
+  allButterPost(filter: {categories: {elemMatch: {slug: {in: ["growth", "npm","node","netlify","webhooks","gatsby","cli","git","sass","javascript","workflow"]}}}}, sort: {fields: created}) {
     edges {
       node {
         id

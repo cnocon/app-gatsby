@@ -7,6 +7,7 @@ import gitImg from '../../images/git.png'
 import searchImg from '../../images/search.png'
 import defaultImg from '../../images/default.png'
 import netlifyImg from '../../images/netlify.png'
+import heartMindImg from '../../images/mental-health.png'
 
 const imageGetter = (slug) => {
   if (slug.match(/animate-page-transitions-with-fade-effect-in-gatsby/)) {
@@ -25,6 +26,8 @@ const imageGetter = (slug) => {
     return searchImg
   } else if (slug.match(/automatically-build-and-deploy-your-gatsby-site-on-netlify-after-publishing-a-post-in-buttercms/)) {
     return netlifyImg
+  } else if (slug.match(/perilous-confusion-and-the-opportunity-for-growth/)) {
+    return heartMindImg
   } else {
     return defaultImg
   }
