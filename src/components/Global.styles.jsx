@@ -298,6 +298,11 @@ export default {styles: css`
 
     &-sm { background-size: 100% 1.5px; }
 
+    &-left {
+      background-position: left;
+      background-size: 3px 85%;
+    }
+
     &a:hover {
     background-image: linear-gradient(90deg, 
       ${Theme.colors.accents.vivid.red} 5%,

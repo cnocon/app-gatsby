@@ -46,7 +46,7 @@ export const ImageColumnHeading = styled.h2`
     font-size: 18px;
     margin-bottom: 10px;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 900;
     margin: 0;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -97,7 +97,7 @@ export const Paragraph = css`
   line-height: ${Theme.fonts.sizes.lineHeights.default};
   text-align: left;
   margin: 0 auto;
-  color: ${Theme.colors.grays.textDark};
+  color: ${Theme.colors.grays.textDarkest};
 
   span {
     float: left;

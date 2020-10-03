@@ -22,7 +22,7 @@ module.exports = {
       lightest: '#fffcb3',
     },
     grays: {
-      background: '#f7f7f7',
+      background: 'hsl(200, 16%, 97%)',
       border: 'hsl(200, 16%, 96%)',
       borderDark: 'hsl(210, 5%, 75%)',
       borderMedium: 'hsl(210, 15%, 85%)',

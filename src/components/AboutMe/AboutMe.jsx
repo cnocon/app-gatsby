@@ -52,14 +52,6 @@ const AboutMe = ({ ...data }) => {
           <div className="row">
             <IconColumn
               columnClasses="col-sm-6 col-md-3"
-              icon="fal fa-graduation-cap"
-              title="Code Tutoring"
-              classes='rainbow-box-shadow-rounded rainbow-icon-narrow dark'
-              text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages. <a href='mailto:her@cristin.io' class=
-              rainbow-box-shadow'>Contact me about tutoring</a>."
-            />
-            <IconColumn
-              columnClasses="col-sm-6 col-md-3"
               icon="fal fa-code"
               title="Web Development"
               classes='rainbow-box-shadow-rounded rainbow-icon-narrow dark'
@@ -67,18 +59,21 @@ const AboutMe = ({ ...data }) => {
             />
             <IconColumn
               columnClasses="col-sm-6 col-md-3"
-              icon="fal fa-typewriter"
-              title="Blog Writer"
+              icon="fal fa-graduation-cap"
+              title="Code Tutoring"
               classes='rainbow-box-shadow-rounded rainbow-icon-narrow dark'
-              text="I believe it's important to <b>share and contribute</b> content to the developer community."
+              text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages. <a href='mailto:her@cristin.io' class=
+              rainbow-box-shadow'>Contact me about tutoring</a>."
             />
-            <IconColumn
-              columnClasses="col-sm-6 col-md-3"
-              icon="fal fa-project-diagram"
-              title="Project Management"
-              classes='rainbow-box-shadow-rounded rainbow-icon-narrow dark'
-              text="I have strong <b>project management</b> skills and can self-manage well as needed."
-            />
+            <div className="col-sm-12 col-md-6">
+              <div className="testo">
+                <span className="icon-wrapper"><i className="fal fa-quote-left"></i></span>
+                <blockquote>
+                  <p><strong>Cristin O'Connor is a lifesaver!</strong> Being new to Gatsby, I was having a difficult time finding a solution for a blocker. I scoured documentation, tried every combination of keywords, and went to every forum I could think of to find the solution. I came across Cristin's website and reached out. Cristin was responsive, fast, and knowledgeable. She was also kind and concise which was exactly what a newbie like me needed.</p>
+                  <cite>– <b>Mariah W.</b>, Freelance Developer</cite>
+                </blockquote>
+              </div>
+            </div>
           </div> 
 
 
