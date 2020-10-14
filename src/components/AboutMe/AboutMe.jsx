@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import * as Styled from "./AboutMe.styles"
 import Layout from "../Layout/Layout"
 import SEO from "../SEO/seo"
@@ -8,6 +8,7 @@ import SectionTitle from '../SectionTitle/SectionTitle'
 import Intro from '../Intro/Intro'
 import IconColumn from '../IconColumn/IconColumn'
 import ImageColumn from '../ImageColumn/ImageColumn'
+import $ from 'jquery'
 
 const AboutMe = ({ ...data }) => {
   const { posts } = data.pageContext
@@ -29,6 +30,10 @@ const AboutMe = ({ ...data }) => {
         key={obj.node.published} />
     })
   )
+
+  useEffect(() => {
+    $('body').fadeIn(400);
+  }, [])
 
   return (
     <Layout>

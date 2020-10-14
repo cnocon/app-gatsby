@@ -19,6 +19,7 @@ export default {styles: css`
     max-width: 100%;
     overflow-x: hidden;
     margin: 0;
+    display: none;
   }
 
   main {
