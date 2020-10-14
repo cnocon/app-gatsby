@@ -44,6 +44,11 @@ export const Container = styled.div`
       padding-left: 22.5px;
       color: ${Theme.colors.default.darker};
 
+      @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+        display: block;
+      }
+
       p {
         margin: 0 0 5px;
         padding: 0;

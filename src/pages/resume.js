@@ -6,7 +6,6 @@ import Header from "../components/Header/Header"
 import Resume from "../components/Resume/Resume"
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs"
 import Rule from "../components/Rule/Rule"
-import PageTransition from '../../plugins/gatsby-v3-plugin-page-transitions';
 
 const IndexPage = () => {
 
@@ -16,9 +15,7 @@ const IndexPage = () => {
       <Breadcrumbs crumbs={[]} />
       <SEO stitle="Résumé | Cristin O'Connor"/>
       <Rule title={'Résumé'} icon="far fa-file-user"/>
-      <PageTransition>
-        <Resume />
-      </PageTransition>
+      <Resume />
     </Layout>
   )
 }

@@ -7,7 +7,6 @@ import PostPreview from "../PostPreview/PostPreview"
 import * as Styled from '../PostsList/PostsList.styles'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
-import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions';
 
 const PostsList = ({...data}) => {
   const {stitle, posts, nextPagePath, prevPagePath, breadcrumbs, title, seoDescription, categories} = data.pageContext
@@ -49,33 +48,31 @@ const PostsList = ({...data}) => {
     <Layout className="blog-posts">
       <Header />
       <SEO stitle={stitle} sdescription={seoDescription} />
-      <PageTransition>
-        <div className="posts-list">
-          <Rule title={title} icon="fas fa-rss" />
-          <Breadcrumbs crumbs={breadcrumbs} />
-          <div className="row">
-            <div className="col-sm-12 col-md-9">
-              {articles}
-              <Styled.Navigation>
-                {prevBtn}
-                {nextBtn}
-              </Styled.Navigation>
-            </div>
-            <BlogSidebar categories={categories} colClasses='col-sm-12 col-md-3' />
-          </div>
-        </div>
-
-        {/* <div className="row">
-            <div className="col-sm-12">
-
+      <div className="posts-list">
+        <Rule title={title} icon="fas fa-rss" />
+        <Breadcrumbs crumbs={breadcrumbs} />
+        <div className="row">
+          <div className="col-sm-12 col-md-9">
+            {articles}
             <Styled.Navigation>
-                {prevBtn}
-                {nextBtn}
-              </Styled.Navigation>
-              </div>
+              {prevBtn}
+              {nextBtn}
+            </Styled.Navigation>
           </div>
-        </div> */}
-      </PageTransition>
+          <BlogSidebar categories={categories} colClasses='col-sm-12 col-md-3' />
+        </div>
+      </div>
+
+      {/* <div className="row">
+          <div className="col-sm-12">
+
+          <Styled.Navigation>
+              {prevBtn}
+              {nextBtn}
+            </Styled.Navigation>
+            </div>
+        </div>
+      </div> */}
     </Layout>
   )
 }

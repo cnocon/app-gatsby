@@ -8,7 +8,6 @@ import * as Styled from "./Post.styles"
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
-import PageTransition from '../../../plugins/gatsby-v3-plugin-page-transitions'
 import $ from 'jquery'
 import { Link } from 'gatsby'
 
@@ -59,7 +58,6 @@ const Post = ({...data}) => {
         <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>
       </SEO>
 
-      <PageTransition>
 
       <Rule
           title={`Level: ${post.tags[0].name.toUpperCase()}`}
@@ -123,7 +121,6 @@ const Post = ({...data}) => {
             </Styled.Navigation>
           </div>
         </div> */}
-      </PageTransition>
     </Layout>
   )
 }

@@ -126,6 +126,14 @@ export const Nav = styled.ul`
       margin: ${Theme.spacing.md} 0;
       flex-wrap: unset;
     }
+
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+      display: block;
+      text-align: center;
+    }
+  }
+
 `
 
 export const NavItem = styled.li`
@@ -135,6 +143,12 @@ export const NavItem = styled.li`
   text-decoration: none;
   flex-basis: 33.333%;
   justify-content: center;
+
+  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+    /* IE10+ specific styles go here */  
+    display: inline-block;
+  }
+
 `
 
 export const NavLink = styled(Link)`

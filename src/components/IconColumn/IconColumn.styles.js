@@ -8,6 +8,12 @@ export const IconColumnDiv = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
+  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+    /* IE10+ specific styles go here */  
+    display: block;
+    text-align: center;
+  }
+
   h4 {
     font-size: ${Theme.fonts.sizes.sm};
     line-height: ${Theme.fonts.sizes.lineHeights.sm};
@@ -52,9 +58,10 @@ export const IconColumnDiv = styled.div`
 
     &.dark {
       background-color: #345 !important;
+      color: white;
       
       &::before {
-        
+        color: white;
       }
     }
   }

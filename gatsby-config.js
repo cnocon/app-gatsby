@@ -84,12 +84,6 @@ module.exports = {
           }
         }
       }
-    },   
-    {
-      resolve: `gatsby-v3-plugin-page-transitions`,
-      options: {
-        transitionTime: 350
-      }
     },
     {
       resolve: `gatsby-plugin-sass`,

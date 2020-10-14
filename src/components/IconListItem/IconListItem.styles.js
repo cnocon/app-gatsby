@@ -103,11 +103,13 @@ export const ItemIcon = styled.i`
 
   .dark & {
     background-color: ${Theme.colors.default.base};
+    color: white;
     font-weight: 500;
   }
 
   .dark a:hover & {
-    &::before { color: #fff; }
+    background-color: white;
+    color: #345;
   }
 `
 
