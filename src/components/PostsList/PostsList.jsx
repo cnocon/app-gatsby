@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../Layout/Layout"
 import BlogSidebar from '../BlogSidebar/BlogSidebar'
 import Header from "../Header/Header"
@@ -7,6 +7,7 @@ import PostPreview from "../PostPreview/PostPreview"
 import * as Styled from '../PostsList/PostsList.styles'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
+import $ from 'jquery'
 
 const PostsList = ({...data}) => {
   const {stitle, posts, nextPagePath, prevPagePath, breadcrumbs, title, seoDescription, categories} = data.pageContext
@@ -43,6 +44,10 @@ const PostsList = ({...data}) => {
       ) : null}
     </div>
   )
+
+  useEffect(() => {
+    $('body').fadeIn(400);
+  }, [])
 
   return (
     <Layout className="blog-posts">

@@ -20,6 +20,12 @@ export default {styles: css`
     overflow-x: hidden;
     margin: 0;
     display: none;
+
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+      display: block;
+    }
+
   }
 
   main {
