@@ -24,20 +24,21 @@ exports.createPages = async ({ actions, graphql }) => {
     const sortedPosts = categoryGroup.nodes.sort((a, b) => a.published < b.published)
     const chunkedPosts = chunkArray(sortedPosts, 3);
     const category = categoryGroup.fieldValue.toLowerCase().replace(/\s/g, '-')
+    console.log('category', category);
 
     chunkedPosts.forEach((collection, index) => {
       actions.createPage({
         path: `/articles/${category}/page-${index + 1}`,
         component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
         context: {
-          categories: categoriesData.data.allButterPost.distinct,
+          skip: index * 3,
+          maxPageNumber: chunkedPosts.length,
+          posts: collection.reverse(),
+          category: category,
           prevPagePath: index < 1 ? null : `/articles/${category}/page-${index}`,
           nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/${category}/page-${index + 2}`,
           title: `Posted in ${categoryGroup.fieldValue}`,
-          stitle: `Latest Posts | Front End Development Blog`,
           seoDescription: `Latest ${categoryGroup.fieldValue} posts from Cristin O'Connor's Front End Development Blog`,
-          category: category,
-          posts: collection.reverse(),
           breadcrumbs: [
             {title: 'Home', path: '/'},
             {title: `Blog`,path: `/articles/page-1`},
@@ -56,7 +57,7 @@ exports.createPages = async ({ actions, graphql }) => {
   chunkedPosts.forEach((collection, index) => {
     actions.createPage({
       path: `/articles/page-${index + 1}`,
-      component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
+      component: path.resolve(`./src/components/PostsList/PostsListNew.jsx`),
       context: {
         skip: index * 3,
         maxPageNumber: chunkedPosts.length

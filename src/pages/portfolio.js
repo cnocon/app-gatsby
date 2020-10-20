@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/seo"
 import Header from "../components/Header/Header"
-import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs"
 import Rule from "../components/Rule/Rule"
 import PortfolioList from "../components/PortfolioList/PortfolioList"
 import $ from 'jquery'

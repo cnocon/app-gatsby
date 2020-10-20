@@ -5,7 +5,6 @@ import SectionTitle from '../SectionTitle/SectionTitle'
 import Intro from '../Intro/Intro'
 import IconColumn from '../IconColumn/IconColumn'
 import ImageColumn from '../ImageColumn/ImageColumn'
-import $ from 'jquery'
 
 const AboutMe = ({ posts }) => {
 

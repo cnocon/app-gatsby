@@ -97,7 +97,7 @@ module.exports = {
         fonts: [
           `roboto\:300,400,500,700,900`,
           `oswald\:200,400,700`,
-          `lato\:400,700,900`,
+          `lato\:300,400,700,900`,
         ],
         display: 'swap'
       }
