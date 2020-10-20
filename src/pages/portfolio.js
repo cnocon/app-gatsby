@@ -7,7 +7,7 @@ import Rule from "../components/Rule/Rule"
 import PortfolioList from "../components/PortfolioList/PortfolioList"
 import $ from 'jquery'
 
-const IndexPage = () => {
+const PortfolioPage = () => {
   useEffect(() => {
     $('body').fadeIn(400);
   }, [])
@@ -15,7 +15,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <Header />
-      <Breadcrumbs crumbs={[]} />
       <SEO stitle="Portfolio | Cristin O'Connor"/>
       <Rule title={'Portfolio'} icon="fal fa-folders"/>
       <PortfolioList />
@@ -23,4 +22,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default PortfolioPage

@@ -9,7 +9,7 @@ export const Button = styled.a`
   display: block;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 400;
   font-size: ${Theme.fonts.sizes.default};
   outline: 0;
   transition: all .2s;

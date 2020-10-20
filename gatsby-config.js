@@ -95,9 +95,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
+          `roboto\:300,400,500,700,900`,
           `oswald\:200,400,700`,
-          `lato\:300,300i,400,400i,700,700i,900,900i`,
-          `roboto\:300,300i,400,400i,500,500i,700,700i,900,900i`
+          `lato\:400,700,900`,
         ],
         display: 'swap'
       }

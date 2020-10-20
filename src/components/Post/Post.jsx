@@ -52,7 +52,6 @@ const Post = ({...data}) => {
   return (
     <Layout>
       <Header />
-
       <SEO stitle={post.title} sdescription={post.summary} slug={post.slug}>
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ed26ab486ccf280"></script>
         <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>

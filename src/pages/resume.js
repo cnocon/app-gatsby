@@ -7,11 +7,11 @@ import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs"
 import Rule from "../components/Rule/Rule"
 import $ from 'jquery'
 
-const IndexPage = () => {
+const ResumePage = () => {
 
   useEffect(() => {
     $('body').fadeIn(400);
-  }, [])
+  }, []);
 
   return (
     <Layout css={{position: 'relative'}}>
@@ -24,4 +24,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default ResumePage

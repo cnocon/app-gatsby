@@ -6,16 +6,16 @@ const Breadcrumbs = ({ crumbs }) => {
 
   return (
     <ul css={Styled.CrumbsContainer}>
-      { crumbs.map(({ path, name }, index) => {
+      { crumbs.map(({ path, title }, index) => {
         if (path) {
           return (
             <li key={index} css={Styled.CrumbItem}>
-              <Link to={path} css={Styled.CrumbLink}>{name}</Link>&nbsp;/&nbsp;
+              <Link to={path} css={Styled.CrumbLink}>{title}</Link>&nbsp;/&nbsp;
             </li>
           )
         } else {
           return (
-            <li key={index} css={Styled.CrumbItem}>{name}</li>
+            <li key={index} css={Styled.CrumbItem}>{title}</li>
           )
         }
       })

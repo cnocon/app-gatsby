@@ -39,9 +39,9 @@ exports.createPages = async ({ actions, graphql }) => {
           category: category,
           posts: collection.reverse(),
           breadcrumbs: [
-            {name: 'Home', path: '/'},
-            {name: `Blog`,path: `/articles/page-1`},
-            {name: category.charAt(0).toUpperCase() + category.slice(1), path: null},
+            {title: 'Home', path: '/'},
+            {title: `Blog`,path: `/articles/page-1`},
+            {title: category.charAt(0).toUpperCase() + category.slice(1), path: null},
           ]
         },
       })
@@ -66,9 +66,9 @@ exports.createPages = async ({ actions, graphql }) => {
         stitle: "Latest Posts | Front End Development Blog",
         seoDescription: `Latest Posts from Cristin O'Connor's Front End Development Blog`,
         breadcrumbs: [
-          {name: 'Home', path: '/'},
-          {name: `Blog`, path: `/articles/page-1`},
-          {name: `Page ${index + 1}`, path: null},
+          {title: 'Home', path: '/'},
+          {title: `Blog`, path: `/articles/page-1`},
+          {title: `Page ${index + 1}`, path: null},
         ],
       },
     })
@@ -89,43 +89,12 @@ exports.createPages = async ({ actions, graphql }) => {
         nextPost: index === allPosts.length - 1 ? null : allPosts[index + 1].node,
         categories: categoriesData.data.allButterPost.distinct,
         breadcrumbs: [
-          { name: 'Home', path: '/'},
-          { name: `Blog`, path: `/articles/page-1`},
-          { name: node.node.title, path: null},
+          { title: 'Home', path: '/'},
+          { title: `Blog`, path: `/articles/page-1`},
+          { title: node.node.title, path: null},
         ],
       },
     })
   })
-
-  /**
-   * ABOUT ME PAGE
-   * 
-   */
-  actions.createPage({
-    path: `/`,
-    component: path.resolve(`./src/components/AboutMe/AboutMe.jsx`),
-    context: {
-      posts: allPosts.slice(0, 6),
-      categories: categoriesData.data.allButterPost.distinct,
-      breadcrumbs: [{name: 'Home', path: null}],
-    },
-  })
 }
 
-// You can delete this file if you're not using it
-
-// MY NODE TYPES ARE "SitePage"
-// const { createFilePath } = require(`gatsby-source-filesystem`)
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions
-//   console.log(node.internal.type);
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const value = createFilePath({ node, getNode })
-//     createNodeField({
-//       name: `slug`,
-//       node,
-//       value,
-//     })
-//   }
-// }
-// });

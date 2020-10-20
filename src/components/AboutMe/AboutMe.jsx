@@ -1,8 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import * as Styled from "./AboutMe.styles"
-import Layout from "../Layout/Layout"
-import SEO from "../SEO/seo"
-import Header from "../Header/Header"
 import IconList from "../IconList/IconList"
 import SectionTitle from '../SectionTitle/SectionTitle'
 import Intro from '../Intro/Intro'
@@ -10,14 +7,13 @@ import IconColumn from '../IconColumn/IconColumn'
 import ImageColumn from '../ImageColumn/ImageColumn'
 import $ from 'jquery'
 
-const AboutMe = ({ ...data }) => {
-  const { posts } = data.pageContext
+const AboutMe = ({ posts }) => {
 
   const articles = (
-    posts.map((obj, i) => {
+    posts.nodes.map((post, i) => {
       const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
-      const date = new Date(obj.node.published).toLocaleDateString(undefined, options)
-      const post = obj.node
+      const date = new Date(post.published).toLocaleDateString(undefined, options)
+
       return <ImageColumn 
         columnClasses='col-sm-12 col-md-6 col-lg-4'
         title={post.title}
@@ -27,110 +23,101 @@ const AboutMe = ({ ...data }) => {
         slug={post.slug}
         summary={post.summary}
         date={date} 
-        key={obj.node.published} />
+        key={post.published} />
     })
   )
 
-  useEffect(() => {
-    $('body').fadeIn(400);
-  }, [])
-
   return (
-    <Layout>
-      <Header />
-      <SEO stitle="Cristin O'Connor | Front End Developer" />
+    <Styled.Container>
+      <div className="row">
+        <div className="col-sm-12">
+          <SectionTitle
+            text="A Little About Me"
+            icon="fal fa-user-astronaut"
+          />
+          <Intro />
+        </div>
+      </div>
 
-      <Styled.Container>
-        <div className="row">
-          <div className="col-sm-12">
-            <SectionTitle
-              text="A Little About Me"
-              icon="fal fa-user-astronaut"
-            />
-            <Intro />
+
+      <SectionTitle text="Services" icon="fas fa-concierge-bell"/>
+      <div className="row">
+        <IconColumn
+          columnClasses="col-sm-6 col-md-3"
+          icon="fal fa-code"
+          title="Web Development"
+          classes='rainbow-box-shadow-rounded dark'
+          text="This is my primary area of expertise. I have <b>10+ years of experience</b> in the field."
+        />
+        <IconColumn
+          columnClasses="col-sm-6 col-md-3"
+          icon="fal fa-graduation-cap"
+          title="Code Tutoring"
+          classes='rainbow-box-shadow-rounded dark'
+          text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages. <a href='mailto:her@cristin.io' class=
+          rainbow-box-shadow'>Contact me about tutoring</a>."
+        />
+        <div className="col-sm-12 col-md-6">
+          <div className="testo">
+            <span className="icon-wrapper"><i className="fal fa-quote-left"></i></span>
+            <blockquote>
+              <p><strong>Cristin O'Connor is a lifesaver!</strong> Being new to Gatsby, I was having a difficult time finding a solution for a blocker. I scoured documentation, tried every combination of keywords, and went to every forum I could think of to find the solution. I came across Cristin's website and reached out. Cristin was responsive, fast, and knowledgeable. She was also kind and concise which was exactly what a newbie like me needed.</p>
+              <cite>– <b>Mariah W.</b>, Freelance Developer</cite>
+            </blockquote>
           </div>
         </div>
+      </div> 
 
 
-        <SectionTitle text="Services" icon="fas fa-concierge-bell"/>
-        <div className="row">
-          <IconColumn
-            columnClasses="col-sm-6 col-md-3"
-            icon="fal fa-code"
-            title="Web Development"
-            classes='rainbow-box-shadow-rounded dark'
-            text="This is my primary area of expertise. I have <b>10+ years of experience</b> in the field."
+      <SectionTitle text="Latest from the Blog" icon="fas fa-rss" />
+      <div className="row">{articles}</div>
+
+          <SectionTitle
+            text="Connect"
+            icon="fal fa-handshake"
           />
-          <IconColumn
-            columnClasses="col-sm-6 col-md-3"
-            icon="fal fa-graduation-cap"
-            title="Code Tutoring"
-            classes='rainbow-box-shadow-rounded dark'
-            text="I focus on <b>teaching with compassion</b>. I love tutoring and I can work with all ages. <a href='mailto:her@cristin.io' class=
-            rainbow-box-shadow'>Contact me about tutoring</a>."
-          />
-          <div className="col-sm-12 col-md-6">
-            <div className="testo">
-              <span className="icon-wrapper"><i className="fal fa-quote-left"></i></span>
-              <blockquote>
-                <p><strong>Cristin O'Connor is a lifesaver!</strong> Being new to Gatsby, I was having a difficult time finding a solution for a blocker. I scoured documentation, tried every combination of keywords, and went to every forum I could think of to find the solution. I came across Cristin's website and reached out. Cristin was responsive, fast, and knowledgeable. She was also kind and concise which was exactly what a newbie like me needed.</p>
-                <cite>– <b>Mariah W.</b>, Freelance Developer</cite>
-              </blockquote>
-            </div>
-          </div>
-        </div> 
-
-
-        <SectionTitle text="Latest from the Blog" icon="fas fa-rss" />
-        <div className="row">{articles}</div>
-
-            <SectionTitle
-              text="Connect"
-              icon="fal fa-handshake"
-            />
-            <IconList 
-              classes='' 
-              listItems={[
-              {
-                icon: 'fab fa-codepen',
-                link: 'https://codepen.io/cnocon',
-                text: 'CodePen',
-                classes: 'rainbow-box-shadow-rounded'
-              },
-              {
-                icon: 'fab fa-github',
-                link: 'https://github.com/cnocon',
-                text: 'GitHub',
-                classes: 'rainbow-box-shadow-rounded'
-              },
-              {
-                icon: 'fal fa-hashtag',
-                link: 'https://twitter.com/cnocon',
-                text: 'Twitter',
-                classes: 'rainbow-box-shadow-rounded'
-              },
-              {
-                icon: 'fab fa-linkedin-in',
-                link: 'https://www.linkedin.com/in/cristinoconnor',
-                text: 'LinkedIn',
-                classes: 'rainbow-box-shadow-rounded'
-              },
-              {
-                icon: 'fab fa-stack-overflow',
-                link: 'https://stackoverflow.com/users/2187039/cnocon',
-                text: 'Stack Overflow',
-                classes: 'rainbow-box-shadow-rounded'
-              },
-              {
-                icon: 'fal fa-envelope',
-                link: 'mailto:her@cristin.io',
-                text: 'Email',
-                classes: 'rainbow-box-shadow-rounded'
-              }
-            ]} 
-          />
-      </Styled.Container>
-    </Layout>
+          <IconList 
+            classes='' 
+            listItems={[
+            {
+              icon: 'fab fa-codepen',
+              link: 'https://codepen.io/cnocon',
+              text: 'CodePen',
+              classes: 'rainbow-box-shadow-rounded'
+            },
+            {
+              icon: 'fab fa-github',
+              link: 'https://github.com/cnocon',
+              text: 'GitHub',
+              classes: 'rainbow-box-shadow-rounded'
+            },
+            {
+              icon: 'fal fa-hashtag',
+              link: 'https://twitter.com/cnocon',
+              text: 'Twitter',
+              classes: 'rainbow-box-shadow-rounded'
+            },
+            {
+              icon: 'fab fa-linkedin-in',
+              link: 'https://www.linkedin.com/in/cristinoconnor',
+              text: 'LinkedIn',
+              classes: 'rainbow-box-shadow-rounded'
+            },
+            {
+              icon: 'fab fa-stack-overflow',
+              link: 'https://stackoverflow.com/users/2187039/cnocon',
+              text: 'Stack Overflow',
+              classes: 'rainbow-box-shadow-rounded'
+            },
+            {
+              icon: 'fal fa-envelope',
+              link: 'mailto:her@cristin.io',
+              text: 'Email',
+              classes: 'rainbow-box-shadow-rounded'
+            }
+          ]} 
+        />
+    </Styled.Container>
   )
 }
 

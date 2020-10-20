@@ -67,17 +67,6 @@ const PostsList = ({...data}) => {
           <BlogSidebar categories={categories} colClasses='col-sm-12 col-md-3' />
         </div>
       </div>
-
-      {/* <div className="row">
-          <div className="col-sm-12">
-
-          <Styled.Navigation>
-              {prevBtn}
-              {nextBtn}
-            </Styled.Navigation>
-            </div>
-        </div>
-      </div> */}
     </Layout>
   )
 }
