@@ -9,10 +9,16 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
 import $ from 'jquery'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
-const Post = ({...data}) => {
-  const { post, breadcrumbs, categoriesMap, prevPost, nextPost, categories } = data.pageContext
+const Post = ({ data, pageContext }) => {
+  const { post, breadcrumbs, categoriesMap, prevPost, nextPost } = pageContext
+  const categories = Object.values(data.categories.nodes.map(node => node.categories).flat().reduce((acc, node) => {
+    if (!acc[node.slug]) {
+      acc[node.slug] = { name: node.name, slug: node.slug };
+    }
+    return acc;
+  }, {}));
 
   const prevBtn = prevPost ?
      <div className={nextPost ? "left-block" : "left-full-block"}>
@@ -45,8 +51,9 @@ const Post = ({...data}) => {
   }
    
   useEffect(() => {
-    $('html, body').animate({ scrollTop: 0 }, 0)
     loadAddThis();
+    $('body').fadeIn(400);
+    $('html, body').animate({ scrollTop: 0 }, 0)
   }, [])
   
   return (
@@ -56,8 +63,6 @@ const Post = ({...data}) => {
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ed26ab486ccf280"></script>
         <script defer async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=doxy"></script>
       </SEO>
-
-
       <Rule
           title={`Level: ${post.tags[0].name.toUpperCase()}`}
           icon="fas fa-chart-bar"
@@ -106,22 +111,21 @@ const Post = ({...data}) => {
           </div>
           <BlogSidebar categories={categories} colClasses='col-sm-12 col-md-3' />
         </div>
-        {/* <div className="row">
-          <div className="col-sm-12">
-            <Styled.Navigation>
-              <div className="col-sm-6 nav-previous left-block">
-                {prevBtn ? <h4>PREVIOUS POST</h4> : null }
-                {prevBtn}
-              </div>
-              <div className="col-sm-6 nav-next right-block">
-                {nextBtn ? <h4>NEXT POST</h4> : null }
-                {nextBtn}
-              </div>
-            </Styled.Navigation>
-          </div>
-        </div> */}
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    categories: allButterPost {
+      nodes {
+        categories {
+          name
+          slug
+        }
+      }
+    }
+  }
+`;
 
 export default Post;
