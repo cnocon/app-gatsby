@@ -33,14 +33,14 @@ export const IconColumnDiv = styled.div`
   }
 
   p {
-    text-align: left;
+    text-align: center;
     font-size: ${Theme.fonts.sizes.default};
     margin: ${Theme.spacing.xs} 0 0;
     font-weight: 400;
-    color: ${Theme.colors.grays.textDarkest};
+    color: ${Theme.colors.default.base};
 
     b {  
-      font-weight: 500;
+      font-weight: 700;
     }
   }
 

@@ -47,7 +47,6 @@ export const Header = styled.header`
 `
 
 export const TitleLink = styled(Link)`
-  // font-size: ${Theme.fonts.sizes.lg};
   font-size: ${Theme.fonts.sizes.md};
   line-height: ${Theme.fonts.sizes.lineHeights.default};
   padding-bottom: 0;
@@ -56,13 +55,8 @@ export const TitleLink = styled(Link)`
   font-family: ${Theme.fonts.headings.family};
   transition: all .4s;
 
-  @media screen and (max-width: ${Theme.breakpoints.max.lg}) {
-    font-size: ${Theme.fonts.sizes.md};
-    line-height: ${Theme.fonts.sizes.lineHeights.xs};
-  }
-
   &:hover {
-    color: ${Theme.colors.default.base};
+    color: ${Theme.colors.default.darker};
   }
 `
 

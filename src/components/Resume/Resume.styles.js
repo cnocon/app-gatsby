@@ -99,11 +99,16 @@ export const Timeline = styled.div`
       h4,
       h5 {
         text-align: center;
+
+        @media screen and (max-width: ${Theme.breakpoints.max.md}) {
+          text-align: left !important;
+        }
       }
 
       p:before,
       ul:before {
-        left: 50%; z-index: -1;
+        left: 50%; 
+        z-index: -1;
       }
     }
 
@@ -140,6 +145,19 @@ export const Timeline = styled.div`
       height: 120%;
       width: 4px;
       background: ${Theme.colors.grays.border};
+    }
+
+    .award span,
+    .award small {
+      line-height: 1;
+    }
+
+    span,
+    small {
+      &.range {
+        font-weight: 400;
+        text-transform: none;
+      }
     }
   }
 `
@@ -461,7 +479,7 @@ export const Asset = styled.li`
   i {
     padding-right: 10px;
     font-size: 16px;
-    color: ${Theme.colors.accents.vivid.green};
+    color: ${Theme.colors.accents.dark.green};
     font-weight: 400;
   }
 

@@ -96,77 +96,16 @@ module.exports = {
       options: {
         fonts: [
           `roboto\:300,400,500,700,900`,
-          `oswald\:200,400,700`,
+          `oswald\:300,400,700`,
           `lato\:300,400,700,900`,
         ],
-        display: 'swap'
+        display: 'block'
       }
     },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [``, `/resume`, `/articles/page-1`, `/articles/page-2`, `/articles/page-3`, `/portfolio`],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allButterPost } }) => {
-              return allButterPost.edges.map(edge => {
-                return Object.assign({}, edge.node, {
-                  description: edge.node.summary,
-                  date: edge.node.published,
-                  url: site.siteMetadata.siteUrl + '/' + edge.node.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.slug,
-                  category: "Web Development",
-                  custom_elements: [
-                    { "content:encoded": edge.node.body },
-                  ],
-                })
-              })
-            },
-            query: `
-              {
-                allButterPost(
-                  sort: { order: DESC, fields: [created] },
-                ) {
-                  edges {
-                    node {
-                      summary
-                      body
-                      slug
-                      title
-                      published
-                      created
-                      featured_image
-                    }
-                  }
-                }
-              }
-            `,
-            output: "/rss.xml",
-            title: "CRISTIN.IO // Front End Development Blog",
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/"
-          },
-        ],
       },
     },
   ],

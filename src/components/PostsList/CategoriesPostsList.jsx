@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Layout from "../Layout/Layout"
 import BlogSidebar from '../BlogSidebar/BlogSidebar'
 import Header from "../Header/Header"
@@ -7,7 +7,6 @@ import PostPreview from "../PostPreview/PostPreview"
 import * as Styled from './PostsList.styles'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
-import $ from 'jquery'
 import { graphql } from "gatsby"
 
 const CategoryPostsList = ({ data, pageContext }) => {
@@ -56,10 +55,6 @@ const CategoryPostsList = ({ data, pageContext }) => {
       ) : null}
     </div>
   )
-
-  useEffect(() => {
-    $('body').fadeIn(400);
-  }, [])
 
   return (
     <Layout className="blog-posts">

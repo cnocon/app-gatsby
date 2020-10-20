@@ -83,8 +83,7 @@ export const Date = styled.time`
   display: inline-block;
   font-size: ${Theme.fonts.sizes.sm};
   line-height: ${Theme.fonts.sizes.lineHeights.default};  
-  font-weight: 500;
-  // text-transform: uppercase;
+  font-weight: 700;
   letter-spacing: .25px;
   text-align: left;
   float: left;

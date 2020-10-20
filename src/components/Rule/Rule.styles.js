@@ -22,6 +22,10 @@ export const RuleWrapper = styled.h2`
     width: ${Theme.layout.widths.full};
     max-width: none;
     border-bottom: 4px solid ${Theme.colors.grays.border};
+
+    @media screen and (max-width: ${Theme.breakpoints.max.md}) {
+      top: calc(50% - 4px);
+    }
   }
 
   i  {
@@ -52,10 +56,14 @@ export const RuleSpan = css`
   font-family: "Lato", Arial, sans-serif;
   
   @media screen and (max-width: ${Theme.breakpoints.max.md}) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
     i {
       display: block;
       text-align: center;
-      margin: 0 auto;
+      margin: 0 10px 0 0;
     }
   }
   `

@@ -139,6 +139,7 @@ export const EntryContent = css`
   h2 {
       text-transform: uppercase;
       font-size: 25px;
+      line-height: ${Theme.fonts.sizes.lineHeights.default};
       margin: 3.5rem 0 1rem 0;
       font-weight: 900;
       font-family: ${Theme.fonts.headings.family};
@@ -194,16 +195,17 @@ export const EntryContent = css`
 
     a {
       color: ${Theme.colors.default.base};
-      font-weight: 500;
+      font-weight: 400;
       text-decoration: none;
       padding-bottom: 1px;
+      box-shadow: 0 1.5px 1px -1px ${Theme.colors.default.base};
       background-image: linear-gradient(90deg, 
-        ${Theme.colors.accents.text.yellow} 10.5%,
-        ${Theme.colors.accents.text.green} 39.5%, 
-        ${Theme.colors.accents.text.blue} 50%, 
-        ${Theme.colors.accents.text.purple} 67.5%,
-        ${Theme.colors.accents.text.red} 82.5%);
-      background-size: 100% 1.5px;
+        ${Theme.colors.accents.text.red} 10.5%,
+        ${Theme.colors.accents.text.yellow} 39.5%, 
+        ${Theme.colors.accents.text.green} 50%, 
+        ${Theme.colors.accents.text.blue} 67.5%,
+        ${Theme.colors.accents.text.purple} 82.5%);
+      background-size: 100% 2px;
       background-position: center bottom;
       background-repeat: no-repeat;
       transition: background-image .3s;

@@ -1,17 +1,11 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/seo"
 import Header from "../components/Header/Header"
 import AboutMe from "../components/AboutMe/AboutMe"
-import $ from 'jquery'
 import { graphql } from 'gatsby';
 
-
 const AboutMePage = ({ data }) => {
-  useEffect(() => {
-    $('body').fadeIn(400);
-  }, [])
-
   return (
     <Layout>
       <Header />

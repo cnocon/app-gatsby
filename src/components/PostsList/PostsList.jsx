@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../Layout/Layout"
 import BlogSidebar from '../BlogSidebar/BlogSidebar'
@@ -8,7 +8,6 @@ import PostPreview from "../PostPreview/PostPreview"
 import * as Styled from './PostsList.styles'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
-import $ from 'jquery'
 
 const PostsList = ({ data, pageContext }) => {
   const posts = data.posts.nodes;
@@ -49,10 +48,6 @@ const PostsList = ({ data, pageContext }) => {
       ) : null}
     </div>
   )
-
-  useEffect(() => {
-    $('body').fadeIn(400);
-  }, [])
 
   return (
     <Layout className="blog-posts">

@@ -77,23 +77,15 @@ export const Event = styled.article`
     margin-bottom: 15px;
     
     h5 {
-      margin: 0;
-      padding: 0 0 .3em 0;
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #C9D5D6;
-      letter-spacing: 0;
-      font-size: 13px;
-      font-family: Roboto;
-      font-weight: 400;
-      line-height: 1.4;
-      text-transform: uppercase;
-      color: ${Theme.colors.default.base};
-      padding-bottom: 0;
       margin: 2px 0;
-      font-weight: 500;
+      padding: 0;
+      text-transform: uppercase;
+      color: #C9D5D6;
+      font-size: 13px;
+      line-height: 1.4;
+      font-family: ${Theme.fonts.body.family};
+      color: ${Theme.colors.default.base};
+      font-weight: 700;
   
       .far {
         &::before {
