@@ -78,7 +78,6 @@ export const H1Link = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: transparent;
     z-index: 0;
     color: transparent;
     -webkit-background-clip: text;
@@ -90,6 +89,12 @@ export const H1Link = styled(Link)`
       ${Theme.colors.accents.text.purple} 50%,
       ${Theme.colors.accents.text.red} 65%,
       ${Theme.colors.accents.text.yellow} 80%);
+    
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        background-image: none;
+        background-clip: unset;
+        color: ${Theme.colors.accents.vivid.purple};
+    }
   }
 `
 

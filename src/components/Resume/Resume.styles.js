@@ -449,9 +449,9 @@ export const Skillset = css`
       color: #fff;
       text-align: center;
       line-height: 2rem;
-      font-weight: 500;
+      font-weight: 700;
       font-size: 1rem;
-      font-family: Roboto, sans-serif;
+      font-family: ${Theme.fonts.body.family};
       border-top-right-radius: 2px;
       border-top-left-radius: 2px;
     }

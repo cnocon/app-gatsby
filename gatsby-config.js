@@ -86,27 +86,15 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        includePaths: ["styles/*.scss"],
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `roboto\:300,400,500,700,900`,
+          `roboto\:300,400,700,900`,
           `oswald\:300,400,700`,
           `lato\:300,400,700,900`,
         ],
         display: 'block'
       }
-    },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [``, `/resume`, `/articles/page-1`, `/articles/page-2`, `/articles/page-3`, `/portfolio`],
-      },
     },
   ],
 }

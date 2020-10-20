@@ -173,12 +173,11 @@ export default {styles: css`
     margin: 10px 0;
     font-size: 16px;
     line-height: 1.8em;
-    font-family: ${Theme.fonts.body.family};
+    font-family: ${Theme.fonts.headings.family};
     font-style: italic;
-    font-weight: 500;
+    font-weight: 300;
     margin: 10px 0;
     color: ${Theme.colors.grays.textDarkest};
-
   }
   
   .pullquote i {
