@@ -65,11 +65,11 @@ const CategoryPostsList = ({ data, pageContext }) => {
     <Layout className="blog-posts">
       <Header />
       <SEO 
-        stitle={`Latest Posts from ${categorySlug.charAt(0).toUpperCase()}| Front End Development Blog`} 
-        sdescription={`Latest ${categorySlug.charAt(0).toUpperCase()} posts from Cristin O'Connor's Front End Development Blog`} 
+        stitle={`Latest Posts in ${categorySlug.charAt(0).toUpperCase()}${categorySlug.slice(1)} | Front End Development Blog`} 
+        sdescription={`Latest posts in ${categorySlug.charAt(0).toUpperCase()}${categorySlug.slice(1)} from Cristin O'Connor's Front End Development Blog`} 
       />
       <div className="posts-list">
-        <Rule title={`Posted in ${categorySlug.charAt(0).toUpperCase()}`} icon="fas fa-rss" />
+        <Rule title={`Posted in ${categorySlug.charAt(0).toUpperCase()}${categorySlug.slice(1)}`} icon="fas fa-rss" />
         <Breadcrumbs crumbs={[
           {title: 'Home', path: '/'},
           {title: `Blog`,path: `/articles/page-1`},

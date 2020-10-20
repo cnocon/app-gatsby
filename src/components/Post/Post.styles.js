@@ -38,16 +38,26 @@ export const Navigation = styled.div`
   display: flex;
   justify-content: space-between;
 
-  .nav-prev {
+  .nav-previous {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   .nav-next {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   h4 {
@@ -88,6 +98,10 @@ export const EntryContent = css`
       display: table-cell;
       border: 0;
       color: ${Theme.colors.grays.borderDark};
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        top: 1rem;
+      }
 
       &::before {
         color: ${Theme.colors.grays.borderDark};

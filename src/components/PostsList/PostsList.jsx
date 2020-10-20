@@ -57,7 +57,7 @@ const PostsList = ({ data, pageContext }) => {
   return (
     <Layout className="blog-posts">
       <Header />
-      <SEO stitle="Latest Posts | Front End Development Blog" sdescription="Latest Posts from Cristin O\'Connor's Front End Development Blog" /> 
+      <SEO stitle="Latest Posts | Front End Development Blog" sdescription="Latest Posts from Cristin O'Connor's Front End Development Blog" /> 
       <div className="posts-list">
         <Rule title='Latest Posts' icon="fas fa-rss" />
         <Breadcrumbs crumbs={[

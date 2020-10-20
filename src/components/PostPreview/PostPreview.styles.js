@@ -9,10 +9,11 @@ export const PostPreview = styled.article`
   flex-direction: column;
   width: 100%;
   max-width: 100%;
-  // margin: 2rem auto;
   margin: 0 auto;
   padding: ${Theme.spacing.xl} 15px ${Theme.spacing.xl};
   border-bottom: 2px solid ${Theme.colors.grays.border};
+  justify-content: center;
+  align-items: center;
 
   &:first-of-type {
     padding-top: 2.25rem;
@@ -26,6 +27,12 @@ export const PostPreview = styled.article`
     margin: ${Theme.spacing.md} auto;
   }
 
+  .entry-content {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      max-width: 100%;
+    }
+  }
+
 `;
 
 export const Header = styled.header`
@@ -33,6 +40,10 @@ export const Header = styled.header`
   flex-direction: column;
   text-align: center;
   padding: 0 4rem;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    max-width: 100%;
+  }
 `
 
 export const TitleLink = styled(Link)`

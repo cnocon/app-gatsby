@@ -46,7 +46,7 @@ exports.createPages = async ({ actions, graphql }) => {
   chunkedPosts.forEach((collection, index) => {
     actions.createPage({
       path: `/articles/page-${index + 1}`,
-      component: path.resolve(`./src/components/PostsList/PostsListNew.jsx`),
+      component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
       context: {
         skip: index * 3,
         maxPageNumber: chunkedPosts.length
@@ -66,7 +66,6 @@ exports.createPages = async ({ actions, graphql }) => {
         post: node.node,
         prevPost: index === 0 ? null : allPosts[index - 1].node,
         nextPost: index === allPosts.length - 1 ? null : allPosts[index + 1].node,
-        categories: categoriesData.data.allButterPost.distinct,
         breadcrumbs: [
           { title: 'Home', path: '/'},
           { title: `Blog`, path: `/articles/page-1`},

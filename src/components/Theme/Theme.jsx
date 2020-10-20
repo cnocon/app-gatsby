@@ -30,7 +30,7 @@ module.exports = {
       text: `hsl(194, 15%, 75%)`,
       textDark: `hsl(194, 10%, 70%)`,
       textDarker: `hsl(194, 5%, 60%)`,
-      textDarkest: `hsl(200deg 10% 45%)`,
+      textDarkest: `hsl(200, 10%, 45%)`,
       boxShadow: `hsl(210, 10%, 60%)`,
       base: `hsl(210, 10%, 45%)`
     },

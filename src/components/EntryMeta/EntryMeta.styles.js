@@ -51,9 +51,13 @@ export const EntryMeta = css`
     display: inline-block;
     line-height: 1.8;
     -webkit-transition: color 0.1s, background-color .2s, border-color .2s; transition: color 0.1s, background-color .2s, border-color .2s;
+
+    &:link,
+    &:visited { color: ${Theme.colors.grays.textDarkest};}
   }
 
-  a:hover {
+  a:hover,
+  a:focus {
     color: #345;
     border-color: #345;
   }
