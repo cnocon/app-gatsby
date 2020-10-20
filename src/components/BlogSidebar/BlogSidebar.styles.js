@@ -87,23 +87,20 @@ export const Tag = styled(Link)`
   font-size: 11px;
   letter-spacing: .03em;
   font-weight: 800;
-  color: ${Theme.colors.grays.textDarkest};
+  background-color: #345;
+  color: #fff;
   display: inline-block;
   line-height: ${Theme.fonts.sizes.lineHeights.md};
   margin: 5px 5px 5px 0;
-  padding: 0 8px;
-  box-shadow: 0 .5px .5px ${Theme.colors.accents.vivid.red},       
-    -.5px 0 .5px ${Theme.colors.accents.vivid.green},
-    .5px 0 .5px ${Theme.colors.accents.vivid.yellow},
-    0 -.5px .5px ${Theme.colors.accents.vivid.blue};
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: 1px solid ${Theme.colors.default.textDarker};
   transition: box-shadow .3s;
 
   &:hover {
-    box-shadow: 0 1px 1px ${Theme.colors.accents.text.red},       
-    -1px 0 1px ${Theme.colors.accents.vivid.green},
-    1px 0 1px ${Theme.colors.accents.vivid.yellow},
-    0 -1px 1px ${Theme.colors.accents.vivid.blue};
-    color: #345;
+    color: ${Theme.colors.default.base};
+    background-color: white;
+    border: 1px solid ${Theme.colors.grays.borderDark};
   }
 `
 

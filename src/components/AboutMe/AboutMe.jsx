@@ -83,7 +83,7 @@ const AboutMe = ({ posts }) => {
               icon: 'fab fa-codepen',
               link: 'https://codepen.io/cnocon',
               text: 'CodePen',
-              classes: 'rainbow-box-shadow-rounded'
+              classes: 'rainbow-box-shadow-rounded dark'
             },
             {
               icon: 'fab fa-github',

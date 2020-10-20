@@ -159,7 +159,7 @@ export const Event = styled.article`
       color: #345;
       display: block;
       width: 100%;
-      font-weight: 300;
+      font-weight: 400;
       font-style: italic;
       text-transform: none;
       text-indent: 16px;

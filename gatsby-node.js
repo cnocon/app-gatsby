@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-const path = require(`path`);
+const path = require('path');
 const { postCategoriesDataQuery } = require('./queries/postCategoriesData');
 const { allPostsDataQuery } = require('./queries/allPostsData');
 const { chunkArray } = require('./helpers/chunkArray');
@@ -58,18 +58,8 @@ exports.createPages = async ({ actions, graphql }) => {
       path: `/articles/page-${index + 1}`,
       component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
       context: {
-        categories: categoriesData.data.allButterPost.distinct,
-        posts: collection.map(p => p.node),
-        prevPagePath: index < 1 ? null : `/articles/page-${index}`,
-        nextPagePath: index + 1 === chunkedPosts.length ? null : `/articles/page-${index + 2}`,
-        title: "Latest Posts",
-        stitle: "Latest Posts | Front End Development Blog",
-        seoDescription: `Latest Posts from Cristin O'Connor's Front End Development Blog`,
-        breadcrumbs: [
-          {title: 'Home', path: '/'},
-          {title: `Blog`, path: `/articles/page-1`},
-          {title: `Page ${index + 1}`, path: null},
-        ],
+        skip: index * 3,
+        maxPageNumber: chunkedPosts.length
       },
     })
   })

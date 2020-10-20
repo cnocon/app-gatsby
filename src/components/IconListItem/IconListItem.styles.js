@@ -81,11 +81,11 @@ export const ItemLink = styled.a`
 `
 
 export const ItemIcon = styled.i`
-  flex-basis: 32px;
-  max-width: 32px;
-  width: 32px;
-  height: 32px;
-  line-height: 32px !important;
+  flex-basis: 36px;
+  max-width: 36px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px !important;
   vertical-align: middle;
   font-size: 18px;
   border-radius: 50%;
@@ -93,21 +93,12 @@ export const ItemIcon = styled.i`
   box-sizing: border-box;
   margin: 0 ${Theme.spacing.xs} ${Theme.spacing.xs};
   font-weight: 400;
-  // background-color: ${Theme.colors.grays.background};
-  transition: all .3s;
+  background-color: ${Theme.colors.default.base};
+  color: white;
   margin: 0 ${Theme.spacing.xs} ${Theme.spacing.sm};
+  transition: all .3s;
   
   a:hover & {
-    color: ${Theme.colors.default.base};  
-  }
-
-  .dark & {
-    background-color: ${Theme.colors.default.base};
-    color: white;
-    font-weight: 500;
-  }
-
-  .dark a:hover & {
     background-color: white;
     color: #345;
   }
