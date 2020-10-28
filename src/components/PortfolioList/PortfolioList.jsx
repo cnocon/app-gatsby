@@ -2,7 +2,7 @@ import React from "react"
 import * as Styled from "./PortfolioList.styles"
 import weatherAppImg from "../../images/weather-app-screenshot.png"
 import youTubeAppImg from "../../images/youtube-app-screenshot.png"
-import flashcardsAppImg from "../../images/flashcards-app-screenshot.png"
+import flashcardsAppImg from "../../images/flashcards-app-screenshot-white.png"
 
 const PortfolioList = () => {
   return (
