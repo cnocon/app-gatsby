@@ -16,6 +16,10 @@ export const LeftBlock = styled.div`
     align-items: flex-start;
     justify-content: normal;
   }
+
+  @media screen and (min-width: ${Theme.breakpoints.min.md}) {
+    padding-left: 0;
+  }
 `
 
 export const RightBlock = styled.div`
@@ -37,6 +41,10 @@ export const RightBlock = styled.div`
     text-align: normal;
     margin-top: 0;
   }
+
+  @media screen and (min-width: ${Theme.breakpoints.min.md}) {
+    padding-right: 0;
+  }
 `
 
 export const FooterInner = styled.div`
@@ -54,16 +62,15 @@ export const FooterInner = styled.div`
   }
 
   @media all and (min-width: ${Theme.breakpoints.min.md}) {
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
   }
 `
 
 export const Footer = styled.footer({
   margin: `4rem 0 0`,
   padding: `4.5rem 0 2.5rem`,
-  width: `107.5%`,
-  transform: 'translateX(-1.75%)',
+  width: `100%`,
   backgroundColor: `${Theme.colors.grays.background}`,
 })
 

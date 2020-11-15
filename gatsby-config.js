@@ -86,6 +86,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `cristin-io-1`
+      }
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [

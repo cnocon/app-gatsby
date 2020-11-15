@@ -10,8 +10,9 @@ import Rule from "../Rule/Rule"
 import EntryMeta from "../EntryMeta/EntryMeta"
 import $ from 'jquery'
 import { Link, graphql } from 'gatsby'
+import Comments from '../Comments/Comments'
 
-const Post = ({ data, pageContext }) => {
+const Post = ({ data, pageContext, location }) => {
   const { post, breadcrumbs, categoriesMap, prevPost, nextPost } = pageContext
   const categories = Object.values(data.categories.nodes.map(node => node.categories).flat().reduce((acc, node) => {
     if (!acc[node.slug]) {
@@ -95,22 +96,23 @@ const Post = ({ data, pageContext }) => {
                     { ReactHtmlParser(post.body) }
                   </div>
                 </div>
-              
+                
             </section>
-
-            <Styled.Navigation>
-              <div className="col-sm-6 nav-previous left-block">
-                {prevBtn ? <h4>PREVIOUS POST</h4> : null }
-                {prevBtn}
-              </div>
-              <div className="col-sm-6 nav-next right-block">
-                {nextBtn ? <h4>NEXT POST</h4> : null }
-                {nextBtn}
-              </div>
-            </Styled.Navigation>
           </div>
           <BlogSidebar categories={categories} colClasses='col-sm-12 col-md-3' />
         </div>
+        <Comments post={post} pageLocation={location} />
+        <Styled.Navigation>
+          <div className="col-sm-6 col-lg-4 nav-previous left-block">
+            {prevBtn ? <h4>PREVIOUS POST</h4> : null }
+            {prevBtn}
+          </div>
+          <div className="col-sm-6 col-lg-4 nav-next right-block">
+            {nextBtn ? <h4>NEXT POST</h4> : null }
+            {nextBtn}
+          </div>
+        </Styled.Navigation>
+
     </Layout>
   )
 }

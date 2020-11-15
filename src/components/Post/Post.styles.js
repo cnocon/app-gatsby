@@ -31,17 +31,26 @@ export const HeaderStyles = css`
   font-size: ${Theme.fonts.sizes.default};
   padding-left: 0;
   padding-right: 0;
-
 `
 
 export const Navigation = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 8rem;
+  width: 100%;
+  
+  @media screen and (min-width: ${Theme.breakpoints.min.lg}) {
+    margin-top: 15rem;
+  }
 
   .nav-previous {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  
+    @media screen and (min-width: ${Theme.breakpoints.min.lg}) {
+      padding-left: 0;
+    }
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       flex-direction: row;
@@ -53,6 +62,8 @@ export const Navigation = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    text-align: right;
+    padding: 0;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       flex-direction: row;
