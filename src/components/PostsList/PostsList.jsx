@@ -64,13 +64,13 @@ const PostsList = ({ data, pageContext }) => {
         <div className="row">
           <div className="col-sm-12 col-md-9">
             {posts.map(node => <PostPreview post={node} key={node.slug} />)}
-            <Styled.Navigation>
-              {prevBtn}
-              {nextBtn}
-            </Styled.Navigation>
           </div>
           <BlogSidebar categories={categories} colClasses='col-sm-12 col-md-3' />
         </div>
+        <Styled.Navigation>
+          {prevBtn}
+          {nextBtn}
+        </Styled.Navigation>
       </div>
     </Layout>
   )

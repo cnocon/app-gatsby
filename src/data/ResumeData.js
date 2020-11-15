@@ -37,6 +37,10 @@ const ResumeData = {
         {
           name: "FED Project Showcase Winner ",
           detail: "July 2020"
+        },
+        {
+          name: "FED Project Showcase Winner ",
+          detail: "October 2020"
         }
         // {
         //   name: "2x Sprint Shoutout Winner",
