@@ -3,6 +3,8 @@ import * as Styled from "./PortfolioList.styles"
 import weatherAppImg from "../../images/weather-app-screenshot.png"
 import youTubeAppImg from "../../images/youtube-app-screenshot.png"
 import flashcardsAppImg from "../../images/flashcards-app-screenshot-white.png"
+import clqImg from "../../images/clq.png"
+import cristinIoImg from "../../images/cristin-io.png"
 
 const PortfolioList = () => {
   return (
@@ -14,9 +16,9 @@ const PortfolioList = () => {
       <div className="col-sm-6 col-md-4">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/flash-cards" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://github.com/cnocon/flash-cards" target="_blank">GitHub</a>
             &nbsp;|&nbsp; 
-            <a href="https://fed-flash-cards.netlify.app/" target="_blank" rel="noreferrer">Demo</a>
+            <a href="https://fed-flash-cards.netlify.app/" target="_blank">Demo</a>
           </h4>
         </header>
         <img src={flashcardsAppImg} alt="Screenshot of Flash Cards App" />
@@ -36,6 +38,64 @@ const PortfolioList = () => {
       </div>
     </div>
 
+
+    <div className="row" css={Styled.PortfolioItem}>
+      <div className="col-sm-12">
+        <h2>CRISTIN.IO</h2>
+      </div>
+      <div className="col-sm-12 col-md-4">
+        <header>
+          <h4>
+            <a href="https://github.com/cnocon/app-gatsby" target="_blank">GitHub</a>
+            &nbsp;|&nbsp; 
+            <a href="https://cristin.io" target="_blank">Demo</a>
+          </h4>
+        </header>
+        <img src={cristinIoImg} alt="Screenshot of this very website" />
+      </div>
+      <div className="col-sm-12 col-md-8">
+        <h4>Summary</h4>
+        <p>CRISTIN.IO is an <b>obvious</b> virtual wonderland that includes a front end web development blog authored by yours truly, my résumé, portfolio (surprise!), and some general information about me and the services I offer.</p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>Gatsby</li>
+          <li>GraphQL</li>
+          <li>Styled Components</li>
+          <li>Node</li>
+          <li>React</li>
+          <li>Netlify</li>
+          <li>ButterCMS (a headless CMS)</li>
+        </ul>
+      </div>
+    </div> 
+
+    <div className="row" css={Styled.PortfolioItem}>
+      <div className="col-sm-12">
+        <h2>CenturyLink Small Business</h2>
+      </div>
+      <div className="col-sm-6 col-md-4">
+        <header>
+          <h4>
+            <a href="https://business.centurylink.com" target="_blank" rel="noreferrer">Demo</a>
+          </h4>
+        </header>
+        <img src={clqImg} alt="Screenshot of CenturyLink Small Business Site" />
+      </div>
+      <div className="col-sm-12 col-md-8">
+        <h4>Summary</h4>
+        <p>Built using a proprietary component library, this website searches for service in a user's zip code and updates content based on product availability along with showcasing small business products. <em>Please note I cannot provide the repository link because it is private</em>.</p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>Component-based architecture</li>
+          <li>Responsive design</li>
+          <li>SCSS</li>
+          <li>Handlebars</li>
+          <li>JavaScript (ES6)</li>
+          <li>PHP</li>
+        </ul>
+      </div>
+    </div>
+
     <div className="row" css={Styled.PortfolioItem}>
       <div className="col-sm-12">
         <h2>YouTube Search App</h2>
@@ -43,9 +103,9 @@ const PortfolioList = () => {
       <div className="col-sm-12 col-md-4">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/youtube-search-new" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://github.com/cnocon/youtube-search-new" target="_blank">GitHub</a>
             &nbsp;|&nbsp; 
-            <a href="https://youtube-search-new.netlify.app/" target="_blank" rel="noreferrer">Demo</a>
+            <a href="https://youtube-search-new.netlify.app/" target="_blank">Demo</a>
           </h4>
         </header>
         <img src={youTubeAppImg} alt="Screenshot of YouTube Search App" />
