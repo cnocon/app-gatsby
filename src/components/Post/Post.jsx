@@ -89,7 +89,7 @@ const Post = ({ data, pageContext, location }) => {
           </div>
           
           <div className="col-sm-12 col-md-9">
-            <section css={theme => ({paddingTop: 0, paddingBottom: theme.spacing.lg})}>
+            <section css={theme => ({paddingTop: 0, paddingBottom: '10rem', marginBottom: '10rem', borderBottom: '1px solid #ddd'})}>
 
                 <div className="entry-content clearfix" css={Styled.EntryContent}>
                   <div className="main-content">
@@ -98,16 +98,17 @@ const Post = ({ data, pageContext, location }) => {
                 </div>
                 
             </section>
+            <Comments post={post} pageLocation={location} />
           </div>
           <BlogSidebar categories={categories} colClasses='col-sm-12 col-md-3' />
         </div>
-        <Comments post={post} pageLocation={location} />
+        
         <Styled.Navigation>
-          <div className="col-sm-6 col-lg-4 nav-previous left-block">
+          <div className="col-sm-6 col-lg-3 nav-previous left-block">
             {prevBtn ? <h4>PREVIOUS POST</h4> : null }
             {prevBtn}
           </div>
-          <div className="col-sm-6 col-lg-4 nav-next right-block">
+          <div className="col-sm-6 col-lg-3 nav-next right-block">
             {nextBtn ? <h4>NEXT POST</h4> : null }
             {nextBtn}
           </div>

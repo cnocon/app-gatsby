@@ -209,7 +209,7 @@ export const EntryContent = css`
       font-weight: 400;
       text-decoration: none;
       padding-bottom: 1px;
-      box-shadow: 0 1.5px 1px -1px ${Theme.colors.default.base};
+      /* box-shadow: 0 1.5px 1px -1px ${Theme.colors.default.base}; */
       background-image: linear-gradient(90deg, 
         ${Theme.colors.accents.text.red} 10.5%,
         ${Theme.colors.accents.text.yellow} 39.5%, 
@@ -266,7 +266,7 @@ export const EntryContent = css`
       line-height: 1.8;
       font-weight: 300; 
       /* color: #6A7686; */
-      color: ${Theme.colors.grays.textDarker};
+      color: #345;
     }
 
   /* DROP CAP */
