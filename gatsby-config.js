@@ -35,6 +35,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingId: `G-QXLV7NSLT1`,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // enable ip anonymization
+        anonymize: true,
+      },
+    },
+    {
       resolve: `gatsby-source-buttercms`,
       options: {
         authToken: process.env.GATSBY_BUTTER_API_KEY,
