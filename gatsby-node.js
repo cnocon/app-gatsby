@@ -4,12 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require('path');
-const { postCategoriesDataQuery } = require('./queries/postCategoriesData');
 const { allPostsDataQuery } = require('./queries/allPostsData');
 const { chunkArray } = require('./helpers/chunkArray');
 
 exports.createPages = async ({ actions, graphql }) => {
-  const categoriesData = await graphql(postCategoriesDataQuery);
   const allPostsData = await graphql(allPostsDataQuery);
   const allPosts = allPostsData.data.allButterPost.edges.reverse();
   const chunkedPosts = chunkArray(allPosts, 3);
