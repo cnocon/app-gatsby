@@ -3,12 +3,39 @@ import * as Styled from "./PortfolioList.styles"
 import weatherAppImg from "../../images/weather-app-screenshot.png"
 import youTubeAppImg from "../../images/youtube-app-screenshot.png"
 import flashcardsAppImg from "../../images/flashcards-app-screenshot-white.png"
+import statCardImg from "../../images/stat-card-preview.png"
 import clqImg from "../../images/clq.png"
 import cristinIoImg from "../../images/cristin-io.png"
 
 const PortfolioList = () => {
   return (
     <>
+    <div className="row" css={Styled.PortfolioItem}>
+      <div className="col-sm-12">
+        <h2>GitHub Stats Card for React</h2>
+      </div>
+      <div className="col-sm-6 col-md-4">
+        <header>
+          <h4>
+            <a href="https://github.com/cnocon/react-github-stats-card " target="_blank" rel="noreferrer nofollow">GitHub</a>
+            &nbsp;|&nbsp; 
+            <a href="https://stat-card-demo.netlify.app/" target="_blank" rel="noreferrer nofollow">Demo</a>
+          </h4>
+        </header>
+        <img src={statCardImg} alt="Screenshot of GitHub Stats Card for React" />
+      </div>
+      <div className="col-sm-12 col-md-8">
+        <h4>Summary</h4>
+        <p>A simple card, with or without attached styles, to show some basic GitHub statistics for a given user.</p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>React</li>
+          <li>JavaScript</li>
+          <li>Node (for the initial <a href="https://github.com/cnocon/github-stats-card" target="_blank" rel="noreferrer nofollow">Express version</a>)</li>
+        </ul>
+      </div>
+    </div>
+
     <div className="row" css={Styled.PortfolioItem}>
       <div className="col-sm-12">
         <h2>Front End Development Flash Cards App</h2>

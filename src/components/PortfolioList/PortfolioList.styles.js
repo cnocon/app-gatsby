@@ -20,7 +20,6 @@ export const PortfolioItem = css`
   a {
     text-decoration: underline;
     color: ${Theme.colors.default.base};
-    font-family: ${Theme.fonts.accent.family};
 
     &:hover {
       text-decoration: none;
