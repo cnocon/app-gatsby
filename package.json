@@ -2,8 +2,8 @@
   "name": "cristin-io",
   "private": true,
   "description": "Cristin O'Connor's Front End Development Blog and Portfolio Site",
-  "version": "1.0.0",
-  "author": "Cristin O'Connor",
+  "version": "2.0.0",
+  "author": "Cristin O'Connor <her@cristin.io>",
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
@@ -43,9 +43,12 @@
   "keywords": [
     "Cristin O'Connor",
     "Portfolio",
+    "Portfolio Site",
     "Resume",
     "Gatsby",
-    "React"
+    "React",
+    "Blog",
+    "ButterCMS"
   ],
   "license": "MIT",
   "scripts": {
