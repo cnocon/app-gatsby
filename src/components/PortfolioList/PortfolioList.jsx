@@ -105,7 +105,7 @@ const PortfolioList = () => {
         <div className="col-sm-12 col-md-6 col-lg-4">
           <header>
             <h4>
-              <a href="https://github.com/cnocon/app-gatsby" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://github.com/cnocon/cristin-io" target="_blank" rel="noreferrer">GitHub</a>
               &nbsp;|&nbsp; 
               <a href="https://cristin.io" target="_blank" rel="noreferrer">Demo</a>
             </h4>
