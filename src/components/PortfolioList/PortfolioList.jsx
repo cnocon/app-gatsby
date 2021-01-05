@@ -14,7 +14,7 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>GitHub Stats Card for React</h2>
       </div>
-      <div className="col-sm-6 col-md-6">
+      <div className="col-sm-6 col-md-6 col-lg-4">
         <header>
           <h4>
             <a href="https://github.com/cnocon/react-github-stats-card-v2" target="_blank" rel="noreferrer nofollow">GitHub</a>
@@ -26,7 +26,7 @@ const PortfolioList = () => {
         </header>
         <img className="screenshot" src={statCardImg} alt="Screenshot of GitHub Stats Card for React" />
       </div>
-      <div className="col-sm-12 col-md-8">
+      <div className="col-sm-12 col-md-6 col-lg-4">
         <h4>Summary</h4>
         <p>A simple card, with or without attached styles, to show some basic GitHub statistics for a given user.</p>
         <h4>Technologies</h4>
@@ -43,17 +43,17 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>Front End Development Flash Cards App</h2>
       </div>
-      <div className="col-sm-6 col-md-6">
+      <div className="col-sm-6 col-md-6 col-lg-4">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/flash-cards" target="_blank">GitHub</a>
+            <a href="https://github.com/cnocon/flash-cards" target="_blank" rel="noreferrer">GitHub</a>
             &nbsp;|&nbsp; 
-            <a href="https://fed-flash-cards.netlify.app/" target="_blank">Demo</a>
+            <a href="https://fed-flash-cards.netlify.app/" target="_blank" rel="noreferrer">Demo</a>
           </h4>
         </header>
         <img className='screenshot' src={flashcardsAppImg} alt="Screenshot of Flash Cards App" />
       </div>
-      <div className="col-sm-12 col-md-8">
+      <div className="col-sm-12 col-md-6 col-lg-4">
         <h4>Summary</h4>
         <p>A flash card app specifically geared toward teaching front end development skills. The questions are pulled in from a custom-built API and MongoDB database.</p>
         <h4>Technologies</h4>
@@ -73,17 +73,17 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>CRISTIN.IO</h2>
       </div>
-      <div className="col-sm-12 col-md-6">
+      <div className="col-sm-12 col-md-6 col-lg-4">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/app-gatsby" target="_blank">GitHub</a>
+            <a href="https://github.com/cnocon/app-gatsby" target="_blank" rel="noreferrer">GitHub</a>
             &nbsp;|&nbsp; 
-            <a href="https://cristin.io" target="_blank">Demo</a>
+            <a href="https://cristin.io" target="_blank" rel="noreferrer">Demo</a>
           </h4>
         </header>
         <img className="screenshot" src={cristinIoImg} alt="Screenshot of this very website" />
       </div>
-      <div className="col-sm-12 col-md-8">
+      <div className="col-sm-12 col-md-6 col-lg-8">
         <h4>Summary</h4>
         <p>CRISTIN.IO is an <b>obvious</b> virtual wonderland that includes a front end web development blog authored by yours truly, my résumé, portfolio (surprise!), and some general information about me and the services I offer.</p>
         <h4>Technologies</h4>
@@ -103,7 +103,7 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>CenturyLink Small Business</h2>
       </div>
-      <div className="col-sm-6 col-md-6">
+      <div className="col-sm-6 col-md-6 col-lg-4">
         <header>
           <h4>
             <a href="https://business.centurylink.com" target="_blank" rel="noreferrer">Demo</a>
@@ -111,7 +111,7 @@ const PortfolioList = () => {
         </header>
         <img className="screenshot" src={clqImg} alt="Screenshot of CenturyLink Small Business Site" />
       </div>
-      <div className="col-sm-12 col-md-8">
+      <div className="col-sm-12 col-md-6 col-lg-4">
         <h4>Summary</h4>
         <p>Built using a proprietary component library, this website searches for service in a user's zip code and updates content based on product availability along with showcasing small business products. <em>Please note I cannot provide the repository link because it is private</em>.</p>
         <h4>Technologies</h4>
@@ -130,17 +130,17 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>YouTube Search App</h2>
       </div>
-      <div className="col-sm-12 col-md-4">
+      <div className="col-sm-12 col-md-6 col-lg-4">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/youtube-search-new" target="_blank">GitHub</a>
+            <a href="https://github.com/cnocon/youtube-search-new" target="_blank" rel="noreferrer">GitHub</a>
             &nbsp;|&nbsp; 
-            <a href="https://youtube-search-new.netlify.app/" target="_blank">Demo</a>
+            <a href="https://youtube-search-new.netlify.app/" target="_blank" rel="noreferrer">Demo</a>
           </h4>
         </header>
         <img className="screenshot" src={youTubeAppImg} alt="Screenshot of YouTube Search App" />
       </div>
-      <div className="col-sm-12 col-md-8">
+      <div className="col-sm-12 col-md-6 col-lg-8">
         <h4>Summary</h4>
         <p>Search for and watch content from YouTube.</p>
         <h4>Technologies</h4>
@@ -156,7 +156,7 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>Weather Charts App</h2>
       </div>
-      <div className="col-sm-6 col-md-6">
+      <div className="col-sm-6 col-md-6 col-lg-4">
         <header>
           <h4>
             <a href="https://github.com/cnocon/weather-charts-app-new" target="_blank" rel="noreferrer">GitHub</a>
@@ -166,7 +166,7 @@ const PortfolioList = () => {
         </header>
         <img src={weatherAppImg} alt="Screenshot of Weather Charts App" />
       </div>
-      <div className="col-sm-12 col-md-8">
+      <div className="col-sm-12 col-md-6 col-lg-4">
         
         <h4>Summary</h4>
         <p>This app lets you see a 7-day forecast including temperature, pressure, and humidity for any major U.S. city you search for. As a bonus, you can see the city rendered in satellite view in a Google Map.</p>
