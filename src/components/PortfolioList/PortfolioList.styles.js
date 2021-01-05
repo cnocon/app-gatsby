@@ -11,7 +11,7 @@ export const PortfolioItem = css`
     border-bottom: 0;
   }
 
-  img {
+  .screenshot {
     border: 3px solid ${Theme.colors.grays.border};
     max-width: 300px;
     margin-right: auto;
@@ -26,7 +26,7 @@ export const PortfolioItem = css`
     }
   }
 
-  h4 {
+  div:not(.github-stats-card) h4 {
     font-size: ${Theme.fonts.sizes.sm};
     line-height: ${Theme.fonts.sizes.lineHeights.sm};
     font-family: ${Theme.fonts.headings.family};
@@ -34,13 +34,27 @@ export const PortfolioItem = css`
     font-weight: 600;
     text-transform: uppercase;
     line-height: ${Theme.fonts.sizes.lineHeights.default};
-    
-    a {
+  }
+
+  h4 {
+    a, 
+    span {
       font-family: ${Theme.fonts.body.family};
       letter-spacing: unset;
       font-weight: 400;
       text-transform: none;
       text-decoration: underline;
+    }
+
+    span { text-decoration: none;}
+  }
+
+  .github-stats-card {
+    header h4 {
+      text-transform: none;
+      letter-spacing: unset;
+      font-weight:  400;
+      font-family: inherit;
     }
   }
 `

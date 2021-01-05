@@ -14,15 +14,17 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>GitHub Stats Card for React</h2>
       </div>
-      <div className="col-sm-6 col-md-4">
+      <div className="col-sm-6 col-md-6">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/react-github-stats-card " target="_blank" rel="noreferrer nofollow">GitHub</a>
+            <a href="https://github.com/cnocon/react-github-stats-card-v2" target="_blank" rel="noreferrer nofollow">GitHub</a>
             &nbsp;|&nbsp; 
-            <a href="https://stat-card-demo.netlify.app/" target="_blank" rel="noreferrer nofollow">Demo</a>
+            <a href="https://www.npmjs.com/package/react-github-stats-card-v2" target="_blank" rel="noreferrer nofollow">NPM</a>
+            &nbsp;|&nbsp; 
+            <a href="https://react-github-stats-card-demo.netlify.app/" target="_blank" rel="noreferrer nofollow">Demo</a>
           </h4>
         </header>
-        <img src={statCardImg} alt="Screenshot of GitHub Stats Card for React" />
+        <img className="screenshot" src={statCardImg} alt="Screenshot of GitHub Stats Card for React" />
       </div>
       <div className="col-sm-12 col-md-8">
         <h4>Summary</h4>
@@ -31,7 +33,8 @@ const PortfolioList = () => {
         <ul>
           <li>React</li>
           <li>JavaScript</li>
-          <li>Node (for the initial <a href="https://github.com/cnocon/github-stats-card" target="_blank" rel="noreferrer nofollow">Express version</a>)</li>
+          <li>Node</li>
+          <li>Storybook</li>
         </ul>
       </div>
     </div>
@@ -40,7 +43,7 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>Front End Development Flash Cards App</h2>
       </div>
-      <div className="col-sm-6 col-md-4">
+      <div className="col-sm-6 col-md-6">
         <header>
           <h4>
             <a href="https://github.com/cnocon/flash-cards" target="_blank">GitHub</a>
@@ -48,7 +51,7 @@ const PortfolioList = () => {
             <a href="https://fed-flash-cards.netlify.app/" target="_blank">Demo</a>
           </h4>
         </header>
-        <img src={flashcardsAppImg} alt="Screenshot of Flash Cards App" />
+        <img className='screenshot' src={flashcardsAppImg} alt="Screenshot of Flash Cards App" />
       </div>
       <div className="col-sm-12 col-md-8">
         <h4>Summary</h4>
@@ -70,7 +73,7 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>CRISTIN.IO</h2>
       </div>
-      <div className="col-sm-12 col-md-4">
+      <div className="col-sm-12 col-md-6">
         <header>
           <h4>
             <a href="https://github.com/cnocon/app-gatsby" target="_blank">GitHub</a>
@@ -78,7 +81,7 @@ const PortfolioList = () => {
             <a href="https://cristin.io" target="_blank">Demo</a>
           </h4>
         </header>
-        <img src={cristinIoImg} alt="Screenshot of this very website" />
+        <img className="screenshot" src={cristinIoImg} alt="Screenshot of this very website" />
       </div>
       <div className="col-sm-12 col-md-8">
         <h4>Summary</h4>
@@ -100,13 +103,13 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>CenturyLink Small Business</h2>
       </div>
-      <div className="col-sm-6 col-md-4">
+      <div className="col-sm-6 col-md-6">
         <header>
           <h4>
             <a href="https://business.centurylink.com" target="_blank" rel="noreferrer">Demo</a>
           </h4>
         </header>
-        <img src={clqImg} alt="Screenshot of CenturyLink Small Business Site" />
+        <img className="screenshot" src={clqImg} alt="Screenshot of CenturyLink Small Business Site" />
       </div>
       <div className="col-sm-12 col-md-8">
         <h4>Summary</h4>
@@ -135,7 +138,7 @@ const PortfolioList = () => {
             <a href="https://youtube-search-new.netlify.app/" target="_blank">Demo</a>
           </h4>
         </header>
-        <img src={youTubeAppImg} alt="Screenshot of YouTube Search App" />
+        <img className="screenshot" src={youTubeAppImg} alt="Screenshot of YouTube Search App" />
       </div>
       <div className="col-sm-12 col-md-8">
         <h4>Summary</h4>
@@ -153,7 +156,7 @@ const PortfolioList = () => {
       <div className="col-sm-12">
         <h2>Weather Charts App</h2>
       </div>
-      <div className="col-sm-6 col-md-4">
+      <div className="col-sm-6 col-md-6">
         <header>
           <h4>
             <a href="https://github.com/cnocon/weather-charts-app-new" target="_blank" rel="noreferrer">GitHub</a>
