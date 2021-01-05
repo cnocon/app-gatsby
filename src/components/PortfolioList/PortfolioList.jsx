@@ -17,11 +17,11 @@ const PortfolioList = () => {
       <div className="col-sm-6 col-md-6 col-lg-4">
         <header>
           <h4>
-            <a href="https://github.com/cnocon/react-github-stats-card-v2" target="_blank" rel="noreferrer nofollow">GitHub</a>
+            <a href="https://github.com/cnocon/react-github-stats-card-v2" target="_blank" rel="noreferrer">GitHub</a>
             &nbsp;|&nbsp; 
-            <a href="https://www.npmjs.com/package/react-github-stats-card-v2" target="_blank" rel="noreferrer nofollow">NPM</a>
+            <a href="https://www.npmjs.com/package/react-github-stats-card-v2" target="_blank" rel="noreferrer">NPM</a>
             &nbsp;|&nbsp; 
-            <a href="https://react-github-stats-card-demo.netlify.app/" target="_blank" rel="noreferrer nofollow">Demo</a>
+            <a href="https://react-github-stats-card-v2-demo.netlify.app/" target="_blank" rel="noreferrer">Demo</a>
           </h4>
         </header>
         <img className="screenshot" src={statCardImg} alt="Screenshot of GitHub Stats Card for React" />
@@ -34,6 +34,7 @@ const PortfolioList = () => {
           <li>React</li>
           <li>JavaScript</li>
           <li>Node</li>
+          <li>Webpack</li>
           <li>Storybook</li>
         </ul>
       </div>
