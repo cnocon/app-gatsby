@@ -15,7 +15,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   /**
    * CATEGORY PAGES
-   * 
+   *
    * 3 posts per page (unlimited pages per category)
    */
   categoryGroups.forEach(cat => {
@@ -37,8 +37,8 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   /**
-   * LATEST POST PAGES 
-   * 
+   * LATEST POST PAGES
+   *
    * 3 posts per page
    */
   chunkedPosts.forEach((collection, index) => {
@@ -47,14 +47,15 @@ exports.createPages = async ({ actions, graphql }) => {
       component: path.resolve(`./src/components/PostsList/PostsList.jsx`),
       context: {
         skip: index * 3,
-        maxPageNumber: chunkedPosts.length
+        maxPageNumber: chunkedPosts.length,
+        posts: collection
       },
     })
   })
 
   /**
-   * POST SINGLE PAGES 
-   * 
+   * POST SINGLE PAGES
+   *
    */
   allPosts.forEach(( node, index ) => {
     actions.createPage({

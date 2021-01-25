@@ -10,7 +10,7 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"
 import Rule from "../Rule/Rule"
 
 const PostsList = ({ data, pageContext }) => {
-  const posts = data.posts.nodes;
+  const posts = pageContext.posts.map(post => post.node);
   const maxPageNumber = pageContext.maxPageNumber;
   const identifier = pageContext.skip;
   const currentPageNumber = Math.floor(identifier / 3) + 1;
@@ -52,7 +52,7 @@ const PostsList = ({ data, pageContext }) => {
   return (
     <Layout className="blog-posts">
       <Header />
-      <SEO stitle="Latest Posts | Front End Development Blog" sdescription="Latest Posts from Cristin O'Connor's Front End Development Blog" /> 
+      <SEO stitle="Latest Posts | Front End Development Blog" sdescription="Latest Posts from Cristin O'Connor's Front End Development Blog" />
       <div className="posts-list">
         <Rule title='Latest Posts' icon="fas fa-rss" />
         <Breadcrumbs crumbs={[
@@ -77,20 +77,7 @@ const PostsList = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query($skip: Int!) {
-    posts: allButterPost(sort: {fields: published, order: DESC}, skip: $skip, limit: 3) {
-      nodes {
-        categories {
-          name
-          slug
-        }
-        id
-        published(locale: "en-US")
-        slug
-        summary
-        title
-      }
-    }
+  query {
     categories: allButterPost {
       nodes {
         categories {
