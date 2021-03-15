@@ -21,9 +21,21 @@ const ResumeData = {
     //   awards: []
     // },
     {
+      year: 2021,
+      startDate: "Feb 2021",
+      endDate: "Present",
+      position: "Software Engineer",
+      company: "Vivint Smart Home, Inc. <i class='far fa-chevron-right'></i> <em>Lehi, UT</em>",
+      desc: "",
+      descList: [
+        "Implement the front end for multiple web applications using technologies including Vue.js and TypeScript.",
+      ],
+      awards: []
+    },
+    {
       year: 2020,
       startDate: "Feb 2020",
-      endDate: "Present",
+      endDate: "Feb 2021",
       position: "Front End Developer II",
       company: "Clearlink <i class='far fa-chevron-right'></i> <em>Salt Lake City, UT</em>",
       desc: "",
@@ -42,10 +54,6 @@ const ResumeData = {
           name: "FED Project Showcase Winner ",
           detail: "October 2020"
         }
-        // {
-        //   name: "2x Sprint Shoutout Winner",
-        //   detail: "March 2020, April 2020"
-        // }
       ]
     },
     {
@@ -111,16 +119,16 @@ const ResumeData = {
       descList: ["Assist in building an Airbnb-like web application using Rails 4", "Build a new database for Wilson’s tennis racket inventory with a Microsoft Access front end","Parse through and import years of inconsistently formatted spreadsheet data with Ruby scripts"],
       awards: []
     },
-    {
-      year: 2013,
-      startDate: "2013",
-      endDate: "2013",
-      position: "Teaching Assistant",
-      company: "University of Notre Dame <i class='far fa-chevron-right'></i> <em>Notre Dame, IN</em>",
-      desc: "Served as a teaching assistant in an Introduction to Web Development course covering HTML, CSS, Javascript, wireframing, and responsive design.",
-      descList: ["Assist with answering questions and explaining concepts to students in a course covering HTML, CSS, Javascript, wireframing, and responsive design"],
-      awards: []
-    },
+    // {
+    //   year: 2013,
+    //   startDate: "2013",
+    //   endDate: "2013",
+    //   position: "Teaching Assistant",
+    //   company: "University of Notre Dame <i class='far fa-chevron-right'></i> <em>Notre Dame, IN</em>",
+    //   desc: "Served as a teaching assistant in an Introduction to Web Development course covering HTML, CSS, Javascript, wireframing, and responsive design.",
+    //   descList: ["Assist with answering questions and explaining concepts to students in a course covering HTML, CSS, Javascript, wireframing, and responsive design"],
+    //   awards: []
+    // },
     {
       year: 2011,
       startDate: "2011",
@@ -191,16 +199,16 @@ const ResumeData = {
     },
   ],
   skills: [
-    {name: "SCSS, LESS, CSS", percent: "92", icon: "fab fa-sass"},
-    {name: "Responsive Development", percent: "90", icon: "fal fa-mobile-alt"},
     {name: "JavaScript", percent: "90", icon: "fab fa-js-square"},
-    {name: "APIs", percent: "80", icon: "fal fa-chart-network"},
-    {name: "React", percent: "75", icon: "fab fa-react"},
-    {name: "Git", percent: "75", icon: "fab fa-git"},
-    {name: "Gatsby", percent: "70", icon: "fal fa-browser"},
-    {name: "Node, NPM", percent: "65", icon: "fab fa-node-js"},
-    {name: "Ruby", percent: "65", icon: "fal fa-gem"},
-    {name: "Rails 5", percent: "60", icon: "fal fa-subway"},
+    {name: "SCSS, LESS, CSS", percent: "90", icon: "fab fa-sass"},
+    {name: "React", percent: "85", icon: "fab fa-react"},
+    {name: "Git", percent: "80", icon: "fab fa-git"},
+    {name: "Vue", percent: "65", icon: "fab fa-vuejs"},
+    {name: "APIs", percent: "60", icon: "fal fa-chart-network"},
+    {name: "Ruby", percent: "60", icon: "fal fa-gem"},
+    {name: "Node, NPM", percent: "55", icon: "fab fa-node-js"},
+    {name: "Rails 5", percent: "50", icon: "fal fa-subway"},
+    {name: "TypeScript", percent: "45", icon: "fa fal fa-brackets"}
   ],
   assets: [
     "Empathy to be an effective teammate",
@@ -214,9 +222,7 @@ const ResumeData = {
     "5+ years of Agile experience",
     "10+ years of experience working on web applications in various capacities",
   ],
-
   courses: [
-
     {
       img: "https://i.udemycdn.com/course/240x135/2143416_520c_2.jpg",
       title: "React Node FullStack",
