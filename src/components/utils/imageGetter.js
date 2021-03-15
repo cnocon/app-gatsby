@@ -9,9 +9,12 @@ import defaultImg from '../../images/default.png'
 import netlifyImg from '../../images/netlify.png'
 import heartMindImg from '../../images/mental-health.png'
 import personLaptop from '../../images/person-on-laptop.png'
+import programmerImg from '../../images/programmer.png'
 
 const imageGetter = (slug) => {
-  if (slug.match(/animate-page-transitions-with-fade-effect-in-gatsby/)) {
+  if (slug.match(/comparing-women-in-computing-with-women-in-stem-overall/)) {
+    return programmerImg
+  } else if (slug.match(/animate-page-transitions-with-fade-effect-in-gatsby/)) {
     return animationImg
   } else if (slug.match(/creating-a-single-production-ready-git-commit-from-multiple-commits/)) {
     return cleanHistoryImg

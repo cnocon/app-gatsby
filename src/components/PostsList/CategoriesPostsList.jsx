@@ -59,9 +59,9 @@ const CategoryPostsList = ({ data, pageContext }) => {
   return (
     <Layout className="blog-posts">
       <Header />
-      <SEO 
-        stitle={`Latest Posts in ${categorySlug.charAt(0).toUpperCase()}${categorySlug.slice(1)} | Front End Development Blog`} 
-        sdescription={`Latest posts in ${categorySlug.charAt(0).toUpperCase()}${categorySlug.slice(1)} from Cristin O'Connor's Front End Development Blog`} 
+      <SEO
+        stitle={`Latest Posts in ${categorySlug.charAt(0).toUpperCase()}${categorySlug.slice(1)} | Front End Development Blog`}
+        sdescription={`Latest posts in ${categorySlug.charAt(0).toUpperCase()}${categorySlug.slice(1)} from Cristin O'Connor's Front End Development Blog`}
       />
       <div className="posts-list">
         <Rule title={`Posted in ${categorySlug.charAt(0).toUpperCase()}${categorySlug.slice(1)}`} icon="fas fa-rss" />
