@@ -6,7 +6,7 @@ import * as Styled from "./BlogSidebar.styles"
 
 const BlogSidebar = ({ colClasses, categories }) => {
   const links = categories.map(c => {
-    return <Styled.Tag to={`/articles/${c.slug}/page-1`} className="tag" key={c.slug}>{c.name}</Styled.Tag>
+    return <Styled.Tag to={`/articles/${c.slug}/page-1`} key={c.slug}>{c.name}</Styled.Tag>
   });
 
   return (
