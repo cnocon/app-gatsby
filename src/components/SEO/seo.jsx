@@ -15,7 +15,7 @@ function SEO({ sdescription, lang, meta, stitle, slug='', children }) {
   const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`;
   const image = `https://cristin.io${imageGetter(slug)}` || `https://cristin.io${defaultImage}`;
   const title = stitle || `CRISTIN.IO`;
-  
+
   return (
     <Helmet
       htmlAttributes={{
@@ -64,7 +64,7 @@ function SEO({ sdescription, lang, meta, stitle, slug='', children }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-        { 
+        {
           name: `twitter:image`,
           content: image,
         },
