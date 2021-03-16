@@ -13,7 +13,6 @@ import imageGetter from '../utils/imageGetter';
 function SEO({ sdescription, lang, meta, stitle, slug='', children }) {
   const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`;
   const image = `https://cristin.io${imageGetter(slug)}`;
-  console.log('image', image);
   const title = stitle || `CRISTIN.IO`;
 
   return (
