@@ -16,12 +16,17 @@ const PostsList = ({ data, pageContext }) => {
   const currentPageNumber = Math.floor(identifier / 3) + 1;
   const prevPageNumber = currentPageNumber - 1 > 0 ? currentPageNumber - 1 : false;
   const nextPageNumber = currentPageNumber + 1 <= maxPageNumber ? currentPageNumber + 1 : false;
-  const categories = Object.values(data.categories.nodes.map(node => node.categories).flat().reduce((acc, node) => {
-    if (!acc[node.slug]) {
-      acc[node.slug] = { name: node.name, slug: node.slug };
+
+  const categories = data ? Object.values(data?.categories?.nodes.map(node => node.categories).flat().reduce((acc, node) => {
+    if (node) {
+      if (!acc[node.slug]) {
+        acc[node.slug] = { name: node.name, slug: node.slug };
+      }
+      return acc;
+    } else {
+      return null;
     }
-    return acc;
-  }, {}));
+  }, {})) : [];
 
   const prevBtn = (
     <div className="col-sm-6 nav-prev left-block">

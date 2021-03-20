@@ -11,10 +11,10 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 module.exports = {
   siteMetadata: {
     siteUrl: siteUrl,
-    title: `Cristin O'Connor | Front End Developer`,
+    title: `Cristin O'Connor | Front End Software Engineer`,
     author: `Cristin O'Connor`,
-    jobTitle: `Front End Developer`,
-    description: `Professional Front End Development Blog and CV Site`,
+    jobTitle: `Front End Software Engineer`,
+    description: `Front End Engineer Cristin O'Connor's Portfolio, Blog, and CV Site`,
     twitter: `@cnocon`,
   },
   plugins: [
@@ -78,8 +78,8 @@ module.exports = {
         resolveEnv: () => process.env.NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ 
-              userAgent: '*', 
+            policy: [{
+              userAgent: '*',
               allow: ['/', '/static/']
             }]
           },

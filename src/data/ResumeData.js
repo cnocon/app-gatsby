@@ -1,6 +1,6 @@
 const ResumeData = {
   name: "Cristin O'Connor",
-  jobTitle: "Front End Developer",
+  jobTitle: "Front End Software Engineer",
   experience: [
     // {
     //   startDate: "June 2019",

@@ -30,10 +30,10 @@ const Header = ({ ruleTitle, ruleIcon, showLogo=true }) => {
             <Sty.ImageEl src={portrait} alt="Cristin O'Connor Avatar" className={`top-bar ${showLogo ? '' : 'hidden'}`}/>
             <Sty.Heading1>
               <Sty.H1Link to="/">Cristin O'Connor</Sty.H1Link>
-              <Sty.Subhead>Front End Developer</Sty.Subhead>
+              <Sty.Subhead>Front End Software Engineer</Sty.Subhead>
             </Sty.Heading1>
           </div>
-        
+
         <Sty.Nav>
           <Sty.NavItem>
             <Sty.NavLink to="/" activeClassName="active">About</Sty.NavLink>
@@ -41,14 +41,14 @@ const Header = ({ ruleTitle, ruleIcon, showLogo=true }) => {
           <Sty.NavItem>
             <Sty.NavLink to="/articles/page-1" className={`${articlesClass}`}>Blog</Sty.NavLink>
           </Sty.NavItem>
-          
+
           <Sty.NavItem>
             <Sty.NavLink to="/portfolio" className={`${portfolioClass}`}>Portfolio</Sty.NavLink>
           </Sty.NavItem>
           <Sty.NavItem>
             <Sty.NavLink to="/resume" className={`${resumeClass}`}>Résumé</Sty.NavLink>
           </Sty.NavItem>
-          
+
         </Sty.Nav>
       </div>
     </Sty.Container>

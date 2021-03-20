@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import imageGetter from '../utils/imageGetter';
 
 function SEO({ sdescription, lang, meta, stitle, slug='', children }) {
-  const metaDescription = sdescription || `Professional blog and CV site for Front End Developer Cristin O'Connor`;
+  const metaDescription = sdescription || `Front End Engineer Cristin O'Connor's portfolio, blog and CV site`;
   const image = `https://cristin.io${imageGetter(slug)}`;
   const title = stitle || `CRISTIN.IO`;
 
